@@ -3,4 +3,4 @@
 
 Coming soon. 
 
-See also [https://pypi.org/project/itemseg/]
+See also https://pypi.org/project/itemseg/
