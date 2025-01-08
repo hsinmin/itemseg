@@ -36,6 +36,7 @@ dependencies = ['requests >= 2.22.0',
                 'scipy >= 1.10.0',
                 'numpy >= 1.23.0',
                 'urllib3 >= 1.25.8',
+                'openai >= 1.59.3'
 ]
 
 [project.scripts]
