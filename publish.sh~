@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm dist/*
+hatch version minor
+python3 -m build

@@ -1,0 +1,97 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "itemseg"
+dynamic = ["version"]
+description = '10-K Report Item Segmentation with Line-based Attention (ISLA)'
+readme = "README.md"
+requires-python = ">=3.8"
+# license = "Free for non-commercial use"
+keywords = ["Item Segmentation", "Sequence Labeling", '10-K']
+authors = [
+  { name = "Hsin-Min Lu; Huan-Hsun Yen; Yen-Hsiu Chen", email = "luim@ntu.edu.tw" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "License :: Free for non-commercial use",
+]
+dependencies = ['requests >= 2.22.0', 
+                'pandas >= 1.1.0',
+                'inscriptis >= 2.3.2',
+                'python-crfsuite >= 0.9.7',
+                'nltk >= 3.5',
+                'gensim >= 4.3.0',
+                'torch >= 1.13.1',
+                'scikit-learn >= 0.24.2',
+                'scipy >= 1.10.0',
+                'numpy >= 1.23.0',
+                'urllib3 >= 1.25.8',
+]
+
+[project.scripts]
+itemseg = "itemseg:main"
+
+
+[project.urls]
+Documentation = "https://github.com/hsinmin/isla#readme"
+Issues = "https://github.com/hsinmin/itemseg/issues"
+Source = "https://github.com/hsinmin/itemseg"
+
+[tool.hatch.version]
+path = "src/itemseg/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/isla tests}"
+
+[tool.coverage.run]
+source_pkgs = ["isla", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/isla/__about__.py",
+]
+
+[tool.coverage.paths]
+isla = ["src/itemseg", "*/itemseg/src/itemseg"]
+tests = ["tests", "*/itemseg/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
