@@ -641,14 +641,68 @@ def openai(text_final, apikey):
         messages=msg,
     )
 
-    save_response(response)
-
     return response
 
+def map_lines_to_tags(response, lines):
+    items = response.choices[0].message.content.split('\n')
+    itemsegid = []
+    for a_item in items:
+        tmp1 = a_item.split(',')
+        if len(tmp1) < 2:
+            continue
 
+        key = tmp1[0].strip()
+        key = key.upper()
+        key = key.replace('.', '')
+        key = key.replace('ITEM', '')
+        key = key.strip()
+
+        try:
+            value = int(tmp1[1].strip())
+            if value >= len(lines): # unrealistic case, just skip
+                continue
+        except:
+            continue
+
+        itemsegid.append([key, value])
+    
+    if len(itemsegid) == 0:
+        # No Item Found!!! Set all lines to 'O'
+        predlabel = ['O'] * len(lines)
+    else:
+        itemsegid2 = sorted(itemsegid, key=lambda x: x[1])
+
+        predlabel = ['O'] * len(lines)
+        lastline = len(lines)
+        for a_item in itemsegid2[::-1]:
+            predlabel[a_item[1]] = 'B' + a_item[0]
+            
+            for tmpid in range(a_item[1]+1, lastline):
+                predlabel[tmpid] = 'I' + a_item[0]
+            lastline = a_item[1]
+
+    return predlabel
+
+# [TODO] Below functions will be removed, start
 def save_response(response):
-    output_filename = os.path.join(os.getcwd(), 'output', 'openai_response.pkl')
-    print('Saving response to', output_filename)
+    output_folder = os.path.join(os.getcwd(), 'output')
+    output_filename = os.path.join(output_folder, 'openai_response.pkl')
 
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    
     with open(output_filename, 'wb') as f:
         pickle.dump(response, f)
+
+    print('Saving response to', output_filename)
+
+
+def load_response():
+    output_folder = os.path.join(os.getcwd(), 'output')
+    output_filename = os.path.join(output_folder, 'openai_response.pkl')
+
+    with open(output_filename, 'rb') as f:
+        response = pickle.load(f)
+
+    return response
+# [TODO] Above functions will be removed, end

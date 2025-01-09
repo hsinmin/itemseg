@@ -599,11 +599,13 @@ def main():
         text_final = gpt4itemSeg.preprocess_doc(lines)
         # 喂進 chatgpt model
         response = gpt4itemSeg.openai(text_final, apikey)
+        # 取得與每行句子對應的預測tag
+        pred_ext = gpt4itemSeg.map_lines_to_tags(response, lines)
 
-        print("Response from chatgpt model:")
-        print(response.choices[0].message.content)
+        outdf = pd.DataFrame({'pred': pred_ext, 'sentence': lines})
+        if args.outfn_type.find("csv") >= 0:
+            outdf.to_csv(os.path.join(args.outputdir, "%s.csv" % args.outfn_prefix), index = False)        
 
-        pred_ext = response.choices[0].message.content
     # For chatgpt model end
 
 
