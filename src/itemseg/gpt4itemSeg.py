@@ -2,6 +2,7 @@ import nltk
 from openai import OpenAI
 import pickle
 import os
+from itemseg import args
 
 # Few shots (five shots)
 instruction = """I am an excellent financial professional. \
@@ -615,17 +616,21 @@ def preprocess_doc(lines):
 
             text_final += f'{i} {truncate_line(aline, ntok=this_trun_len)}\n'
         
-        print(f'prompt Character length = {len(text_final)}')
+        if args.verbose > 0:
+            print(f'prompt Character length = {len(text_final)}')
         words = nltk.word_tokenize(text_final)
         est_token = len(words) * avg_tok_per_word
-        print(f"prompt nltk token count and est. token len = {len(words)} / {est_token}")
+        if args.verbose > 0:
+            print(f"prompt nltk token count and est. token len = {len(words)} / {est_token}")
 
         # 假設預估的 tokens 數量超過最大限制，則縮減 trun_len 的長度再跑一次
         if est_token > prompt_max_len:
             this_trun_len -= 5
-            print(f"    prompt too long, reduce max line len to {this_trun_len}")
+            if args.verbose > 0:
+                print(f"    prompt too long, reduce max line len to {this_trun_len}")
             if this_trun_len < 3:
-                print(f" trun_len < 3 ; ({this_trun_len}); stop")
+                if args.verbose > 0:
+                    print(f" trun_len < 3 ; ({this_trun_len}); stop")
         else:
             break
     
