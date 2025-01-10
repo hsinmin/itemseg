@@ -2,7 +2,6 @@ import nltk
 from openai import OpenAI
 import pickle
 import os
-from itemseg import args
 
 # Few shots (five shots)
 instruction = """I am an excellent financial professional. \
@@ -601,7 +600,7 @@ def truncate_line(intext, ntok=100):
 # truncate_line("this is  a test sentence.", ntok=100)
 
 
-def preprocess_doc(lines):
+def preprocess_doc(args, lines):
     this_trun_len = trun_len
     nline = len(lines)
 
