@@ -827,27 +827,6 @@ def main():
         if args.outfn_type.find("csv") >= 0:
             outdf.to_csv(os.path.join(args.outputdir, "%s.csv" % args.outfn_prefix), index = False)  
 
-    # For chatgpt model start
-    if method == 'chatgpt':
-        if args.apikey is None:
-            print("[Error] Please provide your openAI api key. \n\nUsing: \n        python3 -m itemseg --apikey YOUR_API_KEY \n\nto set up your api key.")
-            sys.exit(1)        
-
-        apikey = args.apikey
-
-        # 處理要喂進 chatgpt model 的輸入
-        text_final = gpt4itemSeg.preprocess_doc(args, lines)
-        # 喂進 chatgpt model
-        response = gpt4itemSeg.openai(text_final, apikey)
-        # 取得與每行句子對應的預測tag
-        pred_ext = gpt4itemSeg.map_lines_to_tags(response, lines)
-
-        outdf = pd.DataFrame({'pred': pred_ext, 'sentence': lines})
-        if args.outfn_type.find("csv") >= 0:
-            outdf.to_csv(os.path.join(args.outputdir, "%s.csv" % args.outfn_prefix), index = False)        
-
-    # For chatgpt model end
-
 
     if args.verbose >= 1:
         print(f"Output files to {args.outputdir}/{args.outfn_prefix}*")
