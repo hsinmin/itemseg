@@ -24,9 +24,9 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import classification_report
 import numpy as np
-from itemsegct import lib_10kq_seg_v1 as lib10kq
-from itemsegct import crf_feature_lib_v8 as crf_feature
-from itemsegct import gpt4itemSeg
+from itemseg import lib_10kq_seg_v1 as lib10kq
+from itemseg import crf_feature_lib_v8 as crf_feature
+from itemseg import gpt4itemSeg
 from argparse import ArgumentParser
 import urllib.parse
 import pathlib
