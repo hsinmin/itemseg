@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "itemsegct"
+name = "itemseg"
 dynamic = ["version"]
 description = '10-K Report Item Segmentation with Line-based Attention (ISLA)'
 readme = "README.md"
@@ -40,7 +40,7 @@ dependencies = ['requests >= 2.22.0',
 ]
 
 [project.scripts]
-itemsegct = "itemsegct:main"
+itemseg = "itemseg:main"
 
 
 [project.urls]
@@ -49,7 +49,7 @@ Issues = "https://github.com/hsinmin/itemseg/issues"
 Source = "https://github.com/hsinmin/itemseg"
 
 [tool.hatch.version]
-path = "src/itemsegct/__about__.py"
+path = "src/itemseg/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -87,8 +87,8 @@ omit = [
 ]
 
 [tool.coverage.paths]
-isla = ["src/itemsegct", "*/itemsegct/src/itemsegct"]
-tests = ["tests", "*/itemsegct/tests"]
+isla = ["src/itemseg", "*/itemseg/src/itemseg"]
+tests = ["tests", "*/itemseg/tests"]
 
 [tool.coverage.report]
 exclude_lines = [

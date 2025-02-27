@@ -686,27 +686,3 @@ def map_lines_to_tags(response, lines):
             lastline = a_item[1]
 
     return predlabel
-
-# [TODO] Below functions will be removed, start
-def save_response(response):
-    output_folder = os.path.join(os.getcwd(), 'output')
-    output_filename = os.path.join(output_folder, 'openai_response.pkl')
-
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
-    
-    with open(output_filename, 'wb') as f:
-        pickle.dump(response, f)
-
-    print('Saving response to', output_filename)
-
-
-def load_response():
-    output_folder = os.path.join(os.getcwd(), 'output')
-    output_filename = os.path.join(output_folder, 'openai_response.pkl')
-
-    with open(output_filename, 'rb') as f:
-        response = pickle.load(f)
-
-    return response
-# [TODO] Above functions will be removed, end
