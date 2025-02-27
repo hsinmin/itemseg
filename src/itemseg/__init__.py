@@ -224,7 +224,6 @@ def main():
 
     args = parser.parse_args()
     args.hostname = platform.node()
-    print('args: ', args)
 
     # test dynamic html page
     # args = parser.parse_args(args=['--input', 
