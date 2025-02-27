@@ -26,6 +26,7 @@ from sklearn.metrics import classification_report
 import numpy as np
 from itemseg import lib_10kq_seg_v1 as lib10kq
 from itemseg import crf_feature_lib_v8 as crf_feature
+from itemseg import gpt4itemSeg
 from argparse import ArgumentParser
 import urllib.parse
 import pathlib
@@ -100,7 +101,7 @@ def main():
     # model options
     parser.add_argument("--method", dest="method", type=str,
                         default='isla',
-                        help="Item segmentation method; isla or crf")
+                        help="Item segmentation method; isla, crf or chatgpt")
     parser.add_argument("--word2vec", dest="word2vec", type=str,
                         default='./resource/word2vecmodel_10kq3a_epoch_5',
                         help="File name of the word2vec model (gensim trained)")
@@ -118,9 +119,16 @@ def main():
     parser.add_argument("--debug", dest="debug", 
                         action="store_true",
                         help="save in-progress files for debugging")
+    
+    # For chatgpt model start
+    parser.add_argument('--apikey', dest='apikey', type=str,
+                        default=None,
+                        help='Your own openai api key for using chatgpt model.')
+    # For chatgpt model end
 
     args = parser.parse_args()
     args.hostname = platform.node()
+    print('args: ', args)
 
     # test dynamic html page
     # args = parser.parse_args(args=['--input', 
@@ -272,6 +280,8 @@ def main():
         #load tagger
         tagger = pycrfsuite.Tagger()
         tagger.open(crf_model_fn)
+    elif method == "chatgpt":
+        pass
     else:
         print(f"Unknonwn method {method}. Stop")
         sys.exit(103)
@@ -576,6 +586,28 @@ def main():
         if args.outfn_type.find("csv") >= 0:
             # outdf.to_csv(outprefix + "%s.csv" % os.path.basename(srcfn), index = False)
             outdf.to_csv(os.path.join(args.outputdir, "%s.csv" % args.outfn_prefix), index = False)
+
+    # For chatgpt model start
+    if method == 'chatgpt':
+        if args.apikey is None:
+            print("[Error] Please provide your openAI api key. \n\nUsing: \n        python3 -m itemseg --apikey YOUR_API_KEY \n\nto set up your api key.")
+            sys.exit(1)        
+
+        apikey = args.apikey
+
+        # 處理要喂進 chatgpt model 的輸入
+        text_final = gpt4itemSeg.preprocess_doc(args, lines)
+        # 喂進 chatgpt model
+        response = gpt4itemSeg.openai(text_final, apikey)
+        # 取得與每行句子對應的預測tag
+        pred_ext = gpt4itemSeg.map_lines_to_tags(response, lines)
+
+        outdf = pd.DataFrame({'pred': pred_ext, 'sentence': lines})
+        if args.outfn_type.find("csv") >= 0:
+            outdf.to_csv(os.path.join(args.outputdir, "%s.csv" % args.outfn_prefix), index = False)        
+
+    # For chatgpt model end
+
 
     if args.verbose >= 1:
         print(f"Output files to {args.outputdir}/{args.outfn_prefix}*")
