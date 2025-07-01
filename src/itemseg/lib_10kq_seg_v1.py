@@ -1360,3 +1360,39 @@ def itemNumberCheck(prefix, suffix, text):
         for tag in tag_list:
             item_number_features[prefix+tag+suffix] = 0
     return item_number_features
+
+
+# map the predicted tags back to original line sequence
+def expand_pred_to_lines(pred, seqmap, lines):
+    pred_ext = ['X'] * len(lines)
+    for i, tag in enumerate(pred):
+        i2 = seqmap[i]
+        pred_ext[i2] = tag
+
+    last_tag = 'O'
+    N = len(pred_ext)
+    for i, tag in enumerate(pred_ext):
+        if tag == 'X':
+            if last_tag[0] == 'B':
+                # find next predicted tag
+                if i+1 < N:
+                    next_ptag = pred_ext[i+1]
+                    step = 2
+                    while next_ptag == 'X' and i + step < N:
+                        next_ptag = pred_ext[i+step]
+                        step += 1
+                    if next_ptag == 'X':
+                        # in case we reach the end of the list
+                        next_ptag = 'O'
+                    elif next_ptag[0] == 'B':
+                        # will not carry future B tags
+                        # next_ptag = last_tag
+                        next_ptag = "I" + last_tag[1:]
+                else:
+                    next_ptag = 'O'
+                pred_ext[i] = next_ptag
+            else:
+                pred_ext[i] = last_tag
+        last_tag = tag
+    return pred_ext
+
