@@ -31,10 +31,11 @@ from itemseg import gpt4itemSeg
 from argparse import ArgumentParser
 import urllib.parse
 import pathlib
-from sentence_transformers import SentenceTransformer
+
+
 html2txt_type = "inscriptis"
 
-sentence_bert_model = SentenceTransformer('stsb-mpnet-base-v2')
+
 # Bi-LSTM
 class BiLSTM2(nn.Module):
 
@@ -319,6 +320,7 @@ def main():
             label2id_fn = os.path.join(resource_prefix, "resource/tag2023_v1_labelidmap.pkl")
         elif args.method in ['crf', 'bert']:
             label2id_fn = os.path.join(resource_prefix, "resource/tag2021_v3_labelidmap.pkl")
+
         else:
             print(f"Unknown method {args.method} for automatic labelid_map assignment")
             sys.exit(105)
@@ -419,6 +421,10 @@ def main():
         pass
     elif method == "bert":
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        from sentence_transformers import SentenceTransformer
+        sentence_bert_model = SentenceTransformer('stsb-mpnet-base-v2')
+
+        
         if args.verbose >= 2:
             print("Using device", device)
         hyperparameters_rnn = {
@@ -874,7 +880,10 @@ def main():
                          num_layers=args.num_layers).to(device)
         model_bert = model_bert.float() 
 
-        ckpt = torch.load(bert_model_fn) 
+        if device == "cpu":
+            ckpt = torch.load(bert_model_fn, map_location=torch.device('cpu'))
+        else:
+            ckpt = torch.load(bert_model_fn) 
         model_bert.load_state_dict(ckpt)
         # model_bert = model_lstm_crf   
 
