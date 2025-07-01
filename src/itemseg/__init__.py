@@ -248,6 +248,9 @@ def main():
     if not os.path.exists(args.outputdir):
         os.makedirs(args.outputdir)
 
+    # Model setting; 
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
     if method == "lstm":    
         # the new model with proper tokenization
         if args.verbose >= 2:
@@ -262,7 +265,6 @@ def main():
         if torch.cuda.is_available():
             torch.cuda.manual_seed(myseed)
             torch.cuda.manual_seed_all(myseed)  # for GPU
-
 
         # label2id_fn = args.labelid_map
         if args.verbose >= 2:
@@ -280,20 +282,9 @@ def main():
         STOP_TAG = "<STOP>"
         label_mapping[START_TAG] = tmpmax + 1
         label_mapping[STOP_TAG] = tmpmax + 2    
-
-        # Model setting; 
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        
         if args.verbose >= 2:
             print("Using device", device)
-
-        hyperparameters_rnn = {            
-            'batch_size': 1,  # one line per batch;             
-            'gamma': 0,          # L2 loss punishment
-            'hidden_dim': 256, # will be overwritten
-            'remove_punc': False, 
-            'add_spaces_between_punc': False,
-            'to_lower_case': False
-        }
 
         if args.verbose >= 2:
             print(f"==== Reading lstm model files in {lstm_model_fn}")
@@ -326,21 +317,22 @@ def main():
     elif method == "chatgpt":
         pass
     elif method == "bert":
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        # device = 'cuda' if torch.cuda.is_available() else 'cpu'
         from sentence_transformers import SentenceTransformer
         sentence_bert_model = SentenceTransformer('stsb-mpnet-base-v2')
 
         
         if args.verbose >= 2:
             print("Using device", device)
-        hyperparameters_rnn = {
-            'optimizer': args.optimizer,
-            'optim_hparas': {
-                'lr': args.lr, 
-                'weight_decay': args.weight_decay        
-            },
-            'hidden_dim': args.hidden_dim,
-        }
+
+        # hyperparameters_rnn = {
+        #     'optimizer': args.optimizer,
+        #     'optim_hparas': {
+        #         'lr': args.lr, 
+        #         'weight_decay': args.weight_decay        
+        #     },
+        #     'hidden_dim': args.hidden_dim,
+        # }
 
         # current_dir = os.path.dirname(__file__)
         # 現有路徑
@@ -742,14 +734,14 @@ def main():
             print(f"tmp_batchx shape: {tmp_batchx.shape}")
             print(f"input_dim: {input_dim}")
             print(f"label_mapping: {label_mapping}")
-            print(f"hidden_dim: {hyperparameters_rnn['hidden_dim']}")
+            print(f"hidden_dim: {args.hidden_dim}")
             print(f"num_layers: {args.num_layers}")
             print(f"device: {device}")
         
 
         model_bert = lib10kq.BiLSTM2(input_dim, 
                          label_mapping, 
-                         hyperparameters_rnn['hidden_dim'], 
+                         args.hidden_dim, 
                          device, 
                          num_layers=args.num_layers).to(device)
         model_bert = model_bert.float() 
