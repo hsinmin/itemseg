@@ -118,8 +118,10 @@ def get_resource(dest="__home__", check_only=False, verbose=1,
              'word2vecmodel_10kq3a_epoch_5.syn1neg.npy',
              'word2vecmodel_10kq3a_epoch_5.wv.vectors.npy',
              'tag2023_v1_labelidmap.pkl',
-             'isla_model/h256len100lay2lr3complete_args.json',
-             'isla_model/h256len100lay2lr3complete_e020_vac97.31_vce0.08639.pth']
+             'tag2021_v3_labelidmap.pkl',  # for bert
+             'bert_model/bert_model.pth',
+             'lstm_model/h256len100lay2lr3complete_args.json',
+             'lstm_model/h256len100lay2lr3complete_e020_vac97.31_vce0.08639.pth']
     
     if dest == "__home__":
         # replace with real home path
@@ -129,7 +131,8 @@ def get_resource(dest="__home__", check_only=False, verbose=1,
         print(f"Download resource to {dest}")
         if not os.path.exists(dest):
             os.makedirs(dest)
-            os.makedirs(os.path.join(dest, "isla_model"))
+            os.makedirs(os.path.join(dest, "lstm_model"))
+            os.makedirs(os.path.join(dest, "bert_model"))
         # start download files
         err_count = 0
         for atarget in files:
@@ -137,6 +140,7 @@ def get_resource(dest="__home__", check_only=False, verbose=1,
             outfn = os.path.join(dest, atarget)
             if verbose >= 1:
                 print(f"Getting {url}")
+
             r = requests.get(url, allow_redirects=True)
             if r.status_code == 200:            
                 open(outfn, 'wb').write(r.content)
@@ -152,9 +156,10 @@ def main():
     parser.add_argument("--get_resource", dest="get_resource", 
                         action="store_true",
                         help="Download resource files")
+    default_resource_url = "http://www.im.ntu.edu.tw/~lu/data/itemseg/"
     parser.add_argument("--resource_url", dest="resource_url", type=str,
-                        default="http://www.im.ntu.edu.tw/~lu/data/itemseg/",
-                        help="URL to download resource files")
+                        default=default_resource_url,
+                        help=f"Set URL to download resource files. Default: {default_resource_url}")
     # input options
     # currently does not support local file yet
     parser.add_argument("--input", dest="input", type=str,
@@ -162,8 +167,15 @@ def main():
                         # required=True,
                         help="EDGAR filing URL; e.g. https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt")
     parser.add_argument("--input_type", dest="input_type", type=str,
-                         default='auto',
-                         help="Input type. auto: determine automatically; fn: file name; url: obtain web page by requests")
+                         # default='auto',
+                         help="[raw|html|native_text|cleaned_text] \n" 
+                              "    raw: Complete submission text file. See sample file at https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt\n"
+                              "    html: HTML report. See sample file at https://www.sec.gov/ix?doc=/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm\n"
+                              "native_text: text report. See sample file at https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt\n"
+                               "cleaned_text: 10-K report converted to the pure text formated with tables removed.")
+    parser.add_argument("--user_agent_str", dest="user_agent_str", type=str,
+                         default='N/A',
+                         help="User Agent String per SEC's request. E.g. 'Sample Company Name AdminContact@<sample company domain>.com'")
 
     # output options
     parser.add_argument("--outputdir", dest="outputdir", type=str,
@@ -178,43 +190,44 @@ def main():
 
     # model options
     parser.add_argument("--method", dest="method", type=str,
-                        default='isla',
-                        help="Item segmentation method; isla, crf or chatgpt")
+                        default='crf',
+                        help="[crf|lstm|bert|chatgpt] Item segmentation method; crf: conditional random field; lstm: Bi-directional long short-term memory; bert: bert encoder coupled with bi-lstm; chatgpt: use openai api and line-id-based prompting.")
     parser.add_argument("--word2vec", dest="word2vec", type=str,
                         default='./resource/word2vecmodel_10kq3a_epoch_5',
                         help="File name of the word2vec model (gensim trained)")
-    parser.add_argument("--islapath", dest="islapath", type=str,
-                        default="./resource/isla_model",
-                        help="ISLA model (path) for inference")
+    parser.add_argument("--lstmpath", dest="lstmpath", type=str,
+                        default="./resource/lstm_model",
+                        help="lstm model (path) for inference")
     parser.add_argument("--crfpath", dest="crfpath", type=str,
                         default="./resource/crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite",
                         help="CRF model (path) for inference")
+    # todo: default to 'AUTO'                        
     parser.add_argument("--labelid_map", dest="labelid_map", type=str,
-                        default='./resource/tag2023_v1_labelidmap.pkl',
-                        help="labelid mapping file; a dictionary of two maps (for ISLA)")
+                        default='AUTO',
+                        help="labelid mapping file; a dictionary of two maps (for lstm and bert)")
     parser.add_argument("--verbose", dest="verbose", default = 1, type = int,
                         help="verbose level=0, 1, or 2; 0=silent, 2=many messages")
     parser.add_argument("--debug", dest="debug", 
                         action="store_true",
                         help="save in-progress files for debugging")
     # For BERT model
-    parser.add_argument("--optimizer", dest="optimizer", type=str,
-                    default="Adam",
-                    help="Optimizer; Adam or SGD")                         
-    parser.add_argument("--lr", dest="lr",  
-                        type = float, default=0.0001,
-                        help="Learning rate")
-    parser.add_argument("--weight_decay", dest="weight_decay",  
-                    type = float, default=0.0,
-                    help="Weight decay; default=0.0")  
-    parser.add_argument("--num_layers", dest="num_layers",  
-                    type = int, default=2,
-                    help="Bi-LSTM hidden dimension")   
-    parser.add_argument("--hidden_dim", dest="hidden_dim",  
-                    type = int, default=256,
-                    help="Bi-LSTM hidden dimension")
+    # parser.add_argument("--optimizer", dest="optimizer", type=str,
+    #                 default="Adam",
+    #                 help="Optimizer; Adam or SGD")                         
+    # parser.add_argument("--lr", dest="lr",  
+    #                     type = float, default=0.0001,
+    #                     help="Learning rate")
+    # parser.add_argument("--weight_decay", dest="weight_decay",  
+    #                 type = float, default=0.0,
+    #                 help="Weight decay; default=0.0")  
+    # parser.add_argument("--num_layers", dest="num_layers",  
+    #                 type = int, default=2,
+    #                 help="Bi-LSTM hidden dimension")   
+    # parser.add_argument("--hidden_dim", dest="hidden_dim",  
+    #                 type = int, default=256,
+    #                 help="Bi-LSTM hidden dimension")
     parser.add_argument('--bertpath', dest='bertpath', type=str,
-                        default='bert_model.pth',
+                        default='./resource/bert_model/bert_model.pth',
                         help="BERT model (path) for inference")
     # For chatgpt model start
     parser.add_argument('--apikey', dest='apikey', type=str,
@@ -224,6 +237,13 @@ def main():
 
     args = parser.parse_args()
     args.hostname = platform.node()
+
+    # set  user-invisiable parameters
+    args.optimizer = "Adam"
+    args.lr = 0.0001
+    args.weight_decay = 0.0
+    args.num_layers = 2
+    args.hidden_dim = 256
 
     # test dynamic html page
     # args = parser.parse_args(args=['--input', 
@@ -250,28 +270,35 @@ def main():
     # local file
     # args = parser.parse_args(args=['--input', 
     #                                "rawdata/6404287.txt",
-    #                                "--method", "isla"])
+    #                                "--method", "lstm"])
     
     
     if args.verbose >=1:
-        print("itemseg: Item Segmentation with Line-based Attention (ISLA)")
-        print("    A 10-K Item Segmentation Tool")
+        print("itemseg: A tool for 10-K Item Segmentation")
         print("    Free to use for non-commercial purpose.")
         print("    Maintained by: Hsin-Min Lu (luim@ntu.edu.tw)")
         # todo: add project URL
-        print("    Please cite our work if you use this tool in your research.")
+        print("    Please cite our work (https://arxiv.org/abs/2502.08875) "
+              "if you use this tool in your research.")
 
     if args.verbose >=2:
         print("Arguments:", args)
         
     if (args.input is None) and (args.get_resource == False):
         parser.error("Need either --input or --get_resource")
-
     
     if args.get_resource:
         get_resource()
         sys.exit(0)
     
+    # now let's check input_type
+    if args.input_type is None:
+        parser.error("Need to specify input_type")
+
+    legal_input_type = ['raw', 'html', 'native_text', 'cleaned_text']
+    if args.input_type not in legal_input_type:
+        parser.error(f"Illegal input type. Need to be one of these {legal_input_type}")
+
     method = args.method
 
     rdnseed = 52345
@@ -280,15 +307,28 @@ def main():
 
     # crf_model_fn = "resource/crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite"
     crf_model_fn = os.path.join(resource_prefix, args.crfpath)
-    # isla_model_fn = "resource/isla_model"
-    isla_model_fn = os.path.join(resource_prefix, args.islapath)
+    # lstm_model_fn = "resource/lstm_model"
+    lstm_model_fn = os.path.join(resource_prefix, args.lstmpath)
     # word2vec_fn = "resource/word2vecmodel_10kq3a_epoch_5"
     word2vec_fn = os.path.join(resource_prefix, args.word2vec)
+
     # label2id_fn = "resource/tag2023_v1_labelidmap.pkl"
-    label2id_fn = os.path.join(resource_prefix, args.labelid_map)
+    # ./resource/tag2023_v1_labelidmap.pkl
+    if args.labelid_map == "AUTO":
+        if args.method in ["lstm"]:
+            label2id_fn = os.path.join(resource_prefix, "resource/tag2023_v1_labelidmap.pkl")
+        elif args.method in ['crf', 'bert']:
+            label2id_fn = os.path.join(resource_prefix, "resource/tag2021_v3_labelidmap.pkl")
+        else:
+            print(f"Unknown method {args.method} for automatic labelid_map assignment")
+            sys.exit(105)
+    else:
+        label2id_fn = os.path.join(resource_prefix, args.labelid_map)
+
+    bert_model_fn = os.path.join(resource_prefix, args.bertpath)        
     
     res_files = [crf_model_fn, 
-                 isla_model_fn,
+                 lstm_model_fn,
                  word2vec_fn,
                  label2id_fn]
     for ares in res_files:
@@ -300,7 +340,7 @@ def main():
     if not os.path.exists(args.outputdir):
         os.makedirs(args.outputdir)
 
-    if method == "isla":    
+    if method == "lstm":    
         # the new model with proper tokenization
         if args.verbose >= 2:
             print(f"Loading word2vec model from {word2vec_fn}")
@@ -348,9 +388,9 @@ def main():
         }
 
         if args.verbose >= 2:
-            print(f"==== Reading ISLA model files in {isla_model_fn}")
+            print(f"==== Reading lstm model files in {lstm_model_fn}")
         # args.inference_only = True 
-        fns = glob.glob(isla_model_fn + "/*_args.json")
+        fns = glob.glob(lstm_model_fn + "/*_args.json")
         fns = sorted(fns)
         if args.verbose >= 2:
             print(f"     Using model setting in {fns[0]}")
@@ -366,7 +406,7 @@ def main():
 
         # pick the best model, 
         # currently using a simple rule (the last one)
-        fns2 = glob.glob(isla_model_fn + "/*.pth")
+        fns2 = glob.glob(lstm_model_fn + "/*.pth")
         fns2 = sorted(fns2)
         best_model_name = fns2[-1]
         if args.verbose >= 2:
@@ -390,47 +430,68 @@ def main():
             'hidden_dim': args.hidden_dim,
         }
 
+        # current_dir = os.path.dirname(__file__)
+        # 現有路徑
+        # label2id_bert = os.path.join(current_dir, 'tag2021_v3_labelidmap.pkl') 
+        with open(label2id_fn, 'rb') as f:
+            labelid_map = pickle.load(f)
+        label_mapping  = labelid_map['label2id']
+        reverse_label_mapping = {v: k for k, v in label_mapping.items()}
+
+        tmpmax = max(label_mapping.values())
+        print(f"[BERT] max id for label is {tmpmax}; going to add two more")
+        START_TAG = "<START>"
+        STOP_TAG = "<STOP>"
+        PADDING_TAG = "<PADDING>"
+        label_mapping[START_TAG] = tmpmax + 1
+        label_mapping[STOP_TAG] = tmpmax + 2
+        label_mapping[PADDING_TAG] = tmpmax + 3
+
     else:
         print(f"Unknonwn method {method}. Stop")
         sys.exit(103)
-
     
-    if method == "isla":
+    if method == "lstm":
         input_dim = len(word2vec_model.wv['a']) + 3
         if args.verbose >=2:
             print(f"   LSTM input dim = {input_dim}")
-        model_isla = lib10kq.BiLSTM_Tok(input_dim, 
+            print(f"   label_mapping = {label_mapping}")
+            print(f"   tag set size = {len(label_mapping)}")
+            print(f"   hidden_dim = {args.hidden_dim}")
+            print(f"   device = {device}")
+            print(f"   attention_method = {args.attention_method}")
+            print(f"   num_layers = {args.num_layers}")
+        model_lstm = lib10kq.BiLSTM_Tok(input_dim, 
                                     label_mapping, 
                                     args.hidden_dim, 
                                     device,
                                     attention_method=args.attention_method,
                                     num_layers=args.num_layers).to(device)
-        model_isla = model_isla.float()
+        model_lstm = model_lstm.float()
         
         # load model
         if device == "cpu":
             ckpt = torch.load(best_model_name, torch.device('cpu'))
         else:
             ckpt = torch.load(best_model_name)  
-        model_isla.load_state_dict(ckpt)
+        model_lstm.load_state_dict(ckpt)
 
-    if args.input_type == "auto":
-        if args.input.find("http") >=0:
-            src_type = "url"
-        else:
-            src_type = "fn"
-            # urltype = "fn"
+
+    # to be continued here...
+    # ====== 2025/6/27 ====
+    if args.input.find("http") >=0:
+        src_type = "url"
     else:
-        src_type = args.input_type
+        src_type = "fn"    
 
     # src_type = "txt"
     # src_type = "url"
     if args.verbose >= 2:
-        print("Input type is", src_type)
+        print("Source type is", src_type)
 
 
     if src_type == "fn":
-        srcfn = "rawdata/6404287.txt"
+        srcfn = args.input
         with open(srcfn, "r") as fh:
             rawtext = fh.read()
     elif src_type == "url":        
@@ -449,9 +510,18 @@ def main():
         print(f"Getting raw file from {srcurl}")
 
         # "Host": "www.sec.gov",
+        # user_agent_str = args.user_agent_str
+        if args.user_agent_str == "N/A":
+            print("You need to specify user_agent_str per SEC's rule.")
+            print("cf. https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data")
+            sys.exit(200)
+
+        # user_agent_str = "National Taiwan University, luim@ntu.edu.tw"
+        # todo: setup cli parameter!!!!
         headers = {        
-            "User-Agent": "Item Segmentation with Line-Based Attention",
-            "Accept-Encoding": "gzip, deflate" 
+            "User-Agent": args.user_agent_str,
+            "Accept-Encoding": "gzip, deflate",
+            "host": "www.sec.gov"
             }
 
         r = requests.get(srcurl, headers=headers)
@@ -470,25 +540,49 @@ def main():
             print(f"The length of filed text is too small (len(r.text)). Stop.") 
             urltype = "HTML"
             sys.exit(101)
+        elif r.text.find("Your Request Originates from an Undeclared Automated Tool") >= 0:
+            print(f"Error: SEC denied undeclared automated tool!")
+            print(f"Header: {headers}")       
+            sys.exit(102)
         else:
             rawtext = r.text
-            
-            
+    # ---- Now we get rawtext; either from local file or url
+    # The next step is to verify and preprocess based on rawtext    #         
+
+
     par1 = re.compile('(<SEC-DOCUMENT>.*?</SEC-HEADER>)(.*)', re.M | re.S)
     par1m1=par1.findall(rawtext)
     if len(par1m1) == 0:
-        print("Cannot find critial tags (SEC-DOCUMENT to SEC-HEADER). Assume to be HTML file.")
-        urltype = "HTML"                
+        print("Cannot find header tags (SEC-DOCUMENT to SEC-HEADER). Assume to be user specified type.")
+        if args.input_type == "raw":
+            print(f"User specified input_type={args.input_type} but the header does not exist. Stop")
+            sys.exit(191)
+        # urltype = "HTML"         
+        urltype = args.input_type
     else:
         sec_header = par1m1[0][0]
         html1 = par1m1[0][1]
-        urltype = "RAW"
+        urltype = "raw"
+        if args.input_type != "raw":
+            print(f"User specified input_type={args.input_type} but header exists. Stop")
+            sys.exit(190)
       
     if args.verbose >= 1:
-        print(f"URL Type = {urltype} (HTML=Ordinary HTML; RAW=EDGAR Complete submission text file)")    
+        print(f"(based on header tag) URL Type = {urltype} "
+               "(raw=EDGAR Complete submission text file; html=10-K in HTML format;"
+               " native_text=10-K in its original text format;"
+               " cleaned_text=10-K in text format with tables removed )")
+
+    # triangulate with user specified type
+    # arg.input_type need to be [raw|html|native_text|cleaned_text
+    #                                    input_type
+    #   urltype == raw  (with header)    raw (ok)       html|native_text|cleaned_text (not ok)
+    #   urltype == HTML (no header)      raw (not ok)   html|native_text|cleaned_text (ok)
+    #    
+
 
     # prase sec_header
-    if urltype == "RAW":
+    if urltype == "raw":
         header_info = lib10kq.parse_edgar_header(sec_header)
         
         if args.verbose >= 1:
@@ -497,7 +591,7 @@ def main():
             print(f"Confirmed period of report = {header_info['cpr']}")
             print(f"Industry: {header_info['sic_desc']} - {header_info['sic_code']}")
 
-    if urltype == "RAW":
+    if urltype == "raw":
         #now, split by document
         par2 = re.compile('(<DOCUMENT>.*?</DOCUMENT>)', re.M | re.S)
         par2m1= par2.findall(html1)
@@ -575,13 +669,13 @@ def main():
                 if args.debug:
                     fn1 = os.path.join(args.outputdir, "urlfile" + "_clean2.htm.txt")
                     with open(fn1, 'w', encoding = 'utf-8') as fh1:
-                        fh1.write(clean_text)
-    elif urltype == "HTML":
+                        fh1.write(pure_text2)
+    elif urltype == "html":
         # HTML
         if args.verbose >= 2:
             print("Processing html file")
-        if src_type == "url":
-            adoc = r.text
+        # if src_type == "url":
+        adoc = rawtext
         
         # (new method)
         if args.debug:
@@ -600,7 +694,20 @@ def main():
             # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
             fn1 = os.path.join(args.outputdir, "urlfile" + "_clean2.htm.txt")
             with open(fn1, 'w', encoding = 'utf-8') as fh1:
-                fh1.write(clean_text)
+                fh1.write(pure_text2)
+    elif urltype == "native_text":  
+        clean_text = lib10kq.translate2ascii(rawtext.encode('utf-8'))
+        pure_text2 = lib10kq.pretty_text(clean_text)
+        if args.debug:
+            # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
+            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean2.htm.txt")
+            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                fh1.write(pure_text2)
+    elif urltype == "cleaned_text":
+        pure_text2 = rawtext
+    else:
+        print(f"Unknown input_type {urltype}")
+        sys.exit(195)
 
     if src_type == "url":
         if args.outfn_prefix == "AUTO":
@@ -620,13 +727,12 @@ def main():
     if args.verbose >= 2:
         print("    There are %d lines (before removing empty lines)" % nrow, flush = True)  
 
-
-    if method == "isla":    
-        model_isla.eval()        
+    if method == "lstm":
+        model_lstm.eval()
         nrow = len(lines)
-        seqkeep = 0 # sequence line no for keeped lines
+        seqkeep = 0 # sequence line no for kept lines
         linekeep = []  # keeped lines
-        seqmap = dict()  #map from keeped line no. to original line no.
+        seqmap = dict()  #map from kept line no. to original line no.
         for i, aline in enumerate(lines):
             aline = aline.strip()
             if len(aline) > 0:
@@ -640,7 +746,7 @@ def main():
         x = x.to(device)
 
         with torch.no_grad():     
-            tmp_pred = model_isla(x, doc_mask)
+            tmp_pred = model_lstm(x, doc_mask)
             # ce_loss = criterion(tmp_pred, y)
             # total_loss += ce_loss.cpu().item()
             max_pred = tmp_pred.argmax(dim = 1)
@@ -717,29 +823,12 @@ def main():
     # For chatgpt model end
 
     # BERT
-    if method == 'bert':
-        current_dir = os.path.dirname(__file__)
-        # 現有路徑
-        label2id_bert = os.path.join(current_dir, 'tag2021_v3_labelidmap.pkl')
-        with open(label2id_bert, 'rb') as f:
-            labelid_map = pickle.load(f)
-        label_mapping  = labelid_map['label2id']
-
-        reverse_label_mapping = {v: k for k, v in label_mapping.items()}
-
-        tmpmax = max(label_mapping.values())
-        print(f"max id for label is {tmpmax}; going to add two more")
-        START_TAG = "<START>"
-        STOP_TAG = "<STOP>"
-        PADDING_TAG = "<PADDING>"
-        label_mapping[START_TAG] = tmpmax + 1
-        label_mapping[STOP_TAG] = tmpmax + 2
-        label_mapping[PADDING_TAG] = tmpmax + 3
-
+    if method == 'bert':        
         # load model
         # 組合路徑到 `bert_model.pth`
-        model_path = os.path.join(current_dir, args.bertpath)
-        print(f"Loading BERT model from {model_path}")
+        # model_path = os.path.join(current_dir, args.bertpath)
+        # bert_model_fn        
+        print(f"Loading BERT model from {bert_model_fn}")
 
         # embeddings = sentence_bert_model.encode(lines, convert_to_tensor=True)  # (batch_size, embedding_dim)
         nrow = len(lines)
@@ -755,25 +844,39 @@ def main():
 
         # Block start - 這個 block 是替換 line number 745, 757, 772 的部分
         total_features_df = createFeatures(linekeep)
+        # print(f"total_features_df = {total_features_df}")        
+        # raise(Exception("here"))
+
         doc_data = total_features_df.to_numpy()
         embeddings = sentence_bert_model.encode(linekeep)  # (batch_size, embedding_dim)
         final_data = np.hstack((doc_data, embeddings))
         final_data = torch.from_numpy(final_data).float().to(device)
         input_dim = final_data.shape[1]
-        tmp_batchx = final_data.unsqueeze(1)
+        # tmp_batchx = final_data.unsqueeze(1)
+        tmp_batchx = final_data.unsqueeze(0)
         # Block end
         # input_dim = embeddings.shape[1]
 
-        model_lstm_crf = BiLSTM2(input_dim, 
+        if args.verbose >=2:
+            print(f"final_data shape: {final_data.shape}")
+            print(f"tmp_batchx shape: {tmp_batchx.shape}")
+            print(f"input_dim: {input_dim}")
+            print(f"label_mapping: {label_mapping}")
+            print(f"hidden_dim: {hyperparameters_rnn['hidden_dim']}")
+            print(f"num_layers: {args.num_layers}")
+            print(f"device: {device}")
+        
+
+        model_bert = BiLSTM2(input_dim, 
                          label_mapping, 
                          hyperparameters_rnn['hidden_dim'], 
                          device, 
                          num_layers=args.num_layers).to(device)
-        model_lstm_crf = model_lstm_crf.float() 
+        model_bert = model_bert.float() 
 
-        ckpt = torch.load(model_path) 
-        model_lstm_crf.load_state_dict(ckpt)
-        model_bert = model_lstm_crf   
+        ckpt = torch.load(bert_model_fn) 
+        model_bert.load_state_dict(ckpt)
+        # model_bert = model_lstm_crf   
 
         model_bert.eval()
 
@@ -785,7 +888,7 @@ def main():
 
         with torch.no_grad():
             tmp_pred = model_bert(tmp_batchx) 
-            max_pred = tmp_pred.squeeze(1).argmax(dim=1)
+            max_pred = tmp_pred.squeeze(0).argmax(dim=1)
             max_pred = max_pred.cpu().tolist()
             pred = [reverse_label_mapping[tmp_pred] for tmp_pred in max_pred]    
 
