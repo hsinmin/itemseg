@@ -130,7 +130,6 @@ def main():
     parser.add_argument("--crfpath", dest="crfpath", type=str,
                         default="./resource/crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite",
                         help="CRF model (path) for inference")
-    # todo: default to 'AUTO'
     parser.add_argument("--labelid_map", dest="labelid_map", type=str,
                         default='AUTO',
                         help="labelid mapping file;")
@@ -151,7 +150,7 @@ def main():
     args.hostname = platform.node()
 
     # set  user-invisiable parameters
-    # (mostly not used; use do deeper cleanup)
+    # (mostly not used; should do a deeper cleanup)
     args.optimizer = "Adam"
     args.lr = 0.0001
     args.weight_decay = 0.0
@@ -254,8 +253,10 @@ def main():
     if not os.path.exists(args.outputdir):
         os.makedirs(args.outputdir)
 
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
     # ================================
     # prepare the 10-k report
+    
     if args.input.find("http") >=0:
         src_type = "url"
     else:
@@ -270,7 +271,6 @@ def main():
             rawtext = fh.read()
     elif src_type == "url":        
         srcurl = args.input
-
         # do sec url translate
         if srcurl.find("sec.gov/") < 0:
             if args.verbose >= 1:
@@ -283,15 +283,11 @@ def main():
 
         print(f"Getting input file from {srcurl}")
 
-        # "Host": "www.sec.gov",
-        # user_agent_str = args.user_agent_str
         if args.user_agent_str == "N/A":
             print("You need to specify user_agent_str per SEC's rule.")
             print("cf. https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data")
             sys.exit(200)
 
-        # user_agent_str = "National Taiwan University, luim@ntu.edu.tw"
-        # todo: setup cli parameter!!!!
         headers = {        
             "User-Agent": args.user_agent_str,
             "Accept-Encoding": "gzip, deflate",
@@ -484,13 +480,15 @@ def main():
             args.outfn_prefix = os.path.basename(args.input)
 
     rawtext = pure_text2
-    srcfn = "urlfn"
+    # srcfn = "urlfn"
 
     lines = rawtext.split("\n")
     nrow = len(lines)
     if args.verbose >= 2:
         print("    There are %d lines (before removing empty lines)" % nrow, flush = True)  
 
+    # ====================
+    # input file is ready, now we can start to prepare the model
 
     # prepare the model
     if method == "lstm":    
@@ -527,20 +525,11 @@ def main():
         label_mapping[STOP_TAG] = tmpmax + 2    
 
         # Model setting; 
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        # device = 'cuda' if torch.cuda.is_available() else 'cpu'
         if args.verbose >= 2:
             print("Using device", device)
 
-        # to be commented out
-        hyperparameters_rnn = {            
-            'batch_size': 1,               
-            'gamma': 0,          # L2 loss punishment
-            'hidden_dim': 256, # will be overwritten
-            'remove_punc': False, 
-            'add_spaces_between_punc': False,
-            'to_lower_case': False
-        }
-
+        
         if args.verbose >= 2:
             print(f"==== Reading lstm model files in {lstm_model_fn}")
         # args.inference_only = True 
@@ -580,15 +569,7 @@ def main():
         
         if args.verbose >= 2:
             print("Using device", device)
-        hyperparameters_rnn = {
-            'optimizer': args.optimizer,
-            'optim_hparas': {
-                'lr': args.lr, 
-                'weight_decay': args.weight_decay        
-            },
-            'hidden_dim': args.hidden_dim,
-        }
-
+        
         # current_dir = os.path.dirname(__file__)
         # 現有路徑
         # label2id_bert = os.path.join(current_dir, 'tag2021_v3_labelidmap.pkl') 
@@ -663,38 +644,7 @@ def main():
             pred = [reverse_label_mapping[tmp_pred] for tmp_pred in max_pred]    
             # preds.append(pred_label)
 
-        # map the predicted tags back to original line sequence
-        pred_ext = ['X'] * len(lines)
-        for i, tag in enumerate(pred):
-            i2 = seqmap[i]
-            pred_ext[i2] = tag
-
-        last_tag = 'O'
-        N = len(pred_ext)
-        for i, tag in enumerate(pred_ext):
-            if tag == 'X':
-                if last_tag[0] == 'B':
-                    # find next predicted tag
-                    if i+1 < N:
-                        next_ptag = pred_ext[i+1]
-                        step = 2
-                        while next_ptag == 'X' and i + step < N:
-                            next_ptag = pred_ext[i+step]
-                            step += 1
-                        if next_ptag == 'X':
-                            # in case we reach the end of the list
-                            next_ptag = 'O'
-                        elif next_ptag[0] == 'B':
-                            # will not carry future B tags
-                            # next_ptag = last_tag
-                            next_ptag = "I" + last_tag[1:]
-                    else:
-                        next_ptag = 'O'
-                    pred_ext[i] = next_ptag
-                else:
-                    pred_ext[i] = last_tag
-            last_tag = tag
-
+        pred_ext = lib10kq.expand_pred_to_lines (pred, seqmap, lines)     
         outdf = pd.DataFrame({'pred': pred_ext, 'sentence': lines})
         # csvstr = outdf.to_csv(index=False)
         if args.outfn_type.find("csv") >= 0:
@@ -770,14 +720,14 @@ def main():
             print(f"tmp_batchx shape: {tmp_batchx.shape}")
             print(f"input_dim: {input_dim}")
             print(f"label_mapping: {label_mapping}")
-            print(f"hidden_dim: {hyperparameters_rnn['hidden_dim']}")
+            print(f"hidden_dim: {args.hidden_dim}")
             print(f"num_layers: {args.num_layers}")
             print(f"device: {device}")
         
 
         model_bert = lib10kq.BiLSTM2(input_dim, 
                          label_mapping, 
-                         hyperparameters_rnn['hidden_dim'], 
+                         args.hidden_dim, 
                          device, 
                          num_layers=args.num_layers).to(device)
         model_bert = model_bert.float() 
@@ -789,7 +739,7 @@ def main():
         
         model_bert.load_state_dict(ckpt)
         # model_bert = model_lstm_crf   
-
+        
         model_bert.eval()
 
         # tmp_batchx = embeddings.to(device).unsqueeze(1)  # (batch_size, 1, embedding_dim)
@@ -806,42 +756,11 @@ def main():
 
  
         # map the predicted tags back to original line sequence
-        pred_ext = ['X'] * len(lines)
-        for i, tag in enumerate(pred):
-            i2 = seqmap[i]
-            pred_ext[i2] = tag
-
-        last_tag = 'O'
-        N = len(pred_ext)
-        for i, tag in enumerate(pred_ext):
-            if tag == 'X':
-                if last_tag[0] == 'B':
-                    # find next predicted tag
-                    if i+1 < N:
-                        next_ptag = pred_ext[i+1]
-                        step = 2
-                        while next_ptag == 'X' and i + step < N:
-                            next_ptag = pred_ext[i+step]
-                            step += 1
-                        if next_ptag == 'X':
-                            # in case we reach the end of the list
-                            next_ptag = 'O'
-                        elif next_ptag[0] == 'B':
-                            # will not carry future B tags
-                            # next_ptag = last_tag
-                            next_ptag = "I" + last_tag[1:]
-                    else:
-                        next_ptag = 'O'
-                    pred_ext[i] = next_ptag
-                else:
-                    pred_ext[i] = last_tag
-            last_tag = tag
-
+        pred_ext = lib10kq.expand_pred_to_lines (pred, seqmap, lines)        
         outdf = pd.DataFrame({'pred': pred_ext, 'sentence': lines})
         
         if args.outfn_type.find("csv") >= 0:
             outdf.to_csv(os.path.join(args.outputdir, "%s.csv" % args.outfn_prefix), index = False)  
-
 
     if args.verbose >= 1:
         print(f"Output files to {args.outputdir}/{args.outfn_prefix}*")
