@@ -40,7 +40,7 @@ Install virtualenv first if it is not already installed. You can use other tools
 
 For Ubuntu 22 LTS: 
 ```console
-sudo apt instll python-virtualenv
+sudo apt instll python3-venv
 ```
 
 For Mac OS:
@@ -48,12 +48,9 @@ For Mac OS:
 pip3 install virtualenv
 ```
 
-The next step is to setup the virtualenv 
-Ubuntu 22 LTS:
-```console
-virtualenv env_itemseg
-```
-Mac OS
+The next step is to setup the virtualenv.
+
+Ubuntu 22 LTS and Mac OS
 ```console
 python3 -m venv env_itemseg
 ```
@@ -76,21 +73,14 @@ python3 -m itemseg --get_resource
 
 ### Download nltk data
 ```console
-python3 -m nltk.downloader punkt punkt..
-```
-
-Alternatively, you can do the following:
-Launch python3 console
-```console
->>> import nltk
->>> nltk.download('punkt')
+python3 -m nltk.downloader punkt punkt_tab
 ```
 
 ## Itemseg Example Usage
 ### Segment items in a 10-K file
 Using Apple 10-K (2023) as an example:
 ```console
-python3 -m itemseg --input_type html --input https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt --user_agent "Some University johndow@someuniversity.edu"
+python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt --user_agent "Some University johndow@someuniversity.edu"
 ```
 
 See the results in ./segout01/
