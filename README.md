@@ -10,13 +10,15 @@ Itemseg supports the following input formats:
 * **native_text**: 10-K report in pure text format. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt)
 * **cleaned_text**: 10-K report converted to pure text format with tables removed.
 
-The input file (`--input`) can be either a local file or a URL pointing to the SEC website.
+The input (`--input`) can be either a local file or a URL pointing to the SEC website.
 
 Itemseg supports the following item segmentation approaches:
 * **crf**: Conditional Random Field. Recommended for machines without a GPU.
 * **lstm**: Bi-directional Long Short-Term Memory.
 * **bert**: BERT encoder coupled with Bi-LSTM.
 * **chatgpt**: Uses OpenAI API and line-id-based prompting.
+
+Both **lstm** and **bert** require a GPU to work at a reasonable speed. You will need to setup the GPU hardware and driver before using these approaches. You can still use itemseg to process 10-K report without a GPU by selecting the **crf** approach. 
 
 [![PyPI - Version](https://img.shields.io/pypi/v/itemseg.svg)](https://pypi.org/project/itemseg)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/itemseg.svg)](https://pypi.org/project/itemseg)
