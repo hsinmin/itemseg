@@ -103,7 +103,8 @@ As an example, the Amazon 10-K report page for [fiscal year 2022](https://www.se
 
 ### todo:
 ```console
-python3 -m itemseg --input https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004.txt
+python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004.txt --user_agent "Some University johedoe@someuniv.edu"
+
 ```
 
 The default setting outputs line-by-line tags (BIO style) in a CSV file, together with Item 1, Item 1A, Item 3, and Item 7 in separate files (`--outfn_type "csv,item1,item1a,item3,item7"`). You can change the output file type combination with `--outfn_type`. For example, if you only want to output Item 1A and Item 7, set `--outfn_type "item1a,item7"`.
