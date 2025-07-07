@@ -5,9 +5,9 @@
 Itemseg is a 10-K item segmentation tool for processing 10-K reports and extracting item-specific text.
 
 Itemseg supports the following input formats:
-* **raw**: Complete submission text file. See example at [SEC Example](https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt)
-* **html**: 10-K report in HTML format. See example at [SEC Example](https://www.sec.gov/ix?doc=/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm)
-* **native_text**: 10-K report in pure text format. See example at [SEC Example](https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt)
+* **raw**: Complete submission text file. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt)
+* **html**: 10-K report in HTML format. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm)
+* **native_text**: 10-K report in pure text format. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt)
 * **cleaned_text**: 10-K report converted to pure text format with tables removed.
 
 The input file (`--input`) can be either a local file or a URL pointing to the SEC website.
