@@ -1,0 +1,2114 @@
+UNITED STATES
+
+SECURITIES AND EXCHANGE COMMISSION
+
+[x]ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF
+
+THE SECURITIES EXCHANGE ACT OF 1934
+
+For the fiscal year ended December 31, 2006
+
+Commission File Number 1-9014
+
+CHYRON CORPORATION
+
+(Exact name of registrant as specified in its charter)
+
+New York
+
+(State or other jurisdiction of incorporation or organization)
+
+(I.R.S. Employer Identification No.)
+
+5 Hub Drive, Melville, New York
+
+(Address of principal executive offices)
+
+Registrant's telephone number, including area code:
+
+Securities registered pursuant to Section 12(b) of the Act:
+
+
+
+
+
+(Title of Class)
+
+(Name of exchange on which registered)
+
+Securities registered pursuant to Section 12(g) of the Act:
+
+Common Stock, par value $.01
+
+(Title of Class)
+
+Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Yes[ ] No[x
+
+Indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act. Yes[ ] No[x]
+
+Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter periods that the registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days.
+
+Indicate by check mark if disclosure of delinquent filers pursuant to Item 405 of Regulation S-K is not contained herein, and will not be contained, to the best of registrant's knowledge, in definitive proxy or information statements incorporated by reference in Part III of this Form 10-K or any amendment to this Form 10-K. [ ]
+
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, or a non-accelerated filer. See definition of "accelerated filer and large accelerated filer" in Rule 12b-2 of the Exchange Act. (Check one):
+
+Large accelerated filer [ ]
+
+Non-accelerated filer [x]
+
+Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Act).
+
+The aggregate market value of voting stock held by non-affiliates of the Company on June 30, 2006 was $27,890,713. The number of shares outstanding of the issuer's common stock, par value $.01 per share, on March 1, 2007 was 45,649,005.
+
+DOCUMENTS INCORPORATED BY REFERENCE
+
+Portions of the proxy statement for the Annual Meeting of Shareholders to be held May 16, 2007 are incorporated by reference into Part III.
+
+From time to time, including in this Annual Report on Form 10-K, we may publish "forward-looking statements" within the meaning of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Exchange Act of 1934 relating to such matters as anticipated financial performance, liquidity and capital resources, business prospects, technological developments, changes in the industry, new products, research and development activities and similar matters. Although we believe that the expectations reflected in such "forward-looking statements" are reasonable, we can give no assurance that such expectations will prove to have been correct. Actual results could differ materially from our expectations. Information on significant potential risks and uncertainties not discussed herein may be found in our filings with the Securities and Exchange Commission. The Private Securities Litigation Reform Act of 1995 provides a safe harbor for forward-looking statements. In order to comply with
+the terms of the safe harbor, we note that a variety of factors could cause our actual results to differ materially from the anticipated results or other expectations expressed in our "forward-looking statements." Factors that can cause or contribute to these differences include those described under the headings "Factors Affecting Future Results" and "Management's Discussion and Analysis of Financial Condition and Results of Operations." The risks and uncertainties that may affect the operations, performance, development and results of our business include, without limitation, the following: product concentration in a mature market, dependence on the emerging digital market and the industry's transition to digital television ("DTV") and high definition television ("HDTV"), consumer acceptance of DTV and HDTV, resistance within the broadcast or cable industry to implement DTV and HDTV technology, rapid technological changes, continued g rowth, use and improvement of the Internet, new
+technologies that could render certain Chyron products to be obsolete, a highly competitive environment, competitors with significantly greater financial resources, new product introductions by competitors, seasonality, fluctuations in quarterly operating results, ability to maintain adequate levels of working capital, our ability to successfully maintain the level of operating costs, and expansion into new markets.
+
+PART I
+
+ITEM 1. BUSINESS
+
+General Information Regarding the Company
+
+Chyron Corporation ("Chyron" or the "Company" or "we") was incorporated under the laws of the State of New York on April 8, 1966, under the name The Computer Exchange, Inc., which was changed to the present name on November 28, 1975. Our principal executive offices are located at 5 Hub Drive, Melville, New York 11747 and our telephone number is (631) 845-2000.
+
+Overview
+
+Chyron Corporation celebrated its 40^th anniversary in 2006 and enters its fifth decade as a leading supplier of graphics hardware and software to the television industry. The Company develops, manufactures, markets and supports hardware and software products that enhance the presentation of live and pre-recorded video, audio and other data and that provide workflow and asset management solutions for broadcast operations. The Company's architecture is open and Windows^ -based. Currently, Chyron designs the video "engine" that powers each product, designs software applications, assembles and tests components that make up the character generator ("CG") and clips and still server systems, and provides an experienced customer service team. Chyron's broadcast-quality products enable customers to:
+
+* create online or offline, standard definition ("SD")/high definition ("HD") graphics containing text, logos and other 2D, 3D, Flipbook, movie and clips elements by applying special effects, animation, 3D transforming and multi-layer compositing,
+* perform real-time playout of graphics without the necessity of time-consuming file conversion and/or platform changes,
+* perform instant update of text and data using a variety of Chyron tools,
+* manage clips, stills and other assets in a central storage location, making the assets network- and web-accessible,
+* use Chyron Media Object Server ("MOS") newsroom integration to enable journalists and producers to quickly create and update graphics for immediate playout,
+* produce live-data tickers and crawls on dedicated systems, and
+* enable direct talent interaction with live broadcasts using telestration tools.
+
+Our broadcast products are intended to meet the myriad demands of analog and digital television, which include standard definition television and high definition television mandated by the United States Federal Communications Commission ("FCC"). The transition from analog to digital signals in the video and audio world has created a range of additional means to deliver video and audio content to the consumer, as well as innovations in storage and management of video and audio assets.
+
+Our video and digital signage products, based on our advanced video processing technology, provide a low-cost, informational/advertising video display which overlays a video source from TV, DVD, camera, etc. The target customers are establishments such as hospitals and medical offices, educational institutions, retailers, corporations, government, independent and franchised restaurants/sports bars, car dealerships, and others that display video to customers, employees or others.
+
+From the time the Company introduced its first character generator in 1970, Chyron's graphics products have grown to become integral to television operations world-wide. Chyron offers a comprehensive experience in providing integrated, scalable real-time graphics solutions. Since the Company has established such a strong presence in the live, "on-air" television graphics segment, its customers have grown to include most major broadcast, cable, satellite and post-production facilities in the U.S. and Europe. Chyron continues to make inroads into Asia, South America and Australia. A small sampling of users includes ABC, CBS, ESPN, Fox News, CNN, Fox Sports, C-SPAN, Discovery, Weather Channel, Home Shopping Network, Comcast, DirecTV, Shop at Home, Court TV, NBA, Turner Entertainment, CBC (Canada), BBC (UK), France 3, Korean Broadcast, YV Catalonia (Spain), Skai TV and numerous local and regional stations. The Company is focused on leveraging and building on its leading brand image and large
+installed base in the broadcast graphics market to further penetrate the post-production, corporate, educational and professional video market sectors.
+
+Products and Services
+
+The Company offers a broad range of powerful graphics products that provide broadcast-quality, real-time HD/SD, 2D/3D graphics creation and playout to the television stations, networks, video production and post-production markets. The Company's line of high-performance systems is relied upon by many of the world's leading broadcast stations to display 2D/3D animated news flashes, election results, sports scores, stock market quotations, programming notes and weather information.
+
+The Company's products are Windows^ -based, feature open architecture, and incorporate a high content of off-the-shelf components. Industry-standard interface protocol enables Chyron's equipment to be easily integrated into the most advanced television facilities, as well as MOS-based newsroom installations. Furthermore, the Company's software has become an indispensable plug-in application for products offered by leading broadcast manufacturers such as Avid^ , Leitch^ and Thomson Grass Valley^ , greatly extending the capabilities of those products.
+
+The Company is dedicated to providing the highest quality and most comprehensive array of broadcast graphics products, ranging from low-cost CG packages that run on a user-supplied computer, to fully-integrated systems providing precision management of text, stills, clips, effects, audio, storage, networking, newsroom integration and multi-format distribution. A summary description of Chyron's selected products and services is listed below.
+
+Hardware Products
+
+The Graphics System/CG Family: The Graphics System/CG family is comprised of real-time, 2D/3D graphics platforms and systems that integrate a Windows^ 2000 or Windows^ XP front end with real-time video processing to provide exceptional performance for television graphics applications. The HyperX is our flagship graphics system, in use by major local, regional and national facilities. Several major broadcasters have standardized the HyperX as the graphics systems of choice for their major sporting events. The HyperX is a multi-standard platform, providing both SD and HD within each channel without the necessity of a separate upgrade. Migration from SD to full HDTV is accomplished with just a mouse-click. Content may be created and played back in any of our supported standards. The Graphics System/CG family employs Lyric and the powerful Lyric PRO option, Chyron's on and off-line content creation and playout software applications, to compose messa ges and play content to air. The systems'
+open architecture has enabled us to provide a range of scalable, cost-effective product solutions, from low-cost single-channel CGs to fully integrated multi-channel systems with clip playout and DVE. The Graphics system/CG family is rounded out by our new, HD-capable LEX^2, evolved from our highly successful LEX, and the MicroX HD/SD, MicroX, and EAS and board-level products.
+
+XClyps: Xclyps has defined a new paradigm for graphics server technology and performance, with a revolutionary design that provides unprecedented quality and control over graphics playout. Serving the most demanding multi-format environments, XClyps can be configured with one or two completely independent, switchable HD/SD channels, each with synchronized video and key outputs. Advanced Wavelet compression provides high-capacity storage and flawless playout of channel branding, promos, snypes and DSK. XClyps can be easily integrated as a single system, or multiple XClyps systems can be networked. Built on .Net technology with 1000 BaseT interface, assets can be quickly transferred across the network. Thanks to a powerful application environment that provides unsurpassed flexibility, XClyps can be controlled remotely via Pro-Bel protocol and Harris (Louth) VDCP and Grass Valley^ PbusII protocol.
+
+Channel Box/Channel Box HA: Channel Box is an HD/SD-switchable branding and automated promo system built on our Lyric PRO application, featuring 2D/3D design and playout for branding applications, including tickers, crawls, snypes, "bag & tag," promos and end-credits. The system's real-time video, graphics effects, clips and audio can be integrated with automation systems, or the system can be used as a standalone branding device. Channel Box is offered in two configurations to fit both needs and budget: Channel Box HA provides mirrored system drives, hot-swappable RAID5 drives for media storage and playout and redundant power. Channel Box (standard) provides a robust system with redundant power. Channel Box was the recipient of the Broadcast Engineering Pick Hit Award at IBC2006.
+
+DynaCrawl/DynaCrawl Squeezeback/DynaCrawl HD/SD: Answering an audience demand for current, continuous information, Chyron's DynaCrawl can simultaneously generate two fully-animated news crawls/tickers and a time/temperature display. DynaCrawl automatically gathers, updates and displays user-selected data from a wide variety of news, weather, sports and financial services. The crawls, tickers and time/temperature displays are
+
+enhanced by dynamic transition effects such as roll, fade, flip, spin and "roll & crawl." An intuitive interface enables each crawl and ticker to be independently configured for font style, color, size, edge, background, crawl rate, etc., providing a look unique to a show, channel or network. Static or animated logos can be incorporated into the crawl/ticker display to reinforce channel branding. Because configurations can be saved, they can be easily applied to different shows. Chyron also offers a custom, third-party solution which packages the customer's choice of news, sports, business and/or other information data delivery services with a plugin which seamlessly ports the data feeds to the DynaCrawl display. DynaCrawl's affordability makes it accessible to a wide range of broadcast facilities.
+
+CAL Box/CAL Box HD/CAL Box HD/SD: In addition to systems with ready-to-use software packages, Chyron offers a powerful, dedicated graphics platform for which custom applications can be created using Chyron's richly-featured CAL developer's tools, in a variety of development environments. CAL Box can generate and playout real-time, broadcast-quality graphics and can integrate with a wide variety of external devices and applications including automation, newsroom and asset management systems and web servers. Real-time data feeds can be connected to CAL's data update module, and continuous feeds of financial, news, sports or other information are automatically displayed in static or animated text, rolls and crawls. CAL's compound 3D animation engine provides built-in and custom data transition effects to create uniquely engaging displays such as interactive viewer feedback from Internet polls.
+
+Chyron Aprisa
+^SSX Still Store: Chyron's Aprisa SSX still store provides high-quality storage and playout for SD images including "over-the-shoulder" shots for news, sports and other broadcasts. Aprisa SSX systems have sophisticated database functions to quickly search and retrieve thousands of images for instant recall or playout in sequence through internal or external playlists. Aprisa SSX and Chyron systems seamlessly integrate for a streamlined workflow.
+
+iSX200 Still Store: The iSX200 is Chyron's HD/SD-switchable still store system providing comprehensive management and playout of broadcast-quality still graphics. Designed specifically for the fast-paced live sports, news and entertainment production workflow, the iSX200 features an intuitive interface, playlist creation, editing tools and a searchable, sortable database for easy retrieval of images.
+
+CodiStrator SD/CodiStrator HD/SD Telestration Systems: Further serving the live broadcast market are Chyron's CodiStrator systems which enable two commentators to illustrate in real time over live video. A favorite of football commentators, CodiStrator features digital drawing, animated video stickers, logos, extendable lines/arrows and more, to provide impact to live coverage. CodiStrator extends beyond the broadcast booth as an ideal illustration tool for corporate, health and educational presentation.
+
+In the race by businesses to attract and hold the attention of potential customers, new information distribution channels have developed, among them, digital signage. To take advantage of this exciting new advertising venue, Chyron introduced, in January 2005, the ChyTV digital signage product line. Incorporating the advanced video processing technology driving our broadcast-quality systems, ChyTV provides low-cost, easy-to-use graphics for digital signage applications. By including features such as video squeezeback, video overlay,
+
+animations and sound effects, Chyron has essentially re-invented the video information display. With this product line, and fresh sales and distribution channels, Chyron is extending its reach into new markets. Our current target markets include entities such as hospitals, medical offices, educational institutions, retailers, corporations, government facilities, independent and franchised restaurants/sports bars, car dealerships, and others that display video to customers, employees or others.
+
+ChyTV Plus:
+Based on the popular ChyTV Video Graphics Information Display system, it extends the product line to include S-video and component video inputs and outputs, serial and GPI control interfaces and both Ethernet and USB connectivity all in a rugged half rack unit chassis. Ideal for any professionally installed video messaging system, ChyTV Plus utilizes the same ChyTV Tools utilities to manage the projects and is completely compatible with existing ChyTV units. The additional features enable more flexible system integration and enhanced video capabilities.
+
+ChyAlert
+: Based on the ChyTV Video Graphics Information Display system, it is a unique product that adds Alert messages to any video source. It is a specialized video appliance designed specifically for automated and/or manual display of emergency and security alert graphic, text and audio in a video distribution display or CATV systems. As a self-contained device, ChyAlert integrates a video source along with a locally generated message. These messages can be standardized or customized for specific applications or situations. Dynamic text elements can be derived from secure data or updated in real-time, either locally or remotely. Secure software applications allow preset messages to be displayed or controlled by authorities to update and alter content.
+
+ChyAlert-2CH: A two channel Video Emergency and Security Alert System. This industrialized version of the ChyAlert single channel system and a member of the ChyTV Video Graphics Information Display product line, is optimized for use with MATV systems in government buildings, hotels, hospitals, transportation centers, universities and any public facility where television signals are widely distributed to all TVs and video displays.
+
+Software Products
+
+The Company's broadcast graphics systems operate primarily with two main software components: Lyric and CAL (Chyron Application Library), plus a number of third-party applications. With the goal of providing end-to-end solutions for its customers, Chyron unifies graphics operations with its workflow and asset management applications, including CAMIO, iSQ and new XMP-based applications.
+
+Lyric^ : Lyric is a highly advanced graphics creation and playback application that is standard on Chyron's graphics/CG systems. Lyric is compatible with systems running Windows^ XP. Using Lyric, graphic artists can create brilliant, multi-layered 2D/3D graphics on a Chyron system or offline, for later playout on a Chyron. Content can be created in one location and transported by local area network ("LAN") or wide area network ("WAN") to another device or facility on the same network. Lyric uses standard Windows^ network protocols and imports numerous standard 2D, 3D and animation file types, as well as legacy iNFiNiT!^ , Quantel^ , and
+
+SGI^ formats. Lyric features intuitive and agile operation, powerful flexibility, hardware transparency, and interoperability with many third-party graphics applications and technologies. Lyric was designed from inception to easily incorporate future advances in software and hardware.
+
+The introduction in the first quarter of 2006 of the Lyric PRO option has revolutionized graphics production and workflow. Based on Chyron's innovative interFuseTM Technology, this object-oriented technology provides unprecedented flexibility in graphics creation and live playout. Major features include: Intelligent Transitions that enhance live broadcast, by enabling playback of transition elements and messages in any order, at any time; live data update executed within transition; continually rendered static and animated graphics, allowing transitions to be executed at will; control of multiple scene graphs for support of complex, multi-layered animations (unique to Lyric PRO); persistent elements completely integrated with graphic animations; and advanced 3D texturing. Lyric PRO was the recipient of the TV Technology STAR Award and the Television Broadcast Top Innovation Award at NAB2006.
+
+Lyric and Lyric PRO are also available as offline applications, enabling users to create graphics on PCs for playout on Chyron systems.
+
+LEIF: Lyric Enhancement Interface Framework ("LEIF") is a Chyron application programming interface ("API") for developing custom applications that harness the power of Lyric for graphics generation. LEIF applications can be created to provide added functionality for Lyric via plugins and to control Lyric from external applications. The plugin architecture supports the addition of user-defined menus and control panels in the Lyric User Interface, user-definable object properties and integral control over the basic functionality of Lyric. Using LEIF, developers can create applications that perform image processing, import and export to custom file formats, automate template field updates, implement remote application control, access browser data and handle numerous diverse operations. Plugins are typically installed by simply placing the file into Lyric's Plugins directory. The LEIF API is based on COM technology. Plugins or applications can be written using any d evelopment environment that
+supports COM. Examples of popular languages include Visual Basic^ , Delphi^ , and Visual C++^ . For external control of Lyric, the LEIF API consists of a series of methods and properties that offer direct manipulation over Lyric functionality. Via the LEIF API, applications can efficiently control Lyric for scenarios that require automated manipulation of Lyric's behavior. LEIF developers have access to the LEIF development network, which provides access to support and the latest tools.
+
+CAL: The Chyron Application Library is a powerful API used to create customized, real-time, high-quality broadcast graphics applications for Chyron platforms or Chyron board-level products. For example, continuous data feeds of financial, news, sports or other information are easily transformed into rolls and crawls through CAL's data spooler. CAL's compound 3D animation engine provides built-in and custom data transition effects to create unique, eye-catching displays. CAL can be used to create graphics not only for Chyron's CAL Box, but for a wide variety of graphics systems. Chyron's third-party developer network creates and markets many specialized CAL applications to address a wide array of broadcast operations. CAL
+
+developers can join the Chyron Developer Network, participate in a supportive community of industry experts and receive access to new tools and an expanding base of CAL-created projects.
+
+Newsroom Integration and Asset Management
+
+CAMIO (formerly known as Chyron MOS): Television newsroom operations depend on accurate, lightning-fast exchange of information and graphics among disparate computer systems and devices. MOS protocol enables Newsroom Computer Systems ("NCS"), Media Object Servers and devices such as graphics systems/CGs to exchange information, i.e. "talk to each other," using the industry-standard MOS protocol. With CAMIO integrated into a newsroom, journalists and producers can access a library of templates from their newsroom workstations, to quickly create and edit text, graphics and movies via our LUCI ActiveX WYSIWYG interface. CAMIO's powerful asset management tools, search engine and visual browser make it easy to locate graphic templates, images and movies. Completed pages are associated with a story, and then the stories are ordered by the Newsroom Computer System and sent to a Chyron system playlist for playout to air. Changes in the newsroom rundown ar e automatically and instantly reflected on
+the Chyron output device, ensuring a more streamlined and accurate newsroom production environment. Because journalists and producers are directly involved in the final output, there is far less opportunity for error, and they can quickly make last-minute changes without involving a graphic artist or graphics system/CG operator. In addition, as the graphics are based on existing, reusable templates created by graphic artists, CAMIO speeds the production of pages by eliminating the need for a graphic artist to create each page for a news broadcast. This frees artists for other tasks and increases output of the art department. Chyron also offers the Proximity Artbox graphics server and Proximity Order Management Module graphics request application, which integrate seamlessly with CAMIO and provide an extra dimension of control over graphic storage, search and graphic creation in the MOS newsroom environment.
+
+ISQ: iSQ (Intelligent Sequencer) offers a single control interface to manage playlists from multiple channels across multiple Chyron playout devices. iSQ includes CueBoard, an intuitive panel to control up to four playlists within the iSQ application. The iSQ software consists of server software to be loaded on the playout devices and client software that can be used to both view and verify playlist content as well as playback control.
+
+Mobile Suite:
+Chyron exploits the rapidly expanding "citizen journalist" phenomenon with its Mobile Suite of products for CAMIO. Chyron's Mobile Suite integrates cell phones directly with the news production workflow. Viewers everywhere are using their cell phones as cameras, uncovering reporting opportunities as never imagined, and now broadcasters can both integrate cell phone images directly into live broadcasts and build loyalty through direct involvement of viewers with unfolding events. Chyron's Mobile Suite includes two products, the award-winning WAPSTR and MOS2WAP.
+
+WAPSTR is a Multimedia Messaging Gateway and CAMIO plugin interfacing with the public mobile phone network. WAPSTR enables simple upload of photos and videos from mobile phones, directly to newsroom computer systems. Journalists have instant access to
+
+these materials, which can quickly and easily be dropped into templates for immediate on-air use. WAPSTR was the recipient of the TV Technology Europe STAR Award at IBC2006.
+
+MOS2WAP features a WAP Server and CAMIO system plugin for simultaneous publication of WAP pages from within Newsroom Computer Systems. Changes to the rundown and breaking news stories are instantly posted to the WAP server, increasing newsroom efficiency and immediately reaching the new mobile audience. Cell phone users can browse and display the latest stories generated from the WAP server.
+
+Chyron has accelerated and extended its interFuse development to encompass Adobe^ Extensible Metadata Platform ("XMP") technology. XMP is fast becoming an industry-wide standard, providing a lingua franca for managing assets with sophisticated packaging of the metadata that travels with each asset file. interFuse leverages XMP technology by tapping into the metadata to optimize broadcast graphics workflow, from centralized creation and storage through distribution and playout. Customized user interfaces can be tailored to the requirements of a facility. Metadata fields can be mapped to graphics template fields in a graphic to accomplish tasks such as populating a head shot with the subject's name, position and automatically updated sports stats, allowing HD graphics to be brought only into HD templates, and preventing the image of a politician from one party from being dropped into a graphic illustrating a different party. With the flexibility and automation afforded by interFuse, a
+facility truly has the ability to build business logic into their operations, increasing the efficiency and productivity that is ultimately reflected in their bottom line.
+
+Sales and Marketing
+
+We market our broadcast products and systems to traditional broadcast, production and post-production facilities, government agencies, educational, health institutions, religious institutions and telecommunications and corporate customers. In order to maintain and increase awareness of our products, we display at the major domestic and international trade shows of the broadcast and post-production segments. In the U.S., we exhibit at the National Association of Broadcasters ("NAB") Convention and other, smaller trade shows. We also exhibit at the International Broadcasters Convention ("IBC") in Europe and other smaller trade shows internationally. At these smaller shows, we exhibit either directly or in partnership with our dealers. Our digital signage products are exhibited at A/V shows and other venues which market to our target customers for these products.
+
+Product promotion is also achieved through direct-mail campaigns, e-newsletters and advertisements placed in relevant journals. Due to our long standing reputation as an innovator in the broadcast graphics market, our views are sought out and articles are often published in trade journals and papers presented at technical conventions by our engineering and corporate staff, reinforcing our technical credentials.
+
+Sales of our broadcast products in the U.S., U.K. and France are made through our direct sales personnel as well as through dealers, independent representatives and systems integrators. Sales of our products outside of these geographic areas are made through dealers and sales representatives covering specific territories. Direct sales, marketing and product specialists
+
+serving our global markets act as links between the customer and our development teams. In 2006, we sold our products in over 40 countries around the world. Sales of our digital signage products are conducted largely through third-party dealers.
+
+Service, Support and Training
+
+For our broadcast products, we offer comprehensive technical service, support and training to our customers through 24-hours-per-day, seven-days-per-week, 52-weeks-per-year access to trained service and support professionals. Scalable and fixed-duration training courses are also available. These training courses range from one day to one week and consist of a mix of classroom discussions and hands-on training. We offer training courses for many of our products at our Melville, NY headquarters, or at customer sites. Chyron has also made training available to a wider user base by offering WebEx^ courses, in which users can participate in interactive, online instruction.
+
+We provide our broadcast customers with installation assistance, hardware and software maintenance contracts and spare parts. We believe that support contracts and a responsive spare parts supply facilitate customer satisfaction. We have also implemented WebEx to help customers resolve problems and update software on their systems. By using this tool, we can speed up repairs and cut costs by not having to send technicians to the customer site. Service is provided both domestically and internationally by us or through our appointed dealers and representatives. We also provide sales and service support to our dealers.
+
+ChyTV support is provided by our network of ChyTV dealers, to whom we also provide support. Future digital signage products will be supported in the same manner.
+
+Warranty
+
+We generally provide warranties on all of our products for one year. There may be, in certain instances, exceptions to these terms. A provision is made to estimate the warranty cost in products sold based on historical actual results.
+
+Research and Development
+
+Our research and product development has primarily been focused on the revitalization and extension of our core products. During 2006, 2005 and 2004, we spent approximately $4.0 million, $2.9 million and $3.4 million, respectively, for research and development for new and existing products.
+
+Manufacturing
+
+Our final assembly, system integration and test operations are located in Melville, NY. We primarily use third-party vendors to manufacture and supply much of the hardware components and sub-assemblies. The Company relies on a limited number of suppliers for major hardware components. We are continually reviewing product specifications in order to diversify the sourcing of critical components. With our open architecture, we use more "off-the-shelf"
+
+components than we have in the past. This not only permits us greater flexibility in sourcing of components, but provides better gross margins on our products through the attainment of lower costs through competitive sourcing and greater commonality of components among our products. We continue, however, to develop proprietary hardware to implement specialized features unique to Chyron.
+
+Customers
+
+There are no customers that individually represent in excess of 10% of our consolidated revenues for 2006, 2005 or 2004.
+
+Competition
+
+The markets for our graphics products are highly competitive and are characterized by rapid technological change and evolving industry standards. Product obsolescence, frequent development of new products and significant price erosion are all features of the industry in which we operate. An FCC ruling requires U.S. broadcasters to transition to digital television ("DTV") transmission by 2009. If a similar requirement were to be imposed by other government agencies worldwide, it would require large future capital expenditures by the broadcast industry. Management believes the FCC's ruling has created an opportunity for us in the market place.
+
+At the same time last year, our ability to capitalize on this opportunity had been delayed due to slower-than-anticipated market acceptance and implementation of DTV transmission globally by broadcasters. The market for HD systems and applications has been steadily growing. The cycle necessary to drive the conversion to HD production and broadcast has finally started to gain momentum, with the drop in price of consumer HD flat panel TVs, the resulting acceleration in purchases and the expectation of consumers that they will be able to tune into HD broadcasts. Chyron is fully prepared with a comprehensive HD/SD-switchable product line that eliminates the need for a facility to budget twice for SD and HD equipment.
+
+We are currently aware of several major and a number of smaller competitors. We believe our primary competitors are Avid Technology, Inc., and their Pinnacle Systems subsidiary, Vizrt Ltd. and Harris Corporation's Inscriber subsidiary. Some of these companies have significantly greater financial, technical, manufacturing and marketing resources than we have. On a region-by-region basis, certain product categories or market segments in which our Company operates, or may operate, are dominated by established vendors.
+
+Patents and Proprietary Rights
+
+All of our products are proprietary in that we have the exclusive right to manufacture them. We sell our products directly and through third-party dealers and agents under contractual arrangements with those third parties. Our success depends upon our ability to protect our proprietary intellectual property, technology and know-how and operate without infringing on the rights of others. We rely on a combination of methods to protect our proprietary intellectual property, technology and know-how, such as trade secret laws, trademark law, patent law, contractual provisions, confidentiality agreements and certain technology and security measures.
+
+Our registered trademarks for our current product line are The Company The Whole World Watches, Chyron, CODI, Duet, Chyron Care, Intelligent Interface, Intelligent Interface (I^2), HyperX, Newscrawl, Transform, Perfection of Image and Lyric. We also have rights in trademarks and service marks that are not federally registered, including WAPSTR and interFuse. We do not have registered copyrights on any of our intellectual property.
+
+We have been awarded patents for our Duet (graphics system/CG) architecture and our interactive TV authoring software application. Our latest patent award was for technology that enables the integration of live television graphics data with a broad range of interactive media platforms and consumer electronics devices.
+
+Government Regulation
+
+The telecommunications and television industries are subject to extensive regulation in the United States and other countries. For example, the FCC has issued regulations relating to shielding requirements for electromagnetic interface in electronic equipment. Our products are in compliance with these regulations. Furthermore, television operators are subject to extensive government regulation by the FCC and other federal and state regulatory agencies.
+
+In addition, we are currently well into the process of bringing our products into compliance with RoHS (Restriction of Hazardous Substances) regulations, which were implemented in the European Union as of July 1, 2006.
+
+Employees
+
+As of December 31, 2006, the Company employed 100 persons worldwide. None of these employees are represented by a labor union. We also contract consulting personnel for specific functions or expertise. The number of consultants fluctuates according to our requirements.
+
+Where You Can Find More Information
+
+We are required to file annual, quarterly and current reports, proxy statements and other information with the Securities and Exchange Commission ("SEC"). These filings are not deemed to be incorporated by reference into this report. You may read and copy any documents filed by us at the Public Reference Section of the SEC, 450 Fifth Street, N.W., Washington, D.C. 20549. You may obtain information on the operation of the Public Reference Room by calling the SEC at 1-800-SEC-0330. Our filings with the SEC are also available to the public through the SEC's website at http://www.sec.gov.
+
+We maintain Internet sites at www.chyron.com and www.chytv.com. We make available, free of charge, through our www.chyron.com website, our annual, quarterly and current reports, as well as any amendments to these reports, as soon as reasonably practicable after electronically filing these reports with the SEC. Our websites and the information contained posted on them or connected to them shall not be deemed to be incorporated by reference into this report.
+
+ITEM 1A. RISK FACTORS
+
+Factors Affecting Future Results
+
+Our operating results may fluctuate from period to period and therefore may fail to meet expectations, which could cause our stock price to decline.
+
+Our operating results have varied widely in the past and are likely to do so in the future. In addition, our operating results may not follow any past trends. Our future operating results will depend on many factors and may fail to meet our expectations for a number of reasons. Any failure to meet expectations could cause our stock price to significantly fluctuate or decline.
+
+Factors that relate to our internal operations and could cause our operating results to fluctuate include:
+
+* the need for continual, rapid new product introductions,
+* changes in our product mix,
+* our inability to adjust our fixed costs in the face of any declines in sales,
+* successful execution of our strategy to develop and market products for the TV broadcasting markets, namely, character generators, graphics platforms, video clip and still stores, channel branding, telestration software, workflow solutions, media management, Chyron MOS newsroom integration and XMP-based interFuse solutions,
+* successful execution of our strategy to develop and market products for the digital signage market, including the ChyTV products,
+* the quality and market acceptance of new products, and
+* the timing and nature of selling and marketing expenses (such as trade shows and other promotions).
+
+Factors that depend upon our suppliers and customers and could cause our operating results to fluctuate include:
+
+* the timing of significant product orders, order cancellations and reschedulings,
+* the availability of production capacity and fluctuations in the manufacturing yields at the facilities to which we subcontract our critical components,
+* our ability and that of our suppliers to bring our entire product line in compliance with RoHS regulations, in effect since July 1, 2006 (affecting European Union sales only),
+* the cost of raw materials and manufacturing services from our suppliers, and
+* the financial stability of our suppliers and customers.
+
+Factors that are industry risks and could cause our operating results to fluctuate include:
+
+* intense competitive pricing pressures,
+* introductions of or enhancements to our competitors' products,
+* the cyclical nature of the broadcast industry,
+* economic conditions affecting our customers and us,
+
+* acceptance of our expanding workflow and asset management solutions, and
+* acceptance of our new line of products that address the non-broadcast, digital signage market.
+
+Our day-to-day business decisions are made with these factors in mind. Although certain of these factors are out of our immediate control, unless we can anticipate and be prepared with contingency plans that respond to these factors, we will be unsuccessful in carrying out our business plan.
+
+If we fail to successfully develop, introduce and sell new products, we may be unable to compete effectively in the future.
+
+We operate in a highly competitive, quickly changing environment marked by rapid obsolescence of existing Windows^ -based, open platform products. Our future success depends on our ability to develop, introduce and successfully market new products, including graphics systems and software that continues to replace our legacy iNFiNiT!, MAX!> and MAXINE! products and older graphics systems from the Duet graphics line. Our success also depends on the ability to cement our position in new segments of the broadcast market with our workflow and asset management, channel branding and Mobile Suite product lines. To date, we have been selling our graphics systems/CG products in increasing quantities, due in part to the increasing implementation of HD by the broadcast facilities. We have also had success with our CAMIO Newsroom Integration and Asset Management products. We must continue to increase our sales or our business will suffer. If any of the following occur, our busines s will be materially
+
+* we fail to complete and introduce new product designs in a timely manner,
+* we are unable to have these new products manufactured according to design specifications,
+* our customers do not perceive value in our new products and demand deep discounts,
+* our sales force and independent distributors do not create adequate demand for our products, or
+* market demand for our new products does not develop as anticipated.
+
+If we are unable to keep up with rapid change in our industry, our business will not grow.
+
+The markets for our products are characterized by rapidly changing technology, evolving industry standards and frequent new product introductions and enhancements. Due to technological advancements and changes in industry standards, our products may become obsolete or the prices at which we can sell them may decline. Future technological advances in the television and video industries may result in the availability of new products or services that could compete with our products or reduce the price of our existing products or services. The availability of competing or less expensive products could cause our existing or potential customers to fulfill their needs, more effectively and cost-efficiently, with products other than ours.
+
+For example, customers are beginning to use personal computers to edit graphics. This is a task that traditionally would have been completed on our lower-end standalone machines. We
+
+have answered this challenge with the development of offline versions of our graphics applications as partner products for our online graphics systems. These offline applications enable graphics creation on PCs for playout on Chyron systems.
+
+We may not be successful in enhancing our products or developing, manufacturing or marketing new products that satisfy customer needs or achieve market acceptance. In addition, services, products or technologies developed by others may render our products or technologies uncompetitive, unmarketable or obsolete. Announcements of currently planned or other new product offerings by either our competitors or us may cause customers to defer or fail to purchase our existing products or services.
+
+In addition, it is possible that errors or failures may be found in our products. Such errors or failures could cause delays in product introductions and shipments or require design modifications that could adversely affect our competitive position. This could result in an increase in the inventory of our products. If we do not develop, on a timely basis, new products and enhancements to existing products, or correct errors should they arise, or if such new products or enhancements do not achieve market acceptance, then our business, financial condition and results of operations may suffer. Furthermore, the trend toward the use of open systems may cause price erosion in our products, create opportunities for new competitors, allow existing competitors enhanced opportunities and limit the sale of our proprietary systems.
+
+We expend substantial resources in developing and selling our products, and we may be unable to generate significant revenue as a result of these efforts.
+
+To establish market acceptance of our products, we must dedicate significant resources to research and development, production, and sales and marketing. We experience a delay between the time when we expend these resources and the time when we begin to generate revenue, if any, from these expenditures. Typically, this delay is one year or more. We record as expenses the costs related to the development of new products as these expenses are incurred. As a result, our profitability from quarter to quarter and from year to year may be materially and adversely affected by the number and timing of our new product introductions in any period, and the level of acceptance gained by these products.
+
+If the digital video market does not grow quickly enough, we will be unable to increase our revenues.
+
+Our future growth and success in our existing business lines will depend to a significant degree on the rate at which broadcasters and cable operators convert to digital video systems, and the rate at which digital video technology expands to additional market segments. Television broadcasters and cable television operators have historically relied on and utilized traditional analog technology. Although the acceptance of digital technology has gained significant momentum, the move from traditional analog technology to digital video technology continues to require a significant expense for television broadcasters and cable television operators. Accordingly, the use of digital video technology may not expand as quickly as anticipated among mid-size and smaller television broadcasters and cable television operators or into additional markets. If television broadcasters and cable television operators do not accept and
+
+implement digital video technology, or if the ruling of the FCC mandating these changes is repealed or amended, we may not be able to grow our existing business lines and our financial condition will suffer.
+
+If the workflow and asset management solutions and Mobile Suite products do not produce as expected, then there will be a negative impact on revenue and earnings.
+
+Chyron's investment in developing these new technologies has resulted in products that have shown great potential. As we are in relatively untested waters with the newest technologies, both from the standpoint of Chyron's traditional product line and the industry as a whole, there will be a process of maturation, in which some branches of development may lead to dead ends and require significant reconfiguration or cessation, and other branches which may prove immediately successful. In addition, as we move into producing workflow and asset management solutions to be installed in large facilities with complex requirements, we must ensure that the individual requirements of each customer implementing our solutions do not "invisibly" drain our resources in terms of time and manpower diverted to support. All of these factors could lead to an erosion of the profit realized by the sale of these products.
+
+If our digital signage products do not produce as expected, then there will be a negative impact on revenue and earnings.
+
+Chyron has entered the digital signage market with its ChyTV display system, catering to a non-broadcast market segment. Our entrance into this market is based on research results indicating that there is an increasing opportunity for these products among customers such as hospitals and medical offices, educational institutions, government facilities, retailers, corporations, independent and franchised restaurants/sports bars, car dealerships, etc. This technology is based on our existing, advanced video processing technology, which places the Company on firm ground with regard to the functionality of these types of products. Our success in this market has been growing, but we still must depend heavily on our A/V dealers to make new inroads.
+
+Digital signage products are typically sold at low-cost. Because the target market differs markedly from the broadcast market, the sales and marketing strategy for this product line cannot be modeled on the sales and marketing structure currently in place for our broadcast products. The planned distribution channels do not, in the short term, involve brick-and-mortar, catalogue or online retail. Except for a small segment of sales, they also do not involve our direct sales force, as it is not cost-effective to deploy Chyron sales personnel whose efforts must remain focused on high-revenue broadcast products. As we go forward with our plan to partner with a network of professional A/V dealers, we may be required to depend initially on an untested, fragmented pool of third-party dealers, and systems-integrators with varying commitment to ChyTV sales, who will likely be selling ChyTV as an ancillary product to a set of related or unrelated products and/or services. If these distribution chan
+nels do not produce as anticipated, then growth and revenue will not meet expectations.
+
+We will be unable to compete effectively if we fail to anticipate product opportunities based upon emerging technologies and standards and fail to develop products that incorporate these technologies and standards.
+
+We may spend significant time and money on research and development to design and develop products around an emerging technology or industry standard. If an emerging technology or industry standard that we have identified fails to achieve broad market acceptance in our target markets, we may be unable to generate significant revenue from our research and development efforts. Moreover, even if we are able to develop products using adopted standards, our products may not be accepted in our target markets. As a result, our business would be materially harmed.
+
+If systems manufacturers move away from the use of industry standards that we support with our products and adopt alternative standards, we may be unable to design and develop new products that conform to these new standards. The expertise required is unique to each industry standard, and we would have to either hire individuals with the required expertise or acquire this expertise through a licensing arrangement or by other means. The demand for individuals with the necessary expertise to develop a product relating to a particular industry standard is generally high, and we may not be able to hire such individuals. The cost to acquire this expertise through licensing or other means may be high and such arrangements may not be possible in a timely manner, if at all.
+
+Since our systems have become Windows^ -based, we have become vulnerable to issues which arise, both anticipated and unanticipated, whenever a current version of Windows^ is updated or, a new version of Windows^ is released. When a Windows^ update is released, Lyric, other Chyron applications and/or the graphics systems may fail to function correctly or at all. Consequently, we incur expenditures conducting an investigation, and subsequently, devising a solution. This can be a time- and capital-consuming process. When a new version of Windows^ is released, we are forced, against our schedule, to rigorously test all of our software and systems using the new version, investigate malfunctions, and re-engineer our software where necessary. This financial and labor expenditure is required in order for us to have the ability to officially represent our software and systems as supporting a specific version of Windows. Wind ows issues, while diverting engineering and capital resources, have not
+been considered a major risk to our overall success. In addition, the same issues affect our competitors as well. We would sacrifice market share, however, if we did not continue to develop and exploit the advantages of Windows^ accessibility.
+
+The effect on Chyron of Windows^ VistaTM, which was released in late 2006, has not yet been quantified. Support for Windows Vista may require significant rewrite of Lyric, Chyron MOS and other code. The expanded accessibility to Windows^ code and availability of software development tools provided with Vista could possibly open the door to competitors which could potentially claim a portion of our business.
+
+The open platform environment has enabled our systems and software to integrate into facilities in a manner which was previously extremely unwieldy or never before possible with our proprietary systems. Because we have moved into an open environment, however, we are
+
+now exposed to the vagaries of individual systems or installations in which hardware and/or software may interfere with the operation of our software and systems, or be interfered with by our software and/or systems, and our systems face exposure to computer viruses. This risk is shared by our competitors as well. Commissioning our systems in these situations can consume time and resources beyond original estimates, and consequently, reduce our margins. We would sacrifice market share, however, if we did not continue to develop and exploit the advantages of open systems.
+
+We may not successfully develop strategic relationships that may be important to our business.
+
+We believe the formation of strategic relationships will be important to our broadcast and digital signage businesses. The inability to find strategic partners or the failure of any existing relationships to achieve meaningful positive results for us could harm our business. We will rely in part on strategic relationships to help us:
+
+* maximize adoption of our products through distribution arrangements,
+* enhance our brand,
+* expand the range of commercial activities based on our technology, and
+* increase the performance, functionality and utility of our products and services.
+
+Many of these goals are beyond our traditional strengths. We anticipate that the efforts of our strategic partners will become more important as the use of open platform products become increasingly widespread; for example, we may become more reliant on strategic partners to provide multimedia content and build the necessary infrastructure for media delivery. In addition, the efforts of our strategic partners may be unsuccessful. Furthermore, these strategic relationships may be terminated before we realize any benefit.
+
+We operate in a highly competitive environment and industry and we may lack resources needed to capture increased market share.
+
+We may not be able to compete successfully against our current or future competitors. The markets for graphics imaging and editing products are competitive. These markets are characterized by constant technological change and evolving industry standards. The majority of our competitors have significantly greater financial, technical, manufacturing and marketing resources than we have. In addition, certain vendors dominate certain product categories and market segments, on a region-by-region basis, in which we currently operate or may wish to operate in the future. As a result, our ability to compete and operate in these areas may be limited.
+
+We anticipate increased competition from companies with which we currently compete and from companies that may enter our industry. We believe our primary competitors are Avid Technology, Inc. and its Pinnacle Systems subsidiary, Vizrt Ltd. and Harris Corporation's Inscriber subsidiary.
+
+We believe that our ability to compete depends on factors both within and outside of our control, including the success and timing of new product developments introduced by us and our
+
+competitors, product performance and price, market presence and customer support. We may not be able to compete successfully with respect to these factors. Maintaining any advantage that we may have, now or in the future, over our competitors will require our continuing investments in research and development, sales and marketing and customer service and support. In addition, as we enter new markets, we may encounter distribution channels, technical requirements and competitive factors that differ from those in the markets in which we currently operate. We may not be able to compete successfully in these new markets. In addition, increased competition in any of our current markets could result in price reductions, reduced margins or loss of market share, any of which could harm our business, financial condition and results of operations.
+
+We may encounter periods of industry-wide, surface-mount components shortage, resulting in pricing pressure and a risk that we could be unable to fulfill our customers' requirements.
+
+The semiconductor industry (from which surface-mount components are derived) has historically been characterized by wide fluctuations in the demand for, and supply of, its products, which feed the electronics, telecommunications and computer markets. These fluctuations have resulted in circumstances when supply and demand for the industry's products have been widely out of balance. Our operating results may be materially harmed by industry-wide surface mount component shortage, which could result in severe pricing pressure. In a market with undersupply, we would have to compete with the larger customers of our vendors for limited manufacturing capacity. In such an environment, we may be unable to have our products manufactured in a timely manner or in quantities necessary to meet our requirements. Since we outsource a large proportion of our products, we are particularly vulnerable to such supply shortages. As a result, we may be unable to fulfill orders and may lose customers. Any future ,
+industry-wide shortage of surface mount components or manufacturing capacity would materially harm our business.
+
+We depend on a limited number of suppliers of surface-mount components.
+
+We depend on a limited number of contract manufacturers to produce surface-mount components for our products. Our principal suppliers may experience unanticipated events that could inhibit their ability to provide us with adequate manufacturing capacity on a timely basis, or at all. Introducing new surface-mount components or transferring existing design and specifications to a new third-party manufacturer would require significant development time to adapt our designs to their manufacturing processes and could cause product shipment delays. In addition, the costs associated with manufacturing our components may increase if we are required to use a new third-party manufacturer. If we fail to satisfy our manufacturing requirements, our business would be materially harmed.
+
+We depend on the availability of specific off-the-shelf components.
+
+If the supply of specific off-the-shelf components terminates due to either market demand or by choice of the manufacturer, then production, and therefore, revenue, could be negatively impacted. In addition, resources must be diverted to locate a replacement component, which must then be tested and qualified. If we fail to have the ability to seamlessly switch from a non-available component to a replacement, then our business would be materially harmed.
+
+We may be unable to grow our business if the markets in which we sell our products do not grow.
+
+Our success depends in large part on the continued growth of various markets that use our products. Any decline in the demand for our products in the following markets could materially harm our business:
+
+* broadcasting infrastructure projects,
+* video/audio, graphics and imaging,
+
+* corporate/institutional customers, or
+* military and security systems.
+
+Slower growth in any of the other markets in which our products are sold may also materially harm our business. Many of these markets are characterized by rapid technological change and intense competition. As a result, our products may face severe price competition, become obsolete over a short time period, or fail to gain market acceptance. In addition, customers may require replacements and upgrades of equipment rather than the purchase of new, more expensive products. Any of these occurrences would materially harm our business, financial condition and results of operations.
+
+Our business will suffer if our systems fail or become unavailable.
+
+A reduction in the performance, reliability and availability of our network infrastructure would harm our ability to distribute our products and services to our users, as well as our reputation and ability to attract and retain funding, users and content providers. Our systems and operations could be damaged or interrupted by fire, flood, power loss, telecommunications failure, Internet breakdown, earthquake and similar events. Our systems are also subject to viruses, break-ins, sabotage, acts of physical terrorism, intentional acts of vandalism, hacking, cyber-terrorism and similar misconduct. We do not have fully redundant systems or a formal disaster recovery plan, and we might not carry adequate business interruption insurance to compensate us for losses that may occur from a system outage. Any system error or failure that causes interruption in availability of products or content or an increase in response time could result in a loss of potential or existing customers or content prov
+iders and declines in stock values. If we suffer sustained or repeated interruptions, our products and services could be less attractive to our users and our business would be harmed.
+
+In order to remain profitable, we will need to offset the general pattern of declines and fluctuations in the prices of our products.
+
+The legacy iNFiNiT!, MAX!> and MAXINE! products sold at prices that were higher than the current Chyron system prices. With advances in technology and introduction of Windows^ -based operating systems, we have to strive continuously to provide more performance and characteristics in our products at lower prices. We may not be able to do so successfully in the future, thus negatively affecting our performance.
+
+We depend upon third-party dealers to market and sell our products and they may discontinue sale of our products, fail to give our products priority or be unable to successfully market, sell and support our products.
+
+We employ independent, third-party dealers to market and sell a significant portion of our products. During 2006, 30% of our sales were made through our dealers and independent representatives. Although we have contracts with our dealers and representatives, any of them may terminate their relationship with us on short notice. The loss of one or more of our principal dealers, or our inability to attract new dealers, could materially harm our business. We may lose dealers in the future and we may be unable to recruit additional or replacement dealers. As a result, our future performance will depend in part on our ability to retain our existing dealers and representatives and attract new dealers and representatives that will be able to market, sell and support our products effectively.
+
+Problems associated with international business operations could subject us to risks from financial, operational and political situations, and affect our ability to manufacture and sell our products.
+
+Sales to customers located outside the United States accounted for 21% of our total sales in each of 2006, 2005 and 2004. We anticipate that sales to customers located outside the United States will continue to represent a significant portion of our total sales in future periods. Accordingly, our operations and revenues are subject to a number of risks associated with foreign commerce, including the following:
+
+* managing foreign dealers and foreign customers, which may be state corporations or government agencies,
+* staffing and managing foreign branch offices,
+* political and economic instability,
+* foreign currency exchange fluctuations,
+* changes in tax laws, tariffs, environmental directives, freight rates and governmental royalties,
+* timing and availability of export licenses,
+* changes in laws and policies governing operations of foreign-based companies,
+* inadequate protection of intellectual property rights in some countries,
+* obtaining governmental approvals for certain products, and
+* technical standards which may differ and/or be more stringent that those of the U.S., and would cause us to incur expenses associated with obtaining required certifications.
+
+In 2006 we denominated sales of our products in foreign countries exclusively in U.S. dollars, British Pounds Sterling and Euros. As a result, any increase in the value of the U.S. dollar relative to the local currency of a foreign country will increase the price of our products in that country so that our products become more expensive to customers in the local currency of that foreign country. As a result, sales of our products in that foreign country may decline. To the extent any such risks materialize, our business would be materially harmed.
+
+We may be unable to accurately predict quarterly results which could adversely affect the trading price of our stock.
+
+We build up our sales projections from information obtained by the sales force and our dealers. Furthermore, in certain large contracts, there are acceptance and/or commissioning conditions. It is possible our products are delivered but are not paid for because acceptance and/or commissioning have not taken place to the satisfaction of the customer. We would not be able to recognize the revenue until the customer has accepted and/or commissioned the products.
+
+Any deviation or inaccuracy in these above factors could affect our quarterly revenue and results of operations. As a result, our stock price could materially fluctuate.
+
+We may be unable to successfully grow our business if we fail to compete effectively with others to attract and retain key personnel.
+
+We believe our future success will depend upon our ability to attract and retain engineers and other highly skilled personnel and sales people. Most of our employees are at-will and only a few are subject to employment contracts. Hiring qualified sales and technical personnel will be difficult due to the limited number of qualified professionals. Competition for these types of employees is high. We have in the past experienced difficulty in recruiting and retaining qualified sales and technical personnel necessary for the development of our business. Failure to attract and retain personnel, particularly sales and technical personnel, would materially harm our business. We are also highly dependent upon the efforts of our senior management. The loss of the services of one or more of these individuals may delay or prevent us from achieving our objectives.
+
+We may not be able to protect our proprietary technology and may be sued for infringing on the rights of others.
+
+Protection of intellectual property rights is crucial to our business, since that is how we keep others from copying innovations that are central to our existing and future products. Our success also depends, in part, upon our ability to operate without infringing upon the rights of others. We rely on a combination of methods to protect our proprietary intellectual property, technology and know-how, such as:
+
+* trade secret laws,
+
+* confidentiality agreements, and
+* certain technology and security measures.
+
+Because it is critical to our success that we are able to prevent competitors from copying our innovations, we intend to continue to seek patent and trade secret protection for our products. The process of seeking patent protection can be long and expensive and we cannot be certain that
+
+any currently pending or future applications will actually result in issued patents, or that, even if patents are issued, they will be of sufficient scope or strength to provide meaningful protection or any commercial advantage to us.
+
+The steps we have taken regarding our proprietary technology, however, may not be sufficient to deter misappropriation. For example, we have rights in trademarks, service marks and copyrights that are not registered. In addition, the laws of certain countries in which our products are or may be developed, manufactured, sold or otherwise distributed do not protect our products and intellectual rights to the extent of the laws of the U.S. We also rely on trade secret protection for our technology, in part through confidentiality agreements with our employees, consultants and third parties; however, employees may breach these agreements, and we may not have adequate remedies for any breach. In any case, others may come to know about or determine our trade secrets through a variety of methods.
+
+In the systems and software industries, companies receive notices from time to time alleging infringement of patents, copyrights or other intellectual property rights of others. In the past we have been, and may from time to time continue to be, notified of claims that we may be infringing patents, copyrights or other intellectual property rights owned by third parties. Companies may pursue claims against us with respect to the alleged infringement of patents, copyrights or other intellectual property rights owned by third parties. In addition, litigation may be necessary to protect our intellectual property rights and trade secrets, to determine the validity of and scope of the proprietary rights of others or to defend against third-party claims of invalidity. Any litigation could result in substantial costs and diversion of resources.
+
+Existing copyright, trademark, patent and trade secret laws afford only limited protection. Moreover, effective protection of copyrights, trade secrets, trademarks and other proprietary rights may be unavailable or limited in certain foreign countries and territories. Domestic and foreign laws, in combination with the steps we have taken to protect our proprietary rights, may not be adequate to prevent misappropriation of our technology or other proprietary rights. Also, these protections do not preclude competitors from independently developing products with functionality or features similar or superior to our products and technologies or designing around the patents we own or the technology we create.
+
+Litigation may be necessary to defend against claims of infringement, to enforce our proprietary rights, or to protect trade secrets and that could result in substantial cost, and a diversion of resources away from the day-to-day operation of our business.
+
+We are uncertain of our ability to obtain financing for our future needs, and liquidity issues have and may continue to increase our cost of capital
+
+At December 31, 2006, we had cash and cash equivalents of $2.4 million and working capital of $5.0 million.
+
+The Company has a $1.5 million working capital line of credit from a U.S. bank which extends through April 13, 2008. The Company will have the ability to borrow on a revolving credit basis based on levels of eligible accounts receivable. We believe that cash on hand, net
+
+cash expected to be generated in the business, and availability under our line of credit, will be sufficient to meet our needs if we are able to achieve our planned results of operations. However, we may need to raise additional funds in order to fund our business, expand our sales and marketing activities, develop or enhance new products, respond to competitive pressures and satisfy our existing and any new obligations that may arise. If we fail to meet our financial covenants under our line of credit agreement, our bank could choose to not lend to us. Additional financing may not be available on terms favorable to us, or at all. Capital is critical to our business, and our ability to raise capital in the event that losses use our available cash would have a material adverse effect on our business.
+
+If a new law or regulation is created pertaining to the telecommunications and television industries, it could cause our customers to suffer and impede our ability to increase profits.
+
+The enactment by U.S. federal or state or international governments of new laws or regulations, changes in the interpretation of existing regulations or a reversal of the trend toward deregulation in these industries could cause our customers to suffer, and thereby adversely affect our ability to continue to be profitable. Television operators are subject to extensive government regulation by the FCC and other U.S. federal and state regulatory agencies. These regulations could limit capital expenditures by television operators and if that occurs, our business, financial condition and results of operations may suffer.
+
+The telecommunications and television industries are subject to extensive regulation in the United States and other countries. Our business is dependent upon the continued growth of these industries in the United States and internationally. Recent legislation has lowered the legal barriers to entry for companies into the United States' multi-channel television market, but telecommunications companies may not successfully enter this or related markets. Moreover, the growth of our business internationally is dependent in part on similar deregulation of the telecommunications industry abroad, in which deregulation may not occur.
+
+Our principal stockholders have significant voting power and may vote for actions that may not be in the best interests of our stockholders.
+
+Our officers, directors and 5% or more stockholders, together control approximately 39% (as of March 1, 2007) of our issued and outstanding common stock. As a result, these stockholders, if they act together, will be able to significantly influence the management and affairs of our Company and all matters requiring stockholder approval, including the election of directors and approval of significant corporate transactions. This concentration of ownership may have an effect on any potential change in control or other business combination and might affect the market price of our common stock. This concentration of ownership may not be in the best interest of our other stockholders.
+
+We have not issued dividends on our common stock for over fifteen years and do not anticipate doing so in the foreseeable future.
+
+We have not paid cash dividends on our common stock since November 27, 1989 and do not anticipate paying any cash dividends in the foreseeable future. We intend to retain any
+
+earnings for use in our business. The decision to pay dividends in the future will be at the discretion of our board of directors. In addition, our lending agreement with our bank also restricts our ability to pay dividends without the bank's consent. The historical and prospective lack of issuing dividends may diminish the value of the common stock.
+
+An increase in the number of shares of our common stock outstanding could reduce the price of our common stock
+
+At December 31, 2006, there were 6.2 million potentially dilutive shares that would be issuable if all outstanding common stock options were exercised. Issuance or sale of a substantial number of shares of additional common stock, or the perception that such issuance or sales could occur, could adversely affect the market price for our common stock as it would result in additional shares of our common stock being available on the public market. These issuances or sales also might make it difficult for us to sell equity securities in the future at a time and at a price that we deem appropriate.
+
+We have various mechanisms in place to discourage takeover attempts, which may reduce or eliminate your ability to sell your shares for a premium in a change of control transaction.
+
+Various provisions of our Amended and Restated Certificate of Incorporation and Amended and Restated By-Laws and in New York corporate law may discourage, delay or prevent a change in control or takeover attempt of our Company by a third-party which is opposed to by our management and board of directors. Public stockholders who might desire to participate in such a transaction may not have the opportunity to do so. These anti-takeover provisions could substantially impede the ability of public stockholders to benefit from a change of control or change in our management and board of directors. These provisions include:
+
+* authorizing the issuance of "blank check" preferred stock that could be issued by our board of directors to increase the number of outstanding shares and thwart a takeover attempt,
+* limiting who may call special meetings of our stockholders, and
+* establishing advance notice requirements for nominations of candidates for election to our board of directors or for proposing matters that can be acted upon by our stockholders at stockholder meetings.
+
+The price of our common stock may be volatile.
+
+The trading price of our common stock has been and may continue to be subject to fluctuations in response to quarter-to-quarter variations in operating results, changes in earnings estimates by analysts, general conditions in the digital media industry, announcements of technological innovations or new products introduced by us or our competitors and other events or factors. The stock market in general, and the shares of technology companies in particular, have experienced extreme price fluctuations in recent years. During the period commencing January 1, 2004 through March 1, 2007, the closing price of our common stock has ranged between $0.29 and $1.44. This volatility has had a substantial impact on the market prices of securities issued by many companies for reasons unrelated to the operating performance of the
+
+companies affected. These broad market fluctuations may adversely affect the market price of our common stock. In addition, our common stock is traded on the OTC Bulletin Board. You may expect trading volume to be low in such a market. Consequently, the activity of only a few shares may affect the market and may result in wide swings in price and in volume.
+
+It may be difficult to sell your shares and the value of your investment may be reduced because our common stock has experienced low trading volumes on the OTC Bulletin Board and currently lacks public market research analyst coverage
+
+Our common stock trades on the OTC Bulletin Board and it experiences lower trading volumes than many stocks listed on a national exchange, and therefore it may be difficult for an investor to sell the shares and to realize any return on an investment in our common stock. Because our common stock lacks public market research analyst coverage, it is more difficult to obtain reliable information about its value or the extent of risks to which the investment is exposed. Even if a liquid market for the shares of our common stock exists in the future, there can be no assurance that the securities could be transferred at or above the price paid. The price of our common stock may fall against the investor's interests, and the investor may get back less than he or she invested.
+
+ITEM 1B. UNRESOLVED STAFF COMMENTS
+
+None.
+
+ITEM 2. PROPERTIES
+
+The executive offices and principal office of our Company is located in Melville, New York, pursuant to a lease that expires on June 30, 2009. This facility consists of approximately 47,000 square feet and is used for manufacturing, research and development, marketing and the executive offices. Management believes that this facility is suitable for our existing operations and does not foresee the need for any significant expansion of our current facility.
+
+ITEM 3. LEGAL PROCEEDINGS
+
+From time to time we are involved in routine legal matters incidental to our business. In the opinion of management, the ultimate resolution of such matters will not have a material adverse effect on our financial position, results of operations or liquidity.
+
+ITEM 4. SUBMISSION OF MATTERS TO A VOTE OF SECURITY HOLDERS
+
+None.
+
+PART II
+
+ITEM 5. MARKET FOR THE REGISTRANT'S COMMON STOCK AND
+RELATED SECURITY HOLDERS MATTERS
+
+Our common stock is quoted on the OTC Bulletin Board under the symbol "CYRO." The following table sets forth, for the periods indicated, the high and low reported bids as quoted on the OTC Bulletin Board. The over-the-counter market quotations reflect inter-dealer prices, without retail mark-up, mark-down or commission, and may not necessarily represent actual transactions.
+
+Price Range of Common Stock
+
+High
+
+Low
+
+Fourth quarter
+
+Third quarter
+
+Second quarter
+
+First quarter
+
+Fourth quarter
+
+Third quarter
+
+Second quarter
+
+First quarter
+
+On March 1, 2007, the closing price of our common stock as reported on the OTC Bulletin Board was $1.15, the approximate number of holders of record of our common stock was 4,800, and the approximate number of common stock holders with accounts in street name was 4,300.
+
+We have not declared or paid any cash dividends since November 27, 1989. We currently plan to retain our future earnings, if any, for use in the operation and expansion of our business and do not anticipate paying cash dividends on the common stock in the foreseeable future. In addition, under the credit agreement with our lender, we are not permitted to pay any dividends without the bank's consent.
+
+The following graph compares the five-year cumulative total return to shareholders on Chyron Corporation's common stock from 12/31/2001 through 12/31/2006, relative to the cumulative total returns of the Russell 2000 Index, and a customized peer group of two companies, which are: Avid Technology, Inc. and Vizrt Ltd. An investment of $100 (with reinvestment of all dividends) is assumed to have been made in our common stock, the major market index and the peer group on 12/31/2001.
+
+Chyron Corporation
+
+Peer Group
+
+The stock price performance included in this graph is not necessarily indicative of future stock price performance.
+
+The remaining information called for by this item relating to "Securities Authorized for Issuance under Equity Compensation Plans" is reported in footnote 8 of the Consolidated Financial Statements for the year ended December 31, 2006 appearing in this Annual Report on Form 10-K.
+
+ITEM 6. SELECTED FINANCIAL DATA
+
+You should read the selected consolidated financial data presented below in conjunction with "Management's Discussion and Analysis of Financial Condition and Results of Operations" and our consolidated financial statements and the related notes appearing in this Annual Report on Form 10-K. The historical results are not necessarily indicative of the results to be expected in any future period. Statement of Operations Data for 2002-2003 has been restated to reflect the operations of Chyron UK Holdings Limited and its operating subsidiary, Pro-Bel Limited, as a discontinued operation.
+
+SUMMARY FINANCIAL DATA
+
+(In thousands, except per share amounts)
+
+Year Ended December 31,
+
+Statement of Operations Data
+
+Net sales
+
+Income (loss) from continuing
+
+operations
+
+Net income (loss)
+
+Net income (loss) per share
+
+- basic and diluted:
+
+Continuing operations
+
+Discontinued operations
+
+Weighted average number of
+
+shares outstanding:
+
+Basic
+
+Diluted
+
+As of December 31,
+
+Balance Sheet Data
+
+Cash and cash equivalents
+
+Working capital
+
+Total assets
+
+Long-term obligations
+
+SELECTED QUARTERLY DATA
+
+(Dollars in thousands except per share amounts)
+
+Per Share of
+
+Gross
+
+Net Income
+
+Common Stock
+
+Net Sales
+
+Profit
+
+Basic
+
+Diluted
+
+First Quarter
+
+Second Quarter
+
+Third Quarter
+
+First Quarter
+
+Second Quarter
+
+Third Quarter
+
+Fourth Quarter
+
+^(1) The fourth quarter of 2006 included a $1.7 million tax benefit that resulted from the
+reversal of a portion of our deferred tax valuation allowance.
+
+ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL
+CONDITION AND RESULTS OF OPERATIONS
+
+General
+
+Management's Discussion and Analysis of Financial Condition and Results of Operations discusses our consolidated financial statements for the periods indicated, which have been prepared in accordance with accounting principles generally accepted in the United States of America. The preparation of these financial statements requires management to make estimates and assumptions that affect the reported amounts of assets and liabilities and the disclosure of contingent assets and liabilities at the date of the financial statements and the reported amounts of revenues and expenses during the reporting period. On an on-going basis, management evaluates its estimates and judgments, including those related to product returns, bad debts, inventories, revenue recognition, investments, intangible assets, income taxes, financing, operations, warranty obligations, restructuring costs, healthcare costs and retirement benefits, forecasts of 2007 results, contingency plans, cash requirements and
+contingencies and litigation. Management bases its estimates and judgments on historical experience and on various other factors. These include, but are not limited to, pricing pressures, customer requirements, supply issues, manufacturing performance, product development and general market conditions that are believed to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities that are not readily apparent from other sources. Actual results may differ from these estimates under different assumptions or conditions. Results for the periods reported herein are not necessarily indicative of results that may be expected in future periods.
+
+Critical Accounting Policies and Estimates
+
+Management believes the following critical accounting policies, among others, comprise the more significant judgments and estimates used in the preparation of our consolidated financial statements. These critical accounting policies and estimates have been discussed with our audit committee and the audit committee has reviewed the disclosures relating to such matters.
+
+We maintain allowances for doubtful accounts for estimated losses resulting from the inability of our customers to make required payments. If the financial condition of our customers were to deteriorate, resulting in an impairment of their ability to make payments, additional allowances and/or the deferral of revenue may be required.
+
+We write-down our inventory for estimated obsolescence or unmarketable inventory equal to the difference between the cost of inventory and the estimated market value based upon assumptions about future demand and market conditions. Technology changes and market conditions may render some of our products obsolete and additional inventory write-downs may be required. If actual, future demand or market conditions are less favorable than those projected by management, additional inventory write-downs may be required.
+
+We provide for the estimated cost of product warranties at the time revenue is recognized. While we engage in extensive product quality programs and processes, including actively monitoring and evaluating the quality of our component suppliers, our warranty obligation is affected by product failure rates, material usage and service delivery costs incurred in correcting a product failure. Should actual product failure rates, material usage or service delivery costs differ from our estimates, revisions to the estimated warranty liability may be required.
+
+We are self-insured for healthcare costs up to certain stop-loss limits. Such costs are accrued based on known claims and an estimate of incurred, but not reported ("IBNR") claims. IBNR claims are estimated using historical lag information and other data provided by claims administrators. This estimation process is subjective, and to the extent that future actual results differ from original estimates, adjustments to recorded accruals may be necessary.
+
+We record a valuation allowance to reduce our deferred tax assets to the amount that we believe is more likely than not to be realized based primarily on projected future taxable income and the reversals of existing temporary differences. Additionally, should we determine that we would be able to realize our deferred tax assets in the future in excess of our net recorded amount, an adjustment to the deferred tax assets would increase income in the period this determination was made. For the year ended December 31, 2006, we determined that it was more likely than not, based on a reasonable business plan, that we would generate book and taxable income over the next three years, and therefore would be able to realize the benefit of a portion of our deferred tax assets, predominately comprised of net operating loss carryforwards. Therefore, we recorded an income tax benefit totaling $1.7 million which reflects a decrease in our valuation allowance.
+
+Pension expense for the defined benefit pension plan and the determination of future pension obligations are determined based upon a number of actuarial assumptions. The assumptions are based on historical rates of inflation and investment performance, target asset allocations and projected rates of compensation increase. These assumptions are reviewed annually by the Company with input from our actuaries and investment advisors. In the event that actual results differ from the actuarial assumptions, the funded status of the defined benefit plan may change and any such change could result in a charge or credit to equity and an increase or decrease in future pension expense and cash contributions.
+
+Effective January 1, 2006, we adopted the provisions of Statement of Financial Accounting Standards (FAS) No. 123(R), "Share-Based Payment." As a result, we measure stock-based compensation at the grant date, based on the estimated fair value of the award. We estimate the fair value of stock options using the Black-Scholes valuation model which requires us to make assumptions about the expected life of options, stock price volatility, risk-free interest rates and dividend yields. Although we believe our judgments, estimates and/or assumptions related to stock-based compensation are reasonable, making material changes to such judgments, estimates and/or assumptions could affect our financial results.
+
+Net sales include revenue derived from sales of products, software and services. We recognize revenue when it is realized or realizable and earned, when we have persuasive evidence of an arrangement, the product has been shipped or the services have been provided to the customer, the sales price is fixed or determinable and collectibility is reasonably assured and all criteria of Statement of Position 97-2 ("SOP97-2"), "Software Revenue Recognition" or SEC Staff Accounting Bulletin No. 104, "Revenue Recognition" ("SAB104") are met. Revenue is reduced for estimated customer returns and other allowances.
+
+Revenue from product sales, which is accounted for under both SOP97-2 and SAB104 since software included in most of our products is considered to be more than incidental to the products as a whole, is recognized when title has passed (usually at the time the product is shipped to the customer) and there are no unfulfilled Company obligations that affect the customer's final acceptance of the arrangement. Revenue from one-time charge licensed software is recognized at the inception of the license term because no post contract support or upgrades or enhancements are included with the purchase of a license and all other revenue recognition criteria are met.
+
+In connection with many of our product sales, customers may purchase a maintenance contract. Revenue from maintenance contracts is recognized ratably over the contractual period. We recognize revenue from training, installation or other services as the services are performed. Revenues from maintenance contracts and other services comprised less than 10% of total revenues in each year presented.
+
+At times, we may enter into transactions that include a combination of products and services (multiple element arrangements). In these instances we use vendor-specific objective evidence ("VSOE") of fair value to allocate revenue to the elements and recognize revenue when the criteria for revenue recognition have been met for each element. VSOE of fair value is established by the price charged when that element is sold separately.
+
+Approximately 30%, 27% and 32% of 2006, 2005 and 2004 consolidated revenues, respectively, were made to dealers and system integrators (collectively, "dealers"). The Company recognizes revenue from sales to dealers when the product is shipped and all other revenue recognition criteria are met.
+
+Year Ended December 31, 2006 Compared to Year Ended December 31, 2005
+
+Net Sales. Revenues for 2006 and 2005 were as follows (in thousands):
+
+% of Total
+
+% of Total
+
+Broadcast graphics
+
+Digital displays
+
+Revenues for the year ended December 31, 2006 were $26.2 million, an increase of $1.1 million, or 4% from the $25.1 million reported for the year ended December 31, 2005. Revenues derived from U.S. customers were $20.7 million in 2006 as compared to $19.8 million in 2005. Revenues derived from international customers were $5.5 million in 2006 and $5.3 million in 2005. The increase in broadcast graphics revenues is due to the increase in consumer demand for HD television content, requiring broadcasters to accelerate the implementation of their HD programs, resulting in increased demand for Chyron's HyperX systems. International revenues in 2006 were higher than 2005 in part as a result of a continuing European government's upgrade program and the result of the efforts of an expanded presence in Europe. We also expect that HDTV acceptance will also continue to increase internationally, which could be beneficial to Chyron in future periods. The increase in sales in our digital display produ ct
+line is due to the expansion of our product offerings and the growth in our sales network.
+
+Gross Profit. Gross margins for the year ended December 31, 2006 and 2005, were 67% and 62%, respectively. Gross margins in our broadcast graphics segment were 68% in 2006 and 62% in 2005. Improvements in gross margins are primarily a result of lower material costs. The reduction in material costs has been driven by several factors, primarily the result of newer technology, which lowers the purchase cost and also results in greater reliability and lower warranty costs. In addition, we have been able to purchase in greater quantities due to the interchangeability of components across product lines and overall higher sales volume. Gross margins in our digital display segment were 72% in 2005 and 59% in 2006. The higher gross margin in 2005 was due to a special consulting project whereas 2006 reflects a standard margin based on product sales.
+
+Selling, General and Administrative Expenses. Selling, general and administrative ("SG&A") expenses for 2006 and 2005 were as follows (in thousands):
+
+% of Total
+
+% of Total
+
+Broadcast graphics
+
+Digital displays
+
+The increase in SG&A expenses for the broadcast graphics segment was driven primarily by the adoption of FAS123(R). In addition to the impact of FAS123(R), trade shows and other marketing costs related to the promotion of digital display products accounted for the increase in that segment.
+
+Research and Development Expenses. Research and development ("R&D") costs for 2006 and 2005 were as follows (in thousands):
+
+% of Total
+
+% of Total
+
+Broadcast graphics
+
+Digital displays
+
+The primary factor contributing to the increase in the broadcast graphics segment is the Company's investment, primarily in the form of personnel and related costs, in the development of new products for HDTV, mobile content, and channel branding. The increase in R&D in the digital display segment is also due to the Company's investment, in the form of personnel and related costs, in new product offerings as this line is expanded.
+
+Interest income and expense
+. Interest expense in 2006 approximated $0.17 million as compared to $0.2 million in 2005. This is a direct result of overall lower borrowings as our Series C and D debentures were paid off or converted to common stock during 2006. As of December 31, 2006 there are no outstanding balances on any debt or other borrowing arrangements.
+
+Interest income increased slightly to $0.15 million primarily as a result of higher interest rates and overall higher cash balances that are invested overnight.
+
+Other income and expense, net
+. The components of other income and expense, net are as follows (in thousands):
+
+Foreign exchange transaction gain (loss)
+
+Subrental income
+
+Other
+
+Income tax benefit. For the year ended December 31, 2006, we determined that it was more likely than not, based on a reasonable forecast of results, that we would generate both book and taxable income over the next three years, and therefore would be able to realize the benefit of a portion of our deferred tax assets, predominantly comprised of net operating loss carryforwards. Therefore, we recorded an income tax benefit totaling $1.7 million which reflects a decrease in our valuation allowance.
+
+Year Ended December 31, 2005 Compared to Year Ended December 31, 2004
+
+Net Sales. Revenues for the year ended December 31, 2005 were $25.1 million, an increase of $1.9 million, or 8% from the $23.2 million reported for the year ended December 31, 2004. Revenues derived from U.S. customers were $19.8 million in 2005 as compared to $18.3 million in 2004. Revenues derived from international customers were $5.3 million in 2005 and $4.9 million in 2004. Revenues in 2005 have been enhanced by the introduction in late 2004 of the Duet HyperX systems, which can be configured as HD, SD or a combination of both, offering a highly flexible and scalable migration path to high definition broadcasting. Consequently, this increase in revenues has resulted from an increase in overall volume from the sales of the Duet HyperX systems and which also carry a higher selling price. Also contributing to the growth in 2005 is the greater realization of sales in international markets, most notably Asia and South America as we continue to enhance our sales and marketing effor ts
+outside of the U.S. Sales of our new microcasting and digital displays product line accounted for $0.5 million of 2005 revenues.
+
+Gross Profit. Gross margins for the year ended December 31, 2005 and 2004, were 62% and 58%, respectively. Approximately 3% of the improvement is due to lower material costs driven by new technology and the interchangeability of raw material components across our product lines that enable us to procure materials in greater quantities and at lower costs. Another 2% of the improvement is due to product mix as our older products are replaced with newer, more advanced systems that carry higher margins. These improvements were offset by a charge of $0.17 million resulting from an increase in our warranty reserve which had the effect of reducing gross margins in 2005 by 1%. The Company believes this charge was prudent based on the accumulation of improved historical data regarding warranty experience.
+
+Selling, General and Administrative Expenses. Selling, general and administrative ("SG&A") expenses increased by $1.9 million, to $11.9 million in 2005 compared to $10.0 million in 2004. The primary reason contributing to the increase in SG&A expenses were increased operating expenses related to the new ChyTV product line of $1.1 million. Other increases were $0.2 million for consulting related to system upgrades, $0.2 million related to increased cost of employee benefits, $0.1 million for consulting services for Sarbanes-Oxley compliance, severance costs of $0.1 million, $0.1 million of trade show costs and $0.1 million of other selling expenses, including the costs of overseas sales offices.
+
+Research and Development Expenses. Research and development (R&D) costs in 2005 of $2.9 million decreased by $0.5 million compared to 2004 costs of $3.4 million. Reductions in spending in 2005 are attributable to lower project material costs, reduced services performed by outside consultants and lower personnel costs.
+
+Interest income and expense
+. Interest expense in 2005 approximated $0.2 million as compared to $0.4 million in 2004. This is a direct result of the combination of lower borrowings and lower interest rates on the underlying debt instruments. In the fourth quarter of 2003 and first quarter of 2004, we closed on two exchange offers which resulted in the retirement of approximately $6 million of Series A and B debentures, with the balance exchanged for Series C
+
+and D debentures which carry a lower rate of interest. Furthermore, approximately $1.3 million of Series C debentures were retired in March 2005.
+
+Interest income increased by $0.03 million primarily as a result of interest earned on cash balances that are invested overnight.
+
+Other income and expense, net.
+The components of other income and expense, net are as follows (in thousands):
+
+Gain on sale of equity securities
+
+Foreign exchange transaction gain (loss)
+
+Subrental income
+
+Contingent payment on sale of land
+
+Other
+
+In the first quarter of 2004, we sold our remaining investment in equity securities and realized a gain of $0.2 million. Also in 2004, we received an additional contingent payment of $0.09 million for a parcel of land in the U.K. that was sold in 2002.
+
+Liquidity and Capital Resources
+
+At December 31, 2006, we had cash on hand of $2.4 million and working capital of $5.0 million.
+
+During 2006, net cash of $2.0 million was provided by operations, $0.7 million was used to acquire equipment and $1.3 million was used to retire all our outstanding indebtedness. The cash from operations was primarily driven by the net income, adjusted for non-cash charges. Inventories increased by approximately $0.8 million due to a wider variety of products, including products for the digital display product line, and manufacturing builds in the fourth quarter of 2006 to support a higher level of sales, that did not materialize, but will be sold in early 2007.
+
+On March 1, 2006, the Company amended its lending agreement with its U.S. bank to provide for a $1.5 million revolving line of credit ("revolver"), with an advance rate of up to 80% of eligible accounts receivable. The revolver will mature on April 13, 2008 and will bear interest at Prime +1%. The agreement also provides for a $1.5 million term loan which the Company drew down on March 20, 2006 in the amount of $1.3 million in order to redeem the Company's Series C Debentures. The term loan was payable in twenty-four equal installments plus interest at Prime + 1.75%. The Company was making monthly installments on the term loan since its inception and on December 28, 2006, the remaining balance on the term loan of $840 thousand was paid in full. The Company is required to maintain cash or availability of $1 million and minimum cumulative year-to-date EBITDA excluding FAS123(R) stock option expense as follows (2008 levels to be determined in late 2007):
+
+The Company did not meet the EBITDA requirement of $100 thousand for Q1 2006, for which period a waiver was obtained. The Company did meet the cumulative year-to-date EBITDA requirement for all other quarters in 2006. As is usual and customary in such lending agreements, the agreement also contains certain non-financial requirements, such as required periodic reporting to the bank and various representations and warranties. The agreement also restricts our ability to pay dividends without the bank's consent.
+
+On September 22, 2006, we notified all holders of our Series D 8% Convertible Subordinated Debentures ("Debentures") due December 31, 2007 of our intent to redeem, on October 9, 2006, all outstanding Debentures which aggregated to $2.66 million. All holders responded by electing to convert their Debentures. As a result, the total outstanding Debentures were converted into 4,098,303 shares of restricted common stock of the Company based upon the conversion price of $0.65 and all Debentures were cancelled.
+
+Chyron's contractual obligations as of December 31, 2006, are as follows (in thousands):
+
+Payments Due by Period
+
+Less Than
+
+One to
+
+Contractual Obligations
+
+Total
+
+One Year
+
+Four Years
+
+Pension obligations
+
+Purchase commitments for inventory
+
+Capital lease obligations
+
+Operating lease obligations
+
+Total
+
+The Company also takes into consideration the environment in which it operates when reviewing its liquidity and capital resource requirements. We provide graphics products to the broadcast industry for use in digital television. We have also expanded our product line to include video and digital signage products that provide for use in business and a general corporate environment. In 2006 this segment incurred an operating loss of approximately $2 million and we expect that it will continue to use cash in 2007 until optimum sales levels are achieved. Our future growth and success will depend to a significant degree on the continued growth of various markets that use our products. We operate in a rapidly changing environment and must remain responsive to changes as they occur. In the event that revenues are significantly below forecasted revenues, we believe we have the ability to reduce or delay discretionary expenditures, including capital purchases, and reduce headcount, so that we will
+have sufficient cash resources. However, there can be no assurance that we will be able to adjust our costs in sufficient time to respond to revenue and cash shortfalls, should that occur.
+
+The long term success of the Company will be dependent on maintaining profitable operating results and the ability to raise additional capital should such additional capital be required. In the event the Company is unable to achieve expected goals of profitability or raise sufficient additional capital, if needed, we may have to scale back or eliminate certain parts of our operations.
+
+We believe that cash on hand, net cash to be generated in the business, and availability under our line of credit, will be sufficient to meet our cash needs if we are able to achieve our planned results of operations and retain availability of credit under our lending agreement.
+
+Impact of Inflation and Changing Prices
+
+Although we cannot accurately determine the precise effect of inflation, we have experienced increased costs of salaries and benefits and increased general and administrative expenses. We attempt to pass on increased costs and expenses by developing more useful and cost-effective products for our customers that can be sold at more favorable profit margins.
+
+Industry Transition to Digital Standards
+
+Conversion to a digital standard in the U.S., and similar standards internationally, will produce an opportunity to appropriately positioned companies involved in the broadcast industry and related business; however, this change has caused uncertainty, hesitation and indecision for some broadcasters and other customers in their decisions on capital spending. The delay in capital spending by some broadcasters has affected the level of our sales. The method and timing of broadcasters' conversion to digital television is very important to our future operating results.
+
+Recent Accounting Pronouncements
+
+In July 2006, the FASB issued FASB Interpretation No. ("FIN") 48, Accounting for Uncertainty in Income Taxes - An Interpretation of FASB Statement No. 109, which prescribes a recognition threshold and measurement attribute for the financial statement recognition and measurement of a tax position taken or expected to be taken in a tax return. FIN 48 will be effective for fiscal years beginning after December 15, 2006 with the cumulative effect of the change in accounting principle recorded as an adjustment to the opening balance of retained earnings. We have completed our initial evaluation of the impact of the adoption of FIN 48 and determined that such adoption is not expected to have a material impact on our financial position or results from operations.
+
+In September 2006, the FASB issued SFAS No. 157, "Fair Value Measurements" ("SFAS No. 157"). SFAS No. 157 establishes a common definition for fair value to be applied to U.S. GAAP guidance requiring use of fair value, establishes a framework for measuring fair value, and expands disclosure about such fair value measurements. SFAS No. 157 is effective for fiscal years beginning after November 15, 2007. We have not yet evaluated the impact of implementation on our consolidated financial statements.
+
+Our Common Stock in 401(k) Plan
+
+We have a 401(k) plan for U.S. employees into which we make discretionary matching contributions of up to 20% of the first 10% of the compensation contributed by a participant. The Company has the option of making the matching contribution in cash or through the issuance of new previously unissued shares of Company stock. The cost associated with the Company's matching contribution was $0.08 million in cash in 2006 and $0.07 million in 2005 and 2004. A participant in the plan has 11 investment choices. One of these is our common stock, which participants may freely trade during non-restricted trading periods as defined in the Company insider-trading policy.
+
+Transactions with Related Parties
+
+The Company began fiscal 2006 with two series of debentures that had been issued to certain persons and entities, including certain directors, affiliates and shareholders of the Company. The Series C Debentures, which totaled $1.3 million (original principal was $2.3 million and was partly redeemed in March 2005), were originally scheduled to mature in April 2006, but were redeemed in full in March 2006 by using the proceeds from a term loan provided by our bank. The Series C Debentures accrued interest on an annual basis at 7%, payable in kind, and carried a per share conversion price of $1.50. Interest expense attributable to these Series C Debentures totaled $19 thousand in 2006, $108 thousand in 2005 and $150 thousand in 2004.
+
+The Series D Debentures, which totaled $2.8 million, were redeemed in full in October 2006, when all holders converted their debentures into 4,098,303 shares of restricted common stock of the Company based upon the conversion price of $0.65. The Series D Debentures earned interest annually at 8%, which was payable in kind when originally issued, and effective December 1, 2005 became payable in cash. Interest expense attributable to these Series D Debentures totaled $29 thousand in 2006, $71 thousand in 2005 and $51 thousand in 2004. The reported amount of interest expense has been adjusted as a result of amortization of a gain on exchange when the Series D were originally issued in 2004, that was deferred in accordance with SFAS No. 15. The amortization, which reduced interest expense, totaled $129 thousand in 2006 and 2005 and $118 thousand in 2004.
+
+The secretary of the Company, a non-executive position, is affiliated with a law firm that rendered various legal services to us for which we incurred costs of $0.3 million, $0.2 million and $0.2 million during 2006, 2005 and 2004, respectively.
+
+We have a 20% ownership in Video Technics, a company from which we purchase certain software products. The purchase price of the software is based on market conditions and competitive offerings. Purchases of Aprisa Clip/Stillstore products from Video Technics were approximately $0.2 million, $0.4 million and $0.8 million for the years ended December 31, 2006, 2005 and 2004, respectively. Sales of Aprisa products represented 1%, 2% and 9% of sales in 2006, 2005 and 2004, respectively.
+
+In September 2004, Dr. Donald Greenberg, a Director, was awarded immediately vested, non-qualified stock options, with an exercise price of $0.48 per share, to purchase 50,000 shares of our common stock. We awarded these options as compensation for services rendered for providing advice relating to technology affecting our products.
+
+ITEM 7A. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT
+
+MARKET RISK
+
+We are exposed to foreign currency and exchange risk in the normal course of business related to investments in our foreign subsidiaries and sales to foreign customers. For each of the years in 2006, 2005 and 2004, sales to foreign customers were 21% of total sales. Substantially all sales generated outside of the U.S. are denominated in British Pounds Sterling, Euros and U.S. Dollars. The net impact of foreign exchange transactions were a gain of $0.08 million, a loss of $0.09 million and a gain of $0.19 million for the years ended December 31, 2006, 2005 and 2004, respectively. We record translation gain or loss as a separate component of other comprehensive income or loss.
+
+Additionally, we are potentially exposed to interest rate risk with respect to any bank debt which would carry a variable interest rate. Rates that affect the variable interest on this debt include the Prime Rate. At December 31, 2006, there is no outstanding indebtedness with variable interest rates. We have evaluated the foreign currency exchange risk and interest rate risk and believe that our exposure to these risks are not material to our near-term financial position, earnings or cash flows.
+
+ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA
+
+Index to Financial Statements
+
+Financial Statements:
+
+Page
+
+Report of BDO Seidman, LLP, Independent Registered Public
+
+Accounting Firm
+
+Report of PricewaterhouseCoopers, LLP, Independent Registered
+
+Public Accounting Firm
+
+Consolidated Balance Sheets at December 31, 2006 and 2005
+
+Consolidated Statements of Income for the Years Ended December 31, 2006,
+
+Consolidated Statements of Cash Flows for the Years Ended December 31, 2006,
+
+Consolidated Statements of Shareholders' Equity (Deficit) for the Years
+
+Notes to the Consolidated Financial Statements
+
+Financial Statement Schedule:
+
+II - Valuation and Qualifying Accounts
+
+Report of Independent Registered Public Accounting Firm
+
+Board of Directors and Shareholders
+
+Chyron Corporation
+
+We have audited the accompanying consolidated balance sheets of Chyron Corporation as of December 31, 2006 and 2005 and the related consolidated statements of income, shareholders' equity (deficit), and cash flows for the years then ended. We have also audited the schedule listed in the accompanying index for the years ended December 31, 2006 and 2005. These financial statements and schedule are the responsibility of the Company's management. Our responsibility is to express an opinion on these financial statements and schedule based on our audits.
+
+We conducted our audits in accordance with the standards of the Public Company Accounting Oversight Board (United States). Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements and schedule are free of material misstatement. The Company is not required to have, nor were we engaged to perform, an audit of its internal control over financial reporting.
+Our audit included consideration of internal control over financial reporting as a basis for designing audit procedures that are appropriate in the circumstances, but not for the purpose of expressing an opinion on the effectiveness of the Company's internal control over financial reporting. Accordingly, we express no such opinion. An audit also includes examining, on a test basis, evidence supporting the amounts and disclosures in the financial statements and schedule, assessing the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the financial statements and schedule. We believe that our audits provide a reasonable basis for our opinion.
+
+In our opinion, the consolidated financial statements referred to above present fairly, in all material respects, the financial position of Chyron Corporation at December 31, 2006 and 2005, and the results of its operations and its cash flows for the years then ended, in conformity with accounting principles generally accepted in the United States of America.
+
+Also, in our opinion, the schedule presents fairly, in all material respects, the information set forth therein for the years ended December 31, 2006 and 2005.
+
+As discussed in Note 1 to the consolidated financial statements, in 2006 Chyron Corporation changed its method of accounting for stock-based compensation in accordance with Statement of Financial Accounting Standards No. 123(R), "Share-Based Payments."
+
+As discussed in Note 1 to the consolidated financial statements, in 2006 Chyron Corporation adopted Statement of Financial Accounting Standards No. 158, "Employers' Accounting for Defined Benefit Pension and Other Postretirement Plans - an amendment of FASB Statements No. 87, 88, 106, and 132(R)" relating to its defined benefit plan.
+
+/s/ BDO Seidman, LLP
+
+Melville, New York
+
+Report of Independent Registered Public Accounting Firm
+
+To the Board of Directors and Shareholders of Chyron Corporation:
+
+In our opinion, the consolidated statements of operations, shareholders' (deficit) equity and cash flows
+for the year ended December 31, 2004 present fairly, in all material respects, the results of operations and cash flows of Chyron Corporation and its subsidiaries for the year ended December 31, 2004, in conformity with accounting principles generally accepted in the United States of America. In addition, in our opinion, the financial statement schedule for the year ended December 31, 2004 presents fairly, in all material respects, the information set forth therein when read in conjunction with the related consolidated financial statements. These financial statements and financial statement schedule are the responsibility of the Company's management. Our responsibility is to express an opinion on these financial statements and financial statement schedule based on our audit. We conducted our audit of these s tatements in accordance with the standards of the Public Company Accounting Oversight Board (United States). Those standards require that we plan and perform the audit to obtain
+reasonable assurance about whether the financial statements are free of material misstatement. An audit includes examining, on a test basis, evidence supporting the amounts and disclosures in the financial statements, assessing the accounting principles used and significant estimates made by management, and evaluating the overall financial statement presentation. We believe that our audit provides a reasonable basis for our opinion.
+
+/s/ PricewaterhouseCoopers LLP
+
+Melville, New York
+
+CHYRON CORPORATION
+CONSOLIDATED BALANCE SHEETS
+(In thousands, except share amounts)
+
+Assets
+
+Current assets:
+
+Cash and cash equivalents
+
+Accounts receivable, net
+
+Inventories, net
+
+Deferred taxes
+
+Prepaid expenses and other current assets
+
+Total current assets
+
+Property and equipment, net
+
+Deferred taxes
+
+Other assets
+
+TOTAL ASSETS
+
+Liabilities and Shareholders' Equity (Deficit)
+
+Current liabilities:
+
+Accounts payable and accrued expenses
+
+Convertible debentures
+
+Deferred revenue
+
+Pension liability
+
+Capital lease obligations
+
+Total current liabilities
+
+Convertible debentures
+
+Pension liability
+
+Other liabilities
+
+Total liabilities
+
+Commitments and contingencies
+
+Preferred stock, par value without designation
+
+Common stock, par value $.01
+
+Issued and outstanding - 45,649,005 and 41,378,610
+
+Additional paid-in capital
+
+Accumulated deficit
+
+Accumulated other comprehensive loss
+
+Total shareholders' equity (deficit)
+
+TOTAL LIABILITIES AND SHAREHOLDERS' EQUITY (DEFICIT)
+
+See Notes to Consolidated Financial Statements
+
+CHYRON CORPORATION
+CONSOLIDATED STATEMENTS OF INCOME
+(In thousands, except per share amounts)
+
+Year Ended December 31,
+
+Net sales
+
+Cost of sales
+
+Gross profit
+
+Operating expenses:
+
+Selling, general and administrative
+
+Research and development
+
+Total operating expenses
+
+Operating income
+
+Interest expense
+
+Interest income
+
+Other income (expense), net
+
+Income before income taxes
+
+Income tax benefit
+
+Net income
+
+Net income per share - basic and diluted
+
+Weighted average shares used in computing net income
+
+per share:
+
+Basic
+
+Diluted
+
+See Notes to Consolidated Financial Statements
+
+CHYRON CORPORATION
+
+CONSOLIDATED STATEMENTS OF CASH FLOWS
+
+Year Ended December 31,
+
+CASH FLOWS FROM OPERATING ACTIVITIES:
+
+Net income
+
+Adjustments to reconcile net income to net cash
+
+provided by (used in) operating activities:
+
+Depreciation and amortization
+
+Gain on extinguishment of debt/sale of investments
+
+Non-cash settlement of interest liability
+
+Non cash compensation related to stock options
+
+Deferred tax benefit
+
+Inventory reserves
+
+Other
+
+Changes in operating assets and liabilities:
+
+Accounts receivable
+
+Inventories
+
+Prepaid expenses and other assets
+
+Accounts payable and accrued expenses
+
+Deferred revenue
+
+Other liabilities
+
+Net cash provided by (used in) operating activities
+
+CASH FLOWS FROM INVESTING ACTIVITIES:
+
+Collection and proceeds from sale of subsidiary, net
+
+Proceeds from sale of investments
+
+Acquisition of property and equipment
+
+Net cash (used in) provided by investing activities
+
+CASH FLOWS FROM FINANCING ACTIVITIES:
+
+Principal payments on convertible debentures
+
+Proceeds from exercise of options and warrants
+
+Payments of capital lease obligations
+
+Net cash used in financing activities
+
+Change in cash and cash equivalents
+
+Cash and cash equivalents at beginning of year
+
+Cash and cash equivalents at end of year
+
+SUPPLEMENTAL CASH FLOW INFORMATION:
+
+Interest paid
+
+Assets acquired under capital lease
+
+Series D Debentures converted to common stock
+
+See Notes to Consolidated Financial Statements
+
+CHYRON CORPORATION
+CONSOLIDATED STATEMENTS OF SHAREHOLDERS' EQUITY (DEFICIT)
+
+Accumulated
+
+Additional
+
+Accumulated
+
+Other
+
+Paid-In
+
+Equity
+
+Comprehensive
+
+Shares
+
+Amount
+
+Capital
+
+Total
+
+Net income
+
+Cumulative translation adjustment
+
+Unrealized loss on available for sale
+
+securities
+
+Total comprehensive income
+
+Shares issued upon exercise of stock
+
+options and warrants
+
+Shares issued to 401K plan
+
+Net income and comprehensive income
+
+Shares issued upon exercise of stock
+
+options
+
+Shares issued to 401K plan
+
+Net income
+
+Effect of pension benefit costs related
+
+to adoption of FAS 158
+
+Cumulative translation adjustment
+
+Total comprehensive income
+
+Non cash compensation related to
+
+stock options
+
+Shares issued upon exercise of
+
+stock options
+
+Shares issued upon conversion of
+
+Series D Debentures
+
+See Notes to Consolidated Financial Statements
+
+CHYRON CORPORATION
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+
+1. SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES
+
+Nature of Business
+
+Chyron Corporation and its wholly-owned subsidiaries ("Chyron" or the "Company") is a supplier of character generators ("CG") and graphics hardware and software related products to the television industry. The Company develops, manufactures, markets and supports hardware and software products that enhance the presentation of live and pre-recorded video, audio and other data. Chyron's products are used in broadcast production facilities worldwide for applications including news, sports, weather and election coverage. The Company's graphics products create, manipulate, store, playback and manage content including 2D/3D text, logos, graphics, animations and video stills/clips. In January 2005, Chyron introduced the ChyTV product line providing low-cost, easy to use graphics for microcasting and digital signage applications. ChyTV which is part of the Company's digital display division, represents a reporting segment for the Company.
+
+Basis of Presentation
+
+The consolidated financial statements include the accounts of the Company and our wholly-owned subsidiaries. All significant intercompany amounts have been eliminated. Investments in affiliates of less than 20 percent are generally stated at cost. Investments in companies representing ownership interests of 20 percent to 50 percent are accounted for by the equity method of accounting. Under the equity method, we include our pro-rata share of income (loss) of such equity investment, in our consolidated income (loss).
+
+The preparation of financial statements in conformity with generally accepted accounting principles requires management to make estimates and assumptions that affect the reported amounts of assets and liabilities and disclosure of contingent assets and liabilities at the date of the financial statements and the reported amounts of revenues, costs and expenses during the periods presented. Estimates made by management include inventory valuations, stock compensation, allowances for doubtful accounts and reserves for warranty and incurred but not reported ("IBNR") health insurance claims. Actual results could differ from those estimates.
+
+Cash and Cash Equivalents
+
+Cash includes cash on deposit and amounts invested in highly liquid money market funds. Cash equivalents consist of short term investments with original maturities of three months or less. The carrying amount of cash and cash equivalents approximates their fair value.
+
+Inventories
+
+Inventories are stated at the lower of cost or market, cost being determined primarily on the basis of FIFO and average cost. The need for inventory obsolescence provisions is evaluated by us and, when appropriate, reserves for technological obsolescence, non-profitability of product lines and excess quantities are established.
+
+Property, Equipment and Depreciation
+
+Property and equipment are stated at cost less accumulated depreciation and amortization. Depreciation and amortization are provided on the straight line method over the following estimated useful lives:
+
+Machinery and equipment
+
+Furniture and fixtures
+
+Leasehold improvements
+
+Shorter of the life of improvement or
+remaining life of the lease
+
+Accounts Payable
+
+A benefit of $0.2 million was realized in the third quarter of 2005 from the reversal of old accounts payable relating to discontinued product lines and businesses, that were no longer deemed to be payable. This had the impact of reducing third quarter and annual selling, general and administrative expenses by $0.2 million.
+
+Self Insurance
+
+The Company is self-insured for healthcare costs up to certain stop-loss limits. Such costs are accrued based on known claims and an estimate of incurred, but not reported ("IBNR") claims. IBNR claims are estimated using historical lag information and other data provided by claims administrators. This estimation process is subjective, and to the extent that future actual results differ from original estimates, adjustments to recorded accruals may be necessary.
+
+Research, Development and Engineering
+
+Technological feasibility for our products is reached shortly before the products are released to manufacturing. Consequently, costs incurred after technological feasibility is established have not been material, and accordingly, we expense all research and development costs when incurred. We re-evaluate the materiality of these costs on an on-going basis. Research and development costs include wages and other personnel costs, material costs and an allocation of certain indirect costs related to facilities.
+
+Impairment of Long-Lived Assets
+
+We continually evaluate whether changes have occurred that would require revisions to the carrying amounts of our long-lived assets. In making such determination, we reassess market value, assess recoverability and replacement values and evaluate undiscounted cash flows of the underlying business or assets. Currently, management does not believe any of its long-lived assets are impaired.
+
+Revenue Recognition
+
+Net sales include revenue derived from sales of products, software and services. We recognize revenue when it is realized or realizable and earned, when we have persuasive evidence of an arrangement, the product has been shipped or the services have been provided to the customer, the sales price is fixed or determinable and collectibility is reasonably assured and all criteria of Statement of Position 97-2 ("SOP97-2"), "Software Revenue Recognition" or SEC Staff Accounting Bulletin No. 104, "Revenue Recognition" ("SAB104") are met. Revenue is reduced for estimated customer returns and other allowances.
+
+Revenue from product sales, which is accounted for under both SOP97-2 and SAB104 since software included in most of our products is considered to be more than incidental to the products as a whole, is recognized when title has passed (usually at the time the product is shipped to the customer) and there are no unfulfilled company obligations that affect the customer's final acceptance of the arrangement. Revenue from one-time charge licensed software is recognized at the inception of the license term because no post contract support or upgrades or enhancements are included with the purchase of a license and all other revenue recognition criteria are met.
+
+In connection with many of our product sales, customers may purchase a maintenance contract. Revenue from maintenance contracts, which approximated 4.8% and 4.9% of our 2006 and 2005 revenues, respectively, is recognized ratably over the contractual period. We recognize revenue from training, installation or other services as the services are performed. Revenues from maintenance contracts and other services comprised less than 10% of total revenues in each year presented.
+
+At times, we may enter into transactions that include a combination of products and services (multiple element arrangements). In these instances we use vendor-specific objective evidence ("VSOE") of fair value to allocate revenue to the elements and recognize revenue when the criteria for revenue recognition have been met for each element. VSOE of fair value is established by the price charged when that element is sold separately.
+
+Approximately 30%, 27% and 32% of 2006, 2005 and 2004 consolidated revenues, respectively, were made to dealers and system integrators (collectively, dealers). The Company recognizes revenue from sales to dealers when the product is shipped and all other revenue recognition criteria are met.
+
+Shipping and Handling Fees and Costs
+
+All amounts billed to a customer in a sales transaction related to shipping and handling represent revenues earned and are reported as revenue, and the costs incurred by the Company for shipping and handling are reported as a component of cost of sales.
+
+Advertising Costs
+
+Advertising costs are expensed as incurred. Advertising expense was $0.26 million in 2006, $0.26 million in 2005 and $0.13 million in 2004.
+
+Income Taxes
+
+We account for income taxes under an asset and liability approach in accordance with the provisions of Statement of Financial Accounting Standards No. 109 ("SFAS109"), Accounting for Income Taxes. Under this method, deferred tax assets and liabilities are determined based on the difference between the financial reporting and tax basis of assets and liabilities using enacted tax rates in effect in the years in which the differences are expected to reverse. Valuation allowances are provided if, based upon the weight of available evidence, it is more likely than not that some or all of the net deferred tax assets will not be realized.
+
+Foreign Currencies
+
+Assets and liabilities of our foreign subsidiaries, which are of immaterial amounts, are translated into U.S. dollars at the current rate of exchange, while revenues and expenses are translated at the average exchange rate during the year. Adjustments from translating foreign subsidiaries' financial statements are reported as a component of other comprehensive income or loss. Transaction gains or losses are included in other income and expense, net. The net impact of foreign exchange transactions for the years ended December 31, 2006, 2005 and 2004 were a gain of $0.08 million, a loss of $0.09 million, and a gain of $0.19 million, respectively.
+
+Net Income Per Share
+
+We report our net income per share in accordance with Financial Accounting Standards Board Statement No. 128, "Earnings Per Share." Basic earnings per share is computed based on the weighted average number of common shares outstanding. Diluted earnings per share is based on the sum of the weighted average number of common shares outstanding and common stock equivalents. Shares used to calculate earnings per share are as follows (in thousands):
+
+Year Ended December 31,
+
+Basic weighted average shares outstanding
+
+Effect of dilutive stock options
+
+Effect of dilutive warrants
+
+Effect of dilutive convertible debentures
+
+Diluted weighted average shares outstanding
+
+Weighted average shares which are not included
+
+in the calculation of diluted earnings per share
+
+because their impact is antidilutive
+
+Stock options
+
+Convertible debentures
+
+Warrants
+
+As of December 31, 2006, all previously outstanding warrants have expired and all Debentures have been redeemed or converted.
+
+Stock-Based Compensation Plans
+
+Effective January 1, 2006, the Company adopted the provisions of FAS No. 123(R), "Share-Based Payment" ("FAS123(R)"). Under FAS123(R), share-based compensation cost is measured at the grant date, based on the estimated fair value of the award, and is recognized as an expense over the requisite service period. Total stock compensation expense for 2006 amounted to $346,000 and impacted diluted earnings per share by approximately $0.01 per share. The Company adopted the provisions of FAS123(R) using a modified prospective application. Under this method, compensation cost is recognized for all share-based payments granted, modified or settled after the date of adoption, as well as for any unvested awards that were granted prior to the date of adoption. Prior periods are not revised for comparative purposes. Because the Company previously adopted only the pro forma disclosure provisions of SFAS 123, it will recognize compensation cost relating to the unvested portion of awa rds granted prior to
+the date of adoption, using the same estimate of the grant-date fair value and the same attribution method used to determine the pro forma disclosures under SFAS 123, except that forfeitures rates will be estimated for all options, as required by FAS123(R). The cumulative effect of applying the forfeiture rates is not material.
+
+Awards granted prior to the adoption of FAS123(R) were accounted for under the provisions of Accounting Principles Board Opinion No. 25, "Accounting for Stock Issued to Employees" ("APB 25"), and its related interpretations. Under this intrinsic value method there was no compensation expense recognized for the years ended December 31, 2005 and 2004 because all options had exercise prices equal to the market value of the underlying stock on the date of grant. The following table illustrates the effect on net income and net income per common share if the fair value method had been applied (in thousands except per share amounts):
+
+Year ended December 31,
+
+Net income as reported
+
+Deduct: Total stock-based employee compensation
+
+expense determined under fair value based method
+
+Pro forma net income (loss)
+
+Net income (loss) per share - basic and diluted:
+
+As reported
+
+Pro forma
+
+Retirement-Related Benefits
+
+We account for our defined benefit pension plan using appropriate actuarial methods and assumptions, in accordance with SFAS No. 87, "Employers' Accounting for Pensions," as amended by SFAS No. 158, "Employers' Accounting for Defined Benefit Pension and Other Postretirement Plans - an amendment of FASB Statements No. 87, 88, 106, and 132(R)." SFAS No. 158 requires that previously unrecognized actuarial gains or losses, prior service costs or credits and transition obligations or assets be recognized generally through adjustments to accumulated other comprehensive income and credits to prepaid benefit cost or accrued benefit liability. As a result of these adjustments, the current funded status of our defined benefit pension plan is reflected in the Company's consolidated balance sheet as of December 31, 2006. See Note 11 to the consolidated financial statements.
+
+Recent Accounting Pronouncements
+
+In July 2006, the FASB issued FASB Interpretation No. ("FIN") 48, Accounting for Uncertainty in Income Taxes - An Interpretation of FASB Statement No. 109, which prescribes a recognition threshold and measurement attribute for the financial statement recognition and measurement of a tax position taken or expected to be taken in a tax return. FIN 48 will be effective for fiscal years beginning after December 15, 2006 with the cumulative effect of the change in accounting principle recorded as an adjustment to the opening balance of retained earnings. We have completed our initial evaluation of the impact of the adoption of FIN48 and determined that such adoption is not expected to have a material impact on our financial position or results from operations.
+
+In September 2006, the FASB issued SFAS No. 157, "Fair Value Measurements" ("SFAS No. 157"). SFAS No. 157 establishes a common definition for fair value to be applied to U.S. GAAP guidance requiring use of fair value, establishes a framework for measuring fair value, and expands disclosure about such fair value measurements. SFAS No. 157 is effective for fiscal years beginning after November 15, 2007. We have not yet evaluated the impact of implementation on our consolidated financial statements.
+
+2. ACCOUNTS RECEIVABLE
+
+Accounts receivable are stated net of an allowance for doubtful accounts of $0.58 million at December 31, 2006 and 2005. Accounts receivable are principally due from customers in, and dealers serving, the broadcast video industry and non-broadcast display markets. At December 31, 2006 and 2005, receivables included approximately $1.2 million and $1.0 million, respectively, due from foreign customers.
+
+Bad debt expense amounted to zero in 2006, 2005 and 2004. We record an allowance for doubtful accounts based on specifically identified amounts that management believes to be uncollectible and an additional allowance based on historical experience and management's assessment of the general financial conditions affecting our customer base. We also evaluate the credit worthiness of our customers and determine whether collateral (in the form of letters of credit or credit insurance) should be taken or whether reduced credit limits are necessary. Credit losses have consistently been within management's expectations. The carrying amounts of accounts receivable approximate their fair values.
+
+Inventory is comprised of the following (in thousands):
+
+Finished goods
+
+Work-in-progress
+
+Raw material
+
+4. PROPERTY AND EQUIPMENT
+
+Property and equipment consist of the following (in thousands):
+
+Machinery and equipment
+
+Furniture and fixtures
+
+Leasehold improvements
+
+Less: Accumulated depreciation
+
+and amortization
+
+The reductions in the gross amounts, and related accumulated depreciation, of all categories of property and equipment result from the disposal of items that were no longer in service and were fully depreciated.
+
+Depreciation expense, which includes amortization of assets under capital lease, was $0.4 million, $0.4 million and $0.3 million in 2006, 2005 and 2004, respectively.
+
+5. ACCOUNTS PAYABLE AND ACCRUED EXPENSES
+
+Accounts payable and accrued expenses consist of the following (in thousands):
+
+Accounts payable
+
+Accrued salaries, bonuses and vacation pay
+
+Other
+
+Included in other accrued expenses at December 31, 2006 and 2005 is $0.2 million related to the Company's estimate of incurred, but not reported, healthcare claims.
+
+6. CREDIT FACILITY
+
+At December 31, 2005, the Company had a $2.5 million working capital line of credit with a U.S. bank which extended through April 14, 2006. Under the agreement, the Company had the ability to borrow on a revolving credit basis based on levels of eligible accounts receivable. Interest was payable at prime +1.5% and we were required to maintain certain levels of tangible net worth (as defined in the then existing agreement) and cash or availability of $0.5 million. At December 31, 2005, available borrowings under the then existing lines of credit were $2.5 million.
+
+On March 1, 2006, the Company amended its lending agreement to provide for a $1.5 million revolving line of credit ("revolver"), with an advance rate of up to 80% of eligible accounts receivable. At December 31, 2006, available borrowings on the revolver were $1.5 million. No amounts have been borrowed under the revolver since its inception. The revolver will mature on April 13, 2008 and will bear interest at Prime +1%. The lending agreement also provides for a $1.5 million term loan which the Company drew down on March 20, 2006 in the amount of $1.3 million in order to redeem the Series C Debentures which were scheduled to mature in April 2006. The term loan was payable in twenty-four equal installments plus interest at Prime + 1.75%. The Company was making monthly installments on the term loan since its inception and on December 28, 2006 the remaining balance on the term loan of $840 thousand was paid in full. The Company is required to maintain cash or availability of $1 mill ion and
+minimum cumulative year-to-date EBITDA excluding FAS123(R) stock option expense, as follows (2008 levels to be determined in late 2007):
+
+The Company did not meet the EBITDA requirement of $100 thousand for Q1 2006, for which period a waiver was obtained. The Company did meet the EBITDA requirement for all other quarters in 2006. As is usual and customary in such lending agreements, the agreement also contains certain non-financials requirements, such as required periodic reporting to the bank and various representations and warranties. The agreement also restricts our ability to pay dividends without the bank's consent.
+
+7. SUBORDINATED CONVERTIBLE DEBENTURES
+
+Series C Convertible Debentures
+
+Series D Convertible Debentures
+
+The Company began fiscal 2006 with two series of debentures that had been issued to certain persons and entities, including certain directors, affiliates and shareholders of the Company. The Series C Debentures, which totaled $1.3 million (original principal was $2.3 million and was partly redeemed in March 2005), were originally scheduled to mature in April 2006, but were redeemed in full in March 2006 by using the proceeds from a term loan provided by our bank. The Series C Debentures accrued interest on an annual basis at 7%, payable in kind, and carried a per share conversion price of $1.50. Interest expense attributable to these Series C Debentures totaled $19 thousand in 2006, $108 thousand in 2005 and $150 thousand in 2004.
+
+The Series D Debentures, which totaled $2.8 million, were redeemed in full in October 2006, when all holders converted their debentures into 4,098,303 shares of restricted common stock of the Company based upon the conversion price of $0.65. The Series D Debentures earned interest annually at 8%, which was payable in kind when originally issued, and effective December 1, 2005 became payable in cash. Interest expense attributable to these Series D Debentures totaled $29 thousand in 2006, $71 thousand in 2005 and $51 thousand in 2004. The reported amount of interest expense has been adjusted as a result of amortization of a gain on exchange when the Series D were originally issued in 2004 that was deferred in accordance with SFAS No. 15. The amortization, which reduced interest expense, totaled $129 thousand in 2006 and 2005 and $118 thousand in 2004.
+
+8. LONG-TERM INCENTIVE PLAN
+
+Incentive awards are provided to employees under the terms of our 1999 Incentive Compensation Plan. The Plan allows for the award of incentive and non-incentive options to employees and non-incentive options to non-employee members of our board of directors. The Plan is administered by a committee, designated by the board, to determine the time and circumstances under which an employee option may be exercised. Generally, options vest 1/3 each year, are fully vested three years from grant date and have a term of ten years. At December 31, 2006, there were 0.7 million shares available to be granted under the Plan.
+
+Effective January 1, 2006, the Company adopted the provisions of FAS No. 123(R), "Share-Based Payment" ("FAS123(R)"). Under FAS123(R), share-based compensation cost is measured at the grant date, based on the estimated fair value of the award, and is recognized as an expense over the requisite service period. The Company adopted the provisions of FAS123(R) using a modified prospective application. Under this method, compensation cost is recognized for all share-based payments granted, modified or settled after the date of adoption, as well as for any unvested awards that were granted prior to the date of adoption. Prior periods are not revised for comparative purposes. Because the Company previously adopted only the pro forma disclosure provisions of FAS123(R), it will recognize compensation cost relating to the unvested portion of awards granted prior to the date of adoption, using the same estimate of the grant-date fair value and the same attribution method used to determine the pro
+forma disclosures under FAS123(R), except that forfeitures rates will be estimated for all options. The cumulative effect of applying the forfeiture rates upon adoption is not material. The Company determined its APIC pool to be zero.
+
+The fair value of each option award is estimated on the date of grant using a Black-Scholes option valuation model. Expected volatility is based on the historical volatility of the price of the Company's stock. The risk-free interest rate is based on U.S. Treasury issues with a term equal to the expected life of the option. The Company uses historical data to estimate expected dividend yield, expected life and forfeiture rates. The fair values of the options granted during the years ended December 31, 2006, 2005 and 2004, were estimated based on the following weighted average assumptions:
+
+Expected volatility
+
+Risk-free interest rate
+
+Expected dividend yield
+
+Expected life (in years)
+
+Estimated fair value per option granted
+
+Stock option activity under the Plan, is as follows:
+
+Weighted
+
+Weighted
+
+average
+
+Number
+
+average
+
+remaining
+
+Aggregate
+
+exercise
+
+contracted
+
+intrinsic
+
+options
+
+price
+
+value
+
+Options granted
+
+Options exercised
+
+Options forfeited and canceled
+
+Options granted
+
+Options exercised
+
+Options forfeited and canceled
+
+Options granted
+
+Options exercised
+
+Options forfeited and cancelled
+
+Options outstanding at December 31, 2006
+
+Options exercisable at December 31, 2006
+
+The aggregate intrinsic value of options exercised during the year ended December 31, 2006 was approximately $117,000.
+
+The impact on our results of operations of recording share-based compensation expense for the year ended December 31, 2006 is as follows:
+
+Cost of sales
+
+Research and development
+
+Selling, general and administrative
+
+As of December 31, 2006, there was approximately $575,000 of total unrecognized share-based compensation expense related to options granted under our plans that will be recognized over the next three years.
+
+A summary of our non-vested options as of December 31, 2006 and changes during the year 2006 is presented below:
+
+Weighted average
+
+grant date
+
+Shares
+
+fair value
+
+Granted
+
+Vested
+
+Forfeited and cancelled
+
+Pursuant to authorization received from the Board of Directors, on February 3, 2005 the Company accelerated the vesting of certain outstanding unvested stock options with an exercise price of greater than $0.47 per share. These options were originally scheduled to vest in equal increments at the end of each of the first, second and third years following their grant date. The Company's decision to accelerate the vesting of the options was due to its desire to avoid recording compensation expense, under FAS123(R). The financial effect was to accelerate the proforma compensation expense and thereby avoid recording compensation expense of $0.29 million in 2006 and $0.15 million in 2007 that would have been required once FAS123(R) was implemented. As a result of the acceleration of vesting, options to purchase 1,503,939 shares of the Company's common stock became immediately exercisable. The following table summarizes the accelerated stock options:
+
+Exercise
+
+Number of Option Shares Accelerated from
+
+Price
+
+Original Vesting in
+
+Total
+
+9. OTHER COMPREHENSIVE INCOME
+
+Components and activity related to accumulated other comprehensive income is as follows (in thousands):
+
+Foreign
+
+Net unrealized
+
+Accumulated
+
+Currency
+
+Loss on
+
+Pension
+
+Other
+
+Translation
+
+Marketable
+
+Benefit
+
+Comprehensive
+
+Adjustments
+
+Securities
+
+Costs
+
+Change for period
+
+Change for period
+
+Change for period
+
+10. INCOME TAXES
+
+The components of deferred income taxes are as follows (in thousands):
+
+Deferred tax assets:
+
+Net operating loss carryforwards
+
+Capital loss carryforwards
+
+Temporary differences:
+
+Inventory
+
+Fixed assets and capitalized software
+
+Other liabilities
+
+Accounts receivable and other assets
+
+Deferred tax valuation allowance
+
+At December 31, 2006, we had U.S. net operating loss carryforwards ("NOLs") of approximately $50 million expiring between the years 2007 through 2024. The $16,927 above is the estimated tax benefit (at approximately 34% tax rate) that would be realized upon realization of those NOLs against future taxable income. Also at December 31, 2006, we had capital loss carryforwards of approximately $15 million that expire in 2008. The $4,973 above is the estimated tax benefit (at approximately 34% tax rate) that would be realized upon realization of these capital loss carryforwards against future capital gains.
+
+SFAS 109 requires us to periodically assess whether it is more likely than not that we will generate sufficient taxable income to realize our deferred income tax assets. In making this determination, we consider all available positive and negative evidence and make certain assumptions. We consider, among other things, our deferred tax liabilities, the overall business environment, our historical earnings and losses and our outlook for future years.
+
+For the year ended December 31, 2006, we determined that it was more likely than not, based on a reasonable forecast of results, that we would generate book and taxable income over the next three years, and therefore would be able to realize the benefit of a portion of our deferred tax assets, predominantly comprised of net operating loss carryforwards. Therefore, we recorded an income tax benefit totaling $1.7 million which reflects a decrease in our valuation allowance.
+
+Our income tax benefit for the year ended December 31, 2006, consisted of the following (in thousands):
+
+Current foreign tax provision
+
+Decrease in valuation allowance
+
+The effective income tax rate differed from the Federal statutory rate as follows (in thousands):
+
+Amount
+
+Amount
+
+Amount
+
+Federal income tax at
+
+statutory rate
+
+Permanent differences
+
+International taxes and rate
+
+differentials
+
+Effect of valuation allowance of
+
+deferred tax assets
+
+11. BENEFIT PLANS
+
+Chyron has a domestic defined benefit pension plan (the "U.S. Pension Plan") covering substantially all U.S. employees meeting minimum eligibility requirements. Benefits paid to retirees are based upon age at retirement, years of credited service and average compensation. During 2006, the U.S. Pension Plan was closed to new employees that joined the Company after October 1, 2006. Pension expense is actuarially determined using the projected unit credit method. Our policy is to fund the minimum contributions required under the Employee Retirement Income Security Act (ERISA). During 2007, we expect to contribute $0.7 million for the 2006 and 2007 plan years, based on these funding requirements. In addition, in 2007, the Company intends to pay all plan expenses, as permitted by ERISA. Furthermore, subject to cash flow levels, it is the Company's intention to make additional contributions to the plan to reduce the unfunded liability. We use a December 31 measurement date to determin e pension
+benefit obligations.
+
+Effective December 31, 2006, the Company adopted SFAS No. 158, which required the recognition of pension obligations and actuarial gains or losses, prior service costs or credits and transition assets or obligations that had previously been deferred under the reporting requirement of FASB Statements No. 87, 88,106 and 132(R). The following table reflects the effects of the adoption of SFAS No. 158 on our consolidated balance sheet as of December 31, 2006 (in thousands).
+
+Before Application
+
+After Application
+
+of SFAS No. 158
+
+Adjustments
+
+of SFAS No. 158
+
+Current pension liability
+
+Long term pension liability
+
+Total liabilities
+
+Accumulated other
+comprehensive income (loss)
+
+Total shareholders' equity
+
+Amounts not yet recognized in net periodic cost and included in accumulated other comprehensive income (AOCI) of $143K consists of:
+
+Unrecognized prior service benefit
+
+Unrecognized net actuarial loss
+
+Total in AOCI
+
+Net periodic cost in excess of
+
+cumulative employee contributions
+
+Net amount recognized in the
+
+statement of financial position
+
+Benefit plan information for the U.S. Pension Plan is as follows (in thousands):
+
+Reconciliation of projected benefit obligation:
+
+Obligation at January 1
+
+Service cost
+
+Interest cost
+
+Actuarial losses
+
+Benefit payments
+
+Obligation at December 31
+
+Reconciliation of fair value of plan assets:
+
+Fair value of plan assets at January 1
+
+Actual return on plan assets
+
+Employer contributions
+
+Benefit payments
+
+Fair value of plan assets at December 31
+
+Funded Status:
+
+Funded status at December 31
+
+Unrecognized prior-service cost
+
+Unrecognized gain
+
+Net amount recognized
+
+Projected benefit obligation
+
+Accumulated benefit obligation
+
+Fair value of plan assets
+
+Components of net periodic pension cost:
+
+Service cost
+
+Interest cost
+
+Expected return on plan assets
+
+Amortization of prior service cost
+
+Amortization of prior (gain) loss
+
+Net periodic benefit cost
+
+Weighted-average assumptions used to
+
+determine net periodic benefit cost for the
+
+years ended December 31:
+
+Discount rate
+
+Expected long term return on plan assets
+
+Rate of compensation increase
+
+Weighted-average assumptions used to
+
+determine pension benefit obligation
+
+as of December 31:
+
+Discount rate
+
+Rate of compensation increase
+
+The assumed expected long-term rate of return on plan assets is an estimate based on our plan investment guidelines which specify our strategic asset allocation, historical performance for the various asset classes in our strategic allocation, and our expectations for long-term rates of return for these various asset classes. We recognize that market performance varies and that our assumed expected long-term rate of return may not be meaningful during some periods. We re-evaluate our assumed expected long-term rate of return on plan assets annually through discussion with our plan investment manager. We select that return which we believe best reflects a reasonable expected return on funds invested and to be invested to provide for the benefits included in the projected benefit obligation. Based on our analysis and in consideration of our actual investment experience over the past three years, we lowered our assumption from 8.5% to 7.5% in 2006, which effect is to increase net periodic pe
+nsion cost. The overall investment objective for the pension plan investment portfolio is to achieve the highest level of return with the least amount of risk. In April 2006, we changed our target allocation from 50% (+1-5%) equity securities, 40% (+1-5%) fixed income securities and 10% (+1-10%) cash and cash equivalents to the below target allocations in effect for 2007. Our actual pension plan asset allocations at December 31, 2006 and 2005 are as follows:
+
+Target
+
+Actual
+
+Allocation Range
+
+Allocation
+
+Asset Category
+
+Equity securities
+
+Debt securities
+
+Cash and cash equivalents
+
+The accumulated benefit obligation was $3.82 million and $3.23 million at December 31, 2006 and 2005, respectively.
+
+The following table presents estimated future benefit payments over the next ten years (in thousands):
+
+The amortization of gains and losses is determined by using a 10% corridor of the greater of the market-related value of assets and the projected benefit obligation. Total unamortized gains and losses in excess of the corridor are amortized into income over the average remaining future service. Prior service costs/(benefits) are amortized over the average remaining future service at the time the prior service was established. Average remaining future service as of January 1, 2006 was about 10.2 years.
+
+We have adopted a 401(k) Plan exclusively for the benefit of participants and their beneficiaries. All U.S. employees of Chyron are eligible to participate in the 401(k) Plan. An employee may elect to contribute a percentage of his or her current compensation to the 401(k) Plan, subject to a maximum of 20% of compensation or the Internal Revenue Service annual
+
+contribution limit, whichever is less. We may make discretionary matching contributions of up to 20% of the first 10% of the compensation contributed by a participant. The Company has the option of making the matching contributions in cash or through the issuance of new previously unissued shares of Company stock. The charge to earnings for the cost of the matching contributions was $0.08 million in 2006 and $0.07 million in each of 2005 and 2004. Employees will vest in the matching contributions in equal increments annually over three years.
+
+We also have several U.K. employees that are provided with pension benefits through the Chyron International Corporation Group Personal Pension Plan (the "CIC Pension Plan"). Under the CIC Pension Plan, each member has an individual account within the defined contribution plan and the Company contributes monthly an amount equal to a percentage of his/her salary, currently ranging from 0% to 16.7%.
+
+12. PRODUCT WARRANTY
+
+We provide product warranties for our various products, typically for one year. Liabilities for the estimated future costs of repair or replacement are established and charged to cost of sales at the time the sale is recognized. We established our reserve based on such historical data, taking into consideration specific product information. The following table sets forth the movement in the warranty reserve (in thousands):
+
+Balance at beginning of period
+
+Warranty services provided
+
+13. COMMITMENTS AND CONTINGENCIES
+
+At December 31, 2006, we were obligated under operating and capital leases, expiring at various dates through 2011, covering facility space and equipment as follows (in thousands):
+
+Operating
+
+Capital
+
+The operating leases contain provisions for escalations and for facility maintenance. Total rent expense was $0.43 million, $0.44 million and $0.39 million for 2006, 2005 and 2004, respectively.
+
+We have severance arrangements for key and virtually all other employees of the Company that provide for payment of a portion of their salary and continuance of their benefits for their severance period, in the event they are involuntarily terminated. The severance periods range from a week to a number of months depending on the length of service and/or level of the employee within the Company. In addition, three executive officers have change in control agreements entitling them to certain additional benefits. Had all such key and other covered employees been terminated at December 31, 2006, the estimated total severance and benefits upon a change in control would have approximated $2.3 million.
+
+At December 31, 2006, we had firm purchase commitments for inventory components of $0.15 million that will come due in the first quarter of 2007.
+
+We, from time to time, are involved in routine legal matters incidental to our business. In the opinion of management, the ultimate resolution of such matters will not have a material adverse effect on our financial position, results of operations or liquidity.
+
+14. RELATED PARTY TRANSACTIONS
+
+The secretary of the Company, a non-executive position, is affiliated with a law firm that rendered various legal services to us for which we incurred costs of $0.3 million, $0.2 million and $0.2 million during 2006, 2005 and 2004, respectively.
+
+We have a 20% ownership in Video Technics, a company from which we purchase certain software products. The purchase price of the software is based on market conditions and competitive offerings. Purchases of Aprisa Clip/Stillstore products from Video Technics were approximately $0.2 million, $0.4 million and $0.8 million for the years ended December 31, 2006, 2005 and 2004, respectively. Sales of Aprisa products represented 1%, 2% and 9% of sales in 2006, 2005 and 2004, respectively.
+
+In September 2004, Dr. Donald Greenberg, a Director, was awarded immediately vested, non-qualified stock options, with an exercise price of $0.48 per share, to purchase 50,000 shares of our common stock. We awarded these options as compensation for services rendered for providing advice relating to technology affecting our products.
+
+15. SEGMENT AND GEOGRAPHIC INFORMATION
+
+We conduct our current operations through two reportable segments: broadcast graphics and digital displays, which started in January 2005. The broadcast graphics segment supplies graphics hardware and software to the broadcast industry. Our digital displays segment provides low-cost graphics for digital signage applications.
+
+The following table presents information about our segments (in thousands):
+
+Net sales
+
+Broadcast graphics
+
+Digital displays
+
+Operating income (loss)
+
+Broadcast graphics
+
+Digital displays
+
+Identifiable assets
+
+Broadcast graphics
+
+Digital displays
+
+The details of the Company's geographic sales are as follows (in thousands):
+
+Revenues from external customers:
+
+United States
+
+Europe
+
+Rest of world
+
+ITEM 9. CHANGES IN AND DISAGREEMENTS WITH ACCOUNTANTS
+ON ACCOUNTING AND FINANCIAL DISCLOSURE
+
+None.
+
+ITEM 9A. CONTROLS AND PROCEDURES
+
+As of December 31, 2006, an evaluation was performed under the supervision and with the participation of the Company's management, including the Chief Executive Officer ("CEO") and Chief Financial Officer ("CFO"), of the effectiveness of the design and operation of the Company's disclosure controls and procedures. Based on that evaluation, the Company's management, including the CEO and CFO, concluded that the Company's disclosure controls and procedures are effective as of December 31, 2006. There have been no changes in the Company's internal control over financial reporting during the most recent quarter that have materially affected, or are reasonably likely to materially affect, the Company's internal control over financial reporting.
+
+ITEM 9B. OTHER INFORMATION
+
+None.
+
+PART III
+
+ITEM 10. DIRECTORS, EXECUTIVE OFFICERS AND CORPORATE GOVERNANCE
+
+The information called for herein will be presented under the captions ELECTION OF THE BOARD OF DIRECTORS, SECTION 16(a) REPORTING COMPLIANCE AND AUDIT COMMITTEE REPORT, in our definitive proxy statement to be filed with the Securities and Exchange Commission pursuant to Regulation 14A of the Exchange Act by April 28, 2007, in connection with the 2007 annual meeting of stockholders of Chyron ("Proxy Statement"), and is incorporated herein by reference in response to this item.
+
+We have a written code of ethics for senior financial officers. The Company will provide to any person, without charge, a copy of such code of ethics, upon written request to: Ms. Margaret Roed, Chyron Corporation, 5 Hub Drive, Melville, NY 11747.
+
+ITEM 11. EXECUTIVE COMPENSATION
+
+The information called for herein will be presented under the captions COMPENSATION COMMITTEE REPORT, COMPENSATION DISCUSSION AND ANALYSIS, EXECUTIVE COMPENSATION, DIRECTOR COMPENSATION, COMPENSATION COMMITTEE INTERLOCKS AND INSIDER PARTICIPATION, AND STOCK PERFORMANCE CHART in our Proxy Statement, and is incorporated herein by reference in response to this item.
+
+ITEM 12. SECURITY OWNERSHIP OF CERTAIN BENEFICIAL OWNERS
+AND MANAGEMENT AND RELATED STOCKHOLDER MATTERS
+
+The information called for herein will be presented under the captions PRINCIPAL SHAREHOLDERS - SECURITY OWNERSHIP OF CERTAIN BENEFICIAL OWNERS and SECURITY OWNERSHIP OF MANAGEMENT in our Proxy Statement, and is incorporated herein by reference in response to this item. The remaining information called for by this item relating to "Securities Authorized for Issuance under Equity Compensation Plans" is reported in footnote 8 of the Consolidated Financial Statements for the year ended December 31, 2006 appearing in this Annual Report on Form 10-K.
+
+ITEM 13. CERTAIN RELATIONSHIPS AND RELATED TRANSACTIONS, AND
+DIRECTOR INDEPENDENCE
+
+The information called for herein will be presented under the caption ELECTION OF THE BOARD OF DIRECTORS - BOARD OF DIRECTORS AND COMMITTEES OF THE BOARD OF DIRECTORS AND CERTAIN RELATIONSHIPS AND RELATED TRANSACTIONS in our Proxy Statement, and is incorporated herein by reference in response to this item.
+
+ITEM 14. PRINCIPAL ACCOUNTANT FEES AND SERVICES
+
+The information called for herein will be presented under the caption REPORT OF THE AUDIT COMMITTEE in our Proxy Statement, and is incorporated herein by reference in response to this item.
+
+PART IV
+
+ITEM 15. EXHIBITS AND FINANCIAL STATEMENT SCHEDULES
+
+See index to Consolidated Financial Statements on page 42.
+
+The following Consolidated Financial Statement schedule of Chyron Corporation and subsidiaries is included in Item 15(d) found on page 74.
+Schedule II - Valuation and Qualifying Accounts for the Years Ended December 31, 2006, 2005 and 2004.
+All other schedules called for under Regulation S-X are not submitted because they are not applicable or not required or because the required information is not material or is included in the Consolidated Financial Statements or notes thereto.
+
+See list of exhibits to the Financial Statements in Section (c) below.
+
+Exhibits
+
+Note
+
+Articles of Incorporation and By-Laws.
+
+Restated Certificate of Incorporation of Chyron Corporation
+
+Amended and Restated By-Laws of Chyron Corporation,
+
+Amendment of Certificate of Incorporation of Chyron Corporation,
+
+Instruments defining rights of security holders, including debentures.
+
+Form of Series C 7% Subordinated Convertible Debenture Due
+
+Form of Series D 8% Subordinated Convertible Debenture Due
+
+Amendment to Series C 7% Subordinated Convertible Debentures
+
+Amendment to Series D 8% Subordinated Convertible Debentures
+
+Material Contracts.
+
+Indemnification Agreement between Chyron Corporation and
+
+Donald P. Greenberg dated November 19, 1996
+
+Indemnification Agreement between Chyron Corporation and
+
+Roger Henderson dated November 19, 1996
+
+Indemnification Agreement between Chyron Corporation and
+
+Christopher R. Kelly dated July 18, 2002
+
+Indemnification Agreement between Chyron Corporation and
+
+Eugene M. Weber dated November 19, 1996
+
+Indemnification Agreement between Chyron Corporation and
+
+Michael Wellesley-Wesley dated November 19, 1996
+
+Indemnification Agreement between Chyron Corporation and
+
+Jerry Kieliszak dated July 18, 2002
+
+Indemnification Agreement between Chyron Corporation and
+
+Kevin Prince dated October 1, 2004
+
+Indemnification Agreement between Chyron Corporation and Jerry Kieliszak,
+
+Indemnification Agreement between Jerry Kieliszak, Trustee, and
+
+Chyron Corporation Employees' Pension Plan, effective March 1, 2002
+
+Employment Agreement between Chyron Corporation and
+
+Michael Wellesley-Wesley dated March 2, 2005
+
+Silicon Valley Bank First Loan Modification Agreement
+
+Silicon Valley Bank Loan and Security Agreement
+
+Silicon Valley Bank Side Letter to Loan and Security Agreement
+
+Silicon Valley Bank Second Loan Modification Agreement
+
+Silicon Valley Bank Third Loan Modification Agreement
+
+Silicon Valley Bank Fourth Loan Modification Agreement
+
+Silicon Valley Bank Fifth Loan Modification Agreement
+
+Code of Ethics for Senior Financial Officers
+
+Consent of PricewaterhouseCoopers LLP
+
+Consent of BDO Seidman, LLP
+
+Certification of Chief Executive Officer pursuant to Rule 13A-14(a) or
+
+15D-14(a) of the Securities Exchange Act of 1934, as adopted pursuant
+
+to Section 302 of the Sarbanes-Oxley Act of 2002
+
+Certification of Chief Financial Officer pursuant to Rule 13A-14(a) or
+
+15D-14(a) of the Securities Exchange Act of 1934, as adopted pursuant
+
+to Section 302 of the Sarbanes-Oxley Act of 2002
+
+Certification of Chief Executive Officer pursuant to 18 U.S.C. Section 1350,
+
+as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002
+
+Certification of Chief Financial Officer pursuant to 18 U.S.C. Section 1350,
+
+as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002
+
+(1) Incorporated herein in its entirety by reference to the Annual Report for the fiscal year ended June 30, 1991 on Form 10-K dated January 31, 1992.
+(2) Incorporated herein in its entirety by reference to the Annual Report for the fiscal year ended December 31, 1996 on Form 10-K dated March 20, 1997.
+(3) Incorporated herein in its entirety by reference to the Annual Report for the fiscal year ended December 31, 1998 on Form 10-K dated March 30, 1999.
+(4) Incorporated herein in its entirety by reference to the Annual Report for the fiscal year ended December 31, 2002 on Form 10-K dated March 31, 2003.
+(5) Incorporated herein in its entirety by reference to the Annual Report for the fiscal year ended December 31, 2003 on Form 10-K dated March 30, 2004.
+(6) Incorporated herein in its entirety by reference to the Annual Report for the fiscal year ended December 31, 2004 in Form 10-K dated March 31, 2005.
+(7) Incorporated herein in its entirety by reference to Form 8-K dated February 24, 2005.
+(8) Incorporated herein in its entirety by reference to Form 8-K dated March 2, 2005.
+(9) Incorporated herein in its entirety by reference to Form 8-K dated March 22, 2005.
+(10) Incorporated herein in its entirety by reference to Form 10-Q dated August 12, 2005.
+(11) Incorporated herein in its entirety by reference to Form 8-K dated November 20, 2005.
+(12) Incorporated herein in its entirety by reference to Form 8-K dated March 2, 2006.
+(13) Attached hereto in this Annual Report for the fiscal year ended December 31, 2006 on Form 10-K dated March 30, 2007.
+(14) Incorporated herein in its entirety by reference to Form 8-K dated March 22, 2007.
+
+d) Financial Statement Schedule
+
+Schedule II
+
+CHYRON CORPORATION AND SUBSIDIARIES
+VALUATION AND QUALIFYING ACCOUNTS
+
+Column A
+
+Column B
+
+Column C
+
+Column D
+
+Column E
+
+Balance at
+
+Charged to
+
+Balance at
+
+Beginning
+
+Costs and
+
+End of
+
+Description
+
+of Period
+
+Expenses
+
+Deductions
+
+Period
+
+Reserves and allowances deducted from
+
+asset accounts:
+
+Allowance for doubtful accounts
+
+Inventory reserves
+
+Deferred tax valuation allowance
+
+Allowance for doubtful accounts
+
+Inventory reserves
+
+Deferred tax valuation allowance
+
+Allowance for doubtful accounts(1)
+
+Inventory reserves
+
+Deferred tax valuation allowance
+
+(1) This deduction results from the specific allocation of allowance to items that were fully reserved.
+
+SIGNATURES
+
+Pursuant to the requirements of Section 13 or 15(d) of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned, thereunto duly authorized.
+
+CHYRON CORPORATION
+
+/s/ Michael Wellesley-Wesley
+
+Michael Wellesley-Wesley
+
+President and
+
+Chief Executive Officer
+
+Pursuant to the requirements of the Securities Exchange Act of 1934, this report has been signed below on March 30, 2007, by the following persons on behalf of the registrant and in the capacities on the date indicated.
+
+/s/ Christopher R. Kelly
+
+Chairman of the Board of Directors
+
+Christopher R. Kelly
+
+/s/ Donald P. Greenberg
+
+Director
+
+Donald P. Greenberg
+
+/s/ Richard P. Greenthal
+
+Director
+
+Richard P. Greenthal
+
+/s/ Roger Henderson
+
+Director
+
+Roger Henderson
+
+/s/ Dawn R. Johnston
+
+Vice President and Corporate Controller
+
+Dawn R. Johnston
+
+/s/ Jerry Kieliszak
+
+Sr. VP and Chief Financial Officer
+
+Jerry Kieliszak
+
+/s/ Eugene M. Weber
+
+Director
+
+Eugene M. Weber
+
+/s/ Michael C. Wheeler
+
+Director
+
+Michael C. Wheeler
+
+/s/ Michael Wellesley-Wesley
+
+President, CEO and Director
+
+Michael Wellesley-Wesley
+

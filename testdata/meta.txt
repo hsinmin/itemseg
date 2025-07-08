@@ -1,0 +1,41 @@
+filing: https://www.sec.gov/Archives/edgar/data/354950/000035495020000015/0000354950-20-000015-index.htm
+
+Raw: https://www.sec.gov/Archives/edgar/data/354950/000035495020000015/0000354950-20-000015.txt
+
+Html https://www.sec.gov/Archives/edgar/data/354950/000035495020000015/hd10k02022020.htm
+
+Native text: https://www.sec.gov/Archives/edgar/data/354950/000095014401005194/g68482e10-k.txt
+
+
+
+# prepare the reference standard
+rm -rf segout01 
+
+# execute one of these
+python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method crf
+python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method lstm
+python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method bert
+
+
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method crf
+mv segout01 ../testdata/out_homedepot_htm_crf 
+
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method lstm
+mv segout01 ../testdata/out_homedepot_htm_lstm 
+
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method bert
+mv segout01 ../testdata/out_homedepot_htm_bert
+
+
+
+# native_text
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method crf
+mv segout01 ../testdata/out_homedepot_ntext_crf 
+
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method lstm
+mv segout01 ../testdata/out_homedepot_ntext_lstm 
+
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method bert
+mv segout01 ../testdata/out_homedepot_ntext_bert
+
+

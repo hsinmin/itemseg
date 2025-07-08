@@ -2,18 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import platform
-import sys, re, os, collections
+import sys, re, os
 import re
-import time
-import os, random
+import os
 import requests
 import pandas as pd
 from inscriptis import get_text
 import html
-# import unicodedata
-# import nltk
 import pycrfsuite
-# from nltk import tokenize
 import glob
 import json
 import gensim
@@ -21,8 +17,6 @@ import torch
 import pickle
 import torch.nn as nn
 import torch.nn.functional as F
-# from torch.utils.data import Dataset, DataLoader
-from sklearn.metrics import classification_report
 import numpy as np
 from itemseg import lib_10kq_seg_v1 as lib10kq
 from itemseg import crf_feature_lib_v8 as crf_feature
@@ -30,6 +24,13 @@ from itemseg import gpt4itemSeg
 from argparse import ArgumentParser
 import urllib.parse
 import pathlib
+# import unicodedata
+# import nltk
+# from torch.utils.data import Dataset, DataLoader
+# from nltk import tokenize
+# from sklearn.metrics import classification_report
+# import time, collections, random
+
 
 html2txt_type = "inscriptis"
 
@@ -47,9 +48,11 @@ def get_resource(dest="__home__", check_only=False, verbose=1,
     
     if dest == "__home__":
         # replace with real home path
-        dest = str(pathlib.Path.home()) + "/itemseg/resource/"
-        
+        # dest = str(pathlib.Path.home()) + "/itemseg/resource/"
+        dest = os.path.join(str(pathlib.Path.home()), "itemseg", "resource")
+
     if check_only == False:
+        # todo: implement check resource... (if this necessary?)
         print(f"Download resource to {dest}")
         if not os.path.exists(dest):
             os.makedirs(dest)
@@ -87,13 +90,13 @@ def main():
     parser.add_argument("--input", dest="input", type=str,
                         # default='',
                         # required=True,
-                        help="EDGAR filing URL; e.g. https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt")
+                        help="path to local input file or EDGAR filing URL; e.g. https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt")
     parser.add_argument("--input_type", dest="input_type", type=str,
                          # default='auto',
                          help="[raw|html|native_text|cleaned_text] \n" 
-                              "    raw: Complete submission text file. See sample file at https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt\n"
-                              "    html: HTML report. See sample file at https://www.sec.gov/ix?doc=/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm\n"
-                              "native_text: text report. See sample file at https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt\n"
+                              "    raw: Complete submission text file. See example at https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt\n"
+                              "    html: HTML report. See example file at https://www.sec.gov/ix?doc=/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm\n"
+                              "native_text: text report. See example at https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt\n"
                                "cleaned_text: 10-K report converted to the pure text formated with tables removed.")
     parser.add_argument("--user_agent_str", dest="user_agent_str", type=str,
                          default='N/A',
@@ -113,7 +116,11 @@ def main():
     # model options
     parser.add_argument("--method", dest="method", type=str,
                         default='crf',
-                        help="[crf|lstm|bert|chatgpt] Item segmentation method; crf: conditional random field; lstm: Bi-directional long short-term memory; bert: bert encoder coupled with bi-lstm; chatgpt: use openai api and line-id-based prompting.")
+                        help="[crf|lstm|bert|chatgpt] Item segmentation method;"
+                             " crf: conditional random field, recommended for machine without a GPU; "
+                             " lstm: Bi-directional long short-term memory; "
+                             " bert: bert encoder coupled with bi-lstm; "
+                             " chatgpt: use openai api and line-id-based prompting.")
     parser.add_argument("--word2vec", dest="word2vec", type=str,
                         default='./resource/word2vecmodel_10kq3a_epoch_5',
                         help="File name of the word2vec model (gensim trained)")
@@ -123,16 +130,14 @@ def main():
     parser.add_argument("--crfpath", dest="crfpath", type=str,
                         default="./resource/crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite",
                         help="CRF model (path) for inference")
-    # todo: default to 'AUTO'                        
     parser.add_argument("--labelid_map", dest="labelid_map", type=str,
                         default='AUTO',
-                        help="labelid mapping file; a dictionary of two maps (for lstm and bert)")
+                        help="labelid mapping file;")
     parser.add_argument("--verbose", dest="verbose", default = 1, type = int,
                         help="verbose level=0, 1, or 2; 0=silent, 2=many messages")
     parser.add_argument("--debug", dest="debug", 
                         action="store_true",
                         help="save in-progress files for debugging")
-    
     parser.add_argument('--bertpath', dest='bertpath', type=str,
                         default='./resource/bert_model/bert_model.pth',
                         help="BERT model (path) for inference")
@@ -140,12 +145,12 @@ def main():
     parser.add_argument('--apikey', dest='apikey', type=str,
                         default=None,
                         help='Your own openai api key for using chatgpt model.')
-    # For chatgpt model end
-
+    
     args = parser.parse_args()
     args.hostname = platform.node()
 
     # set  user-invisiable parameters
+    # (mostly not used; should do a deeper cleanup)
     args.optimizer = "Adam"
     args.lr = 0.0001
     args.weight_decay = 0.0
@@ -183,10 +188,10 @@ def main():
     if args.verbose >=1:
         print("itemseg: A tool for 10-K Item Segmentation")
         print("    Free to use for non-commercial purpose.")
-        print("    Maintained by: Hsin-Min Lu (luim@ntu.edu.tw)")
+        # print("    Maintained by: Hsin-Min Lu (luim@ntu.edu.tw)")
         # todo: add project URL
-        print("    Please cite our work (https://arxiv.org/abs/2502.08875) "
-              "if you use this tool in your research.")
+        # print("    Please cite our work (https://arxiv.org/abs/2502.08875) "
+        #       "if you use this tool in your research.")
 
     if args.verbose >=2:
         print("Arguments:", args)
@@ -207,9 +212,7 @@ def main():
         parser.error(f"Illegal input type. Need to be one of these {legal_input_type}")
 
     method = args.method
-
     rdnseed = 52345
-
     resource_prefix = str(pathlib.Path.home()) + "/itemseg/"
 
     # crf_model_fn = "resource/crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite"
@@ -226,7 +229,6 @@ def main():
             label2id_fn = os.path.join(resource_prefix, "resource/tag2023_v1_labelidmap.pkl")
         elif args.method in ['crf', 'bert']:
             label2id_fn = os.path.join(resource_prefix, "resource/tag2021_v3_labelidmap.pkl")
-
         else:
             print(f"Unknown method {args.method} for automatic labelid_map assignment")
             sys.exit(105)
@@ -235,163 +237,40 @@ def main():
 
     bert_model_fn = os.path.join(resource_prefix, args.bertpath)        
     
+    # check whether the resource files are readily available
     res_files = [crf_model_fn, 
                  lstm_model_fn,
                  word2vec_fn,
-                 label2id_fn]
+                 label2id_fn, 
+                 bert_model_fn]
     for ares in res_files:
         if os.path.exists(ares) == False:
             print(f"Cannot find resource file {crf_model_fn}.\n" 
                    "Did you foreget to download resource files with '--get_resource'?")
             sys.exit(300)
 
+    # create output dir if not exists
     if not os.path.exists(args.outputdir):
         os.makedirs(args.outputdir)
 
-    # Model setting; 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
-    if method == "lstm":    
-        # the new model with proper tokenization
-        if args.verbose >= 2:
-            print(f"Loading word2vec model from {word2vec_fn}")
-        word2vec_model = gensim.models.Word2Vec.load(word2vec_fn)
-
-        myseed = rdnseed
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
-        np.random.seed(myseed)
-        torch.manual_seed(myseed)  # for CPU
-        if torch.cuda.is_available():
-            torch.cuda.manual_seed(myseed)
-            torch.cuda.manual_seed_all(myseed)  # for GPU
-
-        # label2id_fn = args.labelid_map
-        if args.verbose >= 2:
-            print(f"Loading labelid_map from {label2id_fn}")    
-        with open(label2id_fn, 'rb') as f:
-            labelid_map = pickle.load(f)
-
-        label_mapping  = labelid_map['label2id']
-        reverse_label_mapping = {v: k for k, v in label_mapping.items()}
-
-        tmpmax = max(label_mapping.values())
-        if args.verbose >= 2:
-            print(f"    max id for label is {tmpmax}; going to add two more")
-        START_TAG = "<START>"
-        STOP_TAG = "<STOP>"
-        label_mapping[START_TAG] = tmpmax + 1
-        label_mapping[STOP_TAG] = tmpmax + 2    
-        
-        if args.verbose >= 2:
-            print("Using device", device)
-
-        if args.verbose >= 2:
-            print(f"==== Reading lstm model files in {lstm_model_fn}")
-        # args.inference_only = True 
-        fns = glob.glob(lstm_model_fn + "/*_args.json")
-        fns = sorted(fns)
-        if args.verbose >= 2:
-            print(f"     Using model setting in {fns[0]}")
-
-        # updating model parameters to args
-        with open(fns[0], "r") as fp:
-            model_param = json.load(fp) 
-
-        for akey in model_param:
-            # skip some of the settings (command line has the priority)
-            if akey not in ['model_outdir', 'outdir_wfoldid']:            
-                vars(args)[akey] = model_param[akey]
-
-        # pick the best model, 
-        # currently using a simple rule (the last one)
-        fns2 = glob.glob(lstm_model_fn + "/*.pth")
-        fns2 = sorted(fns2)
-        best_model_name = fns2[-1]
-        if args.verbose >= 2:
-            print(f"     Using model file {best_model_name}")
-    elif method == "crf":
-        #load tagger
-        tagger = pycrfsuite.Tagger()
-        tagger.open(crf_model_fn)
-    elif method == "chatgpt":
-        pass
-    elif method == "bert":
-        # device = 'cuda' if torch.cuda.is_available() else 'cpu'
-        from sentence_transformers import SentenceTransformer
-        sentence_bert_model = SentenceTransformer('stsb-mpnet-base-v2')
-
-        
-        if args.verbose >= 2:
-            print("Using device", device)
-
-        # current_dir = os.path.dirname(__file__)
-        # 現有路徑
-        # label2id_bert = os.path.join(current_dir, 'tag2021_v3_labelidmap.pkl') 
-        with open(label2id_fn, 'rb') as f:
-            labelid_map = pickle.load(f)
-        label_mapping  = labelid_map['label2id']
-        reverse_label_mapping = {v: k for k, v in label_mapping.items()}
-
-        tmpmax = max(label_mapping.values())
-        print(f"[BERT] max id for label is {tmpmax}; going to add two more")
-        START_TAG = "<START>"
-        STOP_TAG = "<STOP>"
-        PADDING_TAG = "<PADDING>"
-        label_mapping[START_TAG] = tmpmax + 1
-        label_mapping[STOP_TAG] = tmpmax + 2
-        label_mapping[PADDING_TAG] = tmpmax + 3
-
-    else:
-        print(f"Unknonwn method {method}. Stop")
-        sys.exit(103)
-    
-    if method == "lstm":
-        # model preparation
-        input_dim = len(word2vec_model.wv['a']) + 3
-        if args.verbose >=2:
-            print(f"   LSTM input dim = {input_dim}")
-            print(f"   label_mapping = {label_mapping}")
-            print(f"   tag set size = {len(label_mapping)}")
-            print(f"   hidden_dim = {args.hidden_dim}")
-            print(f"   device = {device}")
-            print(f"   attention_method = {args.attention_method}")
-            print(f"   num_layers = {args.num_layers}")
-        model_lstm = lib10kq.BiLSTM_Tok(input_dim, 
-                                    label_mapping, 
-                                    args.hidden_dim, 
-                                    device,
-                                    attention_method=args.attention_method,
-                                    num_layers=args.num_layers).to(device)
-        model_lstm = model_lstm.float()
-        
-        # load model
-        if device == "cpu":
-            ckpt = torch.load(best_model_name, torch.device('cpu'))
-        else:
-            ckpt = torch.load(best_model_name)  
-        model_lstm.load_state_dict(ckpt)
-
-
+    # ================================
+    # prepare the 10-k report
     
     if args.input.find("http") >=0:
         src_type = "url"
     else:
         src_type = "fn"    
 
-    # src_type = "txt"
-    # src_type = "url"
     if args.verbose >= 2:
         print("Source type is", src_type)
 
-
     if src_type == "fn":
-        srcfn = args.input
-        with open(srcfn, "r") as fh:
+        # srcfn = args.input
+        with open(args.input, "r") as fh:
             rawtext = fh.read()
     elif src_type == "url":        
         srcurl = args.input
-
         # do sec url translate
         if srcurl.find("sec.gov/") < 0:
             if args.verbose >= 1:
@@ -402,17 +281,13 @@ def main():
                 print("EDGAR dynamic URL detected. Apply URL translation.")
                 print(f"    Accessing {srcurl} instead")
 
-        print(f"Getting raw file from {srcurl}")
+        print(f"Getting input file from {srcurl}")
 
-        # "Host": "www.sec.gov",
-        # user_agent_str = args.user_agent_str
         if args.user_agent_str == "N/A":
             print("You need to specify user_agent_str per SEC's rule.")
             print("cf. https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data")
             sys.exit(200)
 
-        # user_agent_str = "National Taiwan University, luim@ntu.edu.tw"
-        # todo: setup cli parameter!!!!
         headers = {        
             "User-Agent": args.user_agent_str,
             "Accept-Encoding": "gzip, deflate",
@@ -444,7 +319,6 @@ def main():
     # ---- Now we get rawtext; either from local file or url
     # The next step is to verify and preprocess based on rawtext    #         
 
-
     par1 = re.compile('(<SEC-DOCUMENT>.*?</SEC-HEADER>)(.*)', re.M | re.S)
     par1m1=par1.findall(rawtext)
     if len(par1m1) == 0:
@@ -474,7 +348,6 @@ def main():
     #   urltype == raw  (with header)    raw (ok)       html|native_text|cleaned_text (not ok)
     #   urltype == HTML (no header)      raw (not ok)   html|native_text|cleaned_text (ok)
     #    
-
 
     # prase sec_header
     if urltype == "raw":
@@ -539,14 +412,6 @@ def main():
 
                     if(html2txt_type == "lynx"):                
                         raise(Exception("unsupported method: lynx"))
-                        p = subprocess.Popen(['lynx', '-nolist', '--dump', '-width=2024000', '-stdin'],
-                            stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.STDOUT)
-                        p.stdin.write(adoc.encode('utf-8'))
-                        clean_text = p.communicate()[0]
-                        p.wait()
-                        # clean_text = unicodedata.normalize("NFKD", unicode(clean_text, 'ascii', errors='ignore')).encode('ascii', 'ignore')
-                        clean_text = html.unescape(clean_text)
-                        clean_text = translate2ascii(clean_text)
                     elif html2txt_type == "inscriptis":
                         clean_text = get_text(adoc)
                         clean_text = html.unescape(clean_text)
@@ -615,12 +480,141 @@ def main():
             args.outfn_prefix = os.path.basename(args.input)
 
     rawtext = pure_text2
-    srcfn = "urlfn"
+    # srcfn = "urlfn"
 
     lines = rawtext.split("\n")
     nrow = len(lines)
     if args.verbose >= 2:
         print("    There are %d lines (before removing empty lines)" % nrow, flush = True)  
+
+    # ====================
+    # input file is ready, now we can start to prepare the model
+
+    # prepare the model
+    if method == "lstm":    
+        # prepare the lstm model
+        if args.verbose >= 2:
+            print(f"Loading word2vec model from {word2vec_fn}")
+        word2vec_model = gensim.models.Word2Vec.load(word2vec_fn)
+
+        myseed = rdnseed
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+        np.random.seed(myseed)
+        torch.manual_seed(myseed)  # for CPU
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed(myseed)
+            torch.cuda.manual_seed_all(myseed)  # for GPU
+
+
+        # label2id_fn = args.labelid_map
+        if args.verbose >= 2:
+            print(f"Loading labelid_map from {label2id_fn}")    
+        with open(label2id_fn, 'rb') as f:
+            labelid_map = pickle.load(f)
+
+        label_mapping  = labelid_map['label2id']
+        reverse_label_mapping = {v: k for k, v in label_mapping.items()}
+
+        tmpmax = max(label_mapping.values())
+        if args.verbose >= 2:
+            print(f"    max id for label is {tmpmax}; going to add two more")
+        START_TAG = "<START>"
+        STOP_TAG = "<STOP>"
+        label_mapping[START_TAG] = tmpmax + 1
+        label_mapping[STOP_TAG] = tmpmax + 2    
+
+        # Model setting; 
+        # device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        if args.verbose >= 2:
+            print("Using device", device)
+
+        
+        if args.verbose >= 2:
+            print(f"==== Reading lstm model files in {lstm_model_fn}")
+        # args.inference_only = True 
+        fns = glob.glob(lstm_model_fn + "/*_args.json")
+        fns = sorted(fns)
+        if args.verbose >= 2:
+            print(f"     Using model setting in {fns[0]}")
+
+        # updating model parameters to args
+        with open(fns[0], "r") as fp:
+            model_param = json.load(fp) 
+
+        for akey in model_param:
+            # skip some of the settings (command line has the priority)
+            if akey not in ['model_outdir', 'outdir_wfoldid']:            
+                vars(args)[akey] = model_param[akey]
+
+        # pick the best model, 
+        # currently using a simple rule (the last one)
+        fns2 = glob.glob(lstm_model_fn + "/*.pth")
+        fns2 = sorted(fns2)
+        best_model_name = fns2[-1]
+        if args.verbose >= 2:
+            print(f"     Using model file {best_model_name}")
+    elif method == "crf":
+        #load tagger
+        tagger = pycrfsuite.Tagger()
+        tagger.open(crf_model_fn)
+    elif method == "chatgpt":
+        pass
+    elif method == "bert":
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        from sentence_transformers import SentenceTransformer
+        # this will trigger internet access. Consider to add option to supress this behavior
+        sentence_bert_model = SentenceTransformer('stsb-mpnet-base-v2')
+
+        
+        if args.verbose >= 2:
+            print("Using device", device)
+        
+        # current_dir = os.path.dirname(__file__)
+        # 現有路徑
+        # label2id_bert = os.path.join(current_dir, 'tag2021_v3_labelidmap.pkl') 
+        with open(label2id_fn, 'rb') as f:
+            labelid_map = pickle.load(f)
+        label_mapping  = labelid_map['label2id']
+        reverse_label_mapping = {v: k for k, v in label_mapping.items()}
+
+        tmpmax = max(label_mapping.values())
+        print(f"[BERT] max id for label is {tmpmax}; going to add two more")
+        START_TAG = "<START>"
+        STOP_TAG = "<STOP>"
+        PADDING_TAG = "<PADDING>"
+        label_mapping[START_TAG] = tmpmax + 1
+        label_mapping[STOP_TAG] = tmpmax + 2
+        label_mapping[PADDING_TAG] = tmpmax + 3
+
+    else:
+        print(f"Unknonwn method {method}. Stop")
+        sys.exit(103)
+    
+    if method == "lstm":
+        input_dim = len(word2vec_model.wv['a']) + 3
+        if args.verbose >=2:
+            print(f"   LSTM input dim = {input_dim}")
+            print(f"   label_mapping = {label_mapping}")
+            print(f"   tag set size = {len(label_mapping)}")
+            print(f"   hidden_dim = {args.hidden_dim}")
+            print(f"   device = {device}")
+            print(f"   attention_method = {args.attention_method}")
+            print(f"   num_layers = {args.num_layers}")
+        model_lstm = lib10kq.BiLSTM_Tok(input_dim, 
+                                    label_mapping, 
+                                    args.hidden_dim, 
+                                    device,
+                                    attention_method=args.attention_method,
+                                    num_layers=args.num_layers).to(device)
+        model_lstm = model_lstm.float()
+        
+        # load model
+        if device == "cpu":
+            ckpt = torch.load(best_model_name, torch.device('cpu'))
+        else:
+            ckpt = torch.load(best_model_name)  
+        model_lstm.load_state_dict(ckpt)
 
     if method == "lstm":
         model_lstm.eval()
@@ -745,7 +739,7 @@ def main():
         
         model_bert.load_state_dict(ckpt)
         # model_bert = model_lstm_crf   
-
+        
         model_bert.eval()
 
         # tmp_batchx = embeddings.to(device).unsqueeze(1)  # (batch_size, 1, embedding_dim)
@@ -767,7 +761,6 @@ def main():
         
         if args.outfn_type.find("csv") >= 0:
             outdf.to_csv(os.path.join(args.outputdir, "%s.csv" % args.outfn_prefix), index = False)  
-
 
     if args.verbose >= 1:
         print(f"Output files to {args.outputdir}/{args.outfn_prefix}*")
