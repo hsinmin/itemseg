@@ -325,15 +325,6 @@ def main():
         if args.verbose >= 2:
             print("Using device", device)
 
-        # hyperparameters_rnn = {
-        #     'optimizer': args.optimizer,
-        #     'optim_hparas': {
-        #         'lr': args.lr, 
-        #         'weight_decay': args.weight_decay        
-        #     },
-        #     'hidden_dim': args.hidden_dim,
-        # }
-
         # current_dir = os.path.dirname(__file__)
         # 現有路徑
         # label2id_bert = os.path.join(current_dir, 'tag2021_v3_labelidmap.pkl') 
@@ -356,6 +347,7 @@ def main():
         sys.exit(103)
     
     if method == "lstm":
+        # model preparation
         input_dim = len(word2vec_model.wv['a']) + 3
         if args.verbose >=2:
             print(f"   LSTM input dim = {input_dim}")
