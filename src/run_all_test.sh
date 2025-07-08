@@ -42,14 +42,14 @@ echo "=== Install depednency completed"
 
 echo "=== Run get_resource to download the required resources"
 python3 -m itemseg --get_resource
-if $? -ne 0; then
+if [ $? -ne 0 ]; then
     echo "Error: Get resource failed. Is the host reachable?"
     exit 1
 fi
 
 echo "=== Get nltk resources"
 python3 -m nltk.downloader punkt punkt_tab
-if $? -ne 0; then
+if [ $? -ne 0 ]; then
     echo "Error: Get nltk resources failed."
     exit 1
 fi
