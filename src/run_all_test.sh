@@ -54,12 +54,133 @@ if $? -ne 0; then
     exit 1
 fi
 
-echo "=== Now its time to run the unittest script"
-# python3 -m unittest discover -s tests -p "test_*.py" -v
-# if $? -ne 0; then
-#     echo "Error: Unittest failed."
-#     exit 1
-# fi  
+echo "=== Now its time to run the test scripts ==="
 
-# echo "=== Now its time to run the chatgpt api test"
-# python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004.txt --user_agent "Some University
+setname=raw_crf_online
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type raw \
+       --input https://www.sec.gov/Archives/edgar/data/354950/000035495020000015/0000354950-20-000015.txt \
+       --method crf \
+       --user_agent "Some University johndoe@someuniv.edu" \
+       --outfn_prefix homedepot_raw.txt 
+diff segout01 ../testdata/out_homedepot_raw_crf
+if [ $? -ne 0 ]; then
+    echo "$setname Error: raw output different from prestored result."     
+    exit 1
+else
+    echo "$setname OK: output matches prestored result."
+fi
+
+
+
+
+setname=raw_crf
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method crf
+diff segout01 ../testdata/out_homedepot_raw_crf
+if [ $? -ne 0 ]; then
+    echo "$setname Error: raw output different from prestored result."     
+    exit 1
+else
+    echo "$setname OK: output matches prestored result."
+fi
+
+setname=raw_lstm
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method lstm
+diff segout01 ../testdata/out_homedepot_raw_lstm
+if [ $? -ne 0 ]; then
+    echo "$setname Error: raw output different from prestored result."     
+    exit 1
+else
+    echo "$setname OK: output matches prestored result."
+fi
+
+setname=raw_bert
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method bert
+diff segout01 ../testdata/out_homedepot_raw_bert
+if [ $? -ne 0 ]; then
+    echo "$setname Error: raw output different from prestored result."     
+    exit 1
+else
+    echo "$setname OK: output matches prestored result."
+fi
+
+# ==== html tests ====
+setname=html_crf
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method crf
+diff segout01 ../testdata/out_homedepot_htm_crf
+if [ $? -ne 0 ]; then
+    echo "$setname Error: html output different from prestored result."     
+    exit 1
+else
+    echo "$setname OK: output matches prestored result."
+fi 
+
+setname=html_lstm
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method lstm
+diff segout01 ../testdata/out_homedepot_htm_lstm
+if [ $? -ne 0 ]; then
+    echo "$setname Error: html output different from prestored result."     
+    exit 1
+else
+    echo "$setname OK: output matches prestored result."
+fi
+
+setname=html_bert
+echo "=== Run test script for $setname"
+rm -rf segout01 
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method bert
+diff segout01 ../testdata/out_homedepot_htm_bert
+if [ $? -ne 0 ]; then
+    echo "$setname Error: html output different from prestored result."     
+    exit 1     
+else
+    echo "$setname OK: output matches prestored result."
+fi
+
+# ==== native_text tests ====
+setname=native_text_crf
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method crf
+diff segout01 ../testdata/out_homedepot_ntext_crf
+if [ $? -ne 0 ]; then
+    echo "$setname Error: native_text output different from prestored result."     
+    exit 1
+else        
+    echo "$setname OK: output matches prestored result."
+fi 
+
+setname=native_text_lstm
+echo "=== Run test script for $setname"
+rm -rf segout01
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method lstm
+diff segout01 ../testdata/out_homedepot_ntext_lstm
+if [ $? -ne 0 ]; then
+    echo "$setname Error: native_text output different from prestored result."     
+    exit 1
+else    
+    echo "$setname OK: output matches prestored result."
+fi  
+
+setname=native_text_bert
+echo "=== Run test script for $setname"
+rm -rf segout01     
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method bert
+diff segout01 ../testdata/out_homedepot_ntext_bert
+if [ $? -ne 0 ]; then
+    echo "$setname Error: native_text output different from prestored result."     
+    exit 1
+else
+    echo "$setname OK: output matches prestored result."
+fi  

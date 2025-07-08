@@ -14,24 +14,28 @@ rm -rf segout01
 # execute one of these
 python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method crf
 python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method lstm
-# todo: requires internet...
 python3 -m itemseg --input_type raw --input ../testdata/homedepot_raw.txt --method bert
 
 
-python3 -m itemseg --input_type raw --input ../testdata/homedepot_html.htm --method crf
-python3 -m itemseg --input_type raw --input ../testdata/homedepot_html.htm --method lstm
-# todo: requires internet...
-python3 -m itemseg --input_type raw --input ../testdata/homedepot_html.htm --method bert
-
-
-
-
-# move to the right place
-mv segout01 ../testdata/out_homedepot_lstm 
-# todo 
-mv segout01 ../testdata/out_homedepot_raw_bert
-
-
-# the html file
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method crf
 mv segout01 ../testdata/out_homedepot_htm_crf 
+
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method lstm
+mv segout01 ../testdata/out_homedepot_htm_lstm 
+
+python3 -m itemseg --input_type html --input ../testdata/homedepot_html.htm --method bert
+mv segout01 ../testdata/out_homedepot_htm_bert
+
+
+
+# native_text
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method crf
+mv segout01 ../testdata/out_homedepot_ntext_crf 
+
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method lstm
+mv segout01 ../testdata/out_homedepot_ntext_lstm 
+
+python3 -m itemseg --input_type native_text --input ../testdata/homedepot_ntext.txt --method bert
+mv segout01 ../testdata/out_homedepot_ntext_bert
+
 
