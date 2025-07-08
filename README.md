@@ -99,7 +99,7 @@ A 10-K report is an annual report filed by publicly traded companies with the U.
 
 You can search and read 10-K reports through the [EDGAR web interface](https://www.sec.gov/edgar/search-and-access).  Itemseg takes the URL of the `Complete submission text file`, converts the HTML to formatted text, and segments the text file by items.
 
-As an example, the Amazon 10-K report page for [fiscal year 2022](https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004-index.htm) shows the link to the HTML 10-K report and a `Complete submission text file` [0001018724-23-000004.txt](https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004.txt). Pass this link to the itemseg module, and it will retrieve the file and segment items for you.
+As an example, the Amazon 10-K report page for [fiscal year 2022](https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004-index.htm) shows the link to the HTML 10-K report and a `Complete submission text file` [0001018724-23-000004.txt](https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004.txt). Pass this link to the itemseg module, and it will retrieve the file and segment items for you. Remember to adjust --user_agent according to your affiliation. 
 
 ```console
 python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004.txt --user_agent "Some University johedoe@someuniv.edu"
