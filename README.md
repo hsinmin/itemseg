@@ -18,7 +18,7 @@ Itemseg supports the following item segmentation approaches:
 * **bert**: BERT encoder coupled with Bi-LSTM.
 * **chatgpt**: Uses OpenAI API and line-id-based prompting.
 
-Both **lstm** and **bert** require a GPU to work at a reasonable speed. You will need to setup the GPU hardware and driver before using these approaches. You can still use itemseg to process 10-K report without a GPU by selecting the **crf** approach. 
+Both **lstm** and **bert** require a GPU to work at a reasonable speed. You will need to setup the GPU hardware and driver before using these approaches. You can still use itemseg to process 10-K reports without GPUs by selecting the **crf** approach. 
 
 [![PyPI - Version](https://img.shields.io/pypi/v/itemseg.svg)](https://pypi.org/project/itemseg)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/itemseg.svg)](https://pypi.org/project/itemseg)
