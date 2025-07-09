@@ -5,11 +5,11 @@ build-backend = "hatchling.build"
 [project]
 name = "itemseg"
 dynamic = ["version"]
-description = '10-K Report Item Segmentation with Line-based Attention (ISLA)'
+description = 'The 10-K Report Item Segmentation Tool'
 readme = "README.md"
 requires-python = ">=3.8"
 # license = "Free for non-commercial use"
-keywords = ["Item Segmentation", "Sequence Labeling", '10-K']
+keywords = ["Item Segmentation", "Sequence Labeling", '10-K', 'CRF', 'LSTM', 'BERT', 'ChatGPT']
 authors = [
   { name = "Hsin-Min Lu; Huan-Hsun Yen; Yen-Hsiu Chen", email = "luim@ntu.edu.tw" },
 ]
@@ -21,22 +21,24 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
   "License :: Free for non-commercial use",
 ]
-dependencies = ['requests >= 2.22.0', 
-                'pandas >= 1.1.0',
-                'inscriptis >= 2.3.2',
-                'python-crfsuite >= 0.9.7',
-                'nltk >= 3.5',
-                'gensim >= 4.3.0',
-                'torch >= 1.13.1',
-                'scikit-learn >= 0.24.2',
-                'scipy >= 1.10.0',
-                'numpy >= 1.23.0',
-                'urllib3 >= 1.25.8',
-                'openai >= 1.59.3'
+dependencies = ['requests <= 2.32.4', 
+                'pandas <= 2.3.0',
+                'inscriptis <= 2.6.0',
+                'python-crfsuite >= 0.9.11',
+                'nltk <= 3.9.1',
+                'gensim <= 4.3.3',
+                'torch <= 2.7.1',
+                'scikit-learn <= 1.7.0',
+                'scipy <= 1.13.1',
+                'numpy <= 1.26.4',
+                'urllib3 <= 2.5.0',
+                'openai <= 1.91.0',
+                'sentence_transformers <= 4.1.0'
 ]
 
 [project.scripts]
@@ -44,7 +46,7 @@ itemseg = "itemseg:main"
 
 
 [project.urls]
-Documentation = "https://github.com/hsinmin/isla#readme"
+Documentation = "https://github.com/hsinmin/itemseg#readme"
 Issues = "https://github.com/hsinmin/itemseg/issues"
 Source = "https://github.com/hsinmin/itemseg"
 
@@ -76,18 +78,18 @@ dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/isla tests}"
+check = "mypy --install-types --non-interactive {args:src/itemseg tests}"
 
 [tool.coverage.run]
-source_pkgs = ["isla", "tests"]
+source_pkgs = ["itemseg", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/isla/__about__.py",
+  "src/itemseg/__about__.py",
 ]
 
 [tool.coverage.paths]
-isla = ["src/itemseg", "*/itemseg/src/itemseg"]
+itemseg = ["src/itemseg", "*/itemseg/src/itemseg"]
 tests = ["tests", "*/itemseg/tests"]
 
 [tool.coverage.report]
