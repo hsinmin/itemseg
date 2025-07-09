@@ -1,0 +1,1233 @@
+pred,sentence
+O,10-K 1 hd10k02022020.htm 10-K
+O,
+X,
+O,UNITED STATES
+O,
+O,"Washington, D.C. 20549"
+O,FORM 10-K
+O,(Mark One)
+O,
+O,"For the fiscal year ended February 2, 2020"
+O,
+O,For the transition period from to
+O,Commission file number 1-8207
+O,"THE HOME DEPOT, INC."
+O,(Exact name of registrant as specified in its charter)
+O,
+O,2455 Paces Ferry Road
+O,
+O,"Registrant's telephone number, including area code: ( 770 ) 433-8211"
+O,
+O,Securities registered pursuant to Section 12(b) of the Act:
+O,
+O,Securities registered pursuant to section 12(g) of the Act: None
+O,"Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Yes   No"
+O,Indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act. Yes   No
+O,"Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days. Yes   No"
+O,Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (SS 232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such files). Yes   No
+O,"Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company. See the definitions of ""large accelerated filer,"" ""accelerated filer,"" ""smaller reporting company,"" and ""emerging growth company"" in Rule 12b-2 of the Exchange Act."
+O,Large accelerated filer   Accelerated filer   Non-accelerated filer   Smaller reporting company   Emerging growth company
+O,"If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. .."
+O,Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Act). Yes   No
+O,"The aggregate market value of voting common stock held by non-affiliates of the registrant on August 4, 2019 was $ 232.3 billion ."
+O,"The number of shares outstanding of the registrant's common stock as of March 6, 2020 was 1,074,741,592 shares."
+O,
+O,Portions of the registrant's proxy statement for the 2020 Annual Meeting of Shareholders are incorporated by reference in Part III of this Form 10-K to the extent described herein.
+O,
+O,TABLE OF CONTENTS
+O,
+O,Cautionary Statement Pursuant to the Private Securities Litigation Reform Act of 1995    iii
+O,
+O,PART I
+O,Item 1.                                                                                  Business .                                                                                                        1
+O,Item 1A.                                                                                 Risk Factors .                                                                                                    8
+O,Item 1B.                                                                                 Unresolved Staff Comments .                                                                                       16
+O,Item 2.                                                                                  Properties .                                                                                                      17
+O,Item 3.                                                                                  Legal Proceedings .                                                                                               18
+O,Item 4.                                                                                  Mine Safety Disclosures .                                                                                         19
+O,
+O,PART II
+O,"Item 5.                                                                                  Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities .    19"
+O,Item 6.                                                                                  Selected Financial Data .                                                                                         20
+O,Item 7.                                                                                  Management's Discussion and Analysis of Financial Condition and Results of Operations .                           21
+O,Item 7A.                                                                                 Quantitative and Qualitative Disclosures About Market Risk .                                                      28
+O,Item 8.                                                                                  Financial Statements and Supplementary Data .                                                                     29
+O,Item 9.                                                                                  Changes in and Disagreements With Accountants on Accounting and Financial Disclosure .                            61
+O,Item 9A.                                                                                 Controls and Procedures .                                                                                         61
+O,Item 9B.                                                                                 Other Information .                                                                                               63
+O,
+O,PART III
+O,"Item 10.                                                                                 Directors, Executive Officers and Corporate Governance .                                                          63"
+O,Item 11.                                                                                 Executive Compensation .                                                                                          64
+O,Item 12.                                                                                 Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters .                  64
+O,"Item 13.                                                                                 Certain Relationships and Related Transactions, and Director Independence .                                       64"
+O,Item 14.                                                                                 Principal Accounting Fees and Services .                                                                          65
+O,
+O,PART IV
+O,"Item 15.                                                                                 Exhibits, Financial Statement Schedules .                                                                         65"
+O,Item 16.                                                                                 Form 10-K Summary .                                                                                               69
+O,
+X,
+X,
+O,ASU No. 2014-09       Revenue from Contracts with Customers (Topic 606)
+O,
+O,Comparable sales      As defined in the Results of Operations and Non-GAAP Financial Measures section of MD&A
+O,
+O,"Exchange Act          Securities Exchange Act of 1934, as amended"
+O,
+O,Restoration Plan      Home Depot FutureBuilder Restoration Plan
+O,
+O,"Securities Act        Securities Act of 1933, as amended"
+O,
+X,
+X,
+O,"Certain statements contained herein, as well as in other filings we make with the SEC and other written and oral information we release, regarding our future performance constitute ""forward-looking statements"" as defined in the Private Securities Litigation Reform Act of 1995. Forward-looking statements may relate to, among other things, the demand for our products and services; net sales growth; comparable sales; effects of competition; implementation of store, interconnected retail, supply chain and technology initiatives; inventory and in-stock positions; state of the economy; state of the housing and home improvement markets; state of the credit markets, including mortgages, home equity loans, and consumer credit; impact of tariffs; issues related to the payment methods we accept; demand for credit offerings; management of relationships with our associates, suppliers and vendors; international trade disputes, natural disasters, public health issues (including pandemics and quarantines), and other business interruptions that could disrupt supply or delivery of, or demand for, the Company's products; continuation of share repurchase programs; net earnings performance; earnings per share; dividend targets; capital allocation and expenditures; liquidity; return on invested capital; expense leverage; stock-based compensation expense; commodity price inflation and deflation; the ability to issue debt on terms and at rates acceptable to us; the impact and expected outcome of investigations, inquiries, claims, and litigation; the effect of accounting charges; the effect of adopting certain accounting standards; the impact of the Tax Act and other regulatory changes; store openings and closures; financial outlook; and the integration of acquired companies into our organization and the ability to recognize the anticipated synergies and benefits of those acquisitions."
+O,"Forward-looking statements are based on currently available information and our current assumptions, expectations and projections about future events. You should not rely on our forward-looking statements. These statements are not guarantees of future performance and are subject to future events, risks and uncertainties - many of which are beyond our control, dependent on actions of third parties, or currently unknown to us - as well as potentially inaccurate assumptions that could cause actual results to differ materially from our expectations and projections. These risks and uncertainties include, but are not limited to, those described in Item 1A, ""Risk Factors,"" and elsewhere in this report and also as may be described from time to time in future reports we file with the SEC."
+O,"Forward-looking statements speak only as of the date they are made, and we do not undertake to update these statements other than as required by law. You are advised, however, to review any further disclosures we make on related subjects in our filings with the SEC."
+O,
+O,iii
+O,
+X,
+O,PART I
+B1,Item 1. Business.
+I1,Introduction
+I1,
+I1,"The Home Depot, Inc. is a Delaware corporation that was incorporated in 1978. Our Store Support Center (corporate office) is located at 2455 Paces Ferry Road, Atlanta, Georgia 30339. Our telephone number at that address is (770) 433-8211."
+I1,Our Business
+I1,Our Strategy
+I1,"The retail landscape has changed rapidly over the past several years, with customer expectations regarding how, when and where they want to shop constantly evolving. To meet this challenge, we have had to become more agile in our response to the changing competitive environment and customer preferences. As a result, in late 2017, we launched our transformational journey to create the One Home Depot experience, our vision of an interconnected, frictionless shopping experience that enables our customers to seamlessly blend the digital and physical worlds. We are now two years into our multi-year, approximately $11 billion accelerated investment program to create this experience. We are investing in our stores, associates, interconnected and digital experience, Pro customer experience, services business, supply chain, and product and innovation to drive value for our customers, our associates, our suppliers, and our shareholders. We are guided in our investments by a ""customer-back"" approach, focusing on the customer experience as we invest. This focus has driven investments aimed at providing an interconnected shopping experience, featuring curated and innovative product choices, personalized for the individual shopper's needs, which are then delivered in a fast and cost-efficient manner. To accomplish this, we are executing against five key strategies designed to drive growth in our business:"
+I1,
+I1,*    Connect associates to customer needs
+I1,
+I1,"*    Interconnected experience: connect stores to online, and online to stores"
+I1,
+I1,*    Connect products and services to customer needs
+I1,
+I1,"*    Connect product to shelf, site and customer"
+I1,
+I1,*    Innovate our business model and value chain
+I1,
+I1,"Taken together, these strategies are helping us to leverage our competitive advantages and create the One Home Depot experience that our customers demand. To highlight our evolution and the capabilities we have developed for the benefit of our customers along this journey, we also changed our tagline in fiscal 2019 to ""How Doers Get More DoneTM"", with a corresponding marketing campaign designed to show our customers the ways we are making home improvement easier, faster and more convenient for them. We discuss below many of our efforts and investments in the context of our five key strategies."
+I1,Connect Associates to Customer Needs
+I1,"As noted above, we have been guided by a focus on our customers in our development of the One Home Depot experience, and we leverage our knowledgeable and engaged associates, guided by our culture and values, to address customer needs. We serve two primary customer groups and have developed different approaches to meet their diverse needs:"
+I1,
+I1,*    DIY Customers. These customers are typically home owners who purchase products and complete their own projects and installations. Our associates assist these customers both in our stores and through online resources and other media designed to provide product and project knowledge. We also offer a variety of
+I1,
+X,
+X,
+I1,clinics and workshops both to share this knowledge and to build an emotional connection with our DIY customers.
+I1,
+I1,"*    Professional Customers (or ""Pros"") . These customers are primarily professional renovators/remodelers, general contractors, handymen, property managers, building service contractors and specialty tradesmen, such as electricians, plumbers and painters. These customers build, renovate, remodel, repair and maintain residential properties, multifamily properties, hospitality properties and commercial facilities, including education facilities, healthcare facilities, government buildings and office buildings. We recognize the great value our Pro customers provide to their clients, and we strive to make the Pros' job easier and help them grow their business. We believe that investments aimed at deepening our relationships with our Pro customers are yielding increased engagement and will continue to translate into incremental spend. As part of our continued commitment to invest in Pro customer relationships and the significant market opportunity these customers represent, we have created an enhanced Pro customer experience, both online and in-store."
+I1,
+I1,"Pro customers are not one-size-fits-all, and The Home Depot Pro offers the level of value-added services that our diverse Pro customers demand. Our Pro loyalty program, Pro Xtra, provides Pros with benefits related to useful business services, exclusive product offers, and a purchase monitoring tool to enable receipt lookup and job tracking of purchases across all forms of payment. We will continue to invest in the Pro customer experience to provide the services, solutions, support, and online tools they need to grow their businesses."
+I1,
+I1,"We help our customers finance their projects by offering PLCC products through third-party credit providers. Our PLCC program includes other benefits, such as a 365-day return policy and, for our Pros, commercial fuel rewards and extended payment terms. In fiscal 2019 , our customers opened approximately 4.8 million new The Home Depot private label credit accounts, and at the end of fiscal 2019 the total number of The Home Depot active account holders was approximately 16.7 million. PLCC sales accounted for approximately 23% of net sales in fiscal 2019 ."
+I1,"We strive to provide an outstanding customer experience by putting customers first and taking care of our associates. Our customer experience begins with excellent customer service, and our associates are key to delivering on that experience. Our goal is to remove complexity and inefficient processes from the stores to allow our associates to focus on our customers and make working at The Home Depot a better experience."
+I1,"To this end, we have continued to focus on freight handling capabilities as part of a multi-year, end-to-end initiative to optimize how product flows from suppliers to our shelves. Among other benefits, this initiative improves on-shelf availability of products for customers while decreasing the amount of time a store associate spends locating product on the receiving dock or in overhead storage. Our overhead management application on our FIRST phones helps associates locate product stored in overhead storage quickly and accurately, saving time, improving the customer"
+I1,
+X,
+X,
+I1,"experience, and assisting with inventory management. As part of our strategic investments, we have rolled out our new order management system, ""Order Up,"" which consolidates certain of our existing legacy systems into a simple and intuitive user interface that requires minimal training and significantly decreases associate time required to create, sell, manage and edit orders. We have also continued to leverage the enhanced labor model we launched in fiscal 2018 to better align associate activity with customer needs, shifting from a model based on the number of transactions to one that correlates to the specific volume of activity within each store down to the department level. This change allows us to better allocate our workforce to provide a best-in-class customer experience. In addition, in fiscal 2019 we expanded our in-aisle mobile learning solution to all departments to further enhance our store associates' learning and development and aid them in assisting customers. This application, which is on the FIRST phone, enables associates to integrate training into their everyday workstream as well as answer questions and assist customers in real time."
+I1,"For our Pro sales associates, we have provided a number of tools aimed at helping them to better understand their top Pro customers. Our MyView system allows our Pro sales associates to access customer data and information, so they can proactively work with our Pro customers and determine how we can better serve them."
+I1,"At the end of fiscal 2019 , we employed approximately 415,700 associates, of whom approximately 29,500 were salaried, with the remainder compensated on an hourly basis. Our culture and values promote ongoing investment in our associates. To attract, reward, and retain qualified associates, we seek to maintain competitive wages in each market we serve, offer comprehensive benefits geared towards helping associates through various life experiences, and provide career growth and development opportunities that make working at The Home Depot a more rewarding experience. We also have a number of programs to recognize stores and individual associates for exceptional customer service. We measure associate satisfaction and engagement regularly through associate surveys and drive enhancements based on the feedback we receive. We believe that our employee relations are very good."
+I1,"Interconnected Experience: Connect Stores to Online, and Online to Stores"
+I1,"Our customers are shopping and interacting with us differently today than they did several years ago. As a result, we have taken a number of steps to provide our customers with a seamless and frictionless interconnected shopping experience across our stores, online, on the job site, and in their homes."
+I1,"We do not view the customer experience as a specific transaction; rather, we believe it encompasses an entire process from inspiration and know-how, to purchase and fulfillment, and to post-purchase care and support. From the inspirational point of the purchase journey to providing product know-how, we are investing in the infrastructure and processes needed to deliver the most relevant marketing messages to our customers based upon what is important for them today. Customers desire more personalized messaging, so we are focusing on connecting marketing activities with the online and in-store experiences to create a seamless series of contacts across channels. Doing this well provides tremendous value to the customer, which in turn drives positive business results."
+I1,"Our stores remain the hub of our business, and we are investing to improve the customer shopping experience through easier navigation and increasing the convenience and speed of checkout. For several years, our associates have used our FIRST phones to help expedite the online order checkout process, locate products in the aisles and online, and check inventory on hand. To improve the customer's experience in our stores, we have also empowered our customers with additional self-help tools, including mobile app-enabled store navigation. Our app provides store-specific maps, which allow customers to pinpoint the exact location of an item on their mobile devices. As part of our strategic investments, we have made significant progress with the implementation of our wayfinding sign and store refresh package, with over 1,400 of our U.S. stores completed by the end of fiscal 2019 . This package includes new, more intuitive signage, better lighting, and other store enhancements. In fiscal 2019, we also continued the roll out of our re-designed front end area, including reconfigured service desks, optimized layouts in all checkout areas, and expanded and enhanced self-checkout options, as well as the addition of self-service lockers at the front entrance to offer convenient pick up of online orders. We believe these investments are driving higher customer satisfaction scores."
+I1,"The enhanced store experience is complemented by our continued investments in our website and mobile apps to drive a more interconnected digital customer experience. Enhancements to our digital properties are critical for our increasingly interconnected customers, who research products online and check available inventory before going into one of our stores to view the products in person or talk to an associate and then make their purchase in store or online. While in the store, customers may also go online to access ratings and reviews, compare prices, view our extended assortment and purchase products. Our investment in digital price labels for our appliance department has enabled us to incorporate ratings from the digital world into the store shopping experience, enhancing the overall customer experience in the category."
+I1,
+X,
+X,
+I1,"We believe that by connecting our stores to online and online to our stores, we drive sales not just in-store but also online. Our focus on improving search capabilities, site functionality, category presentation, product content, speed to checkout, and enhanced fulfillment options has yielded higher traffic, better conversion and continued sales growth. To create an enhanced customer experience, we have been expanding our use of technology, including advanced data science. We have also continued to improve our e-commerce platform with a goal of driving a more personalized customer experience, as discussed above."
+I1,Connect Products and Services to Customer Needs
+I1,"We strive to be the number one retailer in product authority in home improvement by delivering product innovation, assortment and value and by offering a range of home improvement services. In fiscal 2019 , we continued to invest in merchandising resets in our stores to refine assortments, introduce a wide range of innovative new products to our DIY and Pro customers, and improve visual merchandising to drive a better shopping experience. At the same time, we remain focused on offering everyday values in our stores and online. To help our merchandising organization keep pace with changing customer expectations and expanding desire for innovation, localization and personalization, we are investing in tools to better leverage our data and drive a deeper level of collaboration with supplier partners. As a result, we have continued to focus on enhanced merchandising information technology tools to help us to build an interconnected shopping experience that is tailored to our customers' personas, shopping context, and location; ensure we have the best value in the market; and optimize our product assortments."
+I1,"A typical The Home Depot store stocks approximately 30,000 to 40,000 items during the year, including both national brand name and proprietary products. Our online product offerings complement our stores by serving as an extended aisle, and we offer a significantly broader product assortment through our websites, including homedepot.com; blinds.com, our online site for custom window coverings; and thecompanystore.com, our online site for textiles and decor products. We leverage our digital platforms to drive incremental growth from new and adjacent categories like HD Home, pool and workwear. We also routinely use our merchandising tools to refine our online assortment to balance the extended choice with a more curated offering."
+I1,
+I1,"We also offer a number of services for our customers. As noted above, we provide a number of special programs for our Pro customers to meet their particular needs, and for our DIY and DIFM customers, we provide a number of installation services. We also provide tool and equipment rentals at over 1,200 locations across the U.S. and Canada, providing value and convenience for both our Pro and DIY customers. As part of our strategic investment program, we are investing in more space, more tools, and better technology to improve the customer experience and continue to grow this differentiated service offering."
+I1,"Connect Product to Shelf, Site and Customer"
+I1,"We continue to drive productivity and efficiency by building best-in-class competitive advantages in our information technology and supply chain. We recognize that our customers' expectations are changing rapidly and that our supply chain needs to be responsive to their expectations for how, when and where they choose to receive our products and services. As part of our One Home Depot initiative, we are investing approximately $1.2 billion in the multi-year development of our One Supply Chain network, which is designed to continue to improve productivity and connectivity across our supply chain platforms to achieve the fastest, most efficient delivery capabilities in home improvement. Our efforts are focused on ensuring product availability and increasing the speed and reliability of delivery for our customers while managing our costs, which results in higher returns for our shareholders."
+I1,
+X,
+X,
+I1,"We centrally forecast and replenish over 98% of our store products through sophisticated inventory management systems and utilize a network of over 200 distribution centers to serve both our stores' and customers' needs. This network includes multiple distribution center platforms in the U.S., Canada, and Mexico tailored to meet the needs of our stores and customers based on the types of products, location, transportation, and delivery requirements. These platforms primarily include rapid deployment centers, stocking distribution centers, bulk distribution centers, and direct fulfillment centers. As part of our investment in One Supply Chain, we have invested to further automate and mechanize our rapid deployment center network to drive efficiency and faster movement of product."
+I1,"We are also expanding our fulfillment network, investing in approximately 150 new fulfillment facilities to drive speed and reliability of delivery for customers and help us meet our goal of reaching 90% of the U.S. population with same or next day delivery for extended home improvement and MRO product offerings, including big and bulky goods. These facilities include additional direct fulfillment centers, which deliver product directly to customers, and market delivery operations, or MDOs, which function as local hubs to consolidate freight for dispatch to customers for the final mile of delivery, with a focus on items like appliances. We are also adding flatbed distribution centers, which handle large items like lumber that are transported on flatbed trucks, and market delivery centers, which are focused on distribution of MRO products and fast-turning store-based products. As of the end of fiscal 2019 , we have opened at least one of each of these four major types of fulfillment facilities and will continue to build out our fulfillment network over the next few years."
+I1,
+I1,"A key component of our strategy is enabled through our technology portfolio, which consists of a network of systems that help us centrally manage customer orders and optimize where, when and how we fulfill them in order to maximize speed, efficiency, and the customer's experience. During fiscal 2019 , we continued to improve our customer order management platform, or COM, and our delivery management system, which substantially improves our ability to sell and execute deliveries from our stores."
+I1,Innovate Our Business Model and Value Chain
+I1,"In the changing retail environment, we must increase our investments to enhance the interconnected customer experience and position our Company for the future. Our customers view us as one Home Depot and expect us to function in an interconnected, seamless manner. To fully realize the One Home Depot experience, we will continue to connect the various aspects of our business and leverage our scale. We will also invest in our physical locations, our digital properties, our associates, products and innovation, our Pro and DIY customers, our services business, and our supply chain. Underlying all of these investments is our continued investment in information technology, which provides the backbone of the One Home Depot experience."
+I1,"We continue to focus on driving productivity throughout the business. This process includes lowering our costs and reinvesting in the business to drive higher sales, creating what we refer to as a virtuous cycle. We support a cycle of productivity through technology development, improved processes, and simplified systems, driving productivity and speed across the value chain. This virtuous cycle has allowed us to improve the customer experience, increase our competitiveness in the market, increase sales, and deliver shareholder value."
+I1,"Our strategy to create the One Home Depot experience is driven by our desire to create value for all stakeholders, including our customers, our associates, our supplier partners, the communities we serve, and our shareholders. We are accelerating our investments in the business within our disciplined approach to capital allocation. Our first use of cash has been and will continue to be investing in our business, with use of the remainder guided by our shareholder return principles:"
+I1,
+I1,*    Dividend Principle. We look to increase our dividend every year as we grow earnings.
+I1,
+I1,"*    Return on Invested Capital Principle. Our goal is to maintain a high return on invested capital, benchmarking all uses of excess liquidity against the value created for our shareholders through share repurchases."
+I1,
+I1,"*    Share Repurchase Principle. After meeting the needs of the business, we will look to return excess cash to shareholders in the form of share repurchases."
+I1,
+X,
+X,
+I1,"In fiscal 2019 , we drove higher returns on invested capital, which allowed us to return value to shareholders through $7.0 billion in share repurchases and $6.0 billion in cash dividends, as discussed in Item 7, ""Management's Discussion and Analysis of Financial Condition and Results of Operations."""
+I1,Competition
+I1,"Our industry is highly competitive, very fragmented, and evolving. As a result, we face competition for our products and services from a variety of retailers, suppliers, and service providers, ranging from traditional brick-and-mortar, to multichannel, to exclusively online. In each of the markets we serve, there are a number of other home improvement retailers; electrical, plumbing and building materials supply houses; and lumber yards. With respect to some products and services, we also compete with specialty design stores, showrooms, discount stores, local, regional and national hardware stores, paint stores, mail order firms, warehouse clubs, independent building supply stores, MRO companies, home decor retailers, and other retailers, as well as with providers of home improvement services and tool and equipment rental."
+I1,"We compete, both in-store and online, primarily based on customer experience, price, quality, availability, product assortment, and delivery options. With respect to our stores, we also compete based on store location and appearance as well as presentation of merchandise. Further, online and multichannel retailers are increasingly focusing on delivery services, with customers seeking faster and/or guaranteed delivery times, as well as low-price or free shipping. Our ability to be competitive on delivery times and delivery costs depends on many factors, including the success of our investments in One Supply Chain."
+I1,Sustainability Efforts
+I1,"Our environmental, social and governance efforts are focused on taking care of our people and communities while operating sustainably, The Home Depot is committed to sustainable business practices - from the products that we offer to our customers, to the environmental impact of our operations, to our sourcing activities, to taking care of our associates, to our involvement within the communities in which we do business. We believe these efforts continue to be successful in creating value for our customers, shareholders, associates and communities."
+I1,
+X,
+X,
+I1,"We participate in the CDP reporting process. CDP is an independent, international, not-for-profit organization providing a global system for companies and cities to measure, disclose, manage and share environmental information. In January 2020, for the second year in a row, we received a score of ""A"" from CDP, reflecting leadership and a high level of action on climate change mitigation, adaptation and transparency."
+I1,Sourcing and Quality Assurance
+I1,"We maintain a global sourcing program to obtain high-quality and innovative products directly from manufacturers around the world. During fiscal 2019 , in addition to our U.S. sourcing operations, we maintained sourcing offices in Mexico, Canada, China, India, Vietnam and Europe. To ensure that suppliers adhere to our high standards of social and environmental responsibility, we also have a global responsible sourcing program. Our suppliers are contractually obligated to ensure that their products comply with applicable international, federal, state and local laws. All of our vendors and service providers must also comply with our responsible sourcing standards, which cover a variety of expectations across multiple areas of social compliance, including supply chain transparency, sources of supply, and child and forced labor. In addition, we have both quality assurance and engineering resources dedicated to establishing criteria and overseeing compliance with safety, quality and performance standards for our proprietary branded products, including conducting factory audits and compliance visits. Our 2019 Responsible Sourcing Report, available on our website at https://corporate.homedepot.com/responsibility/sourcing-responsibility, provides more information about this program."
+I1,Safety
+I1,"We are committed to maintaining a safe shopping and working environment for our customers and associates. We are dedicated to ensuring the health and safety of our customers and associates, by empowering trained EH&S associates to evaluate, develop, implement and enforce policies, processes and programs on a Company-wide basis. Our EH&S policies are woven into our everyday operations and are part of The Home Depot culture. Some common program elements include: daily store inspection checklists (by department); routine follow-up audits from our store-based safety team members and regional, district and store operations field teams; equipment enhancements and preventative maintenance programs to promote physical safety; departmental merchandising safety standards; training and education programs for all associates, with varying degrees of training provided based on an associate's role and responsibilities; and awareness, communication and recognition programs designed to drive operational awareness and an understanding of EH&S matters."
+I1,
+X,
+X,
+I1,Intellectual Property
+I1,
+I1,Seasonality
+I1,"Our business is subject to seasonal influences. Generally, our highest volume of sales occurs in our second fiscal quarter, and the lowest volume occurs either during our first or fourth fiscal quarter."
+I1,Available Information
+I1,"Our internet website is www.homedepot.com. We make available on the Investor Relations section of our website, free of charge, our Annual Reports to shareholders, Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, Proxy Statements, and Forms 3, 4 and 5, and amendments to those reports, as soon as reasonably practicable after filing such documents with, or furnishing such documents to, the SEC."
+I1,We include our website addresses throughout this report for reference only. The information contained on our websites is not incorporated by reference into this report.
+I1,Other Financial Information
+I1,"For information on key financial highlights, including historical revenues, profits and total assets, see the ""Selected Financial Data"" on page F-1 of this report and Item 7, ""Management's Discussion and Analysis of Financial Condition and Results of Operations."""
+B1A,Item 1A. Risk Factors.
+I1A,"Our business, results of operations, and financial condition are subject to numerous risks and uncertainties. In connection with any investment decision with respect to our securities, you should carefully consider the following risk factors, as well as the other information contained in this report and our other filings with the SEC. Additional risks and uncertainties not presently known to us or that we currently deem immaterial may also impair our business operations. Should any of these risks materialize, our business, results of operations, financial condition and future prospects could be negatively impacted, which in turn could affect the trading value of our securities. You should read these Risk Factors in conjunction with ""Management's Discussion and Analysis of Financial Condition and Results of Operations"" in Item 7 and our consolidated financial statements and related notes in Item 8."
+I1A,Strong competition could adversely affect prices and demand for our products and services and could decrease our market share.
+I1A,"Our industry is highly competitive, very fragmented, and evolving. As a result, we face competition for our products and services from a variety of retailers, suppliers, and service providers, ranging from traditional brick-and-mortar, to multichannel, to exclusively online. The internet facilitates competitive entry, price transparency, and comparison shopping, increasing the level of competition we face. In each of the markets we serve, there are a number of other home improvement retailers; electrical, plumbing and building materials supply houses; and lumber yards. With respect to some products and services, we also compete with specialty design stores, showrooms, discount stores, local, regional and national hardware stores, paint stores, mail order firms, warehouse clubs, independent building supply stores, MRO companies, home decor retailers, and other retailers, as well as with providers of home improvement services and tool and equipment rental."
+I1A,"We compete, both in-store and online, primarily based on customer experience, price, quality, availability, product assortment, and delivery options. With respect to our stores, we also compete based on store location and appearance as well as presentation of merchandise. Further, online and multichannel retailers are increasingly focusing on delivery services, with customers seeking faster and/or guaranteed delivery times, as well as low-price or free shipping. Our ability to be competitive on delivery times and delivery costs depends on many factors, including the success of our investments in One Supply Chain, and our failure to successfully manage these factors and offer competitive delivery options could negatively impact the demand for our products and our profit margins."
+I1A,"We use our marketing, advertising and promotional programs to drive customer traffic and compete more effectively, and we must regularly assess and adjust our efforts to address changes in the competitive landscape. Intense"
+I1A,
+X,
+X,
+I1A,"competitive pressures from one or more of our competitors, such as through aggressive promotional pricing or liquidation events, or our inability to adapt effectively and quickly to a changing competitive landscape, could adversely affect our prices, our margins, or demand for our products and services. If we are unable to timely and appropriately respond to these competitive pressures, including through the delivery of a superior customer experience or maintenance of effective marketing, advertising or promotional programs, our market share and our financial performance could be adversely affected."
+I1A,"We may not timely identify or effectively respond to consumer needs, expectations or trends, which could adversely affect our relationship with customers, our reputation, the demand for our products and services, and our market share."
+I1A,"The success of our business depends in part on our ability to identify and respond promptly to evolving trends in demographics; consumer preferences, expectations and needs; and unexpected weather conditions, public health issues (including pandemics and quarantines) or natural disasters, while also managing appropriate inventory levels in our stores and distribution or fulfillment centers and maintaining an excellent customer experience. It is difficult to successfully predict the products and services our customers will demand. As our customers begin to expect a more personalized experience, our ability to collect, use and protect relevant customer data is important to our ability to effectively meet their expectations. Our ability to collect and use that data, however, is subject to a number of external factors, including the impact of legislation or regulations governing data privacy and security. In addition, each of our primary customer groups has different needs and expectations, many of which evolve as the demographics in a particular customer group change. We also need to offer more localized assortments of our merchandise to appeal to local cultural and demographic tastes within each customer group. If we do not successfully differentiate the shopping experience to meet the individual needs and expectations of or within a customer group, we may lose market share with respect to those customers."
+I1A,"Customer expectations about the methods by which they purchase and receive products or services are also becoming more demanding. Customers routinely use technology and a variety of electronic devices and digital platforms to rapidly compare products and prices, read product reviews, determine real-time product availability, and purchase products. Once products are purchased, customers are seeking alternate options for delivery of those products, and they often expect quick, timely, and low-price or free delivery. We must continually anticipate and adapt to these changes in the purchasing process. We have our BOSS, BOPIS, BODFS and direct fulfillment delivery options, but we cannot guarantee that these or future programs will be maintained and implemented successfully or that we will be able to meet customer expectations on delivery times, options and costs. Customers are also using social media to provide feedback and information about our Company and products and services in a manner that can be quickly and broadly disseminated. To the extent a customer has a negative experience and shares it over social media, it may impact our brand and reputation."
+I1A,"Further, we have an aging store base that requires maintenance, investment, and space reallocation initiatives to deliver the shopping experience that our customers desire. Our investments in our stores may not deliver the relevant shopping experience our customers expect. We must also maintain a safe store environment for our customers and associates, as well as to protect against loss or theft of our inventory (also called ""shrink""). Higher rates of shrink, which we have recently experienced, can require operational changes that may increase costs and impact the customer experience."
+I1A,"Failure to improve and maintain our stores, utilize our store space effectively, and offer a safe shopping environment; to provide a compelling online presence; to timely identify or respond to changing consumer preferences, expectations and home improvement needs; to maintain appropriate inventory; to provide quick and low-price or free delivery alternatives; to differentiate the customer experience for our primary customer groups; and to effectively implement an increasingly localized merchandising assortment could adversely affect our relationship with customers, our reputation, the demand for our products and services, and our market share."
+I1A,"The implementation of our store, interconnected retail, supply chain and technology initiatives could disrupt our operations in the near term, and these initiatives might not provide the anticipated benefits or might fail."
+I1A,"We have been substantially increasing our investments to create the One Home Depot experience, including significant investments over several years to build One Supply Chain. These initiatives are designed to streamline our operations to allow our associates to continue to provide high-quality service to our customers; simplify customer interactions; provide our customers with a more interconnected retail experience; and create the fastest, most efficient delivery network for home improvement products. Failure to choose the right investments and implement them in the right manner and at the right pace could disrupt our operations. The One Home Depot initiative will require significant investment in our operations and systems, as well as the development and execution"
+I1A,
+X,
+X,
+I1A,"of new processes, systems and support. The One Supply Chain initiative also involves significant real estate projects as we expand our distribution network. If we are unable to effectively manage the volume, nature and cost of these investments, projects and changes, our business operations and financial results could be materially and adversely affected. The cost and potential problems, defects of design and interruptions associated with the implementation of these initiatives, including those associated with managing third-party service providers, employing new web-based tools and services, implementing new technology, implementing and restructuring support systems and processes, identifying appropriate facility locations, and addressing impacts on inventory levels, could disrupt or reduce the efficiency of our operations in the near term, lead to product availability issues, and impact profitability. Further, accomplishing these initiatives will require a substantial investment in additional information technology personnel and other specialized personnel. We may face significant competition in the market for these resources and may not be successful in our hiring efforts. In addition, our store and interconnected retail initiatives, One Supply Chain, and new or upgraded information technology systems might not provide the anticipated benefits, it might take longer than expected to complete the initiatives or realize the anticipated benefits, or the initiatives might fail altogether, each of which could adversely impact our competitive position and our financial condition, results of operations, or cash flows."
+I1A,"Our success depends upon our ability to attract, develop and retain highly qualified associates while also controlling our labor costs."
+I1A,"Our customers expect a high level of customer service and product knowledge from our associates. To meet the needs and expectations of our customers, we must attract, develop and retain a large number of highly qualified associates while at the same time controlling labor costs. Our ability to control labor costs is subject to numerous external factors, including market pressures with respect to prevailing wage rates, unemployment levels, and health and other insurance costs, as well as the impact of legislation or regulations governing labor relations, minimum wage, and healthcare benefits. In addition, to support our strategic initiatives, including One Supply Chain, and the related technology investments needed to implement our strategic investments, we must attract and retain a large number of skilled professionals, including technology professionals. The market for these professionals is increasingly competitive. An inability to provide wages and/or benefits that are competitive within the markets in which we operate could adversely affect our ability to retain and attract associates. Further, changes in market compensation rates may adversely affect our labor costs. In addition, we compete with other retail businesses for many of our associates in hourly positions, and we invest significant resources in training and motivating them to maintain a high level of job satisfaction. These positions have historically had high turnover rates, which can lead to increased training and retention costs, particularly in a competitive labor market. There is no assurance that we will be able to attract or retain highly qualified associates in the future."
+I1A,A failure of a key information technology system or process could adversely affect our business.
+I1A,"We rely extensively on information technology systems to analyze, process, store, manage and protect transactions and data. Some of these systems are managed or provided by third-party service providers, including certain cloud platform providers. In managing our business, we also rely heavily on the integrity of, security of, and consistent access to, this operational and financial data for information such as sales, customer data, associate data, demand forecasting, merchandise ordering, inventory replenishment, supply chain management, payment processing, and order fulfillment. For these information technology systems and processes to operate effectively, we or our service providers must maintain and update them. Our systems and the third-party systems with which we interact are subject to damage or interruption from a number of causes, including power outages; computer and telecommunications failures; computer viruses; security breaches or data theft; cyber-attacks, including the use of malicious codes, worms, phishing, spyware, denial of service attacks, and ransomware; catastrophic events such as fires, floods, earthquakes, tornadoes, or hurricanes; acts of war or terrorism; and design or usage errors by our associates, contractors or third-party service providers. Although we and our third-party service providers seek to maintain our respective systems effectively and to successfully address the risk of compromise of the integrity, security and consistent operations of these systems, such efforts may not be successful. As a result, we or our service providers could experience errors, interruptions, delays or cessations of service in key portions of our information technology infrastructure, which could significantly disrupt our operations or impair data security, and be costly, time consuming and resource-intensive to remedy."
+I1A,"In addition, we are currently making, and expect to continue to make, substantial investments in our information technology systems and infrastructure, in certain cases with the assistance of strategic partners and other third-party service providers. These investments involve replacing existing systems with successor systems; outsourcing certain technology to third-party service providers; making changes to existing systems, including the migration of applications to the cloud; or designing or cost-effectively acquiring new systems with new functionality. These efforts can result in significant potential risks, including failure of the systems to operate as designed, potential loss or"
+I1A,
+X,
+X,
+I1A,"corruption of data, changes in security processes, cost overruns, implementation delays, disruption of operations, and the potential inability to meet business and reporting requirements. Any system implementation and transition difficulty may result in operational challenges, security failures, reputational harm, and increased costs that could adversely affect our business operations and results of operations."
+I1A,Disruptions in our customer-facing technology systems could impair our interconnected retail strategy and give rise to negative customer experiences.
+I1A,"Through our information technology systems, we are able to provide an improved overall shopping and interconnected retail experience that empowers our customers to shop and interact with us from a variety of electronic devices and digital platforms. We use our digital platforms both as sales channels for our products and services and also as methods of providing inspiration, as well as product, project, and other relevant information to our customers to drive sales, regardless of whether they occur in-store or online. We have multiple online communities and knowledge centers that allow us to inform, assist and interact with our customers. The retail industry is continually evolving and expanding, and we must effectively respond to new developments and changing customer preferences with respect to an interconnected experience. We continually seek to enhance all of our online and digital properties to provide an attractive, user-friendly interface for our customers. Disruptions, delays, failures or other performance issues with these customer-facing technology systems, or a failure of these systems to meet our or our customers' expectations, could impair the benefits that they provide to our business and negatively affect our relationship with our customers."
+I1A,Disruptions in our supply chain and other factors affecting the distribution of our merchandise could adversely impact our business.
+I1A,"A disruption within our logistics or supply chain network could adversely affect our ability to deliver inventory in a timely manner, which could impair our ability to meet customer demand for products and result in lost sales, increased supply chain costs, or damage to our reputation. Such disruptions may result from damage or destruction to our distribution centers; weather-related events; natural disasters; international trade disputes or trade policy changes or restrictions; tariffs or import-related taxes; third-party strikes, lock-outs, work stoppages or slowdowns; shortages of truck drivers; shipping capacity constraints; third-party contract disputes; supply or shipping interruptions or costs; military conflicts; acts of terrorism; public health issues, including pandemics or quarantines (such as the recent COVID-19 coronavirus outbreak); or other factors beyond our control. Any such disruption could negatively impact our financial performance or financial condition."
+I1A,"If our efforts to maintain the privacy and security of customer, associate, supplier and Company information are not successful, we could incur substantial costs and reputational damage and could become subject to litigation and enforcement actions."
+I1A,"Our business, like that of most retailers, involves the receipt, storage, management and transmission of customers' personal information, preferences, and payment card information, as well as other confidential information, such as personal information about our associates and our suppliers and confidential Company information. We also work with third-party service providers and vendors that provide technology, systems and services that we use in connection with the receipt, storage and transmission of this information. Our information systems, and those of our third-party service providers and vendors, are vulnerable to an increasing threat of continually evolving data protection and cybersecurity risks. Unauthorized parties have in the past gained access, and will continue to attempt to gain access to, these systems and data through fraud or other means of deceiving our associates, third-party service providers or vendors. Hardware, software or applications we develop or obtain from third parties may contain defects in design or manufacture or other problems that could unexpectedly compromise information security. The methods used to obtain unauthorized access, disable or degrade service, or sabotage systems are also constantly changing and evolving and may be difficult to anticipate or detect for long periods of time. We have implemented and regularly review and update our systems, processes, and procedures to protect against unauthorized access to or use of data and to prevent data loss. However, the ever-evolving threats mean we and our third-party service providers and vendors must continually evaluate and adapt our respective systems and processes and overall security environment, as well as those of any companies we acquire. There is no guarantee that these measures will be adequate to safeguard against all data security breaches, system compromises or misuses of data. As we experienced in connection with the data breach we discovered in the third quarter of fiscal 2014, any significant compromise or breach of our data security, whether external or internal, or misuse of customer, associate, supplier or Company data, could result in significant costs, including costs to investigate and remediate, as well as lost sales, fines, lawsuits, and damage to our reputation."
+I1A,"In addition, the regulatory environment related to data privacy and cybersecurity is constantly changing, with new and increasingly rigorous requirements applicable to our business. The implementation of these requirements has"
+I1A,
+X,
+X,
+I1A,"also become more complex. Maintaining our compliance with those requirements, including the California Consumer Privacy Act (CCPA), may require significant effort and cost, require changes to our business practices, and limit our ability to obtain data used to provide a personalized customer experience. In addition, failure to comply with applicable requirements could subject us to fines, sanctions, governmental investigations, lawsuits or reputational damage."
+I1A,"We are subject to payment-related risks that could increase our operating costs, expose us to fraud or theft, subject us to potential liability, and potentially disrupt our business."
+I1A,"We accept payments using a variety of methods, including cash, checks, credit and debit cards, PayPal, our PLCCs, an installment loan program, trade credit, and gift cards, and we may offer new payment options over time. Acceptance of these payment options subjects us to rules, regulations, contractual obligations and compliance requirements, including payment network rules and operating guidelines, data security standards and certification requirements, and rules governing electronic funds transfers. These requirements may change over time or be reinterpreted, making compliance more difficult, costly, or uncertain. For certain payment methods, including credit and debit cards, we pay interchange and other fees, which may increase over time and raise our operating costs. We rely on third parties to provide payment processing services, including the processing of credit cards, debit cards, and other forms of electronic payment. If these companies become unable to provide these services to us, or if their systems are compromised, it could potentially disrupt our business. The payment methods that we offer also subject us to potential fraud and theft by criminals, who are becoming increasingly more sophisticated, seeking to obtain unauthorized access to or exploit weaknesses that may exist in our payments and payment processing systems. If we fail to comply with applicable rules or requirements for the payment methods we accept, or if payment-related data is compromised due to a breach or misuse of data, we may be liable for costs incurred by payment card issuing banks and other third parties or subject to fines and higher transaction fees, or our ability to accept or facilitate certain types of payments may be impaired. In addition, our customers could lose confidence in certain payment types, which may result in a shift to other payment types or potential changes to our payment systems that may result in higher costs. As a result, our business and operating results could be adversely affected."
+I1A,"Uncertainty regarding the housing market, economic conditions, political climate, public health issues, and other factors beyond our control could adversely affect demand for our products and services, our costs of doing business, and our financial performance."
+I1A,"Our financial performance depends significantly on the stability of the housing and home improvement markets, as well as general economic conditions, including changes in gross domestic product. Adverse conditions in or uncertainty about these markets, the economy or the political climate could adversely impact our customers' confidence or financial condition, causing them to decide against purchasing home improvement products and services, causing them to delay purchasing decisions, or impacting their ability to pay for products and services. Other factors beyond our control - including unemployment and foreclosure rates; inventory loss due to theft; interest rate fluctuations; fuel and other energy costs; labor and healthcare costs; the availability of financing; the state of the credit markets, including mortgages, home equity loans and consumer credit; weather; natural disasters; acts of terrorism or violence, including active shooter situations; public health issues, including pandemics and quarantines; and other conditions beyond our control - could further adversely affect demand for our products and services, our costs of doing business, and our financial performance."
+I1A,
+X,
+X,
+I1A,"may be facing as a result of COVID-19, and we may face additional health insurance and labor-related costs. The pandemic may also reduce foot traffic in our stores or temporarily reduce demand for our products or services. In certain jurisdictions, we have had to cease sales of or delay commencement of certain services deemed ""non-life-sustaining,"" and other jurisdictions may impose similar requirements. Further, customers' financial condition may be adversely impacted as a result of the impacts of COVID-19 and efforts taken to prevent its spread, which could result in reduced demand for our products and services. In addition, our continued access to external sources of liquidity depends on multiple factors, including the condition of debt capital markets, our operating performance, and maintaining strong credit ratings. If the impacts of the pandemic create disruptions or turmoil in the financial markets, or if rating agencies lower our credit ratings, it could adversely affect our ability to access the debt markets, our cost of funds, and other terms for new debt. Any of these occurrences may have a negative impact on our business, financial condition, results of operations, or cash flows."
+I1A,"Our business is subject to seasonal influences, and uncharacteristic or significant weather conditions, alone or together with natural disasters, as well as other catastrophic events, could impact our operations."
+I1A,"Natural disasters, such as hurricanes and tropical storms, fires, floods, tornadoes, and earthquakes; unseasonable, or unexpected or extreme weather conditions; acts of terrorism or violence, including active shooter situations; public health concerns, such as pandemics and quarantines; or similar disruptions and catastrophic events can affect consumer spending and confidence and consumers' disposable income, particularly with respect to home improvement or construction projects, and could have an adverse effect on our financial performance. These types of events can also adversely affect our work force and prevent associates and customers from reaching our stores and other facilities. They can also, temporarily or on a long-term basis, disrupt or disable operations of stores, support centers, and portions of our supply chain and distribution network, including causing reductions in the availability of inventory and disruption of utility services. In addition, these events may affect our information systems, resulting in disruption to various aspects of our operations, including our ability to transact with customers and fulfill orders and to communicate with our stores. Unseasonable, unexpected or extreme weather conditions such as excessive precipitation, warm temperatures during the winter season, or prolonged or extreme periods of warm or cold temperatures could render a portion of our inventory incompatible with customer needs. As a consequence of these or other catastrophic or uncharacteristic events, we may experience interruption to our operations, increased costs, or losses of property, equipment or inventory, which would adversely affect our revenue and profitability."
+I1A,"If we fail to identify and develop relationships with a sufficient number of qualified suppliers, or if our suppliers experience financial difficulties or other challenges, our ability to timely and efficiently access products that meet our high standards for quality could be adversely affected."
+I1A,"We buy our products from suppliers located throughout the world. Our ability to continue to identify and develop relationships with qualified suppliers who can satisfy our high standards for quality and responsible sourcing, as well as our need to access products in a timely and efficient manner, is a significant challenge. Our ability to access products from our suppliers can be adversely affected by political instability, military conflict, acts of terrorism or violence, public health issues (including pandemics and quarantines), the financial instability of suppliers, suppliers' noncompliance with applicable laws, trade restrictions, tariffs, currency exchange rates, any disruptions in our suppliers' logistics or supply chain networks or information technology systems, and other factors beyond our or our suppliers' control. If we are unable to access products to meet our customers' demands and expectations in a timely and efficient manner, our sales and gross margin results may be adversely impacted."
+I1A,"If we are unable to effectively manage and expand our alliances and relationships with selected suppliers of both brand name and proprietary products, we may be unable to effectively execute our strategy to differentiate ourselves from our competitors."
+I1A,"As part of our focus on product differentiation, we have formed strategic alliances and exclusive relationships with selected suppliers to market products under a variety of well-recognized brand names. We have also developed relationships with selected suppliers to allow us to market proprietary products that are comparable to national brands. Our proprietary products differentiate us from other retailers, generally carry higher margins than national brand products, and represent a growing portion of our business. If we are unable to manage and expand these alliances and relationships or identify alternative sources for comparable brand name and proprietary products, we may not be able to effectively execute product differentiation, which may impact our sales and gross margin results."
+I1A,
+X,
+X,
+I1A,"Failure to achieve and maintain a high level of product and service quality and safety could damage our image with customers, expose us to litigation, and negatively impact our sales and results of operations."
+I1A,"Product and service quality issues could negatively impact customer confidence in our brands and our Company. If our product and service offerings do not meet applicable safety standards or our customers' expectations regarding safety or quality, we could experience lost sales and increased costs and be exposed to legal, financial and reputational risks, as well as governmental enforcement actions. Actual, potential or perceived product safety concerns, including health-related concerns, could expose us to litigation, as well as government enforcement actions, and result in costly product recalls and other liabilities. We seek but may not be successful in obtaining contractual indemnification and insurance coverage from our vendors. If we do not have adequate contractual indemnification or insurance available, such claims could have an adverse effect on our business, financial condition and results of operations. Even with adequate insurance and indemnification, our reputation as a provider of high quality products and services, including both national brand names and our proprietary products, could suffer, damaging our reputation and impacting customer loyalty. In addition, we and our customers have expectations around responsible sourcing. All of our vendors and service providers must comply with our responsible sourcing standards, which cover a variety of expectations across multiple areas of social compliance, including supply chain transparency, sources of supply, and child and forced labor. We have a responsible sourcing audit process, but we are also dependent on our vendors and service providers to ensure that the products and services we provide comply with our standards."
+I1A,"Our proprietary products subject us to certain increased risks, including regulatory, product liability, supplier relations, and reputational risks."
+I1A,"As we expand our proprietary product offerings, in addition to other product-related risks discussed herein, we may become subject to increased risks due to our greater role in the design, manufacture, marketing and sale of those products. The risks include greater responsibility to administer and comply with applicable regulatory requirements, increased potential product liability and product recall exposure, and increased potential reputational risks related to the responsible sourcing of those products. To effectively execute on our product differentiation strategy, we must also be able to successfully protect our proprietary rights and successfully navigate and avoid claims related to the proprietary rights of third parties. In addition, an increase in sales of our proprietary products may adversely affect sales of our suppliers' products, which in turn could adversely affect our relationships with certain of our suppliers. Any failure to appropriately address some or all of these risks could damage our reputation and have an adverse effect on our business, results of operations, and financial condition."
+I1A,"If we are unable to effectively manage our installation services business, we could suffer lost sales and be subject to fines, lawsuits and reputational damage, or the loss of our general contractor licenses."
+I1A,"We act as a general contractor to provide installation services to our DIFM customers through professional third-party installers. As such, we are subject to regulatory requirements and risks applicable to general contractors, which include management of licensing, permitting and quality of work performed by our third-party installers. We have established processes and procedures to manage these requirements and ensure customer satisfaction with the services provided by our third-party installers. However, if we fail to manage these processes effectively or to provide proper oversight of these services, we could suffer lost sales, fines, lawsuits, and governmental enforcement actions for violations of regulatory requirements, as well as for property damage or personal injury. In addition, we may suffer damage to our reputation or the loss of our general contractor licenses, which could adversely affect our business."
+I1A,"Our strategic transactions involve risks, which could have an adverse impact on our financial condition and results of operation, and we may not realize the anticipated benefits of these transactions."
+I1A,"We regularly consider and enter into strategic transactions, including mergers, acquisitions, investments, alliances, and other growth and market expansion strategies, with the expectation that these transactions will result in increases in sales, cost savings, synergies and various other benefits. Assessing the viability and realizing the benefits of these transactions is subject to significant uncertainty. For each of our acquisitions, we need to successfully integrate the target company's products, services, associates and systems into our business operations. Integration can be a complex and time-consuming process, and if the integration is not fully successful or is delayed for a material period of time, we may not achieve the anticipated synergies or benefits of the acquisition. Furthermore, even if the target companies are successfully integrated, the acquisitions may fail to further our business strategy as anticipated, expose us to increased competition or challenges with respect to our products or services, and expose us to additional liabilities. Any impairment of goodwill or other intangible assets acquired in a strategic transaction may reduce our earnings."
+I1A,
+X,
+X,
+I1A,"Our costs of doing business could increase as a result of changes in, expanded enforcement of, or adoption of new federal, state or local laws and regulations."
+I1A,"We are subject to various federal, state and local laws and regulations that govern numerous aspects of our business. In recent years, a number of new laws and regulations have been adopted, and there has been expanded enforcement of certain existing laws and regulations by federal, state and local agencies. These laws and regulations, and related interpretations and enforcement activity, may change as a result of a variety of factors, including political, economic or social events. Changes in, expanded enforcement of, or adoption of new federal, state or local laws and regulations governing minimum wage or living wage requirements; the classification of exempt and non-exempt employees; the distinction between employees and contractors; other wage, labor or workplace regulations; healthcare; data privacy and cybersecurity; the sale and pricing of some of our products; transportation; logistics; international trade; supply chain transparency; taxes; unclaimed property; energy costs and consumption; or environmental matters, including with respect to our installation services business, could increase our costs of doing business or impact our operations."
+I1A,
+I1A,"If we cannot successfully manage the unique challenges presented by international markets, we may not be successful in our international operations and our sales and profitability may be negatively impacted."
+I1A,
+I1A,"The inflation or deflation of commodity prices could affect our prices, demand for our products, our sales and our profit margins."
+I1A,"Prices of certain commodity products, including lumber and other raw materials, are historically volatile and are subject to fluctuations arising from changes in domestic and international supply and demand, labor costs, competition, market speculation, government regulations, tariffs and trade restrictions, and periodic delays in delivery. Rapid and significant changes in commodity prices may affect the demand for our products, our sales and our profit margins."
+I1A,"We may incur property, casualty or other losses not covered by our insurance."
+I1A,"We are predominantly self-insured for a number of different risk categories, such as general liability (including product liability), workers' compensation, employee group medical, automobile claims, and network security and privacy liability, with insurance coverage for certain catastrophic risks. The types and amounts of insurance may vary from time to time based on our decisions with respect to risk retention and regulatory requirements. The"
+I1A,
+X,
+X,
+I1A,"occurrence of significant claims, a substantial rise in costs to maintain our insurance, or the failure to maintain adequate insurance coverage could have an adverse impact on our financial condition and results of operations."
+I1A,"Changes in accounting standards and subjective assumptions, estimates and judgments by management related to complex accounting matters could significantly affect our financial results or financial condition."
+I1A,"GAAP and related accounting pronouncements, implementation guidelines and interpretations with regard to a wide range of matters that are relevant to our business, such as asset impairment, inventories, lease obligations, self-insurance, vendor allowances, tax matters and litigation, are complex and involve many subjective assumptions, estimates and judgments. Changes in accounting standards or their interpretation or changes in underlying assumptions, estimates or judgments could significantly change our reported or expected financial performance or financial condition. The implementation of new accounting standards could also require certain systems, internal process and other changes that could increase our operating costs."
+I1A,"We are involved in a number of legal, regulatory and governmental enforcement proceedings, and while we cannot predict the outcomes of those proceedings and other contingencies with certainty, some of these outcomes may adversely affect our operations or increase our costs."
+I1A,"We are involved in a number of legal proceedings and regulatory matters, including government inquiries and investigations, and consumer, employment, tort and other litigation that arise from time to time in the ordinary course of business. Litigation is inherently unpredictable, and the outcome of some of these proceedings and other contingencies could require us to take or refrain from taking actions which could adversely affect our operations or could result in excessive adverse verdicts or results. Additionally, involvement in these lawsuits, investigations and inquiries, and other proceedings may involve significant expense, divert management's attention and resources from other matters, and impact the reputation of the Company."
+B1B,Item 1B. Unresolved Staff Comments.
+I1B,Not applicable.
+I1B,
+X,
+X,
+B2,Item 2. Properties.
+I2,"The percentage of our owned versus leased facilities that were operating at the end of fiscal 2019 , along with the total square footage, follows:"
+I2,
+I2,(1)    Our owned stores include those subject to ground leases.
+I2,
+I2,Our U.S. store locations at the end of fiscal 2019 follow:
+I2,
+I2,"Total U.S.    1,984"
+I2,
+X,
+X,
+I2,Our store locations outside of the U.S. at the end of fiscal 2019 follow:
+I2,
+I2,State of Mexico    16
+I2,
+B3,Item 3. Legal Proceedings.
+I3,"SEC regulations require us to disclose certain information about proceedings arising under federal, state or local environmental regulations if we reasonably believe that such proceedings may result in monetary sanctions of $100,000 or more."
+I3,
+X,
+X,
+B4,Item 4. Mine Safety Disclosures.
+I4,Not applicable.
+O,PART II
+B5,"Item 5. Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities."
+I5,"Since April 19, 1984, our common stock has been listed on the NYSE, trading under the symbol ""HD."" We paid our first cash dividend on June 22, 1987 and have paid a cash dividend during each subsequent quarter. While we currently expect a cash dividend to be paid in the future, future dividend payments will depend on our earnings, capital requirements, financial condition, and other factors considered relevant by our Board of Directors."
+I5,"At March 6, 2020 , there were approximately 121,000 holders of record of our common stock and approximately 3,043,000 additional ""street name"" holders whose shares are held of record by banks, brokers, and other financial institutions."
+I5,Stock Performance Graph
+I5,The graph and table below present our cumulative total shareholder returns relative to the performance of the S&P Retail Composite Index and the S&P 500 Index for the five most recent fiscal years. The graph assumes $100 was invested at the closing price of our common stock on the NYSE and in each index on the last trading day of fiscal 2014 and assumes that all dividends were reinvested on the date paid. The points on the graph represent fiscal year-end amounts based on the last trading day in each fiscal year.
+I5,
+I5,Fiscal Year Ended
+I5,
+X,
+X,
+I5,Issuer Purchases of Equity Securities
+I5,The number and average price of shares purchased in each fiscal month of the fourth quarter of fiscal 2019 follow:
+I5,
+I5,Total Number of Shares Purchased      Dollar Value of Shares
+I5,
+I5,"(1)    These amounts include repurchases pursuant to our Amended and Restated 2005 Omnibus Stock Incentive Plan and our 1997 Omnibus Stock Incentive Plan (collectively, the ""Plans""). Under the Plans, participants may surrender shares as payment of applicable tax withholding on the vesting of restricted stock and deferred share awards. Participants in the Plans may also exercise stock options by surrendering shares of common stock that the participants already own as payment of the exercise price. Shares so surrendered by participants in the Plans are repurchased pursuant to the terms of the Plans and applicable award agreement and not pursuant to publicly announced share repurchase programs."
+I5,
+I5,"(2)    In February 2019, our Board of Directors authorized a $15.0 billion share repurchase program that replaced the previous authorization. This program does not have a prescribed expiration date."
+I5,
+I5,(3)    This amount includes shares received in the fourth quarter of fiscal 2019 related to the settlement of the ASR agreement entered into in the third quarter of fiscal 2019. See Note 6 to our consolidated financial statements for further discussion of our ASR agreements.
+I5,
+I5,Sales of Unregistered Securities
+I5,"During the fourth quarter of fiscal 2019 , we issued 462 deferred stock units under the Home Depot, Inc. Nonemployee Directors' Deferred Stock Compensation Plan pursuant to the exemption from registration provided by Section 4(a)(2) of the Securities Act and Rule 506 of the SEC's Regulation D thereunder. The deferred stock units were credited to the accounts of those non-employee directors who elected to receive all or a portion of board retainers in the form of deferred stock units instead of cash during the fourth quarter of fiscal 2019 . The deferred stock units convert to shares of common stock on a one-for-one basis following a termination of service as described in this plan."
+I5,"During the fourth quarter of fiscal 2019 , we credited 9,193 deferred stock units to participant accounts under the Restoration Plan pursuant to an exemption from the registration requirements of the Securities Act for involuntary, non-contributory plans. The deferred stock units convert to shares of common stock on a one-for-one basis following a termination of service as described in this plan."
+B6,Item 6. Selected Financial Data.
+I6,The information required by this item is incorporated by reference to page F-1 of this report.
+I6,
+X,
+X,
+B7,Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations.
+I7,Our MD&A includes the following sections:
+I7,
+I7,*    Executive Summary
+I7,
+I7,*    Results of Operations and Non-GAAP Measures
+I7,
+I7,*    Liquidity and Capital Resources
+I7,
+I7,*    Critical Accounting Policies
+I7,
+I7,Executive Summary
+I7,Highlights of our annual financial performance follow:
+I7,
+I7,Note: Fiscal 2019 and fiscal 2017 include 52 weeks. Fiscal 2018 includes 53 weeks.
+I7,"We reported net sales of $110.2 billion in fiscal 2019 . Net earnings were $11.2 billion , or $10.25 per diluted share. We opened one net new store in Mexico and three net new stores in the U.S. during fiscal 2019 , for a total store count of 2,291 at February 2, 2020 . At the end of fiscal 2019 , a total of 307 of our stores, or 13.4% , were located in Canada and Mexico. Total sales per retail square foot were $454.82 in fiscal 2019 , and our inventory turnover ratio was 4.9 times at the end of fiscal 2019 ."
+I7,"We generated $13.7 billion of cash flow from operations during fiscal 2019 and issued $3.4 billion of long-term debt, net of discounts and premiums. These funds, together with cash on hand, were used to pay $6.0 billion of dividends, fund cash payments of $7.0 billion for share repurchases, repay $365 million of net short-term borrowings, fund $2.7 billion in capital expenditures, and repay $1.0 billion of senior notes that matured in June 2019."
+I7,"During fiscal 2019 , we repurchased $7.0 billion of our common stock through open market transactions and an ASR agreement. In February 2020, we announced a 10% increase in our quarterly cash dividend to $1.50 per share."
+I7,
+I7,"The recent outbreak of the novel coronavirus COVID-19, which was declared a pandemic by the World Health Organization on March 11, 2020, has led to adverse impacts on the U.S. and global economies and created uncertainty regarding potential impacts to our supply chain, operations, and customer demand. The pandemic has impacted and could further impact our operations and the operations of our suppliers and vendors as a result of quarantines, facility closures, and travel and logistics restrictions. As a result of COVID-19, we have reduced store operating hours, expanded our paid time off policy for associates, and shifted certain store support operations to remote or virtual, and we may face additional labor-related costs. We are also taking steps in our stores to manage foot traffic to better protect our customers and associates. In addition, in certain jurisdictions, we have had to cease sales of or delay commencement of work on certain services deemed ""non-life-sustaining."""
+I7,"We continue to actively monitor the situation and may take further actions that alter our operations as may be required by federal, state or local authorities or that we determine are in the best interests of our associates, customers, suppliers, vendors and shareholders. While the disruption is currently expected to be temporary, there is"
+I7,
+X,
+X,
+I7,"uncertainty regarding its duration. Therefore, while we expect the pandemic to impact our business, results of operations, financial position, and liquidity, we cannot reasonably estimate the impact at this time."
+I7,Results of Operations and Non-GAAP Measures
+I7,"The tables and discussion below should be read in conjunction with our consolidated financial statements and related notes included in this report. The following table displays the percentage relationship between net sales and major categories in our consolidated statements of earnings, as well as the percentage change in the associated dollar amounts:"
+I7,
+I7,Operating expenses:
+I7,
+I7,Interest and other (income) expense:
+I7,
+I7,Note: Fiscal 2019 and fiscal 2017 include 52 weeks. Fiscal 2018 includes 53 weeks. Certain percentages may not sum to totals due to rounding.
+I7,
+X,
+X,
+I7,% Change
+I7,
+I7,(1)    Fiscal 2019 compares the 52 week period in fiscal 2019 to weeks 2 through 53 in fiscal 2018. Fiscal 2018 calculations do not include results from the 53 rd week of fiscal 2018 and compare weeks 1 through 52 in fiscal 2018 to the 52 week period in fiscal 2017.
+I7,
+I7,(2)    Comparable sales for fiscal 2017 do not include results for Interline.
+I7,
+I7,(3)    The calculations do not include results for Interline.
+I7,
+I7,"(4)    The 53 rd week of fiscal 2018 increased customer transactions by 24.5 million, added $0.01 to average ticket, and increased sales per retail square foot by $6.87."
+I7,
+I7,"(5)    Average ticket represents the average price paid per transaction and is used by management to monitor the performance of the Company, as it represents a primary driver in measuring sales performance."
+I7,
+I7,(6)    Sales per retail square foot represents sales divided by the retail store square footage. Sales per retail square foot is a measure of the efficiency of sales based on the total square footage of our stores and is used by management to monitor the performance of the Company as an indicator of the productivity of owned and leased square footage for retail operations.
+I7,
+I7,Fiscal 2019 Compared to Fiscal 2018
+I7,Sales. We assess our sales performance by evaluating both net sales and comparable sales.
+I7,"Net Sales . Fiscal 2019 consisted of 52 weeks compared to 53 weeks in fiscal 2018 . Net sales for fiscal 2019 increased $2.0 billion , or 1.9% , to $110.2 billion . The increase in net sales in fiscal 2019 primarily reflected the impact of positive comparable sales driven by an increase in comparable average ticket growth and comparable customer transactions, offset by $1.7 billion of net sales attributable to the additional week in fiscal 2018. Online sales, which consist of sales generated online through our websites for products picked up in our stores or delivered to customer locations, represented 9.3% of net sales and grew 19.4% during fiscal 2019 ."
+I7,"Comparable Sales . Comparable sales is a measure that highlights the performance of our existing locations and websites by measuring the change in net sales for a period over the comparable prior-period of equivalent length. Comparable sales includes sales at all locations, physical and online, open greater than 52 weeks (including remodels and relocations) and excludes closed stores. Retail stores become comparable on the Monday following their 52 nd week of operation. Acquisitions, digital or otherwise, are included in comparable sales after they have been owned for more than 52 weeks. Our comparable sales results for fiscal 2019 compare the 52-week period reported for fiscal 2019 to weeks 2 through 53 in fiscal 2018. Comparable sales is intended only as supplemental information and is not a substitute for net sales presented in accordance with GAAP."
+I7,"Total comparable sales increased 3.5% in fiscal 2019 . The increase in comparable sales reflected a number of factors, including traffic growth across a number of our core categories and the execution of our strategic efforts to drive an enhanced interconnected experience in both the physical and digital worlds. All of our merchandising departments posted positive comparable sales in fiscal 2019 except for Lumber , which was negative primarily due to commodity price deflation. For fiscal 2019 , comparable sales for our Appliances, Indoor Garden, Decor/Storage, Tools, Hardware, and Outdoor Garden merchandising departments were above the Company average. Our comparable average ticket increased 2.5% in fiscal 2019 while comparable customer transactions increased 1.1% during fiscal 2019 . The increase in comparable average ticket was due in large part to strong sales in big ticket purchases in certain categories, such as appliances and vinyl plank flooring."
+I7,"Gross Profit. Gross profit increased $412 million , or 1.1% , to $37.6 billion in fiscal 2019 . Gross profit as a percent of net sales, or gross profit margin, was 34.1% in fiscal 2019 compared to 34.3% in fiscal 2018 . The decrease in gross profit margin for fiscal 2019 was primarily driven by higher shrink and changes in product mix."
+I7,"Operating Expenses. Our operating expenses are composed of SG&A, depreciation and amortization, and impairment loss."
+I7,"Selling, General & Administrative . SG&A increased $227 million , or 1.2% , to $19.7 billion in fiscal 2019 . As a percent of net sales, SG&A was 17.9% for fiscal 2019 compared to 18.0% for fiscal 2018 . The decrease in SG&A as"
+I7,
+X,
+X,
+I7,"a percent of net sales for fiscal 2019 was primarily driven by expense leverage resulting from positive comparable sales and continued expense control, partially offset by expenses related to strategic investments in the business."
+I7,"Depreciation and Amortization . Depreciation and amortization increased $119 million , or 6.4% , in fiscal 2019 . As a percent of net sales, depreciation and amortization was 1.8% for fiscal 2019 compared to 1.7% in fiscal 2018 . The increase in depreciation and amortization as a percent of net sales reflects incremental depreciation stemming from investments in the business, partially offset by leverage resulting from positive comparable sales and timing of asset additions. The additional week in fiscal 2018 did not result in incremental expense because we recognize depreciation and amortization expense on a monthly basis."
+I7,Impairment Loss . There were no material impairment losses recognized in fiscal 2019 . We recognized a $247 million impairment loss in fiscal 2018 related to certain trade names associated with Interline. See Note 1 to our consolidated financial statements for further discussion.
+I7,"Interest and Other, net. Interest and other, net, was $1.1 billion for fiscal 2019 compared to $974 million for fiscal 2018 . Interest and other, net, as a percent of net sales increased to 1.0% in fiscal 2019 from 0.9% in fiscal 2018 , primarily due to higher interest expense resulting from higher debt balances in fiscal 2019 ."
+I7,Provision for Income Taxes. Our combined effective income tax rate was 23.6% for both fiscal 2019 and fiscal 2018 . The provision for income taxes in fiscal 2019 reflects a benefit from stock-based compensation and other discrete tax items. The effective income tax rate for fiscal 2018 primarily reflected the enactment of the Tax Act. See Note 5 to our consolidated financial statements for further discussion.
+I7,Diluted Earnings per Share. Diluted earnings per share were $10.25 for fiscal 2019 compared to $9.73 for fiscal 2018 . Diluted earnings per share for fiscal 2019 reflected a tax-related benefit of $0.17 per share resulting from stock-based compensation and other discrete tax items.
+I7,"Diluted earnings per share for fiscal 2018 reflected a benefit of $1.48 per share resulting from the enactment of the Tax Act, a benefit of $0.21 per share for the 53 rd week, and a decrease of $0.16 per share due to the impairment loss related to certain trade names associated with Interline."
+I7,Fiscal 2018 Compared to Fiscal 2017
+I7,"For a comparison of our results of operations for fiscal 2018 to fiscal 2017 , see "" Part II, Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations "" of our Form 10-K for the fiscal year ended February 3, 2019, filed with the SEC on March 28, 2019."
+I7,
+I7,Non-GAAP Financial Measures
+I7,"To provide clarity about our operating performance, we supplement our reporting with certain non-GAAP financial measures. However, this supplemental information should not be considered in isolation or as a substitute for the related GAAP measures. Non-GAAP financial measures presented herein may differ from similar measures used by other companies."
+I7,"Return on Invested Capital. We believe ROIC is meaningful for investors and management because it measures how effectively we deploy our capital base. We define ROIC as NOPAT, a non-GAAP financial measure, for the most recent twelve-month period, divided by average debt and equity. We define average debt and equity as the average of beginning and ending long-term debt (including current installments) and equity for the most recent twelve-month period."
+I7,"The calculation of ROIC, together with a reconciliation of NOPAT to net earnings (the most comparable GAAP measure), follows:"
+I7,
+I7,Note: Fiscal 2019 and fiscal 2017 include 52 weeks. Fiscal 2018 includes 53 weeks.
+I7,
+I7,(1)    Income tax adjustment is defined as operating income multiplied by our effective tax rate for the trailing twelve months.
+I7,
+I7,"(2)    The beginning balance of equity for fiscal 2019 has been adjusted to reflect an immaterial opening balance sheet adjustment due to the adoption of ASU No. 2016-02, Leases, in fiscal 2019.The beginning balance of equity for fiscal 2018 has been adjusted to reflect an opening balance sheet adjustment of $75 million due to the adoption of ASU No. 2014-09, Revenue from Contracts with Customers, in fiscal 2018."
+I7,
+I7,Liquidity and Capital Resources
+I7,Cash and Cash Equivalents at End of Year
+I7,"At February 2, 2020 , we had $2.1 billion in cash and cash equivalents, of which $1.8 billion was held by our foreign subsidiaries. We believe that our current cash position, cash flow generated from operations, funds available from our commercial paper programs, and access to the long-term debt capital markets should be sufficient for our operating requirements and to enable us to fund our capital expenditures, dividend payments, and any required long-term debt payments through the next several fiscal years. In addition, we believe we have the ability to obtain alternative sources of financing. We expect capital expenditures of approximately $2.8 billion in fiscal 2020. Given the current uncertainty related to the COVID-19 pandemic, we may adjust our capital expenditures as necessary or appropriate to support the operations of the business."
+I7,Debt and Derivatives
+I7,"At February 2, 2020, we had commercial paper programs with an aggregate borrowing capacity of $3.0 billion . All of our short-term borrowings in fiscal 2019 and fiscal 2018 were under these commercial paper programs. In connection with these programs, we have back-up credit facilities with a consortium of banks for borrowings up to $3.0 billion , which consist of a five-year $2.0 billion credit facility, which expires in December 2022, and a 364-day"
+I7,
+X,
+X,
+I7,"$1.0 billion credit facility. In December 2019, we completed the renewal of our 364-day $1.0 billion credit facility, extending the maturity from December 2019 to December 2020. At February 2, 2020 , we were in compliance with all of the covenants contained in the credit facilities, none of which are expected to impact our liquidity or capital resources. At February 2, 2020 , there were $974 million of borrowings outstanding under these commercial paper programs compared to $1.3 billion at February 3, 2019 ."
+I7,"In March 2020, we expanded our commercial paper programs from $3.0 billion to $6.0 billion. We also entered into an additional 364-day $3.5 billion credit facility in March 2020, which together with the two credit facilities mentioned above backs up our expanded commercial paper programs. We may enter into additional credit facilities or other debt financing."
+I7,We also issue senior notes from time to time and use derivative financial instruments in the management of our exposure to fluctuations in foreign currencies and interest rates on certain long-term debt. See Note 4 and Note 7 to our consolidated financial statements for further discussion of our debt and derivative agreements.
+I7,Leases
+I7,"We use operating and finance leases to fund a portion of our real estate, including our stores, distribution centers, and store support centers. See Note 3 to our consolidated financial statements for further discussion of our operating and finance leases."
+I7,Share Repurchases
+I7,"In February 2019, our Board of Directors authorized a new $15.0 billion share repurchase program, of which approximately $8.3 billion remained at the end of fiscal 2019 . During fiscal 2019 , we had cash payments of $7.0 billion for repurchases of our common stock through open market purchases and an ASR agreement. See Note 6 to our consolidated financial statements for further discussion of our share repurchases. In March 2020, we suspended our share repurchases until such time as we deem appropriate."
+I7,Cash Flows Summary
+I7,"Operating Activities. Cash flow generated from operations provides us with a significant source of liquidity. Our operating cash flows result primarily from cash received from our customers, offset by cash payments we make for products and services, employee compensation, operations, and occupancy costs."
+I7,"Cash provided by or used in operating activities is also subject to changes in working capital. Working capital at any specific point in time is subject to many variables, including seasonality, inventory management and category expansion, the timing of cash receipts and payments, vendor payment terms, and fluctuations in foreign exchange rates."
+I7,"Net cash provided by operating activities in fiscal 2019 was $13.7 billion driven primarily by net earnings of $11.2 billion and non-cash adjustments to net earnings of $2.7 billion, consisting of depreciation and amortization, stock-"
+I7,
+X,
+X,
+I7,"based compensation expense and changes in deferred income taxes, offset by working capital outflows driven primarily by timing of inventory purchases and collection of receivables."
+I7,"Net cash provided by operating activities in fiscal 2018 was $13.0 billion driven primarily by net earnings of $11.1 billion and non-cash adjustments to net earnings of $2.7 billion, consisting of depreciation and amortization, stock-based compensation, impairment loss and changes in deferred income taxes, partially offset by net cash outflows associated with changes in working capital driven primarily by timing of inventory purchases."
+I7,"Investing Activities. Cash used in investing activities primarily reflected $2.7 billion and $2.4 billion of capital expenditures for investments in our business in fiscal 2019 and fiscal 2018 , respectively."
+I7,"Financing Activities. Cash used in financing activities in fiscal 2019 primarily reflected $7.0 billion of share repurchases and $6.0 billion of cash dividends paid, partially offset by $2.0 billion of net proceeds from short- and long-term debt."
+I7,"Cash used in financing activities in fiscal 2018 primarily reflected $10.0 billion of share repurchases and $4.7 billion of cash dividends paid, partially offset by $2.0 billion of net proceeds from short- and long-term debt."
+I7,Contractual Obligations
+I7,"Our significant contractual obligations at February 2, 2020 were as follows:"
+I7,
+I7,Payments Due by Period
+I7,
+I7,(1)    Excludes finance lease obligations.
+I7,
+I7,"(2)    Interest payments are calculated at current interest rates, including the impact of active interest rate swaps."
+I7,
+I7,"(3)    Includes finance and operating lease imputed interest of $608 million and $786 million , respectively."
+I7,
+I7,"(4)    Purchase obligations include all legally binding contracts such as firm commitments for inventory purchases, utility purchases, capital expenditures, software acquisitions and license commitments, and legally binding service contracts. Purchase orders that are not binding agreements are excluded from the table above."
+I7,
+I7,(5)    Excludes $448 million of noncurrent unrecognized tax benefits due to uncertainty regarding the timing of future cash tax payments.
+I7,
+I7,Off-Balance Sheet Arrangements
+I7,We have no material off-balance sheet arrangements.
+I7,Critical Accounting Policies
+I7,"Our significant accounting policies are disclosed in Note 1 to our consolidated financial statements. The following discussion addresses our most critical accounting policies, which are those that are both important to the"
+I7,
+X,
+X,
+I7,"representation of our financial condition and results of operations, and that require significant judgment or use of significant assumptions or complex estimates."
+I7,Merchandise Inventories
+I7,"We value the substantial majority of our inventory under the retail inventory method, using the first-in, first-out method, with the remainder of our inventories valued under a cost method. Under the retail inventory method, inventories are stated at cost, which is determined by applying a cost-to-retail ratio to the retail value of inventories."
+I7,"The retail value of our inventory is adjusted as needed to reflect current market conditions. Because these adjustments are based on current prevailing market conditions, the value of our inventory approximates the lower of cost or market. The valuation under the retail inventory method is based on a number of factors such as markups, markdowns, and inventory losses (or shrink). As such, there exists an inherent uncertainty in the final determination of inventory cost and gross profit. We determine markups and markdowns based on the consideration of a variety of factors such as current and anticipated demand, customer preferences and buying trends, age of the merchandise, and weather conditions."
+I7,"We calculate shrink based on actual inventory losses determined as a result of physical inventory counts during each fiscal period and estimated inventory losses which occur between physical inventory counts. The estimate for shrink in the interim period between physical inventory counts is calculated on a store-specific basis based on recent shrink results and current trends in the business. Historically, the difference between estimated shrink and actual inventory losses has not been material to our annual financial results."
+I7,We do not believe there is a reasonable likelihood for a material change in the estimates or assumptions we use to value our inventory under the retail inventory method. We believe that the retail inventory method provides an inventory valuation which approximates cost and results in valuing our inventory at the lower of cost or market.
+I7,Impairment of Long-Lived Assets
+I7,"We evaluate our long-lived assets each quarter for indicators of potential impairment. Indicators of impairment include current period losses combined with a history of losses, our decision to relocate or close a store or other location before the end of its previously estimated useful life, or when changes in other circumstances indicate the carrying amount of an asset may not be recoverable. The evaluation for long-lived assets is performed at the lowest level of identifiable cash flows, which is generally the individual store level. The assets of a store with indicators of impairment are evaluated for recoverability by comparing their undiscounted future cash flows with their carrying value. Our cash flow projections look several years into the future and include assumptions of variables such as future sales and operating margin growth rates, economic conditions, market competition, and inflation."
+I7,"If the carrying value is greater than the undiscounted future cash flows, we then measure the asset's fair value to determine whether an impairment loss should be recognized. If the resulting fair value is less than the carrying value, an impairment loss is recognized. We generally base our estimates of fair market value on market appraisals of owned locations and estimates of the amount of potential sublease income and the time required to sublease for leased locations. Impairments and lease obligation costs on closings and relocations were not material to our consolidated financial statements in fiscal 2019 , fiscal 2018 or fiscal 2017."
+I7,Self-Insurance
+I7,"We have established liabilities for certain losses related to general liability (including product liability), workers' compensation, employee group medical, and automobile claims for which we are self-insured. Our self-insured retention or deductible, as applicable, for each claim involving general liability, workers' compensation, and automobile liability is limited to $25 million, $1 million, and $1 million, respectively. We have no stop loss limits for self-insured employee group medical claims. Our liabilities represent estimates of the ultimate cost for claims incurred at the balance sheet date. The estimated liabilities are not discounted and are established based upon analysis of historical data and actuarial estimates. The liabilities are reviewed by management and third-party actuaries to ensure that they are appropriate. While we believe these estimates are reasonable based on the information currently available, if actual trends, including the severity or frequency of claims, medical cost inflation or fluctuations in premiums, differ from our estimates, our results of operations could be impacted. Actual results related to these types of claims did not vary materially from estimated amounts for fiscal 2019 , fiscal 2018 or fiscal 2017."
+I7,Vendor Allowances
+I7,Vendor allowances primarily consist of volume rebates that are earned as a result of attaining certain purchase levels and co-op advertising allowances for the promotion of vendors' products that are typically based on
+I7,
+X,
+X,
+I7,"guaranteed minimum amounts with additional amounts being earned for attaining certain purchase levels. These vendor allowances are accrued as earned, with those allowances received as a result of attaining certain purchase levels accrued over the incentive period based on estimates of purchases. We believe that our estimate of vendor allowances earned based on expected volume of purchases over the incentive period is an accurate reflection of the ultimate allowance to be received from our vendors."
+I7,"Volume rebates and certain co-op advertising allowances reduce the carrying cost of inventory and are recognized in cost of sales when the related inventory is sold. Certain other co-op advertising allowances that are reimbursements of specific, incremental and identifiable costs incurred to promote vendors' products are recorded as an offset against advertising expense in SG&A."
+I7,Uncertain Tax Positions
+I7,"We are subject to income taxes in the United States and in multiple jurisdictions across our global operations. Thus, the determination of our provision for income taxes requires significant judgment, the use of estimates, and the interpretations and application of complex tax law. Our provision for income taxes could be affected by many factors, including changes in business operations, changes in tax law, outcomes of income tax audits, changes in our assessment of certain tax contingencies, the impact of discrete tax items and the mix of earnings among our U.S. and foreign operations."
+I7,"The calculation of our tax liabilities involves dealing with complexity and thus, there are many transactions and calculations for which the ultimate tax determination is uncertain. The assessment of uncertain tax positions requires the use of significant judgment in evaluating our tax positions and assessing the timing and amounts of deductible and taxable items. We record the benefits of uncertain tax positions in our financial statements only after determining a more likely than not probability that the uncertain tax positions will be sustained."
+I7,Additional Information
+I7,"For information on accounting pronouncements that have impacted or are expected to materially impact our financial condition, results of operations, or cash flows, see Note 1 to our consolidated financial statements."
+B7A,Item 7A. Quantitative and Qualitative Disclosures About Market Risk.
+I7A,"Interest Rate Risk. We have exposure to interest rate risk in connection with our long-term debt portfolio. We use interest rate swap agreements to manage our fixed/floating rate debt portfolio. At February 2, 2020 , after giving consideration to our interest rate swap agreements, floating rate debt principal was $2.9 billion , or approximately 10% of our long-term debt portfolio. A 1.0 percentage point change in the interest costs of floating-rate debt would not have a material impact on our financial condition or results of operations."
+I7A,
+I7A,Foreign Currency Exchange Rate Risk. We are exposed to risks from foreign currency exchange rate fluctuations on the translation of our foreign operations into U.S. dollars and on the purchase of goods by these foreign operations that are not denominated in their local currencies. Revenues from these foreign operations accounted for approximately $8.9 billion of our revenue for fiscal 2019 . Our exposure to foreign currency rate fluctuations is not material to our financial condition or results of operations.
+I7A,"Commodity Price Risk. We experience inflation and deflation related to our purchase of certain commodity products. This price volatility could potentially have a material impact on our financial condition and/or our results of operations. In order to mitigate price volatility, we monitor commodity price fluctuations and may adjust our selling prices accordingly; however, our ability to recover higher costs through increased pricing may be limited by the competitive environment in which we operate. We currently do not use derivative instruments to manage these risks."
+I7A,
+X,
+X,
+B8,Item 8. Financial Statements and Supplementary Data.
+I8,
+X,
+X,
+I8,Report of Independent Registered Public Accounting Firm    30
+I8,
+I8,Note 1. Summary of Significant Accounting Policies         37
+I8,
+X,
+X,
+I8,Report of Independent Registered Public Accounting Firm
+I8,To the Stockholders and Board of Directors
+I8,"The Home Depot, Inc.:"
+I8,
+I8,Opinion on the Consolidated Financial Statements
+I8,
+I8,Change in Accounting Principle
+I8,"As discussed in Note 1 to the Consolidated Financial Statements, the Company has changed its method of accounting for leases as of February 4, 2019 due to the adoption of Accounting Standards Update No. 2016-02, Leases (Topic 842) , and related amendments."
+I8,Basis for Opinion
+I8,
+I8,"We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the Consolidated Financial Statements are free of material misstatement, whether due to error or fraud. Our audits included performing procedures to assess the risks of material misstatement of the Consolidated Financial Statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the Consolidated Financial Statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the Consolidated Financial Statements. We believe that our audits provide a reasonable basis for our opinion."
+I8,Critical Audit Matters
+I8,"The critical audit matters communicated below are matters arising from the current period audit of the Consolidated Financial Statements that were communicated or required to be communicated to the audit committee and that: (1) relate to accounts or disclosures that are material to the Consolidated Financial Statements and (2) involved our especially challenging, subjective, or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the Consolidated Financial Statements, taken as a whole, and we are not, by communicating the critical audit matters below, providing separate opinions on the critical audit matters or on the accounts or disclosures to which they relate."
+I8,Evaluation of the self-insurance liability
+I8,"As discussed in Note 1 to the Consolidated Financial Statements, the Company is self-insured for certain losses related to general liability (including product liability), workers' compensation, employee group medical,"
+I8,
+X,
+X,
+I8,and automobile claims. The Company recognizes the expected ultimate cost for claims incurred at the balance sheet date as a liability. The expected ultimate cost for claims incurred is estimated based upon an analysis of historical data and actuarial estimates determined by the Company's third-party actuary.
+I8,"We identified the evaluation of certain self-insurance liabilities as a critical audit matter, specifically those liabilities related to general liability (including product liability) and workers' compensation. Specialized skills were required to evaluate the actuarial methods and assumptions used in determining certain self-insurance liabilities. There was a high degree of judgment required to evaluate the Company's key assumptions such as loss development factors and the selection of ultimate losses among estimates derived using the various actuarial methods."
+I8,"The primary procedures we performed to address this critical audit matter included the following. We tested certain internal controls over the Company's self-insurance liabilities process including controls over the review of the third-party actuarial report and the actuarial methods and key assumptions used by the actuary in determining certain self-insurance liabilities. We analyzed the key assumptions underlying the actuarial estimates by evaluating the reported claims and claims payments. We involved actuarial professionals with specialized skills and knowledge, who assisted in:"
+I8,
+I8,"*    Assessing the actuarial methods used by the Company's third-party actuary, for consistency with generally accepted actuarial standards and practices;"
+I8,
+I8,*    Evaluating the key assumptions by comparing to historical data; and
+I8,
+I8,"*    Developing an independent actuarial range of certain self-insurance liabilities, based on the Company's underlying historical paid and incurred loss data, and comparing the range to the Company's estimated liabilities."
+I8,
+I8,Evaluation of gross unrecognized income tax benefits
+I8,"As discussed in Notes 1 and 5 to the Consolidated Financial Statements, the Company recognizes the effect of income tax positions if those positions are more likely than not of being sustained at the largest amount that is greater than 50% likely of being realized. The Company's tax positions are subject to examination by domestic and foreign taxing authorities and the resolution of such examinations may span multiple years. Since tax law is complex and often subject to interpretations, there is uncertainty that some of the Company's tax positions will be sustained upon examination."
+I8,We identified the evaluation of the Company's gross unrecognized tax benefits as a critical audit matter. Complex auditor judgment was required to evaluate the Company's interpretation of tax law and its identification and determination of the ultimate resolution of its tax positions.
+I8,"The primary procedures we performed to address this critical audit matter included the following. We tested certain internal controls over the Company's tax process to evaluate gross unrecognized tax benefits, including controls related to (1) interpreting tax law, (2) evaluating which of the Company's tax positions may not be sustained upon examination, and (3) determination of the more-likely-than-not amount of the positions to be upheld. We involved tax professionals with specialized skills and knowledge, who assisted in:"
+I8,
+I8,*    Assessing the transfer pricing studies for compliance with applicable laws and regulations;
+I8,
+I8,*    Evaluating the Company's interpretation of tax laws by developing an independent assessment based on our understanding and interpretation of the tax laws;
+I8,
+I8,"*    Inspecting settlements with applicable taxing authorities, and evaluating the expiration of statutes of limitations; and"
+I8,
+I8,*    Analyzing the Company's assumptions and data used to determine the amount of tax benefits to recognize as well as testing the Company's calculations and comparing the results to the Company's assessment.
+I8,
+I8,/s/ KPMG LLP
+I8,We have served as the Company's auditor since 1979.
+I8,"Atlanta, Georgia"
+I8,"March 25, 2020"
+I8,
+X,
+X,
+I8,"THE HOME DEPOT, INC."
+I8,
+I8,Assets
+I8,Current assets:
+I8,
+I8,Liabilities and Stockholders' Equity
+I8,Current liabilities:
+I8,
+I8,See accompanying notes to consolidated financial statements.
+I8,
+X,
+X,
+I8,"THE HOME DEPOT, INC."
+I8,
+I8,Operating expenses:
+I8,
+I8,Interest and other (income) expense:
+I8,
+I8,Fiscal 2019 and fiscal 2017 include 52 weeks. Fiscal 2018 includes 53 weeks.
+I8,See accompanying notes to consolidated financial statements.
+I8,
+X,
+X,
+I8,"THE HOME DEPOT, INC."
+I8,
+I8,Other comprehensive income (loss):
+I8,
+I8,Fiscal 2019 and fiscal 2017 include 52 weeks. Fiscal 2018 includes 53 weeks.
+I8,See accompanying notes to consolidated financial statements.
+I8,
+X,
+X,
+I8,"THE HOME DEPOT, INC."
+I8,
+I8,Common Stock:
+I8,
+I8,Paid-in Capital:
+I8,
+I8,Retained Earnings:
+I8,
+I8,Accumulated Other Comprehensive Income (Loss):
+I8,
+I8,Treasury Stock:
+I8,
+I8,Fiscal 2019 and fiscal 2017 include 52 weeks. Fiscal 2018 includes 53 weeks.
+I8,See accompanying notes to consolidated financial statements.
+I8,
+X,
+X,
+I8,"THE HOME DEPOT, INC."
+I8,
+I8,Cash Flows from Operating Activities:
+I8,
+I8,Reconciliation of net earnings to net cash provided by operating activities:
+I8,
+I8,Cash Flows from Investing Activities:
+I8,
+I8,Cash Flows from Financing Activities:
+I8,
+I8,Supplemental Disclosures:
+I8,
+I8,Fiscal 2019 and fiscal 2017 include 52 weeks. Fiscal 2018 includes 53 weeks.
+I8,See accompanying notes to consolidated financial statements.
+I8,
+X,
+X,
+I8,"THE HOME DEPOT, INC."
+I8,
+I8,Business
+I8,"The Home Depot, Inc., together with its subsidiaries (the ""Company,"" ""Home Depot,"" ""we,"" ""our"" or ""us""), is a home improvement retailer that sells a wide assortment of building materials, home improvement products, lawn and garden products, and decor items and provides a number of services, in stores and online. We operate in the U.S. (including the Commonwealth of Puerto Rico and the territories of the U.S. Virgin Islands and Guam), Canada, and Mexico."
+I8,Consolidation and Presentation
+I8,Our consolidated financial statements include our accounts and those of our wholly-owned subsidiaries. All significant intercompany transactions have been eliminated in consolidation. Certain amounts in prior fiscal years have been reclassified to conform with the presentation adopted in the current fiscal year. Our fiscal year is a 52- or 53-week period ending on the Sunday nearest to January 31st . Fiscal 2019 and fiscal 2017 include 52 weeks while fiscal 2018 includes 53 weeks.
+I8,Use of Estimates
+I8,"We have made a number of estimates and assumptions relating to the reporting of assets and liabilities, the disclosure of contingent assets and liabilities, and reported amounts of revenues and expenses in preparing these financial statements in conformity with GAAP. Actual results could differ from these estimates."
+I8,Cash Equivalents
+I8,We consider all highly liquid investments purchased with original maturities of three months or less to be cash equivalents. Our cash equivalents are carried at fair market value and consist primarily of money market funds.
+I8,Receivables
+I8,"The components of receivables, net, follow:"
+I8,
+I8,Card receivables consist of payments due from financial institutions for the settlement of credit card and debit card transactions. Rebate receivables represent amounts due from vendors for volume and co-op advertising rebates. Customer receivables relate to credit extended directly to certain customers in the ordinary course of business. The valuation allowance related these receivables was not material to our consolidated financial statements at the end of fiscal 2019 or fiscal 2018 .
+I8,Merchandise Inventories
+I8,"The substantial majority of our merchandise inventories are stated at the lower of cost (first-in, first-out) or market, as determined by the retail inventory method, which is based on a number of factors such as markups, markdowns, and inventory losses (or shrink). As the inventory retail value is adjusted regularly to reflect market conditions, inventory valued using the retail method approximates the lower of cost or market. Certain subsidiaries, including retail operations in Canada and Mexico, and distribution centers, record merchandise inventories at the lower of cost or net realizable value, as determined by a cost method. These merchandise inventories represent approximately 29 % of the total merchandise inventories balance. We evaluate the inventory valued using a cost method at the end of each quarter to ensure that it is carried at the lower of cost or net realizable value. The valuation allowance for merchandise inventories valued under a cost method was not material to our consolidated financial statements at the end of fiscal 2019 or fiscal 2018 ."
+I8,
+X,
+X,
+I8,"Independent physical inventory counts or cycle counts are taken on a regular basis in each store and distribution center to ensure that amounts reflected in merchandise inventories are properly stated. Shrink (or in the case of excess inventory, swell) is the difference between the recorded amount of inventory and the physical inventory. We calculate shrink based on actual inventory losses occurring as a result of physical inventory counts during each fiscal period and estimated inventory losses occurring between physical inventory counts. The estimate for shrink occurring in the interim period between physical inventory counts is calculated on a store-specific basis based on recent shrink results and current trends in the business."
+I8,Property and Equipment
+I8,"Buildings, furniture, fixtures, and equipment are recorded at cost and depreciated using the straight-line method over their estimated useful lives. Leasehold improvements are amortized using the straight-line method over the original term of the lease or the useful life of the improvement, whichever is shorter."
+I8,The estimated useful lives of our property and equipment follow:
+I8,
+I8,Life
+I8,
+I8,"Furniture, fixtures and equipment    2 - 20 years"
+I8,
+I8,"We capitalize certain costs, including interest, related to construction in progress and the acquisition and development of software. Costs associated with the acquisition and development of software are amortized using the straight-line method over the estimated useful life of the software, which is three to six years . Certain development costs not meeting the criteria for capitalization are expensed as incurred."
+I8,"We evaluate our long-lived assets each quarter for indicators of potential impairment. Indicators of impairment include current period losses combined with a history of losses, our decision to relocate or close a store or other location before the end of its previously estimated useful life, or when changes in other circumstances indicate the carrying amount of an asset may not be recoverable. The evaluation for long-lived assets is performed at the lowest level of identifiable cash flows, which is generally the individual store level. The assets of a store with indicators of impairment are evaluated for recoverability by comparing its undiscounted future cash flows with its carrying value. If the carrying value is greater than the undiscounted future cash flows, we then measure the asset's fair value to determine whether an impairment loss should be recognized. If the resulting fair value is less than the carrying value, an impairment loss is recognized for the difference between the carrying value and the estimated fair value. Impairment losses on property and equipment are recorded as a component of SG&A. When a leased location closes, we also recognize, in SG&A, the net present value of future lease obligations less estimated sublease income. Impairments and lease obligation costs on closings and relocations were not material to our consolidated financial statements in fiscal 2019 , fiscal 2018 , or fiscal 2017 ."
+I8,Leases
+I8,"On February 4, 2019, we adopted the new leases standard using the modified retrospective transition method, which requires that we recognize leases differently pre- and post-adoption. See ""Recently Adopted Accounting Pronouncements-ASU No. 2016-02"" below for more information."
+I8,"We categorize leases at their inception as either operating or finance leases. Lease agreements cover certain retail locations, office space, warehouse and distribution space, equipment, and vehicles. Operating leases are included in operating lease right-of-use assets, current operating lease liabilities, and long-term operating lease liabilities in our consolidated balance sheets. Finance leases are included in net property and equipment, current installments of long-term debt, and long-term debt, excluding current installments in our consolidated balance sheets."
+I8,"Leased assets represent our right to use an underlying asset for the lease term, and lease liabilities represent our obligation to make lease payments arising from the lease. Operating lease right-of-use assets and liabilities are recognized at commencement date based on the present value of lease payments over the lease term. We use a secured incremental borrowing rate as the discount rate for present value of lease payments when the rate implicit in the contract is not readily determinable. We determine a secured rate on a quarterly basis and update the weighted average discount rate accordingly. For operating leases with variable payments dependent upon an index or rate that commenced subsequent to adoption of ASU No. 2016-02, we apply the active index or rate as of the lease commencement date. Variable lease payments not based on an index or rate are not included in the operating lease liability as they cannot be reasonably estimated and are recognized in the period in which the obligation for those payments is incurred. Leases that have a term of twelve months or less upon commencement"
+I8,
+X,
+X,
+I8,"date are considered short-term in nature. Accordingly, short-term leases are not included on the consolidated balance sheets and are expensed on a straight-line basis over the lease term, which commences on the date we have the right to control the property."
+I8,Goodwill
+I8,"Goodwill represents the excess of purchase price over the fair value of net assets acquired. We do not amortize goodwill, but assess the recoverability of goodwill in the third quarter of each fiscal year, or more often if indicators warrant, by determining whether the fair value of each reporting unit supports its carrying value. Each fiscal year, we may assess qualitative factors to determine whether it is more likely than not that the fair value of each reporting unit is less than its carrying amount as a basis for determining whether it is necessary to complete quantitative impairment assessments, with a quantitative assessment completed at least once every three years. We completed our last quantitative assessment in fiscal 2019 ."
+I8,"In fiscal 2019 , we completed our annual assessment of the recoverability of goodwill for the U.S., Canada, and Mexico reporting units, performed through quantitative assessments, and concluded that the fair value of the reporting units substantially exceeded their respective carrying values, including goodwill. There were no impairment charges related to goodwill for fiscal 2019 , fiscal 2018 , or fiscal 2017 ."
+I8,Changes in the carrying amount of our goodwill follow:
+I8,
+I8,(1)    Includes purchase price allocation adjustments.
+I8,
+I8,(2)    Primarily reflects the impact of foreign currency translation.
+I8,
+I8,Other Intangible Assets
+I8,"We amortize the cost of other finite-lived intangible assets over their estimated useful lives, which range up to 12 years . Intangible assets with indefinite lives are tested in the third quarter of each fiscal year for impairment, or more often if indicators warrant. Intangible assets other than goodwill are included in other assets."
+I8,"In fiscal 2018, we recognized a pre-tax impairment loss of $ 247 million for certain trade names as a result of a shift in strategy for our MRO business. Our remaining finite-lived and indefinite-lived intangibles were not material at the end of fiscal 2019 or fiscal 2018."
+I8,Debt
+I8,"We record any premiums or discounts associated with an issuance of long-term debt as a direct addition or deduction to the carrying value of the related senior notes. We also record debt issuance costs associated with an issuance of long-term debt as a direct deduction to the carrying value of the related senior notes. Premium, discount, and debt issuance costs are amortized over the term of the respective notes using the effective interest rate method."
+I8,Derivatives
+I8,"We use derivative financial instruments in the management of our interest rate exposure on long-term debt and our exposure to foreign currency fluctuations. For derivatives that are designated as hedges, changes in their fair values that are considered effective are either accounted for in earnings or recognized in other comprehensive income or loss until the hedged item is recognized in earnings, depending on the nature of the hedge. Derivative financial instruments that do not qualify for hedge accounting are recorded at fair value with unrealized gains or losses reported in earnings. All qualifying derivative financial instruments are recognized at their fair values in either assets or liabilities at the balance sheet date and are reported on a gross basis."
+I8,
+X,
+X,
+I8,Insurance
+I8,"We are self-insured for certain losses related to general liability (including product liability), workers' compensation, employee group medical, and automobile claims. We recognize the expected ultimate cost for claims incurred (undiscounted) at the balance sheet date as a liability. The expected ultimate cost for claims incurred is estimated based upon analysis of historical data and actuarial estimates."
+I8,"Our self-insurance liabilities, which are included in accrued salaries and related expenses, other accrued expenses and other long-term liabilities in the consolidated balance sheets, were $ 1.3 billion at February 2, 2020 and February 3, 2019 ."
+I8,We also maintain network security and privacy liability insurance coverage to limit our exposure to losses such as those that may be caused by a significant compromise or breach of our data security. Insurance-related expenses are included in SG&A.
+I8,Treasury Stock
+I8,"Treasury stock is reflected as a reduction of stockholders' equity at cost. We use the weighted-average purchase cost to determine the cost of treasury stock that is reissued, if any."
+I8,Net Sales
+I8,"On January 29, 2018, we adopted the new revenue recognition guidance per ASU No. 2014-09 using the modified retrospective transition method, which requires that we recognize revenue differently pre- and post-adoption."
+I8,"Fiscal 2018 and Subsequent Periods. We recognize revenue, net of expected returns and sales tax, at the time the customer takes possession of merchandise or when a service is performed. The liability for sales returns, including the impact to gross profit, is estimated based on historical return levels and recognized at the transaction price. We also recognize a return asset, and corresponding adjustment to cost of sales, for our right to recover the goods returned by the customer, measured at the former carrying amount of the goods, less any expected recovery cost. At each financial reporting date, we assess our estimates of expected returns, refund liabilities, and return assets."
+I8,"Net sales include services revenue generated through a variety of installation, home maintenance, and professional service programs. In these programs, the customer selects and purchases material for a project, and we provide or arrange for professional installation. These programs are offered through our stores, online, and in-home sales programs. Under certain programs, when we provide or arrange for the installation of a project and the subcontractor provides material as part of the installation, both the material and labor are included in services revenue. We recognize this revenue when the service for the customer is complete, which is not materially different from recognizing the revenue over the service period as the substantial majority of our services are completed within one week."
+I8,"For product sold in stores or online, payment is typically due at the point of sale. For services, payment in full is due upon completion of the job. When we receive payment from customers before the customer has taken possession of the merchandise or the service has been performed, the amount received is recorded as deferred revenue until the sale or service is complete. Such performance obligations are part of contracts with expected original durations of three months or less. We further record deferred revenue for the sale of gift cards and recognize the associated revenue upon the redemption of those gift cards in net sales. Gift card breakage income, which is our estimate of the non-redeemed gift card balance and recognized in net sales, was immaterial in fiscal 2019 and fiscal 2018 ."
+I8,"We also have agreements with third-party service providers who directly extend credit to customers, manage our PLCC program, and own the related receivables. We have evaluated the third-party entities holding the receivables under the program and concluded that they should not be consolidated. The agreement with the primary third-party service provider for our PLCC program expires in 2028, with us having the option, but no obligation, to purchase the existing receivables at the end of the agreement. Deferred interest charges incurred for our deferred financing programs offered to these customers, interchange fees charged to us for their use of the cards, and any profit sharing with the third-party service providers are included in net sales."
+I8,"Fiscal 2017. We recognize revenue, net of estimated returns and sales tax, at the time the customer takes possession of merchandise or when a service is performed. The liability for sales returns, including the impact to gross profit, is estimated based on historical return levels."
+I8,"Net sales include services revenue generated through a variety of installation, home maintenance, and professional service programs. In these programs, the customer selects and purchases material for a project, and we provide or arrange professional installation. These programs are offered through our stores and in-home sales programs."
+I8,
+X,
+X,
+I8,"Under certain programs, when we provide or arrange the installation of a project and the subcontractor provides material as part of the installation, both the material and labor are included in services revenue. We recognize this revenue when the service for the customer is complete."
+I8,"When we receive payment from customers before the customer has taken possession of the merchandise or the service has been performed, the amount received is recorded as deferred revenue until the sale or service is complete. We also record deferred revenue for the sale of gift cards and recognize this revenue upon the redemption of gift cards in net sales. Gift card breakage income, which is our estimate of the non-redeemed gift card balance and recognized as a reduction to SG&A, was immaterial in fiscal 2017."
+I8,Deferred interest charges incurred for our deferred financing programs offered to customers are included in cost of sales in fiscal 2017. Interchange fees and any profit sharing related to the PLCC program are included in SG&A in fiscal 2017.
+I8,Cost of Sales
+I8,"Cost of sales includes the actual cost of merchandise sold and services performed; the cost of transportation of merchandise from vendors to our distribution network, stores, or customers; shipping and handling costs from our stores or distribution network to customers; and the operating cost and depreciation of our sourcing and distribution network and online fulfillment centers. In fiscal 2017, cost of sales also included cost of deferred interest programs offered through our PLCC programs."
+I8,Vendor Allowances
+I8,"Vendor allowances primarily consist of volume rebates that are earned as a result of attaining certain purchase levels and co-op advertising allowances for the promotion of vendors' products that are typically based on guaranteed minimum amounts with additional amounts being earned for attaining certain purchase levels. These vendor allowances are accrued as earned, with those allowances received as a result of attaining certain purchase levels accrued over the incentive period based on estimates of purchases. Volume rebates and certain co-op advertising allowances reduce the carrying cost of inventory and are recognized in cost of sales when the related inventory is sold."
+I8,"Certain other co-op advertising allowances that are reimbursements of specific, incremental, and identifiable costs incurred to promote vendors' products are recorded as an offset against advertising expense in SG&A. The co-op advertising allowances recorded as an offset to advertising expense follow:"
+I8,
+I8,Advertising Expense
+I8,"Television and radio advertising production costs, along with media placement costs, are expensed when the advertisement first appears. Certain co-op advertising allowances are recorded as an offset against advertising expense. Gross advertising expense included in SG&A follows:"
+I8,
+I8,Stock-Based Compensation
+I8,"We are currently authorized to issue incentive and nonqualified stock options, stock appreciation rights, restricted stock, restricted stock units, performance shares, performance units, and deferred shares to certain of our associates and non-employee directors under certain stock incentive plans. We measure and recognize compensation expense for all share-based payment awards made to associates and non-employee directors based on estimated fair values. The value of the portion of the award that is ultimately expected to vest is recognized as stock-based compensation expense over the requisite service period or as restrictions lapse. Additional information on our stock-based payment awards is included in Note 8 ."
+I8,Income Taxes
+I8,"Income taxes are accounted for under the asset and liability method. We provide for federal, state, and foreign income taxes currently payable, as well as for those deferred due to timing differences between reporting income and expenses for financial statement purposes versus tax purposes. Deferred tax assets and liabilities are"
+I8,
+X,
+X,
+I8,recognized for the future tax consequences attributable to temporary differences between the financial statement carrying amounts of existing assets and liabilities and their respective tax bases. Deferred tax assets and liabilities are measured using enacted income tax rates expected to apply to taxable income in the years in which those temporary differences are expected to be recovered or settled. The effect of a change in income tax rates is recognized as income or expense in the period that includes the enactment date.
+I8,We recognize the effect of income tax positions only if those positions are more likely than not of being sustained. Recognized income tax positions are measured at the largest amount that is greater than 50 % likely of being realized. Changes in recognition or measurement are reflected in the period in which the change in judgment occurs.
+I8,
+I8,Comprehensive Income
+I8,"Comprehensive income includes net earnings adjusted for certain gains and losses that are excluded from net earnings under GAAP, which consists primarily of foreign currency translation adjustments."
+I8,Foreign Currency Translation
+I8,Assets and liabilities denominated in a foreign currency are translated into U.S. dollars at the current rate of exchange on the last day of the reporting period. Revenues and expenses are translated using average exchange rates for the period and equity transactions are translated using the actual rate on the day of the transaction.
+I8,Reclassifications
+I8,Certain prior period amounts have been reclassified to conform to the current year's financial statement presentation.
+I8,Recently Adopted Accounting Pronouncements
+I8,
+X,
+X,
+I8,"On February 4, 2019 (the ""effective date""), we adopted ASU No. 2016-02 and subsequent updates, collectively referred to as ""Topic 842"", using the modified retrospective transition method. In addition, we adopted the package of practical expedients in transition, which permits us to not reassess our prior conclusions pertaining to lease identification, lease classification, and initial direct costs on leases that commenced prior to our adoption of the new standard. We also elected the ongoing practical expedient to not recognize operating lease right-of-use assets and operating lease liabilities related to short-term leases. We did not elect the use-of-hindsight or land easements practical expedients. For leases beginning subsequent to the effective date, we elected to not separate lease and non-lease components for certain classes of assets including real estate and certain equipment. To determine the measurement of the lease liability for operating leases with variable payments based on an index or rate that commenced prior to the adoption of Topic 842, we elected to apply the active index or rate at the effective date."
+I8,"As a result of adopting Topic 842, we recognized net operating lease right-of-use assets of $ 5.7 billion and operating lease liabilities of $ 6.0 billion on the effective date. Existing prepaid rent, accrued rent, and closed store reserves were recorded as an offset to our gross operating lease right-of-use assets. The cumulative effect of the adoption resulted in an immaterial adjustment to the opening balance of retained earnings as of February 4, 2019. The standard did not have a material impact on our results of operations or cash flows."
+I8,Recently Issued Accounting Pronouncements
+I8,
+I8,"Recent accounting pronouncements pending adoption not discussed above are either not applicable or are not expected to have a material impact on our consolidated financial condition, results of operations, or cash flows."
+I8,
+I8,"We currently conduct our retail operations in the U.S., Canada, and Mexico, each of which represents one of our three operating segments. Our operating segments reflect the way in which internally-reported financial information is used to make decisions and allocate resources. For disclosure purposes, we aggregate these three operating segments into one reportable segment due to their similar operating and financial characteristics and how the business is managed."
+I8,
+X,
+X,
+I8,"The assets of each of our operating segments primarily consist of net property and equipment and merchandise inventories. Long-lived assets, classified by geography, follow:"
+I8,
+I8,"No sales to an individual customer accounted for more than 10% of revenue during any of the last three fiscal years. Net sales, classified by geography, follow:"
+I8,
+I8,Net sales by products and services follow:
+I8,
+I8,Major product lines and the related merchandising departments (and related services) follow:
+I8,
+I8,Major Product Line      Merchandising Departments
+I8,"Building Materials      Building Materials, Electrical/Lighting, Lumber, Millwork, and Plumbing"
+I8,
+I8,"During the first quarter of fiscal 2019, we combined the Electrical and Lighting merchandising departments into one department, Electrical/Lighting, and we renamed the Decor merchandising department to Decor/Storage. These changes had no impact on our net sales presentations."
+I8,Net sales by major product lines (and related services) follow:
+I8,
+I8,"Note: Net sales for certain merchandising departments were reclassified in the first quarter of fiscal 2019. As a result, prior-year amounts have been reclassified to conform with the current-year presentation."
+I8,
+X,
+X,
+I8,Net sales by merchandising department (and related services) follow:
+I8,
+I8,"Note: Certain percentages may not sum to totals due to rounding. Net sales for certain merchandising departments were reclassified in fiscal 2019. As a result, prior year net sales have been reclassified to conform with the current year presentation. Prior year percent of net sales data also reflects the new classifications."
+I8,
+I8,3.    PROPERTY AND LEASES
+I8,
+I8,Net Property and Equipment
+I8,The components of net property and equipment follow:
+I8,
+I8,"Depreciation and finance lease amortization expense, including depreciation expense included in cost of sales, follows:"
+I8,
+I8,Leases
+I8,"We lease certain retail locations, office space, warehouse and distribution space, equipment, and vehicles. We consider various factors such as market conditions and the terms of any renewal options that may exist to determine whether we will renew or replace the lease. A substantial majority of our leases have remaining lease"
+I8,
+X,
+X,
+I8,"terms of one to 20 years , typically with the option to extend the leases for up to five years . Some of our leases may include the option to terminate in less than five years . In the event we are reasonably certain to exercise the option to extend a lease, we will include the extended terms in the related lease assets and liabilities. Real estate taxes, insurance, maintenance, and operating expenses applicable to the leased property are generally our obligations under the lease agreements."
+I8,"Our lease agreements do not contain any material residual value guarantees or material restrictive covenants. Further, certain lease agreements include rental payments based on an index or rate and others include rental payments based on a percentage of sales."
+I8,The consolidated balance sheet location of assets and liabilities related to operating and finance leases follow:
+I8,
+I8,"February 2,"
+I8,
+I8,Assets:
+I8,
+I8,Liabilities:
+I8,Current:
+I8,
+I8,Long-term:
+I8,
+I8,"Finance lease liabilities      Long-term debt, excluding current installments    1,081"
+I8,
+I8,"(1)    Finance lease assets are recorded net of accumulated amortization of $ 644 million as of February 2, 2020 ."
+I8,
+I8,The components of lease cost follow:
+I8,
+I8,Fiscal
+I8,
+I8,Finance lease cost:
+I8,
+X,
+X,
+I8,ASU 2016-02 requires that public companies use a secured incremental borrowing rate as the discount rate for the present value of lease payments when the rate implicit in the contract is not readily determinable. We determine a secured rate on a quarterly basis and update the weighted average discount rate accordingly. Lease terms and discount rates follow:
+I8,
+I8,"February 2,"
+I8,2020
+I8,Weighted Average Remaining Lease Term (Years):
+I8,
+I8,Weighted Average Discount Rate:
+I8,
+I8,"The approximate future minimum lease payments under operating and finance leases at February 2, 2020 follow:"
+I8,
+I8,"Note: Amounts presented do not include payments relating to immaterial leases excluded from the consolidated balance sheets as part of transition elections adopted upon implementation of Topic 842. Additionally, we have excluded approximately $ 1.9 billion of leases (undiscounted basis) that have not yet commenced. These leases will commence between 2020 and 2021 with lease terms of one to 20 years ."
+I8,"The approximate future minimum lease payments under capital and operating leases at February 3, 2019 and accounted for under previous lease guidance follow:"
+I8,
+X,
+X,
+I8,Other lease information follows for fiscal 2019 :
+I8,
+I8,Fiscal
+I8,
+I8,Cash paid for amounts included in the measurement of lease liabilities:
+I8,
+I8,Lease assets obtained in exchange for new operating lease liabilities      748
+I8,Lease assets obtained in exchange for new finance lease liabilities        186
+I8,
+I8,Short-Term Debt
+I8,"We have commercial paper programs with an aggregate borrowing capacity of $ 3.0 billion . All of our short-term borrowings in fiscal 2019 and fiscal 2018 were under these commercial paper programs. In connection with these programs, we have back-up credit facilities with a consortium of banks for borrowings up to $ 3.0 billion , which consist of a 364-day $ 1.0 billion credit facility and a five-year $ 2.0 billion credit facility, which expires in December 2022. In December 2019, we completed the renewal of our 364-day $ 1.0 billion credit facility, extending the maturity from December 2019 to December 2020."
+I8,Certain information on our commercial paper programs follows:
+I8,
+X,
+X,
+I8,Long-Term Debt
+I8,Details of the components of our long-term debt follow:
+I8,
+I8,Carrying Amount
+I8,
+I8,"January 2020 Issuance. In January, we issued two tranches of senior notes."
+I8,
+I8,"*    The first tranche consisted of $ 750 million of 2.95 % senior notes due June 15, 2029 (the ""2029 notes"") at a premium of $ 32 million . The 2029 notes form a single series with the Company's $ 1.0 billion 2.95 % senior notes due June 15, 2029 that were issued in June 2019 and have the same terms. The aggregate principal amount outstanding of the Company's senior notes due June 15, 2029 is $ 1.8 billion . Interest on the 2029 notes is due semi-annually on June 15 and December 15 of each year, beginning June 15, 2020, with interest accruing from December 15, 2019."
+I8,
+X,
+X,
+I8,"*    The second tranche consisted of $ 1.3 billion of 3.125 % senior notes due December 15, 2049 (the ""2049 notes"") at a discount of $ 16 million (together with the 2029 notes, the ""January 2020 issuance""). Interest on the 2049 notes is due semi-annually on June 15 and December 15 of each year, beginning June 15, 2020."
+I8,
+I8,"*    Issuance costs totaled $ 17 million . The net proceeds of the January 2020 issuance will be used for general corporate purposes, including repurchases of common stock."
+I8,
+I8,"June 2019 Issuance. In June 2019, we issued two tranches of senior notes."
+I8,
+I8,"*    The first tranche consisted of $ 1.0 billion of 2.95 % senior notes due June 15, 2029 at a discount of $ 6 million . Interest on these notes is due semi-annually on June 15 and December 15 of each year, beginning December 15, 2019."
+I8,
+I8,"*    The second tranche consisted of $ 400 million of 3.90 % senior notes due June 15, 2047 (the ""2047 notes"") at a premium of $ 10 million (together with the $ 1.0 billion of 2.95 % senior notes due June 15, 2029, the ""June 2019 issuance""). The 2047 notes form a single series with the Company's $ 750 million 3.90 % senior notes due June 15, 2047 that were issued in June 2017, and have the same terms. The aggregate principal amount outstanding of the Company's senior notes due June 15, 2047 is $ 1.2 billion . Interest on the 2047 notes is due semi-annually on June 15 and December 15 of each year, beginning December 15, 2019, with interest accruing from June 15, 2019."
+I8,
+I8,"*    Issuance costs totaled $ 10 million . The net proceeds of the June 2019 issuance were used to repay the Company's 2.00 % senior notes that matured on June 15, 2019 and for general corporate purposes, including repurchases of common stock."
+I8,
+I8,"December 2018 Issuance. In December 2018, we issued four tranches of senior notes."
+I8,
+I8,"*    The first tranche consisted of $ 300 million of floating rate senior notes due March 1, 2022 (the ""2022 floating rate notes""). The 2022 floating rate notes bear interest at a variable rate determined quarterly equal to the three-month LIBOR plus 31 basis points. Interest on the 2022 floating rate notes is due quarterly on March 1, June 1, September 1, and December 1 of each year, beginning March 1, 2019."
+I8,
+I8,"*    The second tranche consisted of $ 700 million of 3.25 % senior notes due March 1, 2022 (the ""2022 notes"") at a discount of $ 2 million . Interest on the 2022 notes is due semi-annually on March 1 and September 1 of each year, beginning March 1, 2019."
+I8,
+I8,"*    The third tranche consisted of $ 1.0 billion of 3.90 % senior notes due December 6, 2028 (the ""2028 notes"") at a discount of $ 7 million . Interest on the 2028 notes is due semi-annually on June 6 and December 6 of each year, beginning June 6, 2019."
+I8,
+I8,"*    The fourth tranche consisted of $ 1.5 billion of 4.50 % senior notes due December 6, 2048 (the ""2048 notes"") at a discount of $ 25 million (together with the 2022 floating rate notes, the 2022 notes and the 2028 notes, the ""December 2018 issuance""). Interest on the 2048 notes is due semi-annually on June 6 and December 6 of each year, beginning June 6, 2019."
+I8,
+I8,"*    Issuance costs totaled $ 22 million . The net proceeds of the December 2018 issuance were used for general corporate purposes, including repurchases of common stock."
+I8,
+I8,"Redemption. All of our senior notes, other than our outstanding floating rate notes, may be redeemed by us at any time, in whole or in part, at the redemption price plus accrued interest up to the redemption date. With respect to the 1.80% 2020 notes, the 3.25% 2022 notes, and the 5.875% 2036 notes, the redemption price is equal to the greater of (1) 100 % of the principal amount of the notes to be redeemed, or (2) the sum of the present values of the remaining scheduled payments of principal and interest on the notes to be redeemed that would be due after the related redemption date. With respect to all other notes, the redemption price is equal to the greater of (1) 100 % of the principal amount of the notes to be redeemed, or (2) the sum of the present values of the remaining scheduled payments of principal and interest to the Par Call Date, as defined in the respective notes. Additionally, if a Change in Control Triggering Event occurs, as defined in the notes, holders of all notes have the right to require us to redeem those notes at 101 % of the aggregate principal amount of the notes plus accrued interest up to the redemption date."
+I8,"We are generally not limited under the indentures governing the notes in our ability to incur additional indebtedness or required to maintain financial ratios or specified levels of net worth or liquidity. The indentures governing the notes contain various customary covenants; however, none are expected to impact our liquidity or capital resources."
+I8,
+X,
+X,
+I8,"Maturities of Long-Term Debt. Our long-term debt maturities, excluding finance leases, follow:"
+I8,
+I8,in millions    Principal
+I8,
+I8,"Fiscal 2021    2,350"
+I8,"Fiscal 2022    2,250"
+I8,"Fiscal 2023    1,000"
+I8,"Fiscal 2024    1,100"
+I8,
+I8,Derivative Instruments
+I8,We use derivative financial instruments from time to time in the management of our interest rate exposure on long-term debt and our exposure on foreign currency fluctuations.
+I8,"We had outstanding interest rate swap agreements with combined notional amounts of $ 2.1 billion at February 2, 2020 and $ 1.3 billion at February 3, 2019 . These agreements were accounted for as fair value hedges that swap fixed for variable rate interest to hedge changes in the fair values of certain senior notes. The fair values of these agreements were $ 120 million at February 2, 2020 and not material at February 3, 2019 ."
+I8,"We had outstanding cross currency swap agreements with a combined notional amount of $ 326 million at February 3, 2019 , accounted for as cash flow hedges, to hedge foreign currency fluctuations on certain intercompany debt. The approximate fair values of these agreements were assets of $ 121 million at February 3, 2019 , which were the estimated amounts we would have received to settle the agreements and were included in other assets. These cross currency swap agreements settled during fiscal 2019, resulting in a gain of $ 118 million ."
+I8,"We also had outstanding foreign currency forward contracts, accounted for as cash flow hedges, which hedge the variability of forecasted cash flows associated with certain payments made in our foreign operations. At February 2, 2020 and February 3, 2019 , the notional amounts and the fair values of these agreements were not material."
+I8,"At February 2, 2020 , we had outstanding foreign currency forward contracts, accounted for as net investment hedges, with a combined notional amount of $ 1.2 billion . These agreements hedge against foreign currency exposure on our net investment in certain subsidiaries. At February 2, 2020 , the fair values of these agreements were not material."
+I8,
+I8,5.    INCOME TAXES
+I8,
+I8,Tax Reform
+I8,"On December 22, 2017, the U.S. enacted comprehensive tax legislation with the Tax Act, making broad and complex changes to U.S. tax law, including lowering the U.S. corporate income tax rate to 21%, transitioning to a modified territorial system, and providing for current expensing of certain qualifying capital expenditures."
+I8,"We have elected to pay our transition tax over the eight-year period provided in the Tax Act. As of February 2, 2020, the remaining balance of our transition tax obligation was $ 14 million ."
+I8,
+I8,"We expect additional regulatory guidance and technical clarifications from the U.S. Department of the Treasury and IRS clarifying certain provisions of the Tax Act within the next 12 months. When additional guidance is issued, we will recognize the related tax impact in the quarter of enactment."
+I8,
+X,
+X,
+I8,Provision for Income Taxes
+I8,Our earnings before the provision for income taxes follow:
+I8,
+I8,Our provision for income taxes follows:
+I8,
+I8,Current:
+I8,
+I8,Deferred:
+I8,
+I8,"Our combined federal, state, and foreign effective tax rates follow:"
+I8,
+I8,"The reconciliation of our provision for income taxes at the federal statutory rates of 21 % for fiscal 2019 , 21 % for fiscal 2018 , and approximately 34 % for fiscal 2017 to the actual tax expense follows:"
+I8,
+X,
+X,
+I8,Deferred Taxes
+I8,The tax effects of temporary differences that give rise to significant portions of our deferred tax assets and deferred tax liabilities follow:
+I8,
+I8,Assets:
+I8,
+I8,Liabilities:
+I8,
+I8,"Our noncurrent deferred tax assets and noncurrent deferred tax liabilities, netted by tax jurisdiction, follow:"
+I8,
+I8,"We believe that the realization of the deferred tax assets is more likely than not, based upon the expectation that we will generate the necessary taxable income in future periods."
+I8,"At February 2, 2020 , we had federal, state, and foreign net operating loss carryforwards available to reduce future taxable income, expiring at various dates beginning in 2020 to 2038. We have concluded that it is more likely than not that the tax benefits related to the federal, state, and foreign net operating losses will be realized."
+I8,Reinvestment of Unremitted Earnings
+I8,"Substantially all of our current year foreign cash flows in excess of working capital and cash needed for strategic investments are not intended to be indefinitely reinvested offshore. Therefore, the tax effects of repatriation (including applicable state and local taxes and foreign withholding taxes) of such cash flows have been provided for in the accompanying consolidated statements of earnings. We intend to reinvest substantially all of the approximately $ 3 billion of non-cash unremitted earnings of our non-U.S. subsidiaries indefinitely. Accordingly, no provision for state and local taxes or foreign withholding taxes was recorded on these unremitted earnings in the accompanying consolidated statements of earnings. It is impracticable for us to determine the amount of unrecognized deferred tax liabilities on these indefinitely reinvested earnings due to the complexities associated with the hypothetical calculation."
+I8,
+X,
+X,
+I8,Tax Return Examination Status
+I8,
+I8,"Over the next twelve months, it is reasonably possible that the resolution of federal and state tax examinations could reduce our unrecognized tax benefits by $ 25 million . Final settlement of these audit issues may result in payments that are more or less than this amount, but we do not anticipate the resolution of these matters will result in a material change to our consolidated financial condition or results of operations."
+I8,Unrecognized Tax Benefits
+I8,Reconciliations of the beginning and ending amount of our gross unrecognized tax benefits follow:
+I8,
+I8,"Unrecognized tax benefits that if recognized would affect our annual effective income tax rate on net earnings were $ 407 million at February 2, 2020 ; $ 398 million at February 3, 2019 ; and $ 483 million at January 28, 2018 ."
+I8,Interest and Penalties
+I8,"Net adjustments to accruals for interest and penalties associated with uncertain tax positions resulted in a benefit of $ 14 million in fiscal 2019 , a benefit of $ 33 million in fiscal 2018 and expenses of $ 24 million in fiscal 2017 . Interest and penalties are included in interest expense and SG&A, respectively."
+I8,Our total accrued interest and penalties follow:
+I8,
+X,
+X,
+I8,6.    STOCKHOLDERS' EQUITY
+I8,
+I8,Stock Rollforward
+I8,A reconciliation of the number of shares of our common stock follows:
+I8,
+I8,Common stock:
+I8,
+I8,Treasury stock:
+I8,
+I8,Annual per share cash dividends follow:
+I8,
+I8,Accelerated Share Repurchase Agreements
+I8,"We enter into ASR agreements from time to time with third-party financial institutions to repurchase shares of our common stock. Under an ASR agreement, we pay a specified amount to the financial institution and receive an initial delivery of shares. This initial delivery of shares represents the minimum number of shares that we may receive under the agreement. Upon settlement of the ASR agreement, the financial institution delivers additional shares, with the final number of shares delivered determined with reference to the volume weighted average price per share of our common stock over the term of the agreement, less a negotiated discount. The transactions are accounted for as equity transactions and are included in treasury stock when the shares are received, at which time there is an immediate reduction in the weighted average common shares calculation for basic and diluted earnings per share."
+I8,"The terms of each ASR agreement entered into during the last three fiscal years, structured as outlined above, follow (in millions):"
+I8,
+I8,7.    FAIR VALUE MEASUREMENTS
+I8,
+I8,"The fair value of an asset is considered to be the price at which the asset could be sold in an orderly transaction between unrelated knowledgeable and willing parties. A liability's fair value is defined as the amount that would be paid to transfer the liability to a new obligor, rather than the amount that would be paid to settle the liability with the creditor. Assets and liabilities recorded at fair value are measured using a three-tier fair value hierarchy, which prioritizes the inputs used in measuring fair value."
+I8,
+X,
+X,
+I8,Assets and Liabilities Measured at Fair Value on a Recurring Basis
+I8,Assets and liabilities that are measured at fair value on a recurring basis follow:
+I8,
+I8,Assets and Liabilities Measured at Fair Value on a Nonrecurring Basis
+I8,"The carrying amounts of cash and cash equivalents, receivables, short-term debt, and accounts payable approximate fair value due to the short-term maturities of these financial instruments."
+I8,"Long-lived assets and other intangible assets are subject to nonrecurring fair value measurement for the assessment of impairment or as the result of business acquisitions. In the third quarter of fiscal 2019 , we completed our annual assessment of the recoverability of goodwill for our U.S., Canada and Mexico reporting units. The fair values of these reporting units were estimated using the present value of expected future discounted cash flows through unobservable inputs (Level 3), and the fair value exceeded the carrying value for each respective reporting unit. Accordingly, no impairment charges related to goodwill were recorded for these reporting units."
+I8,"Including goodwill as described above, we did not have any material assets or liabilities that were measured at fair value on a nonrecurring basis as of February 2, 2020 or February 3, 2019 , respectively."
+I8,The aggregate fair values and carrying values of our senior notes follow:
+I8,
+I8,8.    STOCK-BASED COMPENSATION
+I8,
+I8,Omnibus Stock Incentive Plans
+I8,
+I8,"Stock Options. Under the terms of the Plans, incentive stock options and nonqualified stock options must have an exercise price at or above the fair market value of our stock on the date of the grant. Typically, nonqualified stock options vest at the rate of 25 % per year commencing on the first or second anniversary date of the grant and expire on the tenth anniversary date of the grant. Additionally, certain stock options may become non-forfeitable upon the associate reaching age 60, provided the associate has had five years of continuous service. No incentive stock options have been issued under the 2005 Plan."
+I8,We estimate the fair value of stock option awards on the date of grant using an option-pricing model. We use the Black-Scholes option pricing model for purposes of valuing stock option awards. Our determination of fair value of stock option awards on the date of grant using the Black-Scholes option pricing model is affected by our stock price as well as assumptions regarding a number of subjective variables.
+I8,
+X,
+X,
+I8,The per share weighted average fair value of stock options granted and the assumptions used in determining fair value at the date of grant using the Black-Scholes option-pricing model follow:
+I8,
+I8,The total intrinsic value of stock options exercised follow:
+I8,
+I8,A summary of stock option activity by number of shares and weighted average exercise price follows:
+I8,
+I8,Shares of common stock issued from stock option exercises are made available from authorized and unissued common stock or treasury stock.
+I8,"Details regarding outstanding and exercisable stock options at February 2, 2020 follow:"
+I8,
+I8,Restricted Stock and Performance Share Awards. Restrictions on the restricted stock issued under the Plans generally lapse according to one of the following schedules:
+I8,
+I8,*    the restrictions on the restricted stock lapse over various periods up to five years; or
+I8,
+I8,*    the restrictions on 25 % of the restricted stock lapse upon the third and sixth anniversaries of the date of issuance with the remaining 50 % of the restricted stock lapsing upon the associate's attainment of age 62.
+I8,
+I8,"At the grant date of the award, recipients of restricted stock are granted voting rights and generally receive dividends on unvested shares, paid in the form of cash on each dividend payment date. Additionally, certain restricted stock awards may become non-forfeitable upon the associate's attainment of age 60, provided the associate has had five years of continuous service."
+I8,"We have also granted performance share awards under the Plans. These awards provide for the issuance of shares of our common stock at the end of the three-year performance cycle based upon our performance against target average ROIC and operating profit over that performance cycle. Additionally, certain awards may become non-forfeitable upon the associate's attainment of age 60, provided the associate has had five years of continuous service and minimum performance targets are achieved. Recipients of performance share awards have no voting rights until the shares are issued following completion of the performance period. Dividend equivalents accrue on the performance shares (as reinvested shares) and are paid upon the payout of the award based upon the actual number of shares earned."
+I8,
+X,
+X,
+I8,The fair value of the restricted stock and performance shares is based on the closing stock price on the date of grant and is expensed over the period during which the restrictions lapse.
+I8,"Restricted Stock Units and Deferred Shares. Each restricted stock unit entitles the associate to one share of common stock to be received upon vesting up to five years after the grant date. Additionally, certain awards may become non-forfeitable upon the associate reaching age 60, provided the associate has had five years of continuous service. Recipients of restricted stock units have no voting rights until the vesting of the award. Recipients receive dividend equivalents that accrue on unvested units and are paid out in the form of additional shares of stock on the vesting date. The fair value of the restricted stock units is based on the closing stock price on the date of grant and is expensed over the period during which the units vest."
+I8,We grant awards of deferred shares to non-employee directors under the Plans. Each deferred share entitles the non-employee director to one share of common stock to be received following termination of Board service. Recipients of deferred shares have no voting rights and receive dividend equivalents that accrue and are paid out in the form of additional shares of stock upon payout of the underlying shares following termination of service. The fair value of the deferred shares is based on the closing stock price on the date of grant and is expensed immediately upon grant.
+I8,Deferred shares granted to non-employee directors follow:
+I8,
+I8,"Stock-Based Compensation Activity. A summary of restricted stock, performance shares, and restricted stock unit activity follows:"
+I8,
+I8,"Stock-based compensation expense, net of estimated forfeitures follows:"
+I8,
+I8,"At February 2, 2020 , there was $ 379 million of unamortized stock-based compensation expense, which is expected to be recognized over a weighted average period of two years."
+I8,"The total fair value of restricted stock, performance shares, and restricted stock units that vested during the fiscal year follow:"
+I8,
+I8,Employee Stock Purchase Plans
+I8,
+X,
+X,
+I8,"ESPPs at February 2, 2020 , associates have contributed $ 23 million to purchase shares at 85 % of the stock's fair market value on the last day of the current purchase period, June 30, 2020 ."
+I8,
+I8,9.    EMPLOYEE BENEFIT PLANS
+I8,
+I8,"We maintain active defined contribution retirement plans for our associates (the ""Benefit Plans""). All associates satisfying certain service requirements are eligible to participate in the Benefit Plans. We make cash contributions each payroll period up to specified percentages of associates' contributions as approved by our Board of Directors."
+I8,"We also maintain the Restoration Plan to provide certain associates deferred compensation that they would have received under the Benefit Plans as a matching contribution if not for the maximum compensation limits under the Internal Revenue Code. We fund the Restoration Plan through contributions made to a grantor trust, which are then used to purchase shares of our common stock in the open market."
+I8,Our contributions to the Benefit Plans and the Restoration Plan follow:
+I8,
+I8,"At February 2, 2020 , the Benefit Plans and the Restoration Plan held a total of 6 million shares of our common stock in trust for plan participants."
+I8,
+I8,The reconciliation of our basic to diluted weighted average common shares follows:
+I8,
+I8,"At February 2, 2020 , we had outstanding letters of credit totaling $ 384 million , primarily related to certain business transactions, including insurance programs, trade contracts, and construction contracts."
+I8,"We are involved in litigation arising in the normal course of business. In management's opinion, any such litigation is not expected to have a material adverse effect on our consolidated financial condition, results of operations, or cash flows."
+I8,
+X,
+X,
+I8,A summary of our quarterly consolidated results of operations follows:
+I8,
+I8,Fiscal 2019:
+I8,
+I8,Fiscal 2018:
+I8,
+I8,The fourth fiscal quarter of fiscal 2018 includes 14 weeks; all other quarters in fiscal 2018 and all quarters of fiscal 2019 include 13 weeks.
+I8,
+I8,13.    SUBSEQUENT EVENTS
+I8,
+I8,"The recent outbreak of the novel coronavirus COVID-19, which was declared a pandemic by the World Health Organization on March 11, 2020, has led to adverse impacts on the U.S. and global economies and created uncertainty regarding potential impacts to our supply chain, operations, and customer demand. The pandemic has impacted and could further impact our operations and the operations of our suppliers and vendors as a result of quarantines, facility closures, and travel and logistics restrictions. As a result of COVID-19, we have reduced store operating hours, expanded our paid time off policy for associates, and shifted certain store support operations to remote or virtual. We are also taking steps in our stores to manage foot traffic to better protect our customers and associates. In addition, in certain jurisdictions, we have had to cease sales of or delay commencement of work on certain services deemed ""non-life-sustaining."" While the disruption caused by the pandemic is currently expected to be temporary, there is uncertainty regarding its duration. Therefore, while we expect the pandemic to impact our results of operations, financial position, and liquidity, we cannot reasonably estimate the impact at this time."
+I8,
+I8,"As a result, the Company is taking action to enhance its financial flexibility. In March 2020, we expanded our commercial paper programs from $ 3.0 billion to $ 6.0 billion and suspended our share repurchases. We also entered into an additional 364-day $ 3.5 billion credit facility in March 2020, which together with our existing credit facilities backs up our expanded commercial paper programs."
+I8,
+X,
+X,
+B9,Item 9. Changes in and Disagreements With Accountants on Accounting and Financial Disclosure.
+I9,Not applicable.
+B9A,Item 9A. Controls and Procedures.
+I9A,Disclosure Controls and Procedures
+I9A,"We maintain disclosure controls and procedures as defined in Rule 13a-15(e) under the Exchange Act that are designed to ensure that information required to be disclosed in our Exchange Act reports is recorded, processed, summarized, and reported within the time periods specified in the SEC's rules and forms, and that such information is accumulated and communicated to our management, including our Chief Executive Officer and Chief Financial Officer, as appropriate, to allow timely decisions regarding required disclosure."
+I9A,"Management, with the participation of our Chief Executive Officer and Chief Financial Officer, has evaluated the effectiveness of our disclosure controls and procedures as of the end of the period covered by this report. Based on that evaluation, our Chief Executive Officer and Chief Financial Officer have concluded that, as of the end of the period covered by this report, our disclosure controls and procedures were effective."
+I9A,Changes in Internal Control Over Financial Reporting
+I9A,"There have not been any changes in our internal control over financial reporting during the fiscal quarter ended February 2, 2020 that have materially affected, or are reasonably likely to materially affect, our internal control over financial reporting."
+I9A,Management's Report on Internal Control Over Financial Reporting
+I9A,
+I9A,"Chairman, Chief Executive Officer and President      Executive Vice President and Chief Financial Officer"
+I9A,
+X,
+X,
+I9A,Report of Independent Registered Public Accounting Firm
+I9A,To the Stockholders and Board of Directors
+I9A,"The Home Depot, Inc.:"
+I9A,Opinion on Internal Control Over Financial Reporting
+I9A,
+I9A,Basis for Opinion
+I9A,
+I9A,"We conducted our audit in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects. Our audit of internal control over financial reporting included obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, and testing and evaluating the design and operating effectiveness of internal control based on the assessed risk. Our audit also included performing such other procedures as we considered necessary in the circumstances. We believe that our audit provides a reasonable basis for our opinion."
+I9A,Definition and Limitations of Internal Control Over Financial Reporting
+I9A,"A company's internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes in accordance with generally accepted accounting principles. A company's internal control over financial reporting includes those policies and procedures that (1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with U.S. generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements."
+I9A,"Because of its inherent limitations, internal control over financial reporting may not prevent or detect misstatements. Also, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate."
+I9A,
+I9A,/s/ KPMG LLP
+I9A,"Atlanta, Georgia"
+I9A,"March 25, 2020"
+I9A,
+X,
+X,
+B9B,Item 9B. Other Information.
+I9B,
+I9B,"Loans under the Credit Facility will bear interest at a rate per year generally equal to, at our election, either:"
+I9B,
+I9B,"*    the highest of (a) the interest rate quoted by The Wall Street Journal as the prime rate in the United States; (b) 0.5% plus the greater of (i) the federal funds effective rate and (ii) the overnight bank funding rate, each as determined by the Federal Reserve Bank of New York; and (c) LIBOR for a one-month interest period plus 1.0%, plus the applicable margin for such loans (""Base Rate Loans""); or"
+I9B,
+I9B,"*    LIBOR for the selected term which may be one, two, three or six months, plus the applicable margin for such loans (""Eurodollar Loans"")."
+I9B,
+I9B,"The applicable margin for loans will vary depending upon our ratings for senior, unsecured, long-term indebtedness for borrowed money. Based upon our current ratings, the applicable margin for Base Rate Loans would be 0.00%, and the applicable margin for Eurodollar Loans would be 0.950%. In addition, we will pay a facility fee on the commitments outstanding under the Credit Facility."
+I9B,"The Credit Agreement contains representations and warranties, affirmative and negative covenants, and events of default customary for financings of this type."
+I9B,PART III
+B10,"Item 10. Directors, Executive Officers and Corporate Governance."
+I10,"Information required by this item, other than the information regarding the executive officers set forth below, is incorporated by reference to the sections entitled ""Election of Directors,"" ""Corporate Governance,"" ""General,"" and ""Audit Committee Report"" in our Proxy Statement for the 2020 Annual Meeting of Shareholders (""Proxy Statement"")."
+I10,"Executive officers are appointed by, and serve at the pleasure of, the Board of Directors. Our executive officers are as follows:"
+I10,
+X,
+X,
+I10,"2006, where he served in various supply chain positions, including Executive Vice President of Supply Chain Management."
+I10,
+B11,Item 11. Executive Compensation.
+I11,"The information required by this item is incorporated by reference to the sections entitled ""Executive Compensation,"" ""Director Compensation,"" and ""Leadership Development and Compensation Committee Report"" in our Proxy Statement."
+B12,Item 12. Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters.
+I12,"The information required by this item is incorporated by reference to the sections entitled ""Beneficial Ownership of Common Stock"" and ""Executive Compensation - Equity Compensation Plan Information"" in our Proxy Statement."
+B13,"Item 13. Certain Relationships and Related Transactions, and Director Independence."
+I13,"The information required by this item is incorporated by reference to the section entitled ""Corporate Governance"" in our Proxy Statement."
+I13,
+X,
+X,
+B14,Item 14. Principal Accounting Fees and Services.
+I14,"The information required by this item is incorporated by reference to the section entitled ""Independent Registered Public Accounting Firm's Fees"" in our Proxy Statement."
+I14,PART IV
+B15,"Item 15. Exhibits, Financial Statement Schedules."
+I15,The following documents are filed as part of this report:
+I15,1. Financial Statements
+I15,The following financial statements are set forth in Item 8 hereof:
+I15,
+I15,*    Report of Independent Registered Public Accounting Firm;
+I15,
+I15,"*    Consolidated Balance Sheets as of February 2, 2020 and February 3, 2019 ;"
+I15,
+I15,"*    Consolidated Statements of Earnings for fiscal 2019 , fiscal 2018 , and fiscal 2017 ;"
+I15,
+I15,"*    Consolidated Statements of Comprehensive Income for fiscal 2019 , fiscal 2018 , and fiscal 2017 ;"
+I15,
+I15,"*    Consolidated Statements of Stockholders' Equity for fiscal 2019 , fiscal 2018 , and fiscal 2017 ;"
+I15,
+I15,"*    Consolidated Statements of Cash Flows for fiscal 2019 , fiscal 2018 , and fiscal 2017 ; and"
+I15,
+I15,*    Notes to Consolidated Financial Statements.
+I15,
+I15,2. Financial Statement Schedules
+I15,All schedules are omitted as the required information is inapplicable or the information is presented in our consolidated financial statements or related notes.
+I15,3. Exhibits
+I15,
+X,
+X,
+X,
+X,
+I15,"10.9       +    The Home Depot, Inc. Nonemployee Directors' Deferred Stock Compensation Plan                                                                                                       Form 8-K filed on August 20, 2007, Exhibit 10.3"
+I15,
+I15,"10.14      +    Form of Deferred Share Award (Nonemployee Director) Pursuant to The Home Depot, Inc. 2005 Omnibus Stock Incentive Plan                                                             Form 8-K filed on November 15, 2007, Exhibit 10.1"
+I15,
+I15,"10.20      +    Form of Deferred Share Award (Nonemployee Director) Pursuant to The Home Depot, Inc. 2005 Omnibus Stock Incentive Plan                                                             Form 10-K for the fiscal year ended January 29, 2017, Exhibit 10.21"
+I15,
+X,
+X,
+I15,31.1       *    Certification of Chief Executive Officer and President pursuant to Rule 13a-14(a)
+I15,31.2       *    Certification of Executive Vice President and Chief Financial Officer pursuant to Rule 13a-14(a)
+I15,
+I15,101.INS    *    XBRL Instance Document - the instance document does not appear in the Interactive Data file because its XBRL tags are embedded within the Inline XBRL document
+I15,
+I15,101.SCH    *    XBRL Taxonomy Extension Schema Document
+I15,
+X,
+X,
+I15,101.CAL    *    XBRL Taxonomy Extension Calculation Linkbase Document
+I15,
+I15,101.DEF    *    XBRL Taxonomy Extension Definition Linkbase Document
+I15,
+I15,101.LAB    *    XBRL Taxonomy Extension Label Linkbase Document
+I15,
+I15,101.PRE    *    XBRL Taxonomy Extension Presentation Linkbase Document
+I15,
+I15,+    Management contract or compensatory plan or arrangement
+I15,
+I15,*    Filed herewith
+I15,
+I15,Furnished (and not filed) herewith pursuant to Item 601(b)(32)(ii) of the SEC ' s Regulation S-K
+I15,
+B16,Item 16. Form 10-K Summary.
+I15,None.
+I15,
+X,
+X,
+O,SIGNATURES
+O,"Pursuant to the requirements of Section 13 or 15(d) of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned, thereunto duly authorized."
+O,
+O,"THE HOME DEPOT, INC."
+O,(Registrant)
+O,
+O,"Craig A. Menear, Chairman,"
+O,Chief Executive Officer and President
+O,
+O,"Pursuant to the requirements of the Securities Exchange Act of 1934, this report has been signed below by the following persons on behalf of the registrant and in the capacities indicated as of March 25, 2020 ."
+O,
+O,Craig A. Menear
+O,
+O,Richard V. McPhail
+O,
+O,Gerard J. Arpey
+O,
+O,Ari Bousbib
+O,
+O,Jeffery H. Boyd
+O,
+O,Gregory D. Brenneman
+O,
+O,J. Frank Brown
+O,
+O,Albert P. Carey
+O,
+O,Helena B. Foulkes
+O,
+O,Linda R. Gooden
+O,
+O,Wayne M. Hewett
+O,
+O,Manuel Kadre
+O,
+O,/s/ S TEPHANIE C . L INNARTZ      Director
+O,Stephanie C. Linnartz
+O,
+X,
+X,
+O,"THE HOME DEPOT, INC."
+O,SELECTED FINANCIAL DATA
+O,
+O,STATEMENT OF EARNINGS DATA
+O,
+O,STATEMENT OF CASH FLOWS DATA
+O,
+O,OTHER METRICS
+O,
+O,Note: Fiscal 2018 includes 53 weeks. All other fiscal periods disclosed include 52 weeks. This information should be read in conjunction with MD&A and our consolidated financial statements and related notes.
+O,
+O,(1)    Includes finance leases.
+O,
+O,"(2)    The calculations for fiscal 2017, fiscal 2016, and fiscal 2015 do not include results for Interline, which was acquired in fiscal 2015."
+O,
+O,"(3)    These amounts do not include the results for Interline, which was acquired in fiscal 2015."
+O,
+O,(4)    Fiscal 2019 compares the 52 week period in fiscal 2019 to weeks 2 through 53 in fiscal 2018. Fiscal 2018 calculations do not include results from the 53 rd week of fiscal 2018 and compare weeks 1 through 52 in fiscal 2018 to the 52 week period in fiscal 2017.
+O,
+O,F-1

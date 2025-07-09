@@ -1,0 +1,1541 @@
+pred,sentence
+O,<DOCUMENT>
+O,<TYPE>10-K
+O,<SEQUENCE>1
+O,<FILENAME>g68482e10-k.txt
+O,
+O,<TEXT>
+O,
+O,"WASHINGTON, D.C. 20549"
+O,
+O,FORM 10-K
+O,
+O,(Mark One)
+O,
+O,"For the fiscal year ended January 28, 2001"
+O,
+O,SECURITIES EXCHANGE ACT OF 1934
+O,
+O,Commission File Number 1-8207
+O,
+O,"THE HOME DEPOT, INC."
+O,(Exact Name of Registrant as Specified in Its Charter)
+O,DELAWARE
+O,(State or Other Jurisdiction of Incorporation or Organization)
+O,
+O,(I.R.S. Employer Identification No.)
+O,
+O,(Address of Principal Executive Offices)
+O,
+O,30339-4024
+O,(Zip Code)
+O,
+O,"Registrant's telephone number, including area code: (770) 433-8211"
+O,
+X,
+O,<CAPTION>
+O,NAME OF EACH EXCHANGE
+O,
+X,
+X,
+O,SECURITIES REGISTERED PURSUANT TO SECTION 12(G) OF THE ACT:  NONE
+O,
+O,Indicate by check mark whether the Registrant (1) has filed all reports
+O,required to be filed by Section 13 or 15(d) of the Securities Exchange Act of
+O,1934 during the preceding 12 months (or for such shorter period that the
+O,"Registrant was required to file such reports), and (2) has been subject to such"
+O,filing requirements for the past 90 days. Yes X No
+O,
+O,Indicate by check mark if disclosure of delinquent filers pursuant to Item 405
+O,"of Regulation S-K is not contained herein, and will not be contained, to the"
+O,"best of Registrant's knowledge, in definitive proxy or information statements"
+O,incorporated by reference in Part III of this Form 10-K or any amendment to this
+O,Form 10-K.
+O,
+O,The aggregate market value of the Common Stock of the
+O,"Registrant held by nonaffiliates of the Registrant on April 2, 2001, was"
+O,"$93,798,491,076. The aggregate market value was computed by reference to the"
+O,closing price of the Common Stock on the New York Stock Exchange on such date.
+O,"For the purposes of this response, executive officers and directors are deemed"
+O,to be the affiliates of the Registrant and the holdings by nonaffiliates was
+O,"computed at 2,204,590,489 shares."
+O,
+O,The number of shares outstanding of the Registrant's Common Stock as of April
+O,"2, 2001 was 2,327,253,241 shares."
+O,
+O,INCORPORATION BY REFERENCE
+O,
+O,Filings made by companies with the Securities and Exchange Commission sometimes
+O,"""incorporate information by reference."" This means that the company is"
+O,"referring you to information that was previously filed with the SEC, and this"
+O,information is considered to be part of the filing you are reading. The
+O,following materials are incorporated by reference into this Form 10-K:
+O,
+O,-        Information contained in our Proxy Statement for the 2001
+O,Annual Meeting of Stockholders is incorporated by reference
+O,in response to Items 10 through 13 of Part III.
+O,
+O,-        Information contained on pages 20 through 31 of our 2000
+O,Annual Report to Stockholders is incorporated by reference in
+O,response to Item 8 of Part II.
+O,
+O,"Certain statements we make in this report, and other written and oral"
+O,statements made by us or our authorized executive officers on our behalf may
+O,"constitute ""forward-looking statements"" within the meaning of the federal"
+O,"securities laws. Words or phrases such as ""should result,"" ""are expected to,"""
+O,"""we anticipate,"" ""we estimate,"" ""we project,"" ""we believe"" or similar"
+O,expressions are intended to identify forward-looking statements. These
+O,statements are subject to certain risks and uncertainties that could cause
+O,actual results to differ materially from the Company's historical experience
+O,and its present expectations or projections. These risks and uncertainties
+O,"include, but are not limited to:"
+O,
+O,-        unanticipated weather conditions;
+O,-        stability of costs and availability of sourcing channels;
+O,"-        our ability to attract, train and retain highly-qualified"
+O,associates;
+O,"-        conditions affecting the availability, acquisition,"
+O,development and ownership of real estate;
+O,-        general economic conditions;
+O,
+O,-        regulatory and litigation matters.
+O,
+O,"You should not place undue reliance on forward-looking statements, since such"
+O,statements speak only as of the date they are made. Additional information
+O,concerning the risks and uncertainties listed above and other factors you may
+O,"wish to consider are provided beginning on page 22 under ""Item 7. Management's"
+O,Discussion and Analysis of Results of Operations and Financial Condition -
+O,"Forward-Looking Statements May Prove Inaccurate."""
+O,
+O,PART I
+B1,ITEM 1.  BUSINESS
+I1,
+I1,"The Home Depot, Inc. is the world's largest home improvement retailer and the"
+I1,second largest retailer in the United States based on net sales volume for
+I1,"fiscal 2000. At the end of our 2000 fiscal year, we were operating 1,103 Home"
+I1,Depot(R) stores and 26 EXPO Design Center(R) stores. A description of these two
+I1,types of stores is as follows:
+I1,
+I1,-        HOME DEPOT STORES: Home Depot stores sell a wide assortment
+I1,of building materials and home improvement and lawn and
+I1,garden products and provide a number of services. Home Depot
+I1,"stores average approximately 108,000 square feet of enclosed"
+I1,"space, with an additional approximately 24,000 square feet in"
+I1,"the outside garden area. At fiscal year end, we had 1,096"
+I1,Home Depot stores located throughout the United States and
+I1,"Canada, as well as seven in South America."
+I1,
+I1,products and services primarily for design and renovation
+I1,"projects. Unlike Home Depot stores, EXPO Design Center stores"
+I1,"do not sell building materials and lumber. Rather, EXPO"
+I1,"Design Center stores offer interior design products, such as"
+I1,"kitchen and bathroom cabinetry, tiles, flooring and lighting"
+I1,"fixtures, and installation services. The prototypical EXPO"
+I1,"Design Center is approximately 100,000 square feet."
+I1,
+I1,"Additionally, at the end of fiscal 2000 we were operating four Villager's(R)"
+I1,Hardware test stores in New Jersey. Villager's Hardware stores offer products
+I1,for home enhancement and small projects. We also have one test store called The
+I1,Home Depot Floor Store(SM) in Texas that sells only flooring products.
+I1,
+I1,We also offer products through two direct marketing subsidiaries. Our
+I1,Maintenance Warehouse(R) subsidiary is a leading direct mail marketer of
+I1,"maintenance, repair and operations products serving primarily the multi-family"
+I1,housing and lodging facilities management market. The company fills orders
+I1,"through its 19 distribution centers, which are located throughout the United"
+I1,"States. During fiscal 2000, Maintenance Warehouse expanded its operations in"
+I1,"Texas, Arizona and Georgia through the acquisition of N-E Thing Supply Company,"
+I1,"Inc. National Blinds & Wallpaper(SM), a wholly owned subsidiary, is a telephone"
+I1,mail order service for wallpaper and custom window treatments.
+I1,
+I1,"We also operate two wholly owned subsidiaries, Georgia Lighting, Inc. and Apex"
+I1,"Supply Company, Inc. Georgia Lighting(R), a leading specialty lighting"
+I1,"designer, distributor and retailer, has six retail locations in Georgia. Apex"
+I1,"Supply Company is a wholesale supplier of plumbing, HVAC, appliances and other"
+I1,"related professional products with 22 locations in Georgia, Tennessee and South"
+I1,Carolina.
+I1,
+I1,Our Store Support Center (corporate office) is located at 2455 Paces Ferry
+I1,"Road, Atlanta, Georgia 30339-4024. The telephone number is (770) 433-8211."
+I1,
+I1,RETAIL BUSINESSES
+I1,
+I1,HOME DEPOT STORES
+I1,
+I1,OPERATING STRATEGY. The operating strategy for Home Depot stores is to offer a
+I1,broad assortment of high-quality merchandise and services at competitive prices
+I1,"using highly knowledgeable, service-oriented personnel and aggressive"
+I1,advertising. We believe that our associates' knowledge of products and home
+I1,improvement techniques and applications is very important in our marketing
+I1,approach and our ability to maintain customer satisfaction. We regularly check
+I1,our competitors' prices to ensure that our prices are competitive within each
+I1,market.
+I1,
+I1,CUSTOMERS. Home Depot stores serve three primary customer groups:
+I1,
+I1,typically homeowners who purchase products and complete their
+I1,own projects and installations. To complement the in-store
+I1,"expertise of our associates, Home Depot stores offer many"
+I1,"D-I-Y ""how-to"" clinics taught by associates and merchandise"
+I1,vendors.
+I1,
+I1,typically homeowners who purchase materials themselves and
+I1,hire third parties to complete the project and/or
+I1,installation. We offer B-I-Y customers installation services
+I1,for a variety of products through third party contractors.
+I1,
+I1,-        PROFESSIONAL CUSTOMERS: These customers are professional
+I1,"repair remodelers, general contractors and tradesmen. In many"
+I1,stores we offer a variety of programs to these professional
+I1,"customers, including additional delivery and will-call"
+I1,services; dedicated staff; extensive merchandise selections;
+I1,"and expanded credit programs, all of which we believe"
+I1,increase sales.
+I1,
+I1,"PRODUCTS. A typical Home Depot store stocks approximately 40,000 to 50,000"
+I1,"product items, including variations in color and size. Each store carries a"
+I1,wide selection of high-quality and nationally advertised brand name
+I1,merchandise. The following table shows the percentage of sales of each major
+I1,product group for each of the last three fiscal years:
+I1,
+X,
+I1,<CAPTION>
+I1,Percentage of Sales for
+I1,Fiscal Year Ended
+I1,
+I1,Product Group
+I1,
+X,
+X,
+I1,We buy our store merchandise from vendors located throughout the world. No
+I1,"single vendor accounts for more than six percent of our total purchases, and we"
+I1,are not dependent on any single vendor. Most of our merchandise is purchased
+I1,"directly from manufacturers, which eliminates ""middleman"" costs. We believe"
+I1,that competitive sources of supply are readily available for substantially all
+I1,of the products we sell in Home Depot stores.
+I1,
+I1,We maintain a global sourcing merchandise program to source high-quality
+I1,"products directly from overseas manufacturers, which gives our customers a"
+I1,broader selection of products and better values while enhancing our gross
+I1,margin. Our product development managers travel internationally to identify
+I1,opportunities to purchase items directly for our stores. This enables us to
+I1,"improve product quality, to import products not currently available to our"
+I1,customers and to offer at a lower price products that would otherwise be
+I1,purchased from third party importers. We currently source products from more
+I1,than 260 manufacturers in approximately 35 countries.
+I1,
+I1,"To complement the established national brand name products we offer, we have"
+I1,formed strategic alliances with vendor partners to market products under brand
+I1,names that are only offered through The Home Depot. At the end of fiscal year
+I1,"2000, we offered products under more than 30 proprietary and other exclusive"
+I1,"brands, including Thomasville(TM) kitchen and bathroom cabinets; RIDGID(R)"
+I1,power tools; Behr Premium Plus(R) paint; Mill's Pride(R) cabinets; GE
+I1,"SmartWater(TM) water heaters; and Vigoro(R) fertilizer. In the future, we may"
+I1,consider additional strategic alignments with other vendors to offer products
+I1,"under proprietary brand names. Additionally, we will continue to assess"
+I1,opportunities to expand the range of products available under existing
+I1,proprietary brands.
+I1,
+I1,INSTALLED SALES SERVICES. Home Depot stores offer a variety of installed sales
+I1,programs through its At-Home Services business. This service targets the B-I-Y
+I1,customer who will select and purchase materials for a project and prefers the
+I1,Company to provide professional installation. We implement our installed sales
+I1,"programs through approximately 6,800 independent qualified contractors in the"
+I1,"U.S. and Canada. These programs include the installation of carpeting, hard"
+I1,"flooring, cabinets, solid surface countertops, exterior doors, garage doors,"
+I1,"roofing, siding and windows. During fiscal 2000, we also began testing a"
+I1,residential HVAC program in Tennessee and Georgia and plan to expand the
+I1,offering during fiscal 2001.
+I1,
+I1,IN-STORE INITIATIVES. We continually assess our business to find opportunities
+I1,"to increase customer loyalty, thereby increasing sales. Accordingly, we"
+I1,implemented or expanded a number of in-store initiatives in Home Depot stores
+I1,"during fiscal 2000, including:"
+I1,
+I1,-        Professional Business Customer Initiative. We are committed
+I1,to being the supplier of choice to a variety of professional
+I1,"customers, including certain repair remodelers, carpenters,"
+I1,"plumbers, painters, electricians, building maintenance"
+I1,"professionals and designers. During fiscal 2000, we continued"
+I1,to expand an initiative that adds service-related programs to
+I1,our stores that are designed to increase sales to
+I1,professional customers. Stores participating in the program
+I1,add associates at a sales desk dedicated to providing more
+I1,"personalized service to professional customers, including"
+I1,managing accounts and taking and filling orders for pick-up
+I1,"or same-day delivery. Additionally, during the hours when"
+I1,"professionals typically shop, these stores assign sales"
+I1,associates in certain departments to assist these customers.
+I1,"To better serve our professional customers, we also increase"
+I1,quantities of existing products typically purchased by
+I1,
+I1,professionals in bulk quantities and offer certain items in
+I1,each department packaged in bulk to offer additional savings.
+I1,"While aimed at the professional customer, this program also"
+I1,enables us to better serve our D-I-Y customer with improved
+I1,"customer service, including delivery and will-call services,"
+I1,expanded credit programs and additional merchandise. Through
+I1,"this initiative, we have identified best practices in serving"
+I1,our professional customers that are being implemented in many
+I1,of our stores without material additional costs. By the end
+I1,"of fiscal 2000, we had expanded the professional customer"
+I1,initiative into 29 markets with approximately 165 stores. We
+I1,"anticipate that during fiscal year 2001, we will expand this"
+I1,initiative to approximately 335 additional stores.
+I1,
+I1,-        SPI Initiative. We began testing the Service Performance
+I1,"Improvement, or ""SPI,"" initiative during fiscal 2000 in"
+I1,approximately 51 stores in three markets. The program focuses
+I1,on making it easier to shop in our stores while emphasizing
+I1,safety and improving customer service. Stores that have
+I1,implemented the initiative assign some associates specific
+I1,tasks while others focus on assisting customers.
+I1,"Additionally, these stores schedule associates to receive"
+I1,shipments and stock merchandise when our stores are closed or
+I1,during hours when they have fewer customers. We believe this
+I1,separation of assignments will allow us to provide better
+I1,"customer service while improving labor productivity, managing"
+I1,inventory more efficiently and increasing sales. We currently
+I1,anticipate rolling this program out to most of our stores
+I1,during fiscal 2001.
+I1,
+I1,"-        Appliance Sales. During fiscal 2000, we completed the"
+I1,roll-out of our appliance sales program to most of our stores
+I1,in the U.S. Through this program we sell appliances
+I1,"manufactured by General Electric(R), Maytag(R) and other"
+I1,manufacturers. We display and stock the more popular
+I1,appliances in our stores and offer the ability to special
+I1,"order over 2,000 additional products through computer kiosks"
+I1,located in the store. Through the computer kiosks we can
+I1,check inventory and arrange for delivery to the customer
+I1,directly from the manufacturer as soon as 48 hours after the
+I1,"order is placed. During fiscal 2001, we plan to expand the"
+I1,appliances we sell and to continue to test new formats for
+I1,selling appliances.
+I1,
+I1,-        Tool Rental. As part of our efforts to satisfy a broad range
+I1,of the needs of our professional customers and our D-I-Y
+I1,"customers, we offer a tool rental service in certain stores."
+I1,"Under this program, we rent approximately 200"
+I1,"commercial-quality tools in ten categories, including saws,"
+I1,"floor sanders, generators, gas powered lawn equipment and"
+I1,"plumbing tools. Customers can lease the tools on an hourly,"
+I1,"daily, weekly or monthly basis. Our associates who work in"
+I1,the tool rental area receive special training concerning the
+I1,"use and maintenance of the tools. As of January 28, 2001, we"
+I1,offered tool rental service in approximately 342 stores
+I1,compared to 150 stores at the end of fiscal 1999. During
+I1,"fiscal 2001, we anticipate expanding tool rental services"
+I1,"into additional stores, and we believe that ultimately tool"
+I1,rental centers will be in approximately 60% of our stores. We
+I1,believe that offering this service increases the sales of
+I1,related merchandise without reducing the sales of equipment
+I1,similar to that available for rental.
+I1,
+I1,"-        Special Order Center Test. Currently, the special order"
+I1,center processes water heater orders nationwide through a
+I1,toll-free number and special order blinds and wallpaper
+I1,through a separate toll-free number that is available to
+I1,approximately 95 stores in three markets. Stores currently
+I1,participating in the program have experienced increased water
+I1,heater sales and reductions in customer transaction times for
+I1,placing orders for blinds and wallpaper.
+I1,
+I1,-        Customer Education Programs. We offer several programs to
+I1,enhance the skills and confidence of our D-I-Y customers. Our
+I1,"associates and vendors teach ""how-to"" clinics that focus on"
+I1,"D-I-Y projects, such as installing garbage disposals, laying"
+I1,"patio pavers or building a deck. In addition to the clinics,"
+I1,"we offer Home Depot University(SM), which presents four-week"
+I1,modules allowing our customers to learn about several facets
+I1,"of a home improvement topic. For example, a room enhancement"
+I1,"module may provide instruction on paint, wallpaper and window"
+I1,treatments. Through The Home Depot's Kids Workshop(SM)
+I1,"program, children are instructed in tool safety and complete a"
+I1,"small project, such as building a birdhouse or tool box. We"
+I1,believe that these types of educational programs increase our
+I1,"sales by encouraging our customers to undertake more projects,"
+I1,differentiating us from our competition and reinforcing our
+I1,position as experts in home improvement.
+I1,
+I1,STORE GROWTH
+I1,
+I1,"United States. At the end of fiscal 2000, we were operating 1,029 Home Depot"
+I1,"stores in the United States, including Puerto Rico. During fiscal 2000 in the"
+I1,"U.S., we opened 173 new Home Depot stores and relocated eight existing Home"
+I1,Depot stores. Although these new store openings occurred primarily in existing
+I1,"markets, we continued our geographic expansion by opening stores in a number of"
+I1,new markets. We currently anticipate opening approximately 200 new stores and
+I1,relocating nine existing stores during fiscal 2001.
+I1,
+I1,"To increase customer service levels, gain incremental sales and enhance"
+I1,"long-term market penetration, we often open new stores near the edge of the"
+I1,market areas served by existing stores. While these openings may initially have
+I1,"a negative impact on comparable store-for-store sales, we believe this"
+I1,"""cannibalization"" strategy increases customer satisfaction and overall market"
+I1,"share by reducing delays in shopping, increasing utilization by existing"
+I1,customers and attracting new customers to more convenient locations. During
+I1,"fiscal 2000, approximately 30% of our stores were cannibalized by new store"
+I1,openings.
+I1,
+I1,"Canada. At the end of fiscal 2000, we were operating 67 Home Depot stores in"
+I1,"seven Canadian provinces. Of these stores, 14 were opened during fiscal 2000,"
+I1,"including our first stores in Quebec and Nova Scotia. During fiscal 2001, we"
+I1,plan to open approximately 13 additional stores in Canada. Our Canadian stores
+I1,are operated through a wholly owned Canadian subsidiary of The Home Depot.
+I1,
+I1,"South America. At the end of fiscal 2000, we were operating seven Home Depot"
+I1,"stores in Chile and Argentina, and we anticipate opening additional stores in"
+I1,South America during fiscal 2001. We operate our Chilean Home Depot stores
+I1,"through a joint venture with S.A.C.I. Falabella, a leading department store"
+I1,retailer in Chile. Our controlling share of the joint venture is 66.67%.
+I1,
+I1,Our Argentina stores are operated through a wholly owned Argentine subsidiary.
+I1,We have offices in both Argentina and Chile from which day-to-day operations
+I1,are handled by a management team comprised of local nationals and seasoned U.S.
+I1,Home Depot managers.
+I1,
+I1,EXPO DESIGN CENTER STORES
+I1,
+I1,OPERATING STRATEGY. The operating strategy for our EXPO Design Center stores is
+I1,"to offer complete interior design services, high-quality, competitively priced"
+I1,products and installation services to assist our customers in their home decor
+I1,and remodeling projects. Each EXPO Design Center store features up to eight
+I1,"different showrooms, each with full-size displays to help customers visualize"
+I1,"the end result of possible interior design projects. To assist our customers,"
+I1,we employ associates who provide exceptional customer service and who have
+I1,"expertise in designing, planning and completing projects."
+I1,
+I1,"CUSTOMERS. Typically, customers at EXPO Design Center stores are middle to"
+I1,"upper income B-I-Y customers, who purchase merchandise for installation by"
+I1,"others. Accordingly, we offer installation services for most of the products we"
+I1,sell at these stores.
+I1,
+I1,PRODUCTS. EXPO Design Center stores offer interior design products and
+I1,installation services in the following core product categories:
+I1,
+I1,EXPO Design Center stores offer a broad range of merchandise in an effort to
+I1,meet all the needs of shoppers whose interior design preferences may go beyond
+I1,the items available in a Home Depot store. While there is minimal overlap
+I1,between the products offered in Home Depot stores and EXPO Design Center
+I1,"stores, those products available at EXPO Design Center stores are typically"
+I1,higher-end or more unique items. In addition to nationally advertised brand
+I1,"name products, we also offer items that must be special ordered or that are"
+I1,typically offered through showrooms open only to design professionals.
+I1,
+I1,"STORE GROWTH. At the end of fiscal 2000, we were operating 26 EXPO Design"
+I1,"Center stores, eleven of which were opened that year. We currently anticipate"
+I1,opening 17 additional stores in fiscal 2001. These new stores are expected to
+I1,"average approximately 100,000 square feet and will incorporate a showroom"
+I1,environment.
+I1,
+I1,IN-STORE SERVICES. We have associates at our EXPO Design Center stores to
+I1,assist with every phase of a project. Certified kitchen and bath designers are
+I1,on staff. We also have design professionals to help our customers design
+I1,"lighting, tile and flooring, custom upholstery and bedding, custom closets and"
+I1,window treatments. Installation services are available for most
+I1,
+I1,"products at EXPO Design Center stores, including kitchens, baths, flooring,"
+I1,"wallpaper, tile, lighting fixtures and window treatments. Our project managers"
+I1,ensure that the products are available and then schedule licensed third party
+I1,contractors to complete the work. We warrant the workmanship of each
+I1,installation for as long as the customer owns the home.
+I1,
+I1,GEORGIA LIGHTING
+I1,
+I1,We acquired our wholly owned subsidiary Georgia Lighting in June 1999. Georgia
+I1,"Lighting is a leading specialty lighting designer, distributor and retailer"
+I1,"based in Atlanta. The company, which has six retail locations, offers an"
+I1,"extensive collection of decorative lighting fixtures, supplies, accents and"
+I1,accessories to commercial and retail customers. We believe that the acquisition
+I1,"of Georgia Lighting has allowed us to strengthen our sourcing, training and"
+I1,merchandising in lighting for both The Home Depot and EXPO Design Center
+I1,stores.
+I1,
+I1,APEX SUPPLY COMPANY
+I1,
+I1,"In January 2000, we acquired Apex Supply Company, a wholesale distributor of"
+I1,"plumbing, HVAC, appliances and other related products. The Company offers these"
+I1,"products through 22 locations in Georgia, Tennessee and South Carolina and"
+I1,employs approximately 570 associates. Apex assisted us with the development of
+I1,"our HVAC program, and we believe this acquisition will help us to increase our"
+I1,penetration of the professional plumbing trades and to be able to handle
+I1,special orders for plumbing products more efficiently in Home Depot stores.
+I1,
+I1,VILLAGER'S HARDWARE STORES
+I1,
+I1,"During fiscal 1999, we opened the first two Villager's Hardware test stores,"
+I1,"and in fiscal 2000 we opened an additional two stores, all of which are in New"
+I1,"Jersey. These stores stock approximately 40,000 items, including variations in"
+I1,"color and size, including hardware, fasteners, tools, plumbing, electrical and"
+I1,"seasonal, as well as a broad selection of home enhancement products, including"
+I1,"paint and wallpaper, window treatments, lighting, storage, housewares and"
+I1,giftware. We believe that the primary focus for these stores will be home
+I1,enhancement and small projects. Each Villager's Hardware store has
+I1,"approximately 35,000 to 40,000 square feet of selling space in a retail"
+I1,"environment, emphasizing customer service and education. During fiscal 2001, we"
+I1,will continue to analyze the results of this test.
+I1,
+I1,THE HOME DEPOT FLOOR STORE
+I1,
+I1,"During fiscal 2000, we opened a test store in Plano, Texas that offers flooring"
+I1,"products. The Floor Store's merchandise assortment includes carpet, ceramic,"
+I1,"wood, laminate and vinyl flooring. During fiscal 2001, we will continue to"
+I1,analyze the results of this test.
+I1,
+I1,INTERNET
+I1,
+I1,Our website is located at www.homedepot.com. The site offers information about
+I1,"projects and our products, calculators to estimate the amount and kinds of"
+I1,"materials needed to complete a project, as well as information about our"
+I1,"company. As with our stores, the focus of our website is customer service. We"
+I1,believe our Internet site provides us with an opportunity to build
+I1,
+I1,"relationships with our customers, educate our customers, improve service and"
+I1,increase incremental store sales.
+I1,
+I1,"During fiscal 2000, we began selling Home Depot products over the Internet in"
+I1,three markets. We offer customers the products available at stores in their
+I1,"local market on our website, and the products are priced based on the market in"
+I1,"which the customer lives. Orders are fulfilled from our stores, and customers"
+I1,can either pick up their purchases or have them delivered. By integrating
+I1,"Internet purchases with our stores, we hope to provide our customers with"
+I1,"greater flexibility and service. During fiscal 2001, we have begun to offer"
+I1,products that can be shipped by United Parcel Service for sale through the
+I1,Internet in additional areas of the U.S.
+I1,
+I1,DIRECT MARKETING SALES
+I1,
+I1,We have two subsidiaries that sell merchandise through direct marketing:
+I1,
+I1,-        MAINTENANCE WAREHOUSE. Our Maintenance Warehouse subsidiary is a
+I1,"leading provider of maintenance, repair and operations products"
+I1,primarily to the multi-family housing and lodging facilities
+I1,"management market. Through its catalog, which is published"
+I1,"semi-annually, Maintenance Warehouse offers approximately 16,000"
+I1,"items, including variations in color and size. Maintenance Warehouse,"
+I1,"which employs approximately 1,100 people, emphasizes accurate order"
+I1,"taking, delivery and personalized service. Orders are typically placed"
+I1,"over the telephone, through a field sales representative or through"
+I1,"the company's website at www.mwh.com, are filled through one of"
+I1,Maintenance Warehouses' 19 distribution centers and are shipped for
+I1,"same-day or next-day delivery. During fiscal 2000, Maintenance"
+I1,"Warehouse expanded its operations in Texas, Arkansas and Georgia"
+I1,"through the acquisition of N-E Thing Supply Company, Inc."
+I1,
+I1,products through telephone sales and over the Internet. The company
+I1,markets primarily through magazine advertising aimed at customers
+I1,"seeking the lowest prices. The company maintains no inventory, but"
+I1,rather acts as a broker to fill special order sales.
+I1,
+I1,STORE SUPPORT SERVICES
+I1,
+I1,"Hardware store is equipped with a computerized point of sale system, electronic"
+I1,bar code scanning system and a UNIX server. Store information is communicated
+I1,to the Store Support Center's computers via a land-based Asynchronous Transfer
+I1,"Mode (""ATM"") network in the U.S. and a frame relay network internationally."
+I1,"These computers provide corporate, financial, merchandising and other back"
+I1,office function support. We believe our systems provide efficient customer
+I1,"check-out and returns, store-based inventory management, rapid order"
+I1,"replenishment, labor planning support and item movement information. Fast"
+I1,"registers, credit authorizations and check approvals expedite transactions in"
+I1,our stores at a pace that we believe sets the standard for our industry. For
+I1,"example, to better serve the increasing number of customers applying for credit"
+I1,"while in our stores, the charge card approval process time has been reduced to"
+I1,less than 30 seconds.
+I1,
+I1,We have implemented a mobile ordering system in our Home Depot stores using
+I1,portable carts with
+I1,
+I1,computers to assist our associates in placing accurate orders for inventory.
+I1,"Through the system, an associate on the sales floor can see the supply the"
+I1,"store has for a given item, review the suggested re-order quantities based on"
+I1,the store's historical experience and place an order with the vendor. We
+I1,believe the system increases the efficiency and productivity of our associates
+I1,because it requires less time and fewer people to assess and order inventory.
+I1,We have also implemented a mobile signing system to help ensure that our
+I1,"signing is consistent with our point-of-sale price data. Additionally, we are"
+I1,in the process of rolling out additional systems tools to assist with labor
+I1,scheduling to help ensure the best possible customer service levels.
+I1,
+I1,We are continuously assessing and upgrading our information systems to support
+I1,"growth, reduce and control costs and enable our associates to make better"
+I1,decisions. We continue to realize greater efficiency as a result of our
+I1,"electronic data interchange (""EDI"") program. Currently, most of our high volume"
+I1,"vendors are participating in the EDI program, which represents more than 70% of"
+I1,"our total transactional volume. EDI is a paperless system, which processes"
+I1,"orders from buying offices to vendors, alerts the stores when the merchandise"
+I1,is to arrive and transmits invoice data from the vendors and freight carriers
+I1,to the Store Support Center.
+I1,
+I1,"ASSOCIATE DEVELOPMENT. As of January 28, 2001, we employed approximately"
+I1,"227,000 associates, of whom approximately 12,800 were salaried, with the"
+I1,remainder compensated on an hourly basis. Approximately 74% of our associates
+I1,"are employed on a full-time basis. To attract and retain qualified personnel,"
+I1,we seek to maintain salary and wage levels equal to or above those of our
+I1,competitors in each market area. Store managers have access to information
+I1,regarding competitive salary rates in their respective markets.
+I1,
+I1,We develop our training programs in a continuing effort to service the needs of
+I1,our associates. These programs are designed to increase associates' knowledge
+I1,"of merchandising departments and products, including mandatory product"
+I1,"knowledge training classes, and to educate, develop and test the skills of"
+I1,those associates who are interested in being promoted. Because our policy is to
+I1,promote or relocate current associates to serve as managers and assistant
+I1,"managers for new stores, training and assessment of our associates is essential"
+I1,to our growth. Our district managers and store managers typically meet with our
+I1,human resources associates to discuss the development of assistant managers and
+I1,certain department heads and consider possible candidates for promotion.
+I1,
+I1,We have implemented programs in our stores to ensure that we hire and promote
+I1,the best qualified associates in a non-discriminatory way. These programs
+I1,"integrate validated computerized tests for all applicants, as well as"
+I1,specialized tests for certain positions. If an applicant passes the computer
+I1,"test, he or she may be selected for a structured interview in which questions"
+I1,to be asked are selected by the computer based on the answers given on the
+I1,original computer test. We also maintain a list of qualified associates who are
+I1,interested in a new assignment and of qualified outside applicants that can be
+I1,reviewed when positions become available.
+I1,
+I1,"We have never experienced a strike or any work stoppage, and we believe that"
+I1,our employee relations are good. There are no collective bargaining agreements
+I1,covering any of our associates.
+I1,
+I1,"MARKETING. We are one of the nation's largest retail advertisers, and we"
+I1,utilize all forms of mass media and selected forms of highly targeted media. We
+I1,"also incorporate major sponsorships into our marketing plan, such as NASCAR(R),"
+I1,"the Olympic games, CBS College Football and home and garden shows. We extend"
+I1,"our reach and educate our customers through proprietary publications,"
+I1,
+I1,such as the Home Improvement 1-2-3(TM) series and the Style Ideas magazine.
+I1,
+I1,We execute our marketing campaigns on both a national and local basis. Because
+I1,the vast majority of our stores are located throughout the United States and
+I1,"Canada, we can achieve greater efficiencies than smaller retailers by using"
+I1,"national advertising. At the same time, we tailor the majority of our"
+I1,"advertising locally to respond to market differences, both in terms of products"
+I1,and the competitive environment.
+I1,
+I1,CREDIT SERVICES. Home Depot offers credit purchase programs to both
+I1,"professional and D-I-Y and B-I-Y customers. In fiscal 2000, 2.6 million new"
+I1,"Home Depot credit accounts were opened, bringing the total number of Home Depot"
+I1,account holders to almost 8 million. Proprietary credit card sales accounted
+I1,for approximately 19% of all Home Depot sales in fiscal 2000. During fiscal
+I1,"2000, we rolled-out a program to all U.S. stores that gives our customers the"
+I1,opportunity to apply for unsecured Home Improvement Loans to purchase products
+I1,and services in our stores. We believe that this loan program not only
+I1,"increases large sales, such as kitchen and bath remodels, but also generates"
+I1,incremental sales from our customers.
+I1,
+I1,"have registered or applied for registration of a variety of trade names,"
+I1,"service marks, trademarks and copyrights for use in our business, including The"
+I1,"Home Depot(R), the ""Homer"" (R) character, EXPO Design Center(R) stores, Hampton"
+I1,"Bay(R) fans, lighting and accessories and PremiumCut(TM) lumber. We regard our"
+I1,intellectual property as having significant value and as being an important
+I1,factor in the marketing of the Company and our stores and direct marketing
+I1,efforts. We are not aware of any facts that could be expected to negatively
+I1,impact our intellectual property.
+I1,
+I1,QUALITY ASSURANCE PROGRAM. For our globally sourced products that we directly
+I1,"import, we have implemented a quality assurance program. Through this program,"
+I1,"we have established criteria for both vendor/factory and product performance,"
+I1,"which measure factors including product quality, timely shipments and fill"
+I1,rate. The performance record is monitored relative to our requirements and is
+I1,also made available to the factories to allow them to strive for improvement.
+I1,"This quality assurance program, which is applied to products directly imported"
+I1,"by Home Depot, has four components:"
+I1,
+I1,-        we authorize laboratories to test products prior to purchase
+I1,to ensure compliance with requirements;
+I1,
+I1,"-        we develop and document product requirements, based on test"
+I1,"results, applicable national and international standards and"
+I1,features determined by our merchants;
+I1,
+I1,-        we assess the capability of factories to manufacture quality
+I1,"products that meet the expectations we have developed, as"
+I1,well as to assess their compliance with Home Depot policies
+I1,on child labor; and
+I1,
+I1,-        we routinely assess product quality and factory performance
+I1,by conducting inspections at the factory on shipments to
+I1,"assure continued compliance with our product requirements,"
+I1,and we reserve the right to perform random audits on child
+I1,labor policies.
+I1,
+I1,LOGISTICS. We use several mechanisms to lower distribution costs and increase
+I1,our efficiencies. A large percentage of our merchandise is shipped directly
+I1,from our vendors to the stores. We operate a number of facilities to distribute
+I1,"the remaining merchandise to our stores. For example, certain import products"
+I1,"require the use of distribution centers. Accordingly, we have seven import"
+I1,"distribution centers, located in the United States, Canada, Argentina and"
+I1,"Chile. Additionally, at the end of fiscal 2000, we had 27 lumber distribution"
+I1,facilities in the United States and Canada to support the lumber demands of our
+I1,"stores. We also operated one cross-docking transit facility, and we currently"
+I1,plan to add several additional facilities during fiscal 2001. At these
+I1,"facilities, we receive merchandise from manufacturers and immediately load it"
+I1,onto trucks for delivery to our stores. We continually assess opportunities to
+I1,improve our distribution network to better satisfy the needs of our stores and
+I1,to lower costs.
+I1,
+I1,SAFETY. We are committed to maintaining a safe environment for our customers
+I1,and associates. The Safety Department consists of a team of directors and
+I1,"managers in the field focused primarily on education and training, as well as"
+I1,an Atlanta-based team of dedicated safety resources who evaluate and implement
+I1,policies and processes Company-wide. The goal of the Safety Department is to
+I1,implement a safety program designed to engineer safety into the fabric of our
+I1,"Company, establishing a ""safety first"" approach to all facets of our business."
+I1,"Our Safety Department is responsible for managing the Company's safety program,"
+I1,"which is implemented in conjunction with store-level associates, store and"
+I1,"Division management, and the Human Resources and Merchandising Departments. The"
+I1,primary focuses of our safety program are (1) to establish safety standards and
+I1,"processes for all aspects of store operations and merchandising, (2) to"
+I1,"effectively train appropriate associates on all applicable standards, and (3)"
+I1,to monitor compliance with established safety standards.
+I1,
+I1,"COMPETITION. Our business is highly competitive, based in part on price, store"
+I1,"location, customer service and depth of merchandise. In each of the markets we"
+I1,"serve, there are a number of other home improvement stores, electrical,"
+I1,plumbing and building materials supply houses and lumber yards. With respect to
+I1,"some products, we also compete with discount stores, local, regional and"
+I1,"national hardware stores, mail order firms, warehouse clubs, independent"
+I1,"building supply stores and, to a lesser extent, other retailers. In addition to"
+I1,"these entities, our EXPO Design Center stores also compete with specialty"
+I1,"design stores or showrooms, some of which are only open to interior design"
+I1,professionals.
+I1,
+I1,"Due to the variety of competition we face, we are unable to precisely measure"
+I1,our market share in existing market areas. We believe that we are an effective
+I1,"and significant competitor in our markets. Based on U.S. Census data estimates,"
+I1,internal estimates and data provided by the Home Improvement Research
+I1,"Institute, we believe that our market share in the U.S. and Canada, currently"
+I1,"defined as including the Do-It-Yourself/Buy-It-Yourself, Tradesmen,"
+I1,"Builders/General Contractors, Heavy Industrial, Repair and Remodeling and"
+I1,"Property Maintenance markets, is approximately 9.4%."
+I1,
+I1,EXECUTIVE OFFICERS
+I1,
+I1,"Executive officers of Home Depot are elected by, and serve at the"
+I1,"pleasure of, the Board of Directors. The following provides information as of"
+I1,"January 28, 2001 concerning our executive officers:"
+I1,
+I1,"BERNARD MARCUS, age 71, is a co-founder of The Home Depot and serves"
+I1,"as Co-Chairman of the Board. From inception of the Company in 1978 until 1997,"
+I1,"he served as Chairman of the Board and Chief Executive Officer, at which time"
+I1,"the title of CEO was passed on to Mr. Arthur M. Blank. In December 2000, Mr."
+I1,Marcus became Co-Chairman of the Board. Mr. Marcus serves as a director on the
+I1,"boards of ChoicePoint Inc., and Westfield America, Inc."
+I1,
+I1,"ARTHUR M. BLANK, age 58, is a co-founder of The Home Depot and has"
+I1,been Co-Chairman of the Board since December 2000. Prior thereto he had been
+I1,"President and Chief Executive Officer since 1997 and President, Chief Operating"
+I1,Officer and a director of The Home Depot since its inception in 1978. Mr. Blank
+I1,"is a member of the Board of Directors of Cox Enterprises, Inc. and Post"
+I1,"Properties, Inc."
+I1,
+I1,"ROBERT L. NARDELLI, age 52, has been President and Chief Executive"
+I1,"Officer since December 2000. Prior thereto, Mr. Nardelli served as President"
+I1,"and Chief Executive Officer of GE Power Systems, a division of General Electric"
+I1,"Company, since 1995."
+I1,
+I1,"LAURENCE B. APPEL, age 39, has been Senior Vice President - Legal"
+I1,"since August 2000. Prior thereto, Mr. Appel was Vice President - Legal from"
+I1,1999 until his most recent promotion. He joined the Company in 1997 as Senior
+I1,"Counsel. From 1995 until 1997, he was an attorney with the firm of Altman,"
+I1,Kritzer & Levick.
+I1,
+I1,"MARK R. BAKER, age 43, has been Executive Vice President -"
+I1,"Merchandising since October 2000, and prior to such time, had been Group"
+I1,President and Senior Vice President - Merchandising since June 1999. From 1997
+I1,"until 1999, he was President of the Midwest Division. Mr. Baker joined the"
+I1,Company in 1996 as Vice President-Merchandising for the Midwest Division. Prior
+I1,"to joining The Home Depot, from 1992 until 1996, Mr. Baker was an Executive"
+I1,"Vice President - Merchandising for HomeBase Inc. in Fullerton, California. In"
+I1,"March 2000, Mr. Baker was promoted to Executive Vice President and Chief"
+I1,Operating Officer of Home Depot U.S. stores.
+I1,
+I1,"DENNIS J. CAREY, age 54, has been Executive Vice President and Chief"
+I1,"Financial Officer since May 1998. From 1994 to 1998, Mr. Carey was employed by"
+I1,"AT&T Corp., most recently as Vice President and General Manager - Corporate"
+I1,"Productivity and Mergers and Acquisitions. Prior to joining AT&T, Mr. Carey"
+I1,held a number of positions during his 25 year tenure with General Electric
+I1,"Company, including Vice President and General Manager of International"
+I1,Operations.
+I1,
+I1,"JEFFREY W. COHEN, age 42, has been Division President - Service"
+I1,Business since January 2001 and prior to that time he had been Group
+I1,President - Direct Marketing Businesses since May 1998. From January 1997 until
+I1,"he joined The Home Depot, Mr. Cohen was President of Cohen & Associates"
+I1,"Management Consultants. From 1995 through 1997, he was Executive Vice President"
+I1,"of Harte-Hanks Direct Marketing, and prior thereto he was a Senior Vice"
+I1,President - General
+I1,
+I1,Manager at GE Capital Corp. He also spent seven years at American Express
+I1,Company where he held various marketing positions.
+I1,
+I1,"VERNON JOSLYN, age 49, has been Division President - Midwest since"
+I1,"January 2001, and he served as Group President from April 2000 until that time."
+I1,He previously served as President of the Northeast Division from 1996 until
+I1,April 2000. Mr. Joslyn also previously served as Vice President-Operations for
+I1,the Northeast Division from 1993 until 1996.
+I1,
+I1,"LYNN MARTINEAU, age 44, has been Division President - New Growth"
+I1,Businesses since January 2001. He previously served as Group President from
+I1,"April 2000 until he assumed his current position, was President - Western"
+I1,Division from 1996 through 2000 and was Vice President - Merchandising for the
+I1,Southeast Division from 1994 through 1996.
+I1,
+I1,"LARRY M. MERCER, age 54, is Executive Vice President of Operations. He"
+I1,is responsible for the functional leadership across the entire Home Depot
+I1,"enterprise, both domestically since March 1996 and internationally since"
+I1,January 2000. Prior to his promotion Mr. Mercer was President of the Northeast
+I1,Division for five years. Mr. Mercer joined the Company in 1979 as an Assistant
+I1,Store Manager and has risen through the ranks to his current position.
+I1,
+I1,"ANDERS C. MOBERG, age 51, has served as Division President -"
+I1,International since January 2001. He joined the Company as Group President -
+I1,"International and Global Resourcing in August 1999. Prior to such time, Mr."
+I1,Moberg was President of The IKEA Group for more than the previous five years.
+I1,
+I1,"BARRY L. SILVERMAN, age 52, has been Division President - EXPO Design"
+I1,Center since January 2001 and prior thereto had served as Group President since
+I1,"January 2000. Prior thereto he was President - Southwest Division since 1997,"
+I1,and he was Vice President - Merchandising of the Northeast Division from 1991
+I1,through 1997.
+I1,
+I1,"CAROL B. TOME, age 44, has been Senior Vice President - Finance and"
+I1,Accounting/ Treasurer since February 2000. She previously served as Vice
+I1,President and Treasurer from 1995 until her most recent promotion. From 1992
+I1,"until 1995, when she joined The Home Depot, Ms. Tome was Vice President and"
+I1,Treasurer of Riverwood International Corporation.
+I1,
+I1,"M. FAYE WILSON, age 63, has served as Senior Vice President - Risk"
+I1,Management since January 2001 and has served on the Board of Directors for the
+I1,"Company since 1992. Prior to assuming her current position, Ms. Wilson was"
+I1,Senior Vice President - Value Initiatives since joining the Company in 1998.
+I1,"From 1992 until joining The Home Depot, she was an Executive Vice President of"
+I1,Bank of America NT&SA and Chairman and President of Security Pacific Financial
+I1,"Services, Inc. Ms. Wilson serves as a director of Farmers Insurance Group."
+I1,
+B2,Item 2.  PROPERTIES
+I2,
+I2,"The following tables show locations of the 1,029 Home Depot stores in the"
+I2,"United States and the 74 stores outside of the United States as of January 28,"
+I2,2001:
+I2,
+X,
+I2,<CAPTION>
+I2,
+X,
+X,
+X,
+I2,<CAPTION>
+I2,
+I2,Canada:
+I2,
+I2,South America:
+I2,
+X,
+X,
+I2,The following table shows the location of the 26 EXPO Design Center stores by
+I2,"state as of January 28, 2001:"
+I2,
+X,
+I2,<CAPTION>
+I2,Number of Stores
+I2,
+X,
+X,
+I2,"Additionally, as of January 28, 2001, we were operating four Villager's"
+I2,"Hardware test stores, all of which are located in New Jersey, six Georgia"
+I2,"Lighting retail locations open to the public, all of which are located in"
+I2,"Georgia, 22 Apex Supply locations, of which 15 are located in Georgia, five are"
+I2,"located in Tennessee and two are located in South Carolina, and one The Home"
+I2,Depot Floor Store location in Texas.
+I2,
+I2,"Of our 1,134 Home Depot stores, EXPO Design Center stores, Villager's Hardware"
+I2,"stores and The Floor Store at January 28, 2001, approximately 78% were owned"
+I2,(including those owned subject to a ground lease) consisting of approximately
+I2,"95,667,000 square feet and approximately 22% were leased consisting of"
+I2,"approximately 27,097,000 square feet. In recent years, we have increased the"
+I2,relative percentage of new stores that are owned. Although we take advantage of
+I2,"lease financing opportunities, we generally prefer to own stores because of"
+I2,"greater operating control and flexibility, generally lower occupancy costs and"
+I2,certain other economic advantages.
+I2,
+I2,"Our executive, corporate staff and financial offices occupy approximately"
+I2,"1,665,000 square feet of leased and owned space in Atlanta, Georgia. In"
+I2,"addition, as of January 28, 2001, we occupied an aggregate of approximately"
+I2,"1,368,000 square feet, of which approximately 305,000 square feet is owned and"
+I2,"approximately 1,063,000 square feet is leased, for divisional store support"
+I2,centers and subsidiary customer support centers. These support centers are
+I2,"located in Orange and San Leandro, California; Tampa, Florida; Atlanta,"
+I2,"Georgia; Arlington Heights, Illinois; Canton, Massachusetts; Plymouth,"
+I2,"Michigan; South Plainfield, New Jersey; Dallas, Texas; Tukwila, Washington;"
+I2,"Scarborough, Ontario and Quebec, Canada; Santiago, Chile; and Buenos Aires,"
+I2,Argentina.
+I2,
+I2,"At January 28, 2001, we utilized approximately 8,277,000 square feet of"
+I2,"warehousing and distribution space, of which approximately 620,000 is owned and"
+I2,"approximately 7,657,000 is leased."
+I2,
+I2,"We believe that at the end of existing lease terms, our current leased space"
+I2,can be either relet or replaced by alternate space for lease or purchase that
+I2,is readily available.
+I2,
+B3,Item 3.  LEGAL  PROCEEDINGS
+I3,
+I3,"We have litigation arising from the normal course of business. In our opinion,"
+I3,this litigation will not materially affect our consolidated financial position
+I3,or our results of operations.
+I3,
+B4,Item 4.  SUBMISSION OF MATTERS TO A VOTE OF SECURITY HOLDERS
+I4,
+I4,No matter was submitted to a vote of security holders during the fourth quarter
+I4,of fiscal 2000.
+I4,
+I4,PART II
+I4,
+B5,Item 5.  MARKET FOR REGISTRANT'S COMMON EQUITY AND RELATED STOCKHOLDER MATTERS
+I5,
+I5,"Since April 19, 1984, our common stock has been listed on the New York Stock"
+I5,"Exchange under the symbol ""HD."" The table below sets forth the low and high"
+I5,sales prices of our common stock on the New York Stock Exchange Composite Tape
+I5,as reported in The Wall Street Journal and the quarterly cash dividends
+I5,declared per share of common stock during the periods indicated.
+I5,
+X,
+I5,<CAPTION>
+I5,
+I5,FISCAL YEAR 1999
+I5,
+I5,FISCAL YEAR 2000
+I5,
+X,
+X,
+I5,"*On December 30, 1999, there was a three-for-two stock split on all shares of"
+I5,"stock owned by stockholders as of December 2, 1999. The stock prices and"
+I5,dividends in the table set forth above have been adjusted to reflect this stock
+I5,split.
+I5,
+I5,"The Company paid its first cash dividend on June 22, 1987, and has paid"
+I5,dividends during each subsequent quarter. Future dividend payments will depend
+I5,"on the Company's earnings, capital requirements, financial condition and other"
+I5,factors considered relevant by the Board of Directors.
+I5,
+I5,"The number of record holders of The Home Depot's Common Stock as of April 2,"
+I5,"2001 was 212,010 (excluding individual participants in nominee security"
+I5,position listings).
+I5,
+I5,"On April 12, 2001, the Company issued $500 million aggregate principal amount"
+I5,"of 5 3/8% Senior Notes due 2006 (the ""Notes"") in an unregistered private"
+I5,"placement to the initial purchasers, Credit Suisse First Boston Corporation and"
+I5,Invemed Associates LLC. The aggregate offering price for the Notes was
+I5,"$499,215,000, or 99.843% of par value, and the initial purchasers received an"
+I5,"aggregate discount of $3,000,000, or .6%. The initial purchasers subsequently"
+I5,placed the Notes with certain qualified institutional buyers in reliance upon
+I5,"Rule 144A promulgated under the Securities Act of 1933, as amended, and with"
+I5,certain persons in offshore transactions in reliance on Regulation S
+I5,promulgated under the Securities Act. The Company intends to file a
+I5,registration statement on Form S-4 under Securities Act pursuant to which it
+I5,will offer to exchange registered notes for the Notes. The terms of the
+I5,registered notes will be substantially the same as the terms of the Notes.
+I5,
+B6,Item 6.  SELECTED CONSOLIDATED FINANCIAL DATA
+I6,
+I6,"The selected consolidated financial data of The Home Depot, Inc. for and as of"
+I6,the end of each of the periods indicated in the five-year period ended January
+I6,"28, 2001 have been derived from the audited consolidated financial statements"
+I6,"of The Home Depot, Inc., which consolidated financial statements have been"
+I6,audited by KPMG LLP. The selected consolidated financial data should be read in
+I6,"conjunction with the consolidated financial statements of The Home Depot, Inc.,"
+I6,"including the notes to those consolidated financial statements, and the audit"
+I6,"reports of KPMG LLP, which are incorporated by reference elsewhere herein."
+I6,
+X,
+I6,<CAPTION>
+I6,Fiscal Year(1)
+I6,
+I6,"(amounts in millions, except per share data)"
+I6,
+X,
+X,
+I6,"(1) Fiscal 2000, 1999, 1998, 1997 and 1996 refer to the fiscal years ended"
+I6,"January 28, 2001; January 30, 2000; January 31, 1999; February 1, 1998; and"
+I6,"February 2, 1997, respectively. Fiscal year 1996 consisted of 53 weeks; all"
+I6,other fiscal years noted consisted of 52 weeks.
+I6,(2) Includes the effect of a $104 million pre-tax non-recurring charge.
+I6,(3) All per share data have been adjusted for a three-for-two stock split on
+I6,"December 30, 1999, a two-for-one stock split on July 2, 1998 and a"
+I6,"three-for-one stock split on July 3, 1997."
+I6,
+B7,Item 7.  MANAGEMENT'S DISCUSSION AND ANALYSIS OF RESULTS OF OPERATIONS AND
+I7,FINANCIAL CONDITION
+I7,
+I7,"The data below reflect sales data, the percentage relationship between sales"
+I7,and major categories in the Consolidated Statements of Earnings and the
+I7,percentage change in the dollar amounts of each of the items.
+I7,
+X,
+I7,<CAPTION>
+I7,PERCENTAGE
+I7,
+I7,OPERATING EXPENSES:
+I7,
+I7,INTEREST INCOME (EXPENSE):
+I7,
+I7,Weighted  Average  Weekly Sales per
+I7,
+X,
+X,
+I7,"(1) Fiscal years 2000, 1999 and 1998 refer to the fiscal years ended January"
+I7,"28, 2001; January 30, 2000; and January 31, 1999, respectively."
+I7,
+I7,"(2) Excludes wholly owned subsidiaries: Apex Supply Company, Georgia Lighting,"
+I7,"Maintenance Warehouse, and National Blinds and Wallpaper."
+I7,
+I7,RESULTS OF OPERATIONS
+I7,
+I7,For an understanding of the significant factors that influenced the Company's
+I7,"performance during the past three fiscal years, the following discussion should"
+I7,be read in conjunction with the consolidated financial statements and the notes
+I7,to consolidated financial statements presented in this annual report.
+I7,
+I7,Net sales for fiscal 2000 increased 19.0% to $45.7 billion from $38.4 billion
+I7,"in fiscal 1999. This increase was attributable to, among other things, full"
+I7,"year sales from the 169 new stores opened during fiscal 1999, a 4% comparable"
+I7,store-for-store sales increase and 204 new store openings.
+I7,
+I7,Gross profit as a percent of sales was 29.9% for fiscal 2000 compared to 29.7%
+I7,for fiscal 1999. The rate increase was primarily attributable to a lower cost
+I7,"of merchandise resulting from product line reviews, benefits from global"
+I7,sourcing programs and an increase in the number of tool rental centers from 150
+I7,at the end of fiscal 1999 to 342 at the end of fiscal 2000.
+I7,
+I7,Operating expenses as a percent of sales were 20.7% for fiscal 2000 compared to
+I7,19.8% for fiscal 1999. Selling and store operating expenses as a percent of
+I7,sales increased to 18.6% in fiscal 2000 from 17.8% in fiscal 1999. The increase
+I7,was primarily attributable to higher store selling payroll expenses resulting
+I7,"from market wage pressures and an increase in employee longevity. In addition,"
+I7,medical costs increased due to higher family enrollment in the Company's
+I7,"medical plans, rising health care costs and higher prescription drug costs."
+I7,"Finally, store occupancy costs, such as property taxes, property rent,"
+I7,"depreciation and utilities, increased due to new store growth and energy rate"
+I7,increases.
+I7,
+I7,Pre-opening expenses as a percent of sales were 0.3% for both fiscal 2000 and
+I7,"1999. The Company opened 204 new stores and relocated 8 stores in fiscal 2000,"
+I7,compared to opening 169 new stores and relocating 6 stores in fiscal 1999.
+I7,"Pre-opening expenses averaged $671,000 per store in fiscal 2000 compared to"
+I7,"$643,000 per store in fiscal 1999. The higher average expense was primarily due"
+I7,to the opening of more EXPO Design Center stores and expansion of Home Depot
+I7,"stores into certain new markets including international locations, which"
+I7,"involved longer pre-opening periods and higher training, travel and relocation"
+I7,costs.
+I7,
+I7,General and administrative expenses as a percent of sales were 1.8% for fiscal
+I7,2000 compared to 1.7% for fiscal 1999. The increase was primarily due to
+I7,"investments in Internet development and international operations, as well as a"
+I7,full year of payroll and other costs associated with operating four new
+I7,"divisional offices, which opened during the fourth quarter of fiscal 1999."
+I7,
+I7,Interest and investment income as a percent of sales was 0.1% for both fiscal
+I7,2000 and 1999. Interest expense as a percent of sales was 0.1% for both
+I7,comparable periods.
+I7,
+I7,The Company's combined federal and state effective income tax rate decreased to
+I7,38.8% for fiscal 2000 from 39.0% for fiscal 1999. The decrease was attributable
+I7,to higher tax credits in fiscal 2000 compared to fiscal 1999.
+I7,
+I7,Net earnings as a percent of sales were 5.6% for fiscal 2000 compared to 6.0%
+I7,"for fiscal 1999, reflecting higher selling and store operating expenses as a"
+I7,percent of sales partially offset by a higher gross profit rate as described
+I7,above. Diluted earnings per share were $1.10 for fiscal 2000 compared to $1.00
+I7,for fiscal 1999.
+I7,
+I7,Net sales for fiscal 1999 increased 27.2% to $38.4 billion from $30.2 billion
+I7,"in fiscal 1998. This increase was attributable to, among other things, full"
+I7,"year sales from the 138 new stores opened during fiscal 1998, a 10% comparable"
+I7,"store-for-store sales increase, and 169 new store openings and 6 store"
+I7,relocations during fiscal 1999.
+I7,
+I7,Gross profit as a percent of sales was 29.7% for fiscal 1999 compared to 28.5%
+I7,for fiscal 1998. The rate increase was primarily attributable to a lower cost
+I7,of merchandise resulting from product line reviews and increased sales of
+I7,"imported products, and other merchandising initiatives begun in prior years and"
+I7,"continued during fiscal 1999, as well as to sales mix shifts to higher gross"
+I7,"margin product categories and assortments. In addition, inventory and refund"
+I7,
+I7,systems improvements and more effective training resulted in better inventory
+I7,shrink results and lower product markdowns.
+I7,
+I7,Operating expenses as a percent of sales were 19.8% for fiscal 1999 compared to
+I7,19.7% for fiscal 1998. Selling and store operating expenses as a percent of
+I7,sales increased to 17.8% in fiscal 1999 from 17.7% in fiscal 1998. The increase
+I7,was primarily attributable to higher store selling payroll expenses resulting
+I7,"from market wage pressures and an increase in employee longevity, as well as by"
+I7,the Company's continued investment in new customer service initiatives. In
+I7,"addition, medical costs increased due to higher family enrollment in the"
+I7,"Company's medical plans, increased claims and higher prescription drug costs."
+I7,The Company's strong financial performance during fiscal 1999 also resulted in
+I7,higher bonus expenses as a percent of sales. Credit card discounts increased as
+I7,a result of higher penetrations of credit card sales and increases in
+I7,non-private label discount rates. Partially offsetting these increases were
+I7,lower net advertising expenses resulting from higher cooperative advertising
+I7,participation by vendors and economies realized from the increased use of
+I7,national advertising.
+I7,
+I7,Pre-opening expenses as a percent of sales were 0.3% for both fiscal 1999 and
+I7,"1998. The Company opened 169 new stores and relocated 6 stores in fiscal 1999,"
+I7,compared to 138 new stores and 4 store relocations in fiscal 1998. Pre-opening
+I7,"expenses averaged $643,000 per store in fiscal 1999 compared to $618,000 per"
+I7,store in fiscal 1998. The higher average expense was primarily due to the
+I7,opening of more EXPO Design Center stores and expansion of Home Depot stores
+I7,"into certain new markets, which involved longer pre-opening periods and higher"
+I7,"training, travel and relocation costs."
+I7,
+I7,General and administrative expenses as a percent of sales were 1.7% for both
+I7,fiscal 1999 and 1998. Incremental expenses related to long-term growth and
+I7,"business planning initiatives, including Internet development, international"
+I7,operations and the opening of four new divisional offices during the fourth
+I7,"quarter of fiscal 1999, were offset by efficiencies realized from increased"
+I7,sales.
+I7,
+I7,Interest and investment income as a percent of sales was 0.1% for both fiscal
+I7,1999 and 1998. Interest expense as a percent of sales was 0.1% for both
+I7,comparable periods.
+I7,
+I7,The Company's combined federal and state effective income tax rate decreased to
+I7,39.0% for fiscal 1999 from 39.2% for fiscal 1998. The decrease was attributable
+I7,to higher tax credits in fiscal 1999 compared to fiscal 1998.
+I7,
+I7,Net earnings as a percent of sales were 6.0% for fiscal 1999 compared to 5.3%
+I7,"for fiscal 1998, reflecting a higher gross profit rate partially offset by"
+I7,higher operating expenses as a percent of sales as described above. Diluted
+I7,earnings per share were $1.00 for fiscal 1999 compared to $0.71 for fiscal
+I7,1998.
+I7,
+I7,Cash flow generated from store operations provides the Company with a
+I7,"significant source of liquidity. Additionally, a portion of the Company's"
+I7,inventory is financed under vendor credit terms.
+I7,
+I7,The Company currently plans to open approximately 200 new stores and relocate 9
+I7,existing stores during fiscal 2001. It is anticipated that approximately 92% of
+I7,"these locations will be owned, and the remainder will be leased."
+I7,
+I7,The Company has two operating lease agreements totaling $882 million for the
+I7,purpose of financing construction costs of certain new stores. Under the
+I7,"operating lease agreements, the lessor purchases the properties, pays for the"
+I7,construction costs and subsequently leases the facilities to the Company. The
+I7,leases provide for substantial residual value guarantees and include purchase
+I7,options at original cost on each property. The Company financed a portion of
+I7,"its new stores opened from fiscal 1997 through fiscal 2000, as well as office"
+I7,"buildings in fiscal 1999 and 2000, under the operating lease agreements."
+I7,
+I7,The cost of new stores to be constructed and owned by the Company varies
+I7,"widely, principally due to land costs, and is currently estimated to average"
+I7,approximately $14.1 million per location. The cost to remodel and/or fixture
+I7,stores to be leased is expected to average approximately $4.9 million per
+I7,"store. In addition, each new store will require approximately $3.5 million to"
+I7,"finance inventories, net of vendor financing."
+I7,
+I7,"During fiscal 1999, the Company issued $500 million of 6 1/2% Senior Notes"
+I7,"(""Senior Notes""). The Senior Notes are due on September 15, 2004 and pay"
+I7,interest semi-annually. The Senior Notes may be redeemed by the Company at any
+I7,"time, in whole or in part, at a defined redemption price plus accrued interest"
+I7,up to the redemption date. The net proceeds from the offering were used to
+I7,"finance a portion of the Company's capital expenditure program, including store"
+I7,"expansions and renovations, for working capital needs and for general corporate"
+I7,purposes.
+I7,
+I7,The Company has a commercial paper program that allows borrowings up to a
+I7,"maximum of $1 billion. As of January 28, 2001, there were $754 million of"
+I7,"borrowings outstanding under the program. In connection with the program, the"
+I7,Company has a back-up credit facility with a consortium of banks for up to $800
+I7,"million. The credit facility, which expires in September 2004, contains various"
+I7,"restrictive covenants, none of which is expected to impact the Company's"
+I7,liquidity or capital resources.
+I7,
+I7,"As of January 28, 2001, the Company had $167 million in cash and cash"
+I7,"equivalents. Management believes that its current cash position, internally"
+I7,"generated funds, funds available from its $1 billion commercial paper program"
+I7,and the ability to obtain alternate sources of financing should enable the
+I7,"Company to complete its capital expenditure programs, including store openings"
+I7,"and renovations, through the next several fiscal years."
+I7,
+I7,Although the Company cannot accurately determine the precise effect of
+I7,"inflation on its operations, it does not believe inflation has had a material"
+I7,effect on sales or results of operations.
+I7,
+I7,"In June 1998, the Financial Accounting Standards Board issued Statement of"
+I7,"Financial Accounting Standards No. 133 (""SFAS 133""), ""Accounting for Derivative"
+I7,"Instruments and Hedging Activities."" SFAS 133 requires all derivatives to be"
+I7,carried on the balance sheet at fair value. Changes in the fair value of
+I7,derivatives must be recognized in the Company's statements of earnings when
+I7,"they occur; however, there is an exception for derivatives that qualify as"
+I7,"hedges as defined by SFAS 133. If a derivative qualifies as a hedge, a company"
+I7,"can elect to use ""hedge accounting"" to eliminate or reduce the income statement"
+I7,volatility that would arise from reporting changes in a derivative's fair
+I7,"value. The Company will adopt SFAS 133 in the quarter ending April 29, 2001 and"
+I7,will record its derivatives at fair value. Based on the Company's derivative
+I7,"positions at January 28, 2001, the adoption of SFAS 133 will not have a"
+I7,material impact on the Company's financial results.
+I7,
+I7,"In December 1999, the Securities and Exchange Commission (""SEC"") issued Staff"
+I7,"Accounting Bulletin No. 101 (""SAB 101""), ""Revenue Recognition in Financial"
+I7,"Statements."" SAB 101 summarizes certain of the SEC staff's views in applying"
+I7,generally accepted accounting principles to revenue recognition in financial
+I7,"statements. As of January 28, 2001, the Company was in compliance with SAB 101."
+I7,
+I7,"Certain statements we make in this report, and other written or oral statements"
+I7,"made by or on behalf of the Company, may constitute ""forward-looking"
+I7,"statements"" within the meaning of the federal securities laws. Words or phrases"
+I7,"such as ""should result,"" ""are expected to,"" ""we anticipate,"" ""we estimate,"" ""we"
+I7,"project,"" ""we believe,"" or similar expressions are intended to identify"
+I7,forward-looking statements. Examples of such statements in this report include
+I7,"descriptions of our plans with respect to new store openings and relocations,"
+I7,our plans to enter new markets and expectations relating to our continuing
+I7,growth. These statements are subject to certain risks and uncertainties that
+I7,could cause actual results to differ materially from the Company's historical
+I7,experience and its present expectations or projections. Management believes
+I7,"that these forward-looking statements are reasonable; however, you should not"
+I7,place undue reliance on such statements. Such statements speak only as of the
+I7,"date they are made, and we undertake no obligation to publicly update or revise"
+I7,"any forward-looking statement, whether as a result of future events, new"
+I7,information or otherwise.
+I7,
+I7,The following are some of the factors that could cause the Company's actual
+I7,results to differ materially from the expected results described in the
+I7,Company's forward-looking statements:
+I7,
+I7,"-        Adverse or unanticipated weather conditions, which may affect the"
+I7,Company's overall level of sales and sales of particular lines of
+I7,"products, such as building materials, lumber and lawn and garden"
+I7,supplies.
+I7,
+I7,"-        Instability of costs and availability of sourcing channels, which may"
+I7,affect the prices that the Company pays for certain commodity
+I7,"products, such as lumber and plywood, as well as the Company's ability"
+I7,to improve its mix of merchandise. Our cost of sales is affected by
+I7,our ability to maintain favorable arrangements and relationships with
+I7,our suppliers. Our sources of supply may be affected by trade
+I7,"restrictions, tariffs, currency exchange rates, transport costs and"
+I7,"capacity, and other factors affecting domestic and international"
+I7,markets.
+I7,
+I7,"-        Our ability to attract, train and retain highly qualified associates"
+I7,to staff both existing and new stores.
+I7,
+I7,"-        Conditions affecting the availability, acquisition, development and"
+I7,"ownership of real estate, including local zoning and land use issues,"
+I7,environmental regulations and general conditions in the commercial
+I7,real estate market.
+I7,
+I7,"-        General economic conditions, which affect consumer confidence and home"
+I7,"improvement and home-building spending, including interest rates, the"
+I7,"overall level of economic activity, the availability of consumer"
+I7,credit and mortgage financing and unemployment rates.
+I7,
+I7,"-        The impact of competition, including competition for customers,"
+I7,locations and products and in other important aspects of our business.
+I7,"Our primary competitors include electrical, plumbing and building"
+I7,"materials supply houses, lumber yards, home improvement stores and"
+I7,"other local, regional or national hardware stores, as well as discount"
+I7,department stores and any other channel of distribution that offers
+I7,"products that we sell. Our business is highly competitive, and we may"
+I7,face new types of competitors as we enter new markets or lines of
+I7,business.
+I7,
+I7,"-        Changes in laws and regulations, including changes in accounting"
+I7,"standards, tax statutes or regulations and environmental and land use"
+I7,"regulations, and uncertainties of litigation."
+I7,
+B7A,Item 7A. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK
+I7A,
+I7A,We use derivative financial instruments at various times to manage the risk
+I7A,associated with foreign currency and interest rate fluctuations. These
+I7A,contracts are insignificant to the Company's operations and financial position.
+I7A,We believe that our exposure to market risk associated with other financial
+I7A,"instruments (such as investments and borrowings), interest rate risk and"
+I7A,foreign currency rate risk is not material.
+I7A,
+B8,Item 8.  FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA
+I8,
+I8,"We refer you to the ""Consolidated Statements of Earnings,"" ""Consolidated"
+I8,"Balance Sheets,"" ""Consolidated Statements of Stockholders' Equity and"
+I8,"Comprehensive Income,"" ""Consolidated Statements of Cash Flows,"" ""Notes to"
+I8,"Consolidated Financial Statements"" and ""Independent Auditors' Report"" contained"
+I8,"in our Annual Report to Stockholders for the fiscal year ended January 28,"
+I8,2001.
+I8,
+B9,Item 9.  CHANGES IN AND DISAGREEMENTS WITH ACCOUNTANTS ON ACCOUNTING AND
+I9,FINANCIAL DISCLOSURE
+I9,
+I9,None.
+I9,
+I9,PART III
+I9,
+B10,Item 10. DIRECTORS AND EXECUTIVE OFFICERS OF THE REGISTRANT
+I10,
+I10,We refer you to our Proxy Statement for the 2001 Annual Meeting of Stockholders
+I10,"under the headings ""Election of Directors and Director Biographies,"" ""Board of"
+I10,"Directors Information"" and ""General - Compliance with Section 16(a) Beneficial"
+I10,"Ownership Reporting Requirements."" Biographical information on our executive"
+I10,officers is contained in Item I of this Annual Report on Form 10-K.
+I10,
+B11,Item 11. EXECUTIVE COMPENSATION
+I11,
+I11,We refer you to the information in our Proxy Statement for the 2001 Annual
+I11,"Meeting of Stockholders under the headings ""Executive Compensation,"" ""Board of"
+I11,"Directors Information"" and ""General - Compensation Committee Interlocks and"
+I11,"Insider Participation."""
+I11,
+B12,Item 12. SECURITY OWNERSHIP OF CERTAIN BENEFICIAL OWNERS AND MANAGEMENT
+I12,
+I12,We refer you to the information in our Proxy Statement for the 2001 Annual
+I12,"Meeting of Stockholders under the heading ""Stock Ownership."""
+I12,
+B13,Item 13. CERTAIN RELATIONSHIPS AND RELATED TRANSACTIONS
+I13,
+I13,We refer you to the information in our Proxy Statement for the 2001 Annual
+I13,"Meeting of Stockholders under the heading ""General - Insider Transactions."""
+I13,
+I13,PART IV
+I13,
+B15,"Item 14. EXHIBITS, FINANCIAL STATEMENT SCHEDULES AND REPORTS ON FORM 8-K"
+I15,
+I15,(a) 1.   Financial Statements
+I15,
+I15,The following financial statements are incorporated by reference from pages 20
+I15,through 31 of our Annual Report to Stockholders for the fiscal year ended
+I15,"January 28, 2001, as provided in Item 8 hereof:"
+I15,
+I15,-        Consolidated Statements of Earnings for the fiscal years
+I15,"ended January 28, 2001; January 30, 2000; and January 31, 1999."
+I15,
+I15,"-        Consolidated Balance Sheets as of January 28, 2001 and"
+I15,"January 30, 2000."
+I15,
+I15,-        Consolidated Statements of Stockholders' Equity and
+I15,"Comprehensive Income for the fiscal years ended January 28, 2001; January 30,"
+I15,"2000; and January 31, 1999."
+I15,
+I15,-        Consolidated Statements of Cash Flows for the fiscal years
+I15,"ended January 28, 2001;"
+I15,
+I15,"January 30, 2000; and January 31, 1999."
+I15,
+I15,-        Notes to Consolidated Financial Statements.
+I15,
+I15,-        Independent Auditors' Report.
+I15,
+I15,2.   Financial Statement Schedules
+I15,
+I15,All schedules are omitted as the required information is inapplicable or the
+I15,information is presented in the consolidated financial statements or related
+I15,notes.
+I15,
+I15,There were no Current Reports on Form 8-K filed during the fourth quarter of
+I15,fiscal 2000.
+I15,
+I15,Exhibits marked with an asterisk (*) are incorporated by reference to exhibits
+I15,"or appendices previously filed with the SEC, as indicated by the references in"
+I15,brackets.
+I15,
+I15,The Registrant agrees to furnish a copy of all agreements relating to long-term
+I15,debt upon request of the Commission.
+I15,
+X,
+X,
+I15,"*3.l    Restated Certificate of Incorporation of The Home Depot, Inc., as amended. [FORM 10-Q FOR THE FISCAL"
+I15,"QUARTER ENDED JULY 30, 2000, EXHIBIT 3.1]"
+I15,
+I15,"*10.1    Credit Agreement dated September 17, 1999 (the ""Credit Agreement"") by and among The Home Depot, Inc., Bank"
+I15,"of America, N.A., as Administrative Agent, Wachovia Bank, N.A., as Syndication Agent, First Union National Bank"
+I15,
+I15,"ENDED OCTOBER 31, 1999, EXHIBIT 10.1]"
+I15,
+I15,"*10.2    Assignment and Acceptance of the Credit Agreement dated February 23, 2000 by and among The Home Depot, Inc.,"
+I15,"the banks party thereto, Bank of America, N.A., as Administrative Agent, Wachovia Bank, N.A., as"
+I15,"Syndication Agent, and First Union National Bank and Bank of New York, as Co-Documentation Agents. [FORM 10-K FOR"
+I15,
+I15,"*10.3    Assignment and Acceptance of the Credit Agreement dated March 31, 2000 by and among The Home Depot, Inc., the"
+I15,"banks party thereto, Bank of America, N.A., as Administrative Agent, Wachovia Bank, N.A., as Syndication"
+I15,"Agent, and First Union National Bank and The Bank of New York, as Co-Documentation Agents. [FORM 10-K FOR THE"
+I15,
+X,
+X,
+X,
+X,
+I15,"ENDED FEBRUARY 1, 1998, EXHIBIT 10.2]"
+I15,
+I15,"10.5     +Employee Stock Purchase Plan, as amended."
+I15,
+I15,"OF STOCKHOLDERS HELD MAY 26, 1999]"
+I15,
+I15,"OF STOCKHOLDERS HELD MAY 27, 1998]"
+I15,
+I15,EXHIBIT 10.5]
+I15,
+I15,"JANUARY 31, 1999, EXHIBIT 10.7]"
+I15,
+I15,10.10   +The Home Depot ESOP Restoration Plan.
+I15,
+I15,"*10.11   Participation Agreement dated as of October 22, 1998 among The Home Depot, Inc. as Guarantor; Home Depot"
+I15,"U.S.A., Inc. as Lessee; HD Real Estate Funding Corp. II as Facility Lender; Credit Suisse Leasing 92A L.P."
+I15,as Lessor; The Bank of New York as Indenture Trustee; and Credit Suisse First Boston Corporation and
+I15,
+I15,"*10.12   Participation Agreement dated as of June 25, 1996 among The Home Depot, Inc. as Guarantor; Home Depot U.S.A., Inc."
+I15,as Lessee and Construction Agent; HD Real Estate Funding Corp. as Facility Lender; the lenders named on the Schedule
+I15,thereto as Lenders; Credit Suisse First Boston Corporation as Agent Bank and Lender; and Credit Suisse Leasing
+I15,
+I15,"*10.13   First Amendment and Supplement to the Participation Agreement dated as of May 8, 1997 among The Home Depot, Inc."
+I15,"as Guarantor; Home Depot U.S.A., Inc. as Lessee and Construction Agent; HD Real Estate Funding Corp. as"
+I15,Facility Lender; the lenders named on the Schedule thereto as Lenders; Credit Suisse First Boston Corporation
+I15,
+I15,"31, 1999, EXHIBIT 10-12.]"
+I15,
+I15,"*10.14   Master Modification Agreement dated as of April 20, 1998 among The Home Depot, Inc. as Guarantor; Home Depot"
+I15,"U.S.A., Inc., as Lessee and Construction Agent; HD Real Estate Funding Corp., as Facility Lender;"
+I15,Credit Suisse Leasing 92A L.P. as Lessor; the lenders named on the Schedule thereto as Lenders; and Credit Suisse
+I15,
+X,
+X,
+X,
+X,
+I15,"*10.15   Indenture, dated as of September 27, 1999 among The Home Depot, Inc., Credit Suisse First Boston Corporation and"
+I15,
+I15,"31, 1999, EXHIBIT 10.14]"
+I15,
+I15,"10.17   +Employment Agreement between Robert L. Nardelli and The Home Depot, Inc., dated January 19, 2001."
+I15,
+I15,"10.18   +Promissory Note between Robert L. Nardelli and The Home Depot, Inc. dated as of December 4, 2000."
+I15,
+I15,"10.19   Commercial Paper Dealer Agreement between Credit Suisse First Boston Corporation, as Dealer, and The Home Depot,"
+I15,"Inc., dated as of January 24, 2001."
+I15,
+I15,"10.20   +Non-Qualified Stock Option and Deferred Stock Unit Plan and Agreement dated as of December 4, 2001."
+I15,
+I15,"10.21   +Agreement between Bernard Marcus and The Home Depot, Inc. dated as of February 22, 2001."
+I15,
+I15,"10.22   +Promissory Note between Mark Baker and Home Depot U.S.A., Inc. dated December 29, 2000."
+I15,
+I15,"13      The Registrant's Annual Report to Stockholders for the fiscal year ended January 28, 2001. Only those portions"
+I15,of said report which are specifically designated in this Form 10-K as being incorporated by reference are being
+I15,electronically filed pursuant to the Securities Exchange Act of 1934.
+I15,
+I15,21      List of Subsidiaries of the Registrant.
+I15,
+I15,23      Consent of Independent Auditors.
+I15,
+X,
+X,
+X,
+I15,24      Special Powers of Attorney authorizing execution of this Form 10-K Annual Report have been granted and are
+I15,filed herewith as follows:
+I15,
+I15,Power of Attorney from Frank Borman.
+I15,Power of Attorney from Gregory D. Brenneman.
+I15,Power of Attorney from Richard H. Brown.
+I15,Power of Attorney from John L. Clendenin.
+I15,Power of Attorney from Berry R. Cox.
+I15,Power of Attorney from William S. Davila.
+I15,"Power of Attorney from Milledge A. Hart, III."
+I15,Power of Attorney from Bonnie G. Hill.
+I15,Power of Attorney from Kenneth G. Langone.
+I15,Power of Attorney from M. Faye Wilson.
+I15,
+X,
+I15,+Management contract or compensatory plan or arrangement required to be filed
+I15,as an exhibit to this form pursuant to Item 14(c) of this report.
+I15,
+O,SIGNATURES
+O,
+O,Pursuant to the requirements of Section 13 or 15(d) of the Securities
+O,"Exchange Act of 1934, the Registrant has duly caused this report to be signed"
+O,"on its behalf by the undersigned, thereunto duly authorized."
+O,
+O,"THE HOME DEPOT, INC."
+O,
+O,By: /s/ Robert L. Nardelli
+O,
+O,"(Robert L. Nardelli, President & CEO)"
+O,
+O,"Date:   April 20, 2001"
+O,
+O,"Pursuant to the requirements of the Securities Exchange Act of 1934,"
+O,this report has been signed below by the following persons on behalf of the
+O,"Registrant, The Home Depot, Inc., and in the capacities and on the dates"
+O,indicated.
+O,
+X,
+O,<CAPTION>
+O,
+O,(Bernard Marcus)
+O,
+O,(Arthur M. Blank)
+O,
+O,(Robert L. Nardelli)
+O,
+X,
+X,
+X,
+O,<CAPTION>
+O,
+O,(Frank Borman)
+O,
+O,(Gregory D. Brenneman)
+O,
+O,(Richard H. Brown)
+O,
+O,(John L. Clendenin)
+O,
+O,(Berry R. Cox)
+O,
+O,(William Davila)
+O,
+O,"(Milledge A. Hart, III)"
+O,
+O,(Bonnie G. Hill)
+O,
+O,(Kenneth G. Langone)
+O,
+O,(M. Faye Wilson)
+O,
+X,
+O,"*        The undersigned, by signing his name hereto, does hereby sign this"
+O,report on behalf of each of the above-indicated directors of the Registrant
+O,"pursuant to powers of attorney, executed on behalf of each such director."
+O,
+O,By: /s/ Robert L. Nardelli
+O,
+O,"(Robert L. Nardelli, Attorney-in-fact)"
+O,
+X,
+O,<CAPTION>
+O,EXHIBIT INDEX
+O,
+O,"Home Depot,  Inc., dated as of January 24, 2001."
+O,
+O,portions of said report which are specifically designated in this Form 10-K as being incorporated by
+O,reference are being electronically filed pursuant to the Securities Exchange Act of 1934.
+O,
+O,and are filed herewith as follows:
+O,
+O,Power of Attorney from Frank Borman.
+O,Power of Attorney from Gregory D. Brenneman.
+O,Power of Attorney from Richard H. Brown.
+O,Power of Attorney from John L. Clendenin.
+O,Power of Attorney from Berry R. Cox.
+O,Power of Attorney from William S. Davila.
+O,"Power of Attorney from Milledge A. Hart, III."
+O,Power of Attorney from Bonnie G. Hill.
+O,Power of Attorney from Kenneth G. Langone.
+O,Power of Attorney from M. Faye Wilson.
+O,
+X,
+O,+Management contract or compensatory plan or arrangement required to be filed
+O,as an exhibit to this form pursuant to Item 14(c) of this report.
+O,
+O,</TEXT>
+O,</DOCUMENT>

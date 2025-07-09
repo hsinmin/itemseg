@@ -12,6 +12,8 @@ from nltk import tokenize
 import os
 from html.parser import HTMLParser
 from io import StringIO
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence, PackedSequence
+import pandas as pd
 
 # setup tokenizer
 word_tokenizer = nltk.tokenize.wordpunct_tokenize
@@ -655,6 +657,65 @@ def gen_doc_feature(lines, word2vec_model):
     return x, doc_mask
             
     
+
+# Bi-LSTM
+class BiLSTM2(nn.Module):
+
+    # def __init__(self, vocab_size, tag_to_ix, embedding_dim, hidden_dim):
+    def __init__(self, input_dim, tag_to_ix, hidden_dim, device, batch_size=4, num_layers=1, dropout=0.5):  # tag_to_ix就是label_mapping
+        '''
+        parameters:
+            tag_to_ix: 標籤對應標號的字典
+            hidden dimension: BILSM 隱藏層的神經元數量
+        '''
+        super(BiLSTM2, self).__init__()
+        self.hidden_dim = hidden_dim
+        self.tag_to_ix = tag_to_ix
+        self.tagset_size = len(tag_to_ix) # the output size
+        self.num_layers = num_layers
+        self.batch_size = batch_size
+        self.device = device
+        # self.embedding_dim = embedding_dim
+        # self.vocab_size = vocab_size
+        # self.adjust_input_dim = nn.Linear(input_dim, 803)  # 將 768 調整為 803
+        ## dimension: batch_size, num_line, dim        
+        self.lstm = nn.LSTM(input_dim, hidden_dim // 2,  # we uses input_dim instead of embedding_dim
+                            num_layers = num_layers, bidirectional = True, 
+                            batch_first = True, dropout = dropout)
+
+
+        # 將 LSTM 的輸出映射到標籤空間
+        self.hidden2tag = nn.Linear(hidden_dim, self.tagset_size)
+        self.dropout = nn.Dropout(dropout)
+    def init_hidden(self, batch_size=0):
+        # (num_layers, nums_directions, minibatch_size, hidden_dim, device)
+        # 實際上初始化的 h0, c0
+        if batch_size == 0:
+            # use default batch size if not passed to us; 
+            batch_size = self.batch_size
+        return (torch.randn(2 * self.num_layers, batch_size, self.hidden_dim // 2, device=self.device),
+                torch.randn(2 * self.num_layers, batch_size, self.hidden_dim // 2, device=self.device))
+    
+    def forward(self, sentence):
+        # sentence = self.adjust_input_dim(sentence)
+        # check the sentence is packed or not
+        if isinstance(sentence, PackedSequence):
+            batch_size = sentence.unsorted_indices.shape[0] 
+        else:
+            batch_size = sentence.shape[0]    
+        self.hidden = self.init_hidden(batch_size=batch_size) # initial state and hidden state
+        lstm_out, self.hidden = self.lstm(sentence, self.hidden) # 最後輸出結果和最後的隱藏狀態
+
+        if isinstance(sentence, PackedSequence):
+            lstm_out, _ = pad_packed_sequence(lstm_out, batch_first=True)
+
+        lstm_feats = self.hidden2tag(self.dropout(lstm_out))
+        return lstm_feats
+
+
+
+
+
 # criterion = nn.CrossEntropyLoss(ignore_index=padding_idx)
 criterion = nn.CrossEntropyLoss()
 
@@ -1112,3 +1173,226 @@ def f1_perf(fold_perf):
     mean_core_f1 = core_f1.mean()
     mean_all_f1 = all_f1.mean()
     return mean_core_f1, mean_all_f1
+
+def createFeatures(doc):
+    sen_pos_percentile = []
+    back_sen_pos_percentile = []
+    first_is_item = []
+    headpos = []
+    wordlen_list = []
+    signature_list = []
+    part_two_list = []
+    content_1 = []
+    content_2 = []
+    re_name_list = []  # regular_expression name
+    re_number_list = []  # regular_expression number    
+    for sen_i, sen in enumerate(doc):
+
+        # sen_pos_percentile
+        sen_pos_percentile.append(sen_i / len(doc))
+
+        # back sen_pos_percentile
+        back_sen_pos_percentile.append((len(doc)-sen_i) / len(doc))
+
+        # starts with item
+        if itemShow(sen):
+            first_is_item.append(1)
+        else:
+            first_is_item.append(0)
+
+        # head_pos: 越大越可能不是head (超過threshold就是1) 代替裡面各種threshold
+        headthreshold_ratio = 0.3  # 0 等於不看
+        headthreshold = headthreshold_ratio * len(doc)
+        headpos.append(min(sen_i, headthreshold) / headthreshold * 1.0)
+
+        # wordlen
+        wordlenmax = 20.0
+        wordlen = len(sen.split())
+        wordlen_list.append(min(wordlen, wordlenmax) / wordlenmax * 1.0)
+        
+        # signatureCheck
+        signature_sign = signatureCheck(sen)
+        signature_list.append(signature_sign)
+        
+        # partTwoCheck
+        # part_two_sign = partTwoCheck(sen)
+        # part_two_list.append(part_two_sign)
+
+        # regular_expression name
+        prefix, suffix = 'contain_', '_name'
+        trans_row = itemNameCheck(prefix, suffix, sen)
+        re_name_list.append(trans_row)
+
+        # regular_expression by number
+        prefix_, suffix_ = 'contain_', '_number'
+        trans_row_ = itemNumberCheck(prefix_, suffix_, sen)
+        re_number_list.append(trans_row_)
+
+        # content_1
+        if sen_i+10 < len(doc):
+            if len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i-1][0:150],re.IGNORECASE)) !=0 or \
+               len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i-2][0:150],re.IGNORECASE)) !=0 or \
+               len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+1][0:150],re.IGNORECASE)) !=0 or \
+               len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+2][0:150],re.IGNORECASE)) !=0:
+                content_1.append(1)
+            else:
+                content_1.append(0)
+        else:
+            content_1.append(0)
+
+        # content_2
+        if sen_i+10 < len(doc):
+            if len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+1][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+2][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+3][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+4][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+5][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+6][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+7][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+8][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+9][0:150],re.IGNORECASE)) !=0 or \
+            len(re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',doc[sen_i+10][0:150],re.IGNORECASE)) !=0:
+                content_2.append(1)
+            else:
+                content_2.append(0)
+        else:
+            content_2.append(0)
+            
+
+        
+        # 我在baseline(regularEX)判斷時設了不少threshold(content, signature, part two)，但是在這個情況下是不是先不用
+        # 設threshold了，有統一擺了一個 headthreshold
+
+        # unigram and biagram 顏秀
+        # sentence bert
+        
+
+    total_features = list(zip(sen_pos_percentile, 
+                              back_sen_pos_percentile, 
+                              first_is_item,
+                              wordlen_list, 
+                              signature_list, 
+                              headpos, 
+                              content_1, 
+                              content_2))
+    total_features_df = pd.DataFrame(total_features, 
+              columns=['sen_pos_percentile', 
+                       'back_sen_pos_percentile', 
+                       'first_is_item',
+                       'wordlen', 
+                       'signature',  
+                       'headpos', 
+                       'content_1', 
+                       'content_2'])
+    re_features_df = pd.DataFrame(re_name_list)
+    re_number_df = pd.DataFrame(re_number_list)
+    total_features_df = total_features_df.join(re_features_df)
+    total_features_df = total_features_df.join(re_number_df)
+    
+    return total_features_df
+
+def itemShow(text):
+    criteria = re.findall(r'^\s*item',text[0:15],re.IGNORECASE)
+    if len(criteria) == 1 :
+        return(1)
+    else:
+        return(0)
+        
+
+def signatureCheck(text):
+    criteria = re.findall(r'signature',text,re.IGNORECASE)
+    if len(criteria) != 0:
+        return(1)
+    else:
+        return(0)
+
+def itemNameCheck(prefix, suffix, text):
+    alltasks = {
+        'item 1': r'^item[\s\w.-]*business',
+        'item 1A': r'^item[\s\w.-]*risk\s+factor',
+        'item 1B': r'^item\[\s\w.-]*unresolved\s+staff\s+comment',
+        'item 2': r'^item[\s\w.-]*propert[yies]',
+        'item 3': r'^item[\s\w.-]*legal[\s]*proceedings',
+        'item 4': r'^item[\s\w.-]*submission[\s\w]*'
+                   'matters|item[\s\w.-－]mine[\s]*safety[\s]*disclosure',
+        'item 5': r'^item[\s\w.-]*market[\s\w]*registrant[’''\ss]*common[\s]*equity',
+        'item 6': r'^item[\s\w.-]*select[ed][\s\w]*financial\s+data',
+        'item 7': r'^item[\s\w.-]*management[\s\'s’'']*discussion[\s\w]*analysis',
+        'item 7A': r'^item[\s\w.-]*quantitative[\s\w]*qualitative[\s]*disclosure',
+        'item 8': r'^item[\s\w.-]*financial[\s]*statement[\s\w]*supplementary',
+        'item 9': r'^item[\s\w.-]*changes[\s\w]*disagreement[s]',
+        'item 9A': r'^item[\s\w.-]*cntrol[\s\w]*procedure[s]',
+        'item 9B': r'^item[\s\w.-]*other[\s]*information',
+        'item 10': r'^item[\s\w.-]*director[,\w\s]*executive[,\w\s]*officer',
+        'item 11': r'^item[\s\w.-]*executive[\s]*compensation',
+        'item 12': r'^item[\s\w.-]*security[\s]*ownership[,\w\s]*certain[\s]*beneficial',
+        'item 13': r'^item[\s\w.-]*certain[\s]*relationship'
+                    '[,\w\s]*related[\s]*transaction',
+        'item 14': r'^item[\s\w.-]*principal[\s]*account[\s\w]*fees[\s\w]*services',
+        'item 15': r'^item\s*15[.\s-]*exhibit[\w\s]*schedules'
+        }
+    item_name_features = {}  # 這就是 sentence 轉換後的特徵，一筆資料
+    text = text.strip()
+    for item, condition in alltasks.items():
+        criteria = re.findall(condition, text, re.IGNORECASE)  # 抓回符合規則的那段string
+        # print(criteria)
+        if len(criteria) == 1:  # 多過一個就不要，因為 item 那句只會出現一次，也不會重複出現
+            item_name_features[prefix+item+suffix] = 1
+        else:        
+            item_name_features[prefix+item+suffix] = 0
+    return item_name_features
+
+def itemNumberCheck(prefix, suffix, text):
+    tag_list = ["1", "1A", "2", "3", "4", "5", "6"]
+    pre150 = text[0:50]
+    item_number_features = {}
+    criteria = re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',pre150,re.IGNORECASE) #  For most cases
+    if len(criteria) !=0:
+        # print(criteria[0]) # ex.ITEM 1.
+        sign = re.findall(r'[0-9]+[()]?[A-Za-z]?[)]?',criteria[0])
+        recommend_tag = sign[0].upper()
+        for tag in tag_list:
+            if tag == recommend_tag:
+                item_number_features[prefix+tag+suffix] = 1
+            else:
+                item_number_features[prefix+tag+suffix] = 0
+    else:
+        for tag in tag_list:
+            item_number_features[prefix+tag+suffix] = 0
+    return item_number_features
+
+
+# map the predicted tags back to original line sequence
+def expand_pred_to_lines(pred, seqmap, lines):
+    pred_ext = ['X'] * len(lines)
+    for i, tag in enumerate(pred):
+        i2 = seqmap[i]
+        pred_ext[i2] = tag
+
+    last_tag = 'O'
+    N = len(pred_ext)
+    for i, tag in enumerate(pred_ext):
+        if tag == 'X':
+            if last_tag[0] == 'B':
+                # find next predicted tag
+                if i+1 < N:
+                    next_ptag = pred_ext[i+1]
+                    step = 2
+                    while next_ptag == 'X' and i + step < N:
+                        next_ptag = pred_ext[i+step]
+                        step += 1
+                    if next_ptag == 'X':
+                        # in case we reach the end of the list
+                        next_ptag = 'O'
+                    elif next_ptag[0] == 'B':
+                        # will not carry future B tags
+                        # next_ptag = last_tag
+                        next_ptag = "I" + last_tag[1:]
+                else:
+                    next_ptag = 'O'
+                pred_ext[i] = next_ptag
+            else:
+                pred_ext[i] = last_tag
+        last_tag = tag
+    return pred_ext
+
