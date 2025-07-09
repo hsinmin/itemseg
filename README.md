@@ -97,7 +97,7 @@ A 10-K report is an annual report filed by publicly traded companies with the U.
 * **Item 3 (Legal Proceedings)**
 * **Item 7 (Management’s Discussion and Analysis of Financial Condition and Results of Operations; MD&A)**: Offers management's perspective on the financial results, including discussion of liquidity, capital resources, and results of operations.
 
-You can search and read 10-K reports through the [EDGAR web interface](https://www.sec.gov/edgar/search-and-access).  Itemseg takes the URL of the `Complete submission text file`, converts the HTML to formatted text, and segments the text file by items.
+You can search and read 10-K reports through the [EDGAR web interface](https://www.sec.gov/edgar/search-and-access).  For **raw** input type, Itemseg takes the URL of the `Complete submission text file`, converts the HTML to formatted text, removing tables with numerical content, and segments the text file by items.
 
 As an example, the Amazon 10-K report page for [fiscal year 2022](https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004-index.htm) shows the link to the HTML 10-K report and a `Complete submission text file` [0001018724-23-000004.txt](https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/0001018724-23-000004.txt). Pass this link to the itemseg module, and it will retrieve the file and segment items for you. Remember to adjust --user_agent according to your affiliation. 
 
