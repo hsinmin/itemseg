@@ -4,7 +4,7 @@
 
 Itemseg is a 10-K item segmentation tool for processing 10-K reports and extracting item-specific text.
 
-Itemseg supports the following input formats:
+Itemseg supports the following input formats (--input_type):
 * **raw**: Complete submission text file. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt)
 * **html**: 10-K report in HTML format. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm)
 * **native_text**: 10-K report in pure text format. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt)
@@ -12,8 +12,8 @@ Itemseg supports the following input formats:
 
 The input (`--input`) can be either a local file or a URL pointing to the SEC website.
 
-Itemseg supports the following item segmentation approaches:
-* **crf**: Conditional Random Field. Recommended for machines without a GPU.
+Itemseg supports the following item segmentation approaches (--method):
+* **crf**: Conditional Random Field (default method). Recommended for machines without a GPU.
 * **lstm**: Bi-directional Long Short-Term Memory.
 * **bert**: BERT4ItemSeg; BERT encoder coupled with Bi-LSTM.
 * **chatgpt**: GPT4ItemSeg; Uses OpenAI API and line-id-based prompting.
