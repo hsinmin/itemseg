@@ -118,6 +118,8 @@ The module also comes with a script that allows you to run the module via the `i
 
 ## Citation
 
+Please cite our work if you use **itemseg** in your research. 
+
 Lu, H.-M., Chien, Y.-T., Yen, H.-H., and Chen, Y.-H. (2025). Utilizing Pre-trained and Large Language Models for 10-K Items Segmentation. arXiv preprint arxiv:2502.08875
 
 We extend our special thanks to Chia-Tai Li and I-Chen Tsai for their valuable support in managing the dataset, as well as merging and refactoring the project.
