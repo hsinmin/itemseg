@@ -80,7 +80,7 @@ python3 -m nltk.downloader punkt punkt_tab
 ## Itemseg Example Usage
 
 ### Segment items in a 10-K file
-Using Apple 10-K (2023) as an example:
+Using Apple 10-K (2023) as an example (adjust --user_agent according to your affiliation):
 ```console
 python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt --user_agent "Some University johndow@someuniversity.edu"
 ```
