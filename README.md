@@ -110,7 +110,7 @@ The default setting outputs line-by-line tags (BIO style) in a CSV file, togethe
 
 If you are trying to process large amounts of 10-K files, a good starting point is the [master index](https://www.sec.gov/Archives/edgar/full-index/), which lists all available files and provides a convenient way to construct a comprehensive list of target files.
 
-The module also comes with a script that allows you to run the module via the `itemseg` command. The default location (for Ubuntu) is at `~/.local/bin`. Add this location to your PATH to enable the `itemseg` command.
+<!-- The module also comes with a script that allows you to run the module via the `itemseg` command. The default location (for Ubuntu) is at `~/.local/bin`. Add this location to your PATH to enable the `itemseg` command. -->
 
 ## License
 
