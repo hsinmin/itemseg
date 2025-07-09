@@ -89,7 +89,7 @@ See the results in `./segout01/`.
 
 The `*.csv` file contains line-by-line predictions for items in Begin-Inside-Outside (BIO) style tags. Other files contain item-specific text.
 
-### About 10-K files
+### About 10-K reports
 A 10-K report is an annual report filed by publicly traded companies with the U.S. Securities and Exchange Commission (SEC). It provides a comprehensive overview of the company's financial performance and is more detailed than an annual report. Key items of a 10-K report include:
 
 * **Item 1 (Business)**: Describes the company's main operations, products, and services.
