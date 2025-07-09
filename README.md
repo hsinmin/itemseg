@@ -15,8 +15,8 @@ The input (`--input`) can be either a local file or a URL pointing to the SEC we
 Itemseg supports the following item segmentation approaches:
 * **crf**: Conditional Random Field. Recommended for machines without a GPU.
 * **lstm**: Bi-directional Long Short-Term Memory.
-* **bert**: BERT encoder coupled with Bi-LSTM.
-* **chatgpt**: Uses OpenAI API and line-id-based prompting.
+* **bert**: BERT4ItemSeg; BERT encoder coupled with Bi-LSTM.
+* **chatgpt**: GPT4ItemSeg; Uses OpenAI API and line-id-based prompting.
 
 Both **lstm** and **bert** require a GPU to work at a reasonable speed. You will need to setup the GPU hardware and driver before using these approaches. You can still use itemseg to process 10-K reports without GPUs by selecting the **crf** approach. 
 
