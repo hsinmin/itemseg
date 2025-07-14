@@ -34,8 +34,9 @@ import pathlib
 
 html2txt_type = "inscriptis"
 
+# url0 = "http://www.im.ntu.edu.tw/~lu/data/itemseg/"
 def get_resource(dest="__home__", check_only=False, verbose=1, 
-                 url0 = "http://www.im.ntu.edu.tw/~lu/data/itemseg/"):
+                 url0 = "http://nebula.lu.im.ntu.edu.tw/itemseg/"):
     files = ['crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite',
              'word2vecmodel_10kq3a_epoch_5',
              'word2vecmodel_10kq3a_epoch_5.syn1neg.npy',
@@ -81,7 +82,8 @@ def main():
     parser.add_argument("--get_resource", dest="get_resource", 
                         action="store_true",
                         help="Download resource files")
-    default_resource_url = "http://www.im.ntu.edu.tw/~lu/data/itemseg/"
+    # default_resource_url = "http://www.im.ntu.edu.tw/~lu/data/itemseg/"
+    default_resource_url = "http://nebula.lu.im.ntu.edu.tw/itemseg/"
     parser.add_argument("--resource_url", dest="resource_url", type=str,
                         default=default_resource_url,
                         help=f"Set URL to download resource files. Default: {default_resource_url}")
