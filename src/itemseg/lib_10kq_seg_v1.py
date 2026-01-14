@@ -1,3 +1,19 @@
+"""
+Library for 10-K/10-Q SEC Filing Item Segmentation (Version 1)
+
+This module provides functionality for processing and segmenting SEC 10-K and 10-Q
+filings into their constituent items (Items 1-15).
+
+Key Components:
+- Text preprocessing: HTML stripping, Unicode-to-ASCII conversion, table/noise filtering
+- EDGAR header parsing: Extract filing metadata (company name, dates, SIC codes)
+- Feature engineering: Position-based, word-based, and regex-based features for item detection
+- Neural network models: PyTorch sequence tagging models with attention mechanisms
+- Training & evaluation: Training loops, validation, metrics computation (precision, recall, F1)
+- Item extraction: Extract and save specific items from segmented filings
+- Performance utilities: Timer and progress tracking for long-running operations
+"""
+
 from datetime import datetime
 import numpy as np
 import torch
@@ -15,31 +31,77 @@ from io import StringIO
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence, PackedSequence
 import pandas as pd
 
-# setup tokenizer
-word_tokenizer = nltk.tokenize.wordpunct_tokenize
+# Global tokenizer configuration
+word_tokenizer = nltk.tokenize.wordpunct_tokenize  # Standard word tokenizer
+
+# English punctuation marks for text processing
 eng_punc = ['~', '\\', '>', '<', '@', '|', '+', '.', '?', '!', ':','=', '*', '-', ',', '(', ')', '[', ']', '{', '}', '/', '$', '%', '&', ';', '"', "'"]
-re_float = re.compile('([+-]?\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?')
-punc_splus = re.compile(r'[=_\s.-]{2,}')
+
+# Regex patterns for text cleaning
+re_float = re.compile('([+-]?\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?')  # Matches floating point numbers
+punc_splus = re.compile(r'[=_\s.-]{2,}')  # Matches 2+ repeated punctuation/whitespace
 
 class MLStripper(HTMLParser):
+    """
+    HTML tag stripper that removes all HTML markup from text.
+
+    Extends HTMLParser to extract only the text content from HTML,
+    discarding all tags, attributes, and formatting.
+
+    OBSOLETE: Do not use. This implementation may be replaced in future versions.
+    """
     def __init__(self):
         super().__init__()
         self.reset()
         self.strict = False
-        self.convert_charrefs= True
-        self.text = StringIO()
+        self.convert_charrefs= True  # Convert HTML entities to unicode
+        self.text = StringIO()  # Buffer to accumulate text content
+
     def handle_data(self, d):
+        """Handle text data between HTML tags."""
         self.text.write(d)
+
     def get_data(self):
+        """Return the accumulated text content."""
         return self.text.getvalue()
 
 def strip_tags(html):
+    """
+    Strip all HTML tags from input text, keeping only text content.
+    This function is only used in simple case (pure text filings).
+    Do not use this function on HTML filings.
+
+    Args:
+        html: String containing HTML markup
+
+    Returns:
+        String with all HTML tags removed
+
+    OBSOLETE: Do not use. This function may be replaced in future versions.
+    """
     s = MLStripper()
     s.feed(html)
     return s.get_data()
 
 def write_item_file(args, lines, pred_ext):
-    
+    """
+    Extract items from predicted tags and write to separate output files.
+
+    This function extracts specific items (1, 1A, 2-14) from segmented filing text
+    based on predicted sequence tags and writes each item to a separate file.
+
+    Args:
+        args: Arguments object containing:
+            - outfn_type: Comma-separated list of items to output (e.g., "item1,item2")
+            - outputdir: Output directory for item files
+            - outfn_prefix: Prefix for output filenames
+        lines: List of text lines from the filing
+        pred_ext: List of predicted tags (e.g., ['B1', 'I1', 'O', 'B2', ...])
+
+    Output:
+        Writes files named "{prefix}_1.txt", "{prefix}_1A.txt", etc. to outputdir
+    """
+    # Extract all items using Begin/Inside tags (B/I notation)
     b1_str, b1_nl = item_extract(lines, pred_ext, ['B1', 'I1'])    
     b1_wlen = word_len(b1_str)
     b1a_str, b1a_nl = item_extract(lines, pred_ext, ['B1A', 'I1A'])
@@ -142,6 +204,24 @@ def write_item_file(args, lines, pred_ext):
 
 
 def parse_edgar_header(sec_header):
+    """
+    Parse EDGAR SEC filing header to extract metadata.
+
+    Extracts company information and filing details from the standardized
+    header section of SEC filings.
+
+    Args:
+        sec_header: String containing the EDGAR header section
+
+    Returns:
+        Dictionary with keys:
+            - cname: Company conformed name
+            - ftype: Filing type (e.g., '10-K', '10-Q')
+            - cpr: Conformed period of report (YYYYMMDD)
+            - sic_desc: Standard Industrial Classification description
+            - sic_code: SIC code (integer, -1 if not found)
+    """
+    # Regular expressions for extracting header fields
     re0 = re.compile('CONFORMED SUBMISSION TYPE:\s+(\S+)')
     re1 = re.compile('CONFORMED PERIOD OF REPORT:\s+(\d+)')
     re2 = re.compile('FILED AS OF DATE:\s+(\d+)')
@@ -197,6 +277,19 @@ def parse_edgar_header(sec_header):
             'sic_code': sich}    
         
 def item_extract(lines, tags, target_tags):
+    """
+    Extract lines that match specified target tags.
+
+    Args:
+        lines: List of text lines
+        tags: List of tags corresponding to each line
+        target_tags: List of tags to extract (e.g., ['B1', 'I1'])
+
+    Returns:
+        Tuple of (extracted_text, num_lines):
+            - extracted_text: Newline-joined string of matching lines
+            - num_lines: Number of lines extracted
+    """
     outtext = []
     for i, atag in enumerate(tags):
         if atag in target_tags:
@@ -204,160 +297,194 @@ def item_extract(lines, tags, target_tags):
     return "\n".join(outtext), len(outtext)
 
 def word_len(text):
+    """
+    Count the number of meaningful words in text (excluding pure punctuation).
+
+    Args:
+        text: Input string
+
+    Returns:
+        Integer count of words containing at least one letter or digit
+    """
     nonPunct = re.compile('.*[A-Za-z0-9].*')  # must contain a letter or digit
     filtered = [w for w in tokenize.word_tokenize(text) if nonPunct.match(w)]
     wlen = len(filtered)
     return wlen
 
-# translate text to ascii
 def translate2ascii(text):
-        # to string
-        clean_text2 = text.decode('utf-8')
-        clean_text2 = clean_text2.replace(u"’", "'")
-        clean_text2 = clean_text2.replace(u"“", '"')
-        clean_text2 = clean_text2.replace(u"”", '"')
-        clean_text2 = clean_text2.replace(u"•", '*')
-        clean_text2 = clean_text2.replace(u"§", 'SS')
-        clean_text2 = clean_text2.replace(u"—", '-')
-        clean_text2 = clean_text2.replace(u"–", '-')
-        clean_text2 = clean_text2.replace(u"‐", '-')
+    """
+    Convert Unicode text to ASCII by replacing common special characters.
 
-        clean_text2 = clean_text2.replace(u"®", '(R)')
-        clean_text2 = clean_text2.replace(u"°", ' ')
-        clean_text2 = clean_text2.replace(u"€", '$')
-        clean_text2 = clean_text2.replace(u"†", '+')
-        clean_text2 = clean_text2.replace(u"¨", '..')
-        clean_text2 = clean_text2.replace(u"þ", ' ')
-        clean_text2 = clean_text2.replace(u"‘", "'")
-        clean_text2 = clean_text2.replace(u"£", " ")
-        clean_text2 = clean_text2.replace(u"·", "*")
-        clean_text2 = clean_text2.replace(u"©", "(C)")
-        
-        clean_text2 = clean_text2.replace(u"¾", "3/4")        
-        clean_text2 = clean_text2.replace(u"½", "1/2")
-        clean_text2 = clean_text2.replace(u"¢", "c/")
-        # 
-        
-        clean_text2 = clean_text2.replace(u"\u0080", "(E)")
-        clean_text2 = clean_text2.replace(u"\u0086", "+")
-        clean_text2 = clean_text2.replace(u"\u0091", "'")
-        clean_text2 = clean_text2.replace(u"\u0092", "'")
-        clean_text2 = clean_text2.replace(u"\u0093", '"')
-        clean_text2 = clean_text2.replace(u"\u0094", '"')
-        clean_text2 = clean_text2.replace(u"\u0095", '*')
-        clean_text2 = clean_text2.replace(u"\u0096", '-')
-        clean_text2 = clean_text2.replace(u"\u0097", '-')
-        clean_text2 = clean_text2.replace(u"\u0098", '~')
-        clean_text2 = clean_text2.replace(u"\u0099", 'TM')
-        
-        clean_text2 = clean_text2.replace(u"\u2010", '-')
-        clean_text2 = clean_text2.replace(u"\u2011", '-')
-        clean_text2 = clean_text2.replace(u"\u2012", '-')
-        clean_text2 = clean_text2.replace(u"\u2013", '-')
-        clean_text2 = clean_text2.replace(u"­", '-')
-        
+    Handles various Unicode characters commonly found in SEC filings:
+    - Smart quotes to straight quotes
+    - Em/en dashes to hyphens
+    - Accented characters to base letters
+    - Trademark symbols to (TM), (R), (C)
+    - Non-ASCII punctuation and symbols
 
-        LATIN_LETTERS = {
-            u'\N{LATIN SMALL LETTER DOTLESS I}': 'i',
-            u'\N{LATIN SMALL LETTER S WITH CEDILLA}': 's',
-            u'\N{LATIN SMALL LETTER C WITH CEDILLA}': 'c',
-            u'\N{LATIN SMALL LETTER G WITH BREVE}': 'g',
-            u'\N{LATIN SMALL LETTER O WITH DIAERESIS}': 'o',
-            u'\N{LATIN SMALL LETTER U WITH DIAERESIS}': 'u',
-            u'\N{LATIN SMALL LETTER A WITH GRAVE}' : 'a',
-            u'\N{LATIN SMALL LETTER A WITH ACUTE}' : 'a',
-            u'\N{LATIN SMALL LETTER A WITH CIRCUMFLEX}' : 'a',
-            u'\N{LATIN SMALL LETTER A WITH TILDE}' : 'a',
-            u'\N{LATIN SMALL LETTER A WITH DIAERESIS}' : 'a',
-            u'\N{LATIN SMALL LETTER A WITH RING ABOVE}' : 'a',
-            u'\N{LATIN SMALL LETTER A WITH MACRON}': 'a',
-            u'\N{LATIN SMALL LETTER A WITH BREVE}': 'a',
-            u'\N{LATIN SMALL LETTER AE}' : 'ae',
-            u'\N{LATIN SMALL LETTER E WITH GRAVE}' : 'e',
-            u'\N{LATIN SMALL LETTER E WITH ACUTE}' : 'e',
-            u'\N{LATIN SMALL LETTER E WITH CIRCUMFLEX}' : 'e',
-            u'\N{LATIN SMALL LETTER E WITH DIAERESIS}' : 'e',
-            u'\N{LATIN SMALL LETTER I WITH GRAVE}' : 'i',
-            u'\N{LATIN SMALL LETTER I WITH ACUTE}' : 'i',
-            u'\N{LATIN SMALL LETTER I WITH CIRCUMFLEX}' : 'i',
-            u'\N{LATIN SMALL LETTER I WITH DIAERESIS}' : 'i',
-            u'\N{LATIN SMALL LETTER N WITH TILDE}' : 'n',
-            u'\N{LATIN SMALL LETTER O WITH GRAVE}' : 'o',
-            u'\N{LATIN SMALL LETTER O WITH ACUTE}' : 'o',
-            u'\N{LATIN SMALL LETTER O WITH CIRCUMFLEX}' : 'o',
-            u'\N{LATIN SMALL LETTER O WITH TILDE}' : 'o',
-            u'\N{LATIN SMALL LETTER O WITH STROKE}': 'o',
-            u'\N{LATIN SMALL LETTER U WITH GRAVE}': 'u',
-            u'\N{LATIN SMALL LETTER U WITH ACUTE}': 'u',
-            u'\N{LATIN SMALL LETTER U WITH CIRCUMFLEX}': 'u',
-            u'\N{LATIN SMALL LETTER Y WITH ACUTE}': 'y',
-            u'\N{LATIN SMALL LETTER Y WITH DIAERESIS}': 'y'
-        }
+    Args:
+        text: Byte string containing Unicode text
 
-        CAPITAL_LATIN_LETTERS = {
-            u'\N{LATIN CAPITAL LETTER I WITH DOT ABOVE}': 'I',
-            u'\N{LATIN CAPITAL LETTER S WITH CEDILLA}': 'S',
-            u'\N{LATIN CAPITAL LETTER C WITH CEDILLA}': 'C',
-            u'\N{LATIN CAPITAL LETTER G WITH BREVE}': 'G',
-            u'\N{LATIN CAPITAL LETTER O WITH DIAERESIS}': 'O',
-            u'\N{LATIN CAPITAL LETTER U WITH DIAERESIS}': 'U',
-            u'\N{LATIN CAPITAL LETTER A WITH GRAVE}' : 'A',
-            u'\N{LATIN CAPITAL LETTER A WITH ACUTE}' : 'A',
-            u'\N{LATIN CAPITAL LETTER A WITH CIRCUMFLEX}' : 'A',
-            u'\N{LATIN CAPITAL LETTER A WITH TILDE}' : 'A',
-            u'\N{LATIN CAPITAL LETTER A WITH DIAERESIS}' : 'A',
-            u'\N{LATIN CAPITAL LETTER A WITH RING ABOVE}' : 'A',
-            u'\N{LATIN CAPITAL LETTER A WITH MACRON}': 'A',
-            u'\N{LATIN CAPITAL LETTER A WITH BREVE}': 'A',
-            u'\N{LATIN CAPITAL LETTER AE}' : 'AE',
-            u'\N{LATIN CAPITAL LETTER E WITH GRAVE}' : 'E',
-            u'\N{LATIN CAPITAL LETTER E WITH ACUTE}' : 'E',
-            u'\N{LATIN CAPITAL LETTER E WITH CIRCUMFLEX}' : 'E',
-            u'\N{LATIN CAPITAL LETTER E WITH DIAERESIS}' : 'E',
-            u'\N{LATIN CAPITAL LETTER I WITH GRAVE}' : 'I',
-            u'\N{LATIN CAPITAL LETTER I WITH ACUTE}' : 'I',
-            u'\N{LATIN CAPITAL LETTER I WITH CIRCUMFLEX}' : 'I',
-            u'\N{LATIN CAPITAL LETTER I WITH DIAERESIS}' : 'I',
-            u'\N{LATIN CAPITAL LETTER N WITH TILDE}' : 'N',
-            u'\N{LATIN CAPITAL LETTER O WITH GRAVE}' : 'O',
-            u'\N{LATIN CAPITAL LETTER O WITH ACUTE}' : 'O',
-            u'\N{LATIN CAPITAL LETTER O WITH CIRCUMFLEX}' : 'O',
-            u'\N{LATIN CAPITAL LETTER O WITH TILDE}' : 'O',
-            u'\N{LATIN CAPITAL LETTER O WITH STROKE}': 'O',
-            u'\N{LATIN CAPITAL LETTER U WITH GRAVE}': 'U',
-            u'\N{LATIN CAPITAL LETTER U WITH ACUTE}': 'U',
-            u'\N{LATIN CAPITAL LETTER U WITH CIRCUMFLEX}': 'U',
-            u'\N{LATIN CAPITAL LETTER Y WITH ACUTE}': 'Y',
-            u'\N{LATIN CAPITAL LETTER Y WITH DIAERESIS}': 'Y'
-        }
-
-        for key, value in LATIN_LETTERS.items():
-            # print(f"{key} --> {value}")
-            clean_text2 = clean_text2.replace(key, value)
-        for key, value in CAPITAL_LATIN_LETTERS.items():
-            # print(f"{key} --> {value}")
-            clean_text2 = clean_text2.replace(key, value)
-
-        # last resort
-        # clean_text2 = unicodedata.normalize('NFKD', clean_text2).encode('ascii', 'replace')
-        clean_text2 = unicodedata.normalize('NFKD', clean_text2).encode('ascii', 'xmlcharrefreplace')
-
-        # replace all remaining non-ascii char to space, format example: &#1086;
-        clean_text2 = re.sub('&#\d+;', ' ', clean_text2.decode('ascii'))
-        # for debugging only, easy identification of missed unicode characters
-        # clean_text2 = re.sub('&#\d+;', '????', clean_text2.decode('ascii'))
-
-        return clean_text2
+    Returns:
+        ASCII-compatible string with special chars replaced
+    """
+    # to string
+    clean_text2 = text.decode('utf-8')
+    clean_text2 = clean_text2.replace(u"’", "'")
+    clean_text2 = clean_text2.replace(u"“", '"')
+    clean_text2 = clean_text2.replace(u"”", '"')
+    clean_text2 = clean_text2.replace(u"•", '*')
+    clean_text2 = clean_text2.replace(u"§", 'SS')
+    clean_text2 = clean_text2.replace(u"—", '-')
+    clean_text2 = clean_text2.replace(u"–", '-')
+    clean_text2 = clean_text2.replace(u"‐", '-')
+    clean_text2 = clean_text2.replace(u"®", '(R)')
+    clean_text2 = clean_text2.replace(u"°", ' ')
+    clean_text2 = clean_text2.replace(u"€", '$')
+    clean_text2 = clean_text2.replace(u"†", '+')
+    clean_text2 = clean_text2.replace(u"¨", '..')
+    clean_text2 = clean_text2.replace(u"þ", ' ')
+    clean_text2 = clean_text2.replace(u"‘", "'")
+    clean_text2 = clean_text2.replace(u"£", " ")
+    clean_text2 = clean_text2.replace(u"·", "*")
+    clean_text2 = clean_text2.replace(u"©", "(C)")
     
+    clean_text2 = clean_text2.replace(u"¾", "3/4")        
+    clean_text2 = clean_text2.replace(u"½", "1/2")
+    clean_text2 = clean_text2.replace(u"¢", "c/")
     
+    clean_text2 = clean_text2.replace(u"\u0080", "(E)")
+    clean_text2 = clean_text2.replace(u"\u0086", "+")
+    clean_text2 = clean_text2.replace(u"\u0091", "'")
+    clean_text2 = clean_text2.replace(u"\u0092", "'")
+    clean_text2 = clean_text2.replace(u"\u0093", '"')
+    clean_text2 = clean_text2.replace(u"\u0094", '"')
+    clean_text2 = clean_text2.replace(u"\u0095", '*')
+    clean_text2 = clean_text2.replace(u"\u0096", '-')
+    clean_text2 = clean_text2.replace(u"\u0097", '-')
+    clean_text2 = clean_text2.replace(u"\u0098", '~')
+    clean_text2 = clean_text2.replace(u"\u0099", 'TM')
+    
+    clean_text2 = clean_text2.replace(u"\u2010", '-')
+    clean_text2 = clean_text2.replace(u"\u2011", '-')
+    clean_text2 = clean_text2.replace(u"\u2012", '-')
+    clean_text2 = clean_text2.replace(u"\u2013", '-')
+    clean_text2 = clean_text2.replace(u"­", '-')
+    
+    LATIN_LETTERS = {
+        u'\N{LATIN SMALL LETTER DOTLESS I}': 'i',
+        u'\N{LATIN SMALL LETTER S WITH CEDILLA}': 's',
+        u'\N{LATIN SMALL LETTER C WITH CEDILLA}': 'c',
+        u'\N{LATIN SMALL LETTER G WITH BREVE}': 'g',
+        u'\N{LATIN SMALL LETTER O WITH DIAERESIS}': 'o',
+        u'\N{LATIN SMALL LETTER U WITH DIAERESIS}': 'u',
+        u'\N{LATIN SMALL LETTER A WITH GRAVE}' : 'a',
+        u'\N{LATIN SMALL LETTER A WITH ACUTE}' : 'a',
+        u'\N{LATIN SMALL LETTER A WITH CIRCUMFLEX}' : 'a',
+        u'\N{LATIN SMALL LETTER A WITH TILDE}' : 'a',
+        u'\N{LATIN SMALL LETTER A WITH DIAERESIS}' : 'a',
+        u'\N{LATIN SMALL LETTER A WITH RING ABOVE}' : 'a',
+        u'\N{LATIN SMALL LETTER A WITH MACRON}': 'a',
+        u'\N{LATIN SMALL LETTER A WITH BREVE}': 'a',
+        u'\N{LATIN SMALL LETTER AE}' : 'ae',
+        u'\N{LATIN SMALL LETTER E WITH GRAVE}' : 'e',
+        u'\N{LATIN SMALL LETTER E WITH ACUTE}' : 'e',
+        u'\N{LATIN SMALL LETTER E WITH CIRCUMFLEX}' : 'e',
+        u'\N{LATIN SMALL LETTER E WITH DIAERESIS}' : 'e',
+        u'\N{LATIN SMALL LETTER I WITH GRAVE}' : 'i',
+        u'\N{LATIN SMALL LETTER I WITH ACUTE}' : 'i',
+        u'\N{LATIN SMALL LETTER I WITH CIRCUMFLEX}' : 'i',
+        u'\N{LATIN SMALL LETTER I WITH DIAERESIS}' : 'i',
+        u'\N{LATIN SMALL LETTER N WITH TILDE}' : 'n',
+        u'\N{LATIN SMALL LETTER O WITH GRAVE}' : 'o',
+        u'\N{LATIN SMALL LETTER O WITH ACUTE}' : 'o',
+        u'\N{LATIN SMALL LETTER O WITH CIRCUMFLEX}' : 'o',
+        u'\N{LATIN SMALL LETTER O WITH TILDE}' : 'o',
+        u'\N{LATIN SMALL LETTER O WITH STROKE}': 'o',
+        u'\N{LATIN SMALL LETTER U WITH GRAVE}': 'u',
+        u'\N{LATIN SMALL LETTER U WITH ACUTE}': 'u',
+        u'\N{LATIN SMALL LETTER U WITH CIRCUMFLEX}': 'u',
+        u'\N{LATIN SMALL LETTER Y WITH ACUTE}': 'y',
+        u'\N{LATIN SMALL LETTER Y WITH DIAERESIS}': 'y'
+    }
+    CAPITAL_LATIN_LETTERS = {
+        u'\N{LATIN CAPITAL LETTER I WITH DOT ABOVE}': 'I',
+        u'\N{LATIN CAPITAL LETTER S WITH CEDILLA}': 'S',
+        u'\N{LATIN CAPITAL LETTER C WITH CEDILLA}': 'C',
+        u'\N{LATIN CAPITAL LETTER G WITH BREVE}': 'G',
+        u'\N{LATIN CAPITAL LETTER O WITH DIAERESIS}': 'O',
+        u'\N{LATIN CAPITAL LETTER U WITH DIAERESIS}': 'U',
+        u'\N{LATIN CAPITAL LETTER A WITH GRAVE}' : 'A',
+        u'\N{LATIN CAPITAL LETTER A WITH ACUTE}' : 'A',
+        u'\N{LATIN CAPITAL LETTER A WITH CIRCUMFLEX}' : 'A',
+        u'\N{LATIN CAPITAL LETTER A WITH TILDE}' : 'A',
+        u'\N{LATIN CAPITAL LETTER A WITH DIAERESIS}' : 'A',
+        u'\N{LATIN CAPITAL LETTER A WITH RING ABOVE}' : 'A',
+        u'\N{LATIN CAPITAL LETTER A WITH MACRON}': 'A',
+        u'\N{LATIN CAPITAL LETTER A WITH BREVE}': 'A',
+        u'\N{LATIN CAPITAL LETTER AE}' : 'AE',
+        u'\N{LATIN CAPITAL LETTER E WITH GRAVE}' : 'E',
+        u'\N{LATIN CAPITAL LETTER E WITH ACUTE}' : 'E',
+        u'\N{LATIN CAPITAL LETTER E WITH CIRCUMFLEX}' : 'E',
+        u'\N{LATIN CAPITAL LETTER E WITH DIAERESIS}' : 'E',
+        u'\N{LATIN CAPITAL LETTER I WITH GRAVE}' : 'I',
+        u'\N{LATIN CAPITAL LETTER I WITH ACUTE}' : 'I',
+        u'\N{LATIN CAPITAL LETTER I WITH CIRCUMFLEX}' : 'I',
+        u'\N{LATIN CAPITAL LETTER I WITH DIAERESIS}' : 'I',
+        u'\N{LATIN CAPITAL LETTER N WITH TILDE}' : 'N',
+        u'\N{LATIN CAPITAL LETTER O WITH GRAVE}' : 'O',
+        u'\N{LATIN CAPITAL LETTER O WITH ACUTE}' : 'O',
+        u'\N{LATIN CAPITAL LETTER O WITH CIRCUMFLEX}' : 'O',
+        u'\N{LATIN CAPITAL LETTER O WITH TILDE}' : 'O',
+        u'\N{LATIN CAPITAL LETTER O WITH STROKE}': 'O',
+        u'\N{LATIN CAPITAL LETTER U WITH GRAVE}': 'U',
+        u'\N{LATIN CAPITAL LETTER U WITH ACUTE}': 'U',
+        u'\N{LATIN CAPITAL LETTER U WITH CIRCUMFLEX}': 'U',
+        u'\N{LATIN CAPITAL LETTER Y WITH ACUTE}': 'Y',
+        u'\N{LATIN CAPITAL LETTER Y WITH DIAERESIS}': 'Y'
+    }
+    for key, value in LATIN_LETTERS.items():
+        # print(f"{key} --> {value}")
+        clean_text2 = clean_text2.replace(key, value)
+    for key, value in CAPITAL_LATIN_LETTERS.items():
+        # print(f"{key} --> {value}")
+        clean_text2 = clean_text2.replace(key, value)
+    # last resort
+    # clean_text2 = unicodedata.normalize('NFKD', clean_text2).encode('ascii', 'replace')
+    clean_text2 = unicodedata.normalize('NFKD', clean_text2).encode('ascii', 'xmlcharrefreplace')
+    # replace all remaining non-ascii char to space, format example: &#1086;
+    clean_text2 = re.sub('&#\d+;', ' ', clean_text2.decode('ascii'))
+    # for debugging only, easy identification of missed unicode characters
+    # clean_text2 = re.sub('&#\d+;', '????', clean_text2.decode('ascii'))
+    return clean_text2
+    
+# import pdb
+
 def pretty_text(pure_text1):
+    """
+    Clean and filter text by removing table fragments, noise, and repetitive lines.
+
+    This function applies heuristic filters to remove non-content lines such as:
+    - Table rows with excessive spaces/punctuation
+    - Lines with many uppercase characters (likely headers/tables)
+    - Lines with high ratio of numbers (likely tables)
+    - Frequently repeated lines (likely boilerplate)
+
+    Args:
+        pure_text1: Input text string with newlines
+
+    Returns:
+        Cleaned text string with noise lines replaced by empty lines
+    """
     lines = pure_text1.split('\n')
     line_count = 0
     all_lines_clean = []
 
-    empty_linm1 = 0
+    empty_linm1 = 0  # Track consecutive empty lines
     for aline in lines:
         aline_orig = aline.strip()
+        
+
         aline = aline.strip().lower()
         if len(aline) > 2:
             line_count = line_count + 1
@@ -403,6 +530,9 @@ def pretty_text(pure_text1):
                         pass
 
             #print "  Summary: seq=%d; %d (float) out of %d words" % (seq[0], floatlen, wordlen)
+            # if aline_orig.find("The Company has a large") >= 0:
+            #     print(f" -- {aline_orig}")
+            #     pdb.set_trace()
 
             if wordlen > 0:
                 float_ratio = float(floatlen) / wordlen
@@ -412,9 +542,13 @@ def pretty_text(pure_text1):
             # keep short lines (wordlen <=4); 2021-8-25 (side effect is many table residual, not doing this for now
             if (item_count == 0) and ((plen >= 10) or (uppercount >= 25)):
                 # if many surplus space or many uppercase characters, reject the line
-                if(empty_linm1==0):
+                if (wordlen > 50):
+                    all_lines_clean.append(aline_orig)
+                    empty_linm1 = 0
+                else:
                     all_lines_clean.append("")
-                empty_linm1+=1
+                    # print(f"rejected {aline_orig}")
+                    empty_linm1+=1
             elif plen == 0:
                 # no extra space, accept
                 all_lines_clean.append(aline_orig)
@@ -430,7 +564,8 @@ def pretty_text(pure_text1):
                     empty_linm1=0
                     #print "zero-rate=%f" % zero_rate
                 else:
-                    #print "reject (%d/%d; zero=%f): %s (%s)" % (floatlen, wordlen, zero_rate, aline.strip(), lineword)
+                    # print ("reject (%d/%d; zero=%f): %s (%s)" % (floatlen, wordlen, zero_rate, aline.strip(), lineword))
+                    # print(f"rejected {aline_orig}")
                     if(empty_linm1==0):
                         all_lines_clean.append("")
                     empty_linm1+=1
@@ -441,6 +576,7 @@ def pretty_text(pure_text1):
             #the case when this line does not have much...
             if(empty_linm1==0):
                 all_lines_clean.append("")
+                # print(f"rejected {aline_orig}")
             empty_linm1 +=1
             #pass
 
@@ -466,15 +602,35 @@ def pretty_text(pure_text1):
     pure_text2 = pure_text2.strip()
     return(pure_text2)
 
-    
+
 class BiLSTM_Tok(nn.Module):
-    def __init__(self, input_dim, tag_to_ix, hidden_dim, 
+    """
+    Bidirectional LSTM with attention for sequence tagging of SEC filing items.
+
+    This model processes word embeddings through a BiLSTM and applies attention
+    mechanisms to aggregate token-level representations into line-level representations.
+
+    Architecture:
+        Input -> BiLSTM -> Attention -> Linear -> Output tags
+
+    Supports three attention methods:
+        - "complete": Full attention mechanism with learned weights
+        - "simple": Use only the first token (linehead) of each line
+        - "simple2": Use the second token of each line
+    """
+    def __init__(self, input_dim, tag_to_ix, hidden_dim,
                  device, attention_method="complete", num_layers=1):
-        '''
-        parameters:
-            tag_to_ix: tag to index, i.e., label_mapping
-            hidden dimension: BILSM hidden size
-        '''
+        """
+        Initialize the BiLSTM model with attention.
+
+        Args:
+            input_dim: Dimension of input features (word embeddings + position features)
+            tag_to_ix: Dictionary mapping tags to indices (label vocabulary)
+            hidden_dim: Hidden dimension size for LSTM (will be split bidirectionally)
+            device: PyTorch device (cuda/cpu)
+            attention_method: Attention type - "complete", "simple", or "simple2"
+            num_layers: Number of LSTM layers (default=1)
+        """
         super(BiLSTM_Tok, self).__init__()
         self.hidden_dim = hidden_dim
         self.tag_to_ix = tag_to_ix
@@ -495,12 +651,22 @@ class BiLSTM_Tok(nn.Module):
         self.u_omega = nn.Parameter(torch.Tensor(hidden_dim, 1))# u_omega([256, 1])
         nn.init.uniform_(self.w_omega, -0.1, 0.1)
         nn.init.uniform_(self.u_omega, -0.1, 0.1)        
-    def attention_net(self, x, doc_mask):       #x:[batch, seq_len, hidden_dim] torch.Size([6040, 1, 256])
-        # method="complete" --> the original attention implementation
-        # method="simple" --> just take the first token in a line and pass it out
-        # method="simple2" --> just take the first token next to the linehead in a line and pass it out
-        
-        
+    def attention_net(self, x, doc_mask):
+        """
+        Apply attention mechanism to aggregate token representations into line representations.
+
+        Args:
+            x: Token-level LSTM outputs, shape [total_doc_tokens, 1, hidden_dim]
+            doc_mask: Tuple of indices marking end positions of each line
+
+        Returns:
+            Line-level representations, shape [num_lines, hidden_dim]
+
+        Methods:
+            - "complete": Full attention with learned weights (softmax over tokens in each line)
+            - "simple": Take only the first token (linehead) of each line
+            - "simple2": Take the second token of each line
+        """
         if self.att_method == "complete":
             # x: torch.Size([26833, 1, 128])
             # w_omega: # torch.Size([128, 128])
@@ -594,28 +760,55 @@ class BiLSTM_Tok(nn.Module):
         lstm_feats = self.hidden2tag(attn_output) # lstm_out [seq_len, hidden_dim]
         return lstm_feats
         
-def my_word_tokenizer(cur_sent, method="split", 
+def my_word_tokenizer(cur_sent, method="split",
                       trun_line_len=0, addheader="_LINEHEAD_"):
+    """
+    Tokenize a sentence with optional header addition and truncation.
+
+    Args:
+        cur_sent: Input sentence string
+        method: Tokenization method - "split" (whitespace) or "word_tokenizer" (NLTK)
+        trun_line_len: Truncate to this many tokens (0 = no truncation)
+        addheader: Header token to prepend (empty string = no header)
+
+    Returns:
+        List of tokens
+    """
     if addheader != "":
         cur_sent = addheader + " " + cur_sent
-    
+
     if method == "word_tokenizer":
         alltoks = word_tokenize(cur_sent)
     elif method == "split":
         alltoks = cur_sent.split()
     else:
         raise(Exception(f"unsupported tokenizer method {method}"))
-        
+
     if trun_line_len > 0:
         alltoks = alltoks[0:trun_line_len]
-        
+
     return alltoks
 
 
 def gen_doc_feature(lines, word2vec_model):
+    """
+    Generate word embedding features for a document with position information.
+
+    Converts lines to sequences of word embeddings augmented with positional features.
+
+    Args:
+        lines: List of text lines
+        word2vec_model: Gensim Word2Vec model with .wv attribute
+
+    Returns:
+        Tuple of (doc_embed, doc_mask):
+            - doc_embed: List of embeddings, shape [total_tokens, embedding_dim+3]
+                         Each embedding includes [sent_pos, sent_pos_back, tok_pos, word_vec...]
+            - doc_mask: Tuple of indices marking the end position of each line
+    """
     doc_embed = []
     doc_mask = []
-    
+
     nline_doc = len(lines)
     # sen_pos_percentile
     # sen_pos_percentile.append(int(100 * sen_i / len(doc)))
@@ -660,14 +853,30 @@ def gen_doc_feature(lines, word2vec_model):
 
 # Bi-LSTM
 class BiLSTM2(nn.Module):
+    """
+    Bidirectional LSTM for sequence tagging with batch processing support.
+    (To be coupled with BERT)
 
-    # def __init__(self, vocab_size, tag_to_ix, embedding_dim, hidden_dim):
-    def __init__(self, input_dim, tag_to_ix, hidden_dim, device, batch_size=4, num_layers=1, dropout=0.5):  # tag_to_ix就是label_mapping
-        '''
-        parameters:
-            tag_to_ix: 標籤對應標號的字典
-            hidden dimension: BILSM 隱藏層的神經元數量
-        '''
+    This model processes batches of sequences through a BiLSTM and applies
+    a linear layer for tag prediction. Supports packed sequences for efficient
+    handling of variable-length inputs.
+
+    Architecture:
+        Input -> BiLSTM (with dropout) -> Linear -> Output tags
+    """
+    def __init__(self, input_dim, tag_to_ix, hidden_dim, device, batch_size=4, num_layers=1, dropout=0.5):
+        """
+        Initialize the BiLSTM model.
+
+        Args:
+            input_dim: Dimension of input features
+            tag_to_ix: Dictionary mapping tags to indices (label vocabulary)
+            hidden_dim: Hidden dimension size for LSTM (split bidirectionally)
+            device: PyTorch device (cuda/cpu)
+            batch_size: Default batch size (default=4)
+            num_layers: Number of LSTM layers (default=1)
+            dropout: Dropout probability (default=0.5)
+        """
         super(BiLSTM2, self).__init__()
         self.hidden_dim = hidden_dim
         self.tag_to_ix = tag_to_ix
@@ -677,14 +886,14 @@ class BiLSTM2(nn.Module):
         self.device = device
         # self.embedding_dim = embedding_dim
         # self.vocab_size = vocab_size
-        # self.adjust_input_dim = nn.Linear(input_dim, 803)  # 將 768 調整為 803
+        # self.adjust_input_dim = nn.Linear(input_dim, 803)  # adjust 768 to 803
         ## dimension: batch_size, num_line, dim        
         self.lstm = nn.LSTM(input_dim, hidden_dim // 2,  # we uses input_dim instead of embedding_dim
                             num_layers = num_layers, bidirectional = True, 
                             batch_first = True, dropout = dropout)
 
 
-        # 將 LSTM 的輸出映射到標籤空間
+        # Map LSTM output to label space
         self.hidden2tag = nn.Linear(hidden_dim, self.tagset_size)
         self.dropout = nn.Dropout(dropout)
     def init_hidden(self, batch_size=0):
@@ -704,7 +913,7 @@ class BiLSTM2(nn.Module):
         else:
             batch_size = sentence.shape[0]    
         self.hidden = self.init_hidden(batch_size=batch_size) # initial state and hidden state
-        lstm_out, self.hidden = self.lstm(sentence, self.hidden) # 最後輸出結果和最後的隱藏狀態
+        lstm_out, self.hidden = self.lstm(sentence, self.hidden) # final output
 
         if isinstance(sentence, PackedSequence):
             lstm_out, _ = pad_packed_sequence(lstm_out, batch_first=True)
@@ -719,9 +928,32 @@ class BiLSTM2(nn.Module):
 # criterion = nn.CrossEntropyLoss(ignore_index=padding_idx)
 criterion = nn.CrossEntropyLoss()
 
-def train(subtrain_x, subtrain_y, valid_x, valid_y, 
-          model, hyperparameters, device, 
+def train(subtrain_x, subtrain_y, valid_x, valid_y,
+          model, hyperparameters, device,
           model_outdir="./segmodels/bilstm_crf_att_wordebd_0/"):
+    """
+    Train the sequence tagging model with validation and early stopping.
+
+    Trains the model for multiple epochs, validates after each epoch, saves the best model,
+    and implements early stopping based on validation accuracy.
+
+    Args:
+        subtrain_x: List of training documents (each is a list of lines)
+        subtrain_y: List of training labels (each is a list of tags per line)
+        valid_x: List of validation documents
+        valid_y: List of validation labels
+        model: PyTorch model to train
+        hyperparameters: Dict containing:
+            - n_epochs: Maximum number of training epochs
+            - optimizer: Optimizer name (e.g., 'Adam')
+            - optim_hparas: Optimizer parameters (e.g., {'lr': 0.001})
+            - early_stop: Early stopping patience
+        device: PyTorch device (cuda/cpu)
+        model_outdir: Directory to save model checkpoints
+
+    Returns:
+        Tuple of (best_valid_acc, best_model_filename, best_status, avg_epoch_time)
+    """
     n_epochs = hyperparameters['n_epochs']
 
     # optimizer
@@ -766,7 +998,7 @@ def train(subtrain_x, subtrain_y, valid_x, valid_y,
             x, doc_mask = gen_doc_feature(x)
             
             x, y = torch.tensor(np.array(x)), torch.tensor(np.array(y))
-            x, y = x.float(), y   # 這次是分類，不用float  # .long() debug CUDA error: CUBLAS_STATUS_INTERNAL_ERROR可用
+            x, y = x.float(), y   
             x, y = x.to(device), y.to(device=device, dtype=torch.int64)
             model.zero_grad()
 
@@ -880,8 +1112,31 @@ def valid_and_test(valid_x, valid_y, model, hyperparameters, device):
     total_loss = total_loss / len(valid_x)      # compute averaged loss
     return total_loss        
 
-# plot
 def actual_vs_pred(valid_x, valid_y, model, hyperparameters, device):
+    """
+    Evaluate model predictions against ground truth labels.
+
+    Computes per-document and aggregate performance metrics including accuracy,
+    precision, recall, and F1 scores for each item type.
+
+    Args:
+        valid_x: List of validation documents (each is a list of lines)
+        valid_y: List of validation labels (each is a list of tags per line)
+        model: PyTorch model to evaluate
+        hyperparameters: Dictionary of hyperparameters
+        device: PyTorch device (cuda/cpu)
+
+    Returns:
+        Tuple of (micro_acc, macro_acc, total_loss, core_f1, all_f1, preds, targets, perf_details):
+            - micro_acc: Micro-averaged accuracy across all lines
+            - macro_acc: Macro-averaged accuracy across documents
+            - total_loss: Average cross-entropy loss
+            - core_f1: F1 score for core items (1, 1A, 3, 5, 7, 7A, 8, 10, 11)
+            - all_f1: F1 score averaged across all items
+            - preds: List of predicted tag sequences
+            - targets: List of ground truth tag sequences
+            - perf_details: List of per-document performance dictionaries
+    """
     model.eval()
     preds, targets = [], []
     total_counts = 0
@@ -945,6 +1200,24 @@ def actual_vs_pred(valid_x, valid_y, model, hyperparameters, device):
     return acc_, acc_macro, total_loss, core_f1, all_f1, preds, targets, tmpperf
 
 def train_valid_test_uid_text(valid_fold, use_ntrain_fold=0):
+    """
+    Split data into train/valid/test sets by fold, returning UIDs and text.
+
+    Uses 10-fold cross-validation scheme where:
+    - valid_fold: Used for validation
+    - test_fold: valid_fold + 1 (wraps to 0 if > 9)
+    - Remaining folds: Used for training
+
+    Args:
+        valid_fold: Fold index for validation (0-9)
+        use_ntrain_fold: Limit training to first N folds (0 = use all available)
+
+    Returns:
+        Tuple of (train_uid, valid_uid, test_uid, train_doc, valid_doc, test_doc)
+        where each is a list of UIDs or document texts
+
+    Note: Requires global variables copy_df and fold_index to be defined
+    """
     test_fold = valid_fold + 1
     allfold = set(list(range(10)))
     if test_fold > 9: test_fold = test_fold % 10
@@ -975,16 +1248,25 @@ def train_valid_test_uid_text(valid_fold, use_ntrain_fold=0):
     return train_uid, valid_uid, test_uid, train_doc, valid_doc, test_doc
 
 
-# not used: , trun_line_len=0    
-def train_valid_test(valid_fold, use_ntrain_fold=0):    
-    # do a train-valid-test split
-    # rule: valid_fold = i; test_fold = i+1; the remaining is training fold; 
-    # use_ntrain_fold = 0 --> use all available training data; 
-    #      set use_ntrain_fold = 1 to use only the first training fold; 
-    #      set use_ntrain_fold = k to use only the first k training folds;
-    # not used; trun_line_len: use a max of trun_line_len tokens; set 0 to use all tokens
+def train_valid_test(valid_fold, use_ntrain_fold=0):
+    """
+    Split data into train/valid/test sets by fold, returning X and Y data.
 
-    # valid_fold = 8
+    Uses 10-fold cross-validation scheme where:
+    - valid_fold: Used for validation
+    - test_fold: valid_fold + 1 (wraps to 0 if > 9)
+    - Remaining folds: Used for training
+
+    Args:
+        valid_fold: Fold index for validation (0-9)
+        use_ntrain_fold: Limit training to first N folds (0 = use all available)
+
+    Returns:
+        Tuple of (subtrain_x, subtrain_y, valid_x, valid_y, test_x, test_y)
+        where each is a list of documents/labels
+
+    Note: Requires global variables X, Y, and fold_index to be defined
+    """
     test_fold = valid_fold + 1
     allfold = set(list(range(10)))
     if test_fold > 9: test_fold = test_fold % 10
@@ -1024,8 +1306,23 @@ def train_valid_test(valid_fold, use_ntrain_fold=0):
     
 
 class gclock():
-    
+    """
+    Generic timer for tracking progress and estimating time to completion.
+
+    Tracks elapsed time, average time per lap, and estimates total time
+    when total_laps is provided. Useful for monitoring long-running operations
+    like training loops.
+    """
     def __init__(self, total_laps=0, prefix="GTimer", keep_all_marks=False, stime=None):
+        """
+        Initialize the timer.
+
+        Args:
+            total_laps: Total number of laps/iterations expected (0 for unknown)
+            prefix: Prefix string for output messages
+            keep_all_marks: Whether to keep all lap timestamps (default False)
+            stime: Start time (default is current time)
+        """
         self.prefix = prefix
         if stime == None:
             self.stime = datetime.now()
@@ -1033,12 +1330,19 @@ class gclock():
             self.stime = stime
         self.mtime = stime
         self.total_laps = total_laps
-        self.lcount = 0
-        self.avg_ltime = 0.0
-        self.lmarks = []
+        self.lcount = 0  # Lap count
+        self.avg_ltime = 0.0  # Average time per lap
+        self.lmarks = []  # List of lap timestamps (if keepall=True)
         self.keepall = keep_all_marks
-        self.est_total = 0
+        self.est_total = 0  # Estimated total time
     def mark_lap(self, increment=1, mtime=None):
+        """
+        Mark completion of one or more laps and update timing statistics.
+
+        Args:
+            increment: Number of laps completed (default=1)
+            mtime: Mark time (default is current time)
+        """
         if mtime == None:
             self.mtime = datetime.now()
         else:
@@ -1050,7 +1354,14 @@ class gclock():
             self.lmarks.append(mtime)
         if self.total_laps > 0:
             self.est_total = self.avg_ltime * self.total_laps
+
     def report(self):
+        """
+        Print timing report with average time, elapsed time, remaining time, and total time.
+
+        Returns:
+            Dictionary with keys 'avg_time' and 'total_time'
+        """
         print(f"{self.prefix}: AT/ET/RT/TT="\
               f"{self.avg_ltime:.2f}/{self.et:.2f}/"\
               f"{self.est_total-self.et:.2f}/{self.est_total:.2f} mins "\
@@ -1060,6 +1371,17 @@ class gclock():
 
 
 def metricCal(y_pred, y_true, target):
+    """
+    Calculate precision, recall, and F1 for a specific item/target.
+
+    Args:
+        y_pred: List of predicted tags
+        y_true: List of ground truth tags
+        target: Dictionary with 'beg' and 'end' tags (e.g., {'beg': 'B1', 'end': 'I1'})
+
+    Returns:
+        Tuple of (precision, recall, f1)
+    """
     pre_list = set([index for index, value in enumerate(y_pred) if value in target.values()])
     true_list = set([index for index, value in enumerate(y_true) if value in target.values()])
     precision = len(pre_list.intersection(true_list)) / len(pre_list)
@@ -1071,11 +1393,21 @@ def metricCal(y_pred, y_true, target):
     return(precision, recall, f1)
 
 def metricCal2(y_pred, y_true, target):
+    """
+    Calculate precision, recall, F1, and accuracy for a specific item/target.
+
+    Args:
+        y_pred: List of predicted tags
+        y_true: List of ground truth tags
+        target: Dictionary with 'beg' and 'end' tags (e.g., {'beg': 'B1', 'end': 'I1'})
+
+    Returns:
+        Tuple of (precision, recall, f1, accuracy)
+    """
     pre_list = set([index for index, value in enumerate(y_pred) if value in target.values()])
     true_list = set([index for index, value in enumerate(y_true) if value in target.values()])
     precision = len(pre_list.intersection(true_list)) / len(pre_list)
     recall = len(pre_list.intersection(true_list)) / len(true_list)
-    # accuracy = len(pre_list.intersection(true_list)) / len(y_true)
     
     y_pred_bin = []
     for vv in y_pred:
@@ -1103,6 +1435,23 @@ def metricCal2(y_pred, y_true, target):
     return(precision, recall, f1, accuracy)
 
 def trec_val_cross(y_pred, y_true):
+    """
+    Calculate performance metrics for all item types in 10-K/10-Q filings.
+
+    Computes precision, recall, F1, and accuracy for each item (1-15, including A/B variants).
+    Handles cases where items are not present in the document.
+
+    Args:
+        y_pred: List of predicted tags for a document
+        y_true: List of ground truth tags for a document
+
+    Returns:
+        Dictionary mapping item names to performance dicts with keys:
+            'pre': Precision (or 1.0/0.0 for non-existent items)
+            'recall': Recall (or 1.0/0.0 for non-existent items)
+            'f1': F1 score (or 1.0/0.0 for non-existent items)
+            'acc': Accuracy (or 1.0/0.0 for non-existent items)
+    """
     alltasks = {'Item1':{'beg':'B1','end':'I1'},'Item1A':{'beg':'B1A','end':'I1A'},'Item1B':{'beg':'B1B','end':'I1B'},
                 'Item2':{'beg':'B2','end':'I2'},'Item3':{'beg':'B3','end':'I3'},'Item4':{'beg':'B4','end':'I4'},
                 'Item5':{'beg':'B5','end':'I5'},'Item6':{'beg':'B6','end':'I6'},'Item7':{'beg':'B7','end':'I7'},
@@ -1155,7 +1504,22 @@ def trec_val_cross(y_pred, y_true):
     return(allitem)
 
 import re
+
 def f1_perf(fold_perf):
+    """
+    Extract core and overall F1 scores from performance metrics.
+
+    Core items are the most important sections: 1, 1A, 3, 5, 7, 7A, 8, 10, 11.
+
+    Args:
+        fold_perf: Pandas Series or dict containing performance metrics
+                   with keys like 'Item1_f1', 'Item2_f1', etc.
+
+    Returns:
+        Tuple of (mean_core_f1, mean_all_f1):
+            - mean_core_f1: Average F1 score for core items
+            - mean_all_f1: Average F1 score for all items
+    """
     core_f1 = []
     all_f1 = []
     # coreitem = ['Item1', 'Item1A', 'Item3', 'Item5', 'Item7', 'Item7A', 'Item8', 'Item10', 'Item11']
@@ -1175,6 +1539,23 @@ def f1_perf(fold_perf):
     return mean_core_f1, mean_all_f1
 
 def createFeatures(doc):
+    """
+    Create hand-crafted features for each line in a document.
+
+    Extracts various features useful for item segmentation:
+    - Position features (forward/backward percentile)
+    - Item markers (starts with "ITEM")
+    - Length features (word count)
+    - Signature detection
+    - Regex-based item name and number matching
+    - Content proximity features (nearby ITEM mentions)
+
+    Args:
+        doc: List of text lines (strings)
+
+    Returns:
+        Pandas DataFrame with feature columns for each line
+    """
     sen_pos_percentile = []
     back_sen_pos_percentile = []
     first_is_item = []
@@ -1185,7 +1566,7 @@ def createFeatures(doc):
     content_1 = []
     content_2 = []
     re_name_list = []  # regular_expression name
-    re_number_list = []  # regular_expression number    
+    re_number_list = []  # regular_expression number
     for sen_i, sen in enumerate(doc):
 
         # sen_pos_percentile
@@ -1200,8 +1581,8 @@ def createFeatures(doc):
         else:
             first_is_item.append(0)
 
-        # head_pos: 越大越可能不是head (超過threshold就是1) 代替裡面各種threshold
-        headthreshold_ratio = 0.3  # 0 等於不看
+        # head_pos: 
+        headthreshold_ratio = 0.3  # 0 = ignore
         headthreshold = headthreshold_ratio * len(doc)
         headpos.append(min(sen_i, headthreshold) / headthreshold * 1.0)
 
@@ -1259,11 +1640,7 @@ def createFeatures(doc):
             content_2.append(0)
             
 
-        
-        # 我在baseline(regularEX)判斷時設了不少threshold(content, signature, part two)，但是在這個情況下是不是先不用
-        # 設threshold了，有統一擺了一個 headthreshold
-
-        # unigram and biagram 顏秀
+        # unigram and biagram Yen-shou
         # sentence bert
         
 
@@ -1292,14 +1669,32 @@ def createFeatures(doc):
     return total_features_df
 
 def itemShow(text):
+    """
+    Check if line starts with "ITEM" (case-insensitive).
+
+    Args:
+        text: Text line to check
+
+    Returns:
+        1 if line starts with "ITEM", 0 otherwise
+    """
     criteria = re.findall(r'^\s*item',text[0:15],re.IGNORECASE)
     if len(criteria) == 1 :
         return(1)
     else:
         return(0)
-        
+
 
 def signatureCheck(text):
+    """
+    Check if line contains the word "signature" (case-insensitive).
+
+    Args:
+        text: Text line to check
+
+    Returns:
+        1 if "signature" found, 0 otherwise
+    """
     criteria = re.findall(r'signature',text,re.IGNORECASE)
     if len(criteria) != 0:
         return(1)
@@ -1307,6 +1702,20 @@ def signatureCheck(text):
         return(0)
 
 def itemNameCheck(prefix, suffix, text):
+    """
+    Check if line matches item name patterns using regex.
+
+    Detects items by their textual descriptions (e.g., "ITEM 1. Business").
+
+    Args:
+        prefix: Prefix for feature names (e.g., "contain_")
+        suffix: Suffix for feature names (e.g., "_name")
+        text: Text line to check
+
+    Returns:
+        Dictionary mapping feature names to binary values (0 or 1)
+        Keys are formatted as "{prefix}{item}{suffix}"
+    """
     alltasks = {
         'item 1': r'^item[\s\w.-]*business',
         'item 1A': r'^item[\s\w.-]*risk\s+factor',
@@ -1331,20 +1740,34 @@ def itemNameCheck(prefix, suffix, text):
         'item 14': r'^item[\s\w.-]*principal[\s]*account[\s\w]*fees[\s\w]*services',
         'item 15': r'^item\s*15[.\s-]*exhibit[\w\s]*schedules'
         }
-    item_name_features = {}  # 這就是 sentence 轉換後的特徵，一筆資料
+    item_name_features = {}  # sentence feature, one instance
     text = text.strip()
     for item, condition in alltasks.items():
-        criteria = re.findall(condition, text, re.IGNORECASE)  # 抓回符合規則的那段string
+        criteria = re.findall(condition, text, re.IGNORECASE)  # get what is matched
         # print(criteria)
-        if len(criteria) == 1:  # 多過一個就不要，因為 item 那句只會出現一次，也不會重複出現
+        if len(criteria) == 1:  # item only show once. 
             item_name_features[prefix+item+suffix] = 1
         else:        
             item_name_features[prefix+item+suffix] = 0
     return item_name_features
 
 def itemNumberCheck(prefix, suffix, text):
+    """
+    Check if line contains item numbers using regex.
+
+    Detects items by their numeric identifiers (e.g., "ITEM 1", "ITEM 1A").
+
+    Args:
+        prefix: Prefix for feature names (e.g., "contain_")
+        suffix: Suffix for feature names (e.g., "_number")
+        text: Text line to check
+
+    Returns:
+        Dictionary mapping feature names to binary values (0 or 1)
+        Keys are formatted as "{prefix}{tag}{suffix}" for tags 1, 1A, 2-6
+    """
     tag_list = ["1", "1A", "2", "3", "4", "5", "6"]
-    pre150 = text[0:50]
+    pre150 = text[0:50]  # Check only first 50 characters
     item_number_features = {}
     criteria = re.findall(r'ITEM[s]?\s*[0-9]+[(]?[A-Za-z]?[)]?[.]?\s?',pre150,re.IGNORECASE) #  For most cases
     if len(criteria) !=0:
@@ -1362,8 +1785,23 @@ def itemNumberCheck(prefix, suffix, text):
     return item_number_features
 
 
-# map the predicted tags back to original line sequence
 def expand_pred_to_lines(pred, seqmap, lines):
+    """
+    Map predicted tags back to the original line sequence and fill gaps.
+
+    This function handles cases where some lines were not processed (marked as 'X')
+    by propagating tags from surrounding predicted lines.
+
+    Args:
+        pred: List of predicted tags (length = number of processed lines)
+        seqmap: List mapping pred indices to original line indices
+        lines: Original list of all lines
+
+    Returns:
+        List of tags (length = len(lines)) with gaps filled
+        - 'X' markers are replaced based on surrounding tag context
+        - If preceded by a 'B' tag, propagates appropriate 'I' tag
+    """
     pred_ext = ['X'] * len(lines)
     for i, tag in enumerate(pred):
         i2 = seqmap[i]

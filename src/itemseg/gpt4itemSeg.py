@@ -1,9 +1,21 @@
+"""
+10-K Item Segmentation Script using GPT-4
+
+This script uses OpenAI's GPT-4 to identify and segment different items (sections)
+in SEC 10-K financial reports. It processes text with line numbers and identifies
+where each standard 10-K item begins (e.g., Item 1. Business, Item 1A. Risk Factors, etc.).
+
+The script uses few-shot learning with 5 examples to teach the model how to
+recognize item boundaries in 10-K documents.
+"""
+
 import nltk
 from openai import OpenAI
 import pickle
 import os
 
-# Few shots (five shots)
+# Few-shot prompt instruction (contains 5 examples)
+# This instruction teaches GPT-4 how to identify starting lines of 10-K items
 instruction = """I am an excellent financial professional. \
 The task is to identify the starting lines of items \
 in 10-K report. 
@@ -584,37 +596,68 @@ Use comma (",") to separate the two columns. Include no additional white space.
 =====
 """
 
-# for the estimation of token length
+# Token estimation constants
+# Average tokens per word ratio for estimating prompt length
 avg_tok_per_word = 1.25
+# Maximum allowed prompt length in tokens (GPT-4 context limit consideration)
 prompt_max_len = 120000
 
+# Base prompt text that includes the instruction and examples
 text_final_pre = instruction
+# Maximum number of tokens to keep per line when truncating long lines
 trun_len = 30
 
 def truncate_line(intext, ntok=100):
-    # intext = "This document covers the company's compliance with accounting standards, including fair value measurements, derivative instruments, income taxes, and legal contingencies. It also includes notes that provide additional context and detail on the financial statements, methodologies used in financial measurements, and significant accounting policies."
+    """
+    Truncate a text line to a maximum number of words.
+
+    Args:
+        intext (str): Input text to truncate
+        ntok (int): Maximum number of words to keep
+
+    Returns:
+        str: Truncated text containing at most ntok words
+
+    Note: Despite the parameter name 'ntok', this actually truncates by word count,
+          not token count. This is a simple word-based truncation.
+    """
     intexttok = intext.split(" ")
     outtext = " ".join(intexttok[0:ntok])
     return outtext
 
-# truncate_line("this is  a test sentence.", ntok=100)
-
 
 def preprocess_doc(args, lines):
+    """
+    Preprocess a document by adding line numbers and ensuring the prompt fits within token limits.
+
+    This function iteratively truncates lines if the total prompt exceeds the maximum
+    allowed token length. It will attempt up to 5 times to fit the document within limits.
+
+    Args:
+        args: Argument object containing verbose flag for logging
+        lines (list): List of text lines from the 10-K document
+
+    Returns:
+        str: The final formatted prompt with instruction, examples, and numbered lines
+    """
     this_trun_len = trun_len
     nline = len(lines)
 
-    # 這裡為 doc 添加行號，並且檢查 prompt token 數量是否超過限制，最多跑五次
+    # Add line numbers to document and check if prompt token count exceeds limit
+    # Will iterate up to 5 times, reducing line length each time if needed
     for _ in range(5):
         text_final = text_final_pre
 
+        # Build the prompt by adding line numbers to each document line
         for i in range(nline):
             aline = lines[i]
             if len(aline) == 0:
                 continue
 
+            # Format: "line_number truncated_content\n"
             text_final += f'{i} {truncate_line(aline, ntok=this_trun_len)}\n'
-        
+
+        # Estimate token count to ensure prompt fits within limits
         if args.verbose > 0:
             print(f'prompt Character length = {len(text_final)}')
         words = nltk.word_tokenize(text_final)
@@ -622,20 +665,34 @@ def preprocess_doc(args, lines):
         if args.verbose > 0:
             print(f"prompt nltk token count and est. token len = {len(words)} / {est_token}")
 
-        # 假設預估的 tokens 數量超過最大限制，則縮減 trun_len 的長度再跑一次
+        # If estimated token count exceeds max limit, reduce line truncation length and retry
         if est_token > prompt_max_len:
             this_trun_len -= 5
             if args.verbose > 0:
                 print(f"    prompt too long, reduce max line len to {this_trun_len}")
+            # Stop if truncation length becomes too small (minimum 3 words per line)
             if this_trun_len < 3:
                 if args.verbose > 0:
                     print(f" trun_len < 3 ; ({this_trun_len}); stop")
         else:
+            # Token count is acceptable, break out of loop
             break
-    
+
     return text_final
 
 def openai(text_final, apikey):
+    """
+    Send the formatted prompt to OpenAI's GPT-4 API for item segmentation.
+
+    Args:
+        text_final (str): The complete formatted prompt with instruction and document
+        apikey (str): OpenAI API key for authentication
+
+    Returns:
+        OpenAI response object: Contains the model's predictions for item line numbers
+
+    Note: Uses 'gpt-4o' model (optimized GPT-4 variant)
+    """
     msg = [{"role": "user", "content": f"{text_final}\n =====\nOutput:"}]
 
     print('--Contact openai api...')
@@ -648,6 +705,29 @@ def openai(text_final, apikey):
     return response
 
 def map_lines_to_tags(response, lines):
+    """
+    Convert GPT-4 response into BIO-tagged labels for each line.
+
+    This function parses the model's output (format: "Item X,line_number") and creates
+    BIO tags where:
+    - 'B' prefix = Beginning of an item
+    - 'I' prefix = Inside/continuation of an item
+    - 'O' = Outside any item
+
+    Args:
+        response: OpenAI API response object containing model predictions
+        lines (list): Original document lines
+
+    Returns:
+        list: BIO tags for each line (e.g., ['O', 'B1', 'I1', 'B1A', 'I1A', ...])
+
+    Example output format:
+        - 'B1' = Beginning of Item 1
+        - 'I1' = Inside Item 1
+        - 'B1A' = Beginning of Item 1A
+        - 'O' = Not part of any item
+    """
+    # Parse response content: each line has format "Item X,line_number" or "Item X,NA"
     items = response.choices[0].message.content.split('\n')
     itemsegid = []
     for a_item in items:
@@ -655,32 +735,42 @@ def map_lines_to_tags(response, lines):
         if len(tmp1) < 2:
             continue
 
+        # Extract and normalize item key (e.g., "Item 1A" -> "1A")
         key = tmp1[0].strip()
         key = key.upper()
         key = key.replace('.', '')
         key = key.replace('ITEM', '')
         key = key.strip()
 
+        # Extract line number value
         try:
             value = int(tmp1[1].strip())
-            if value >= len(lines): # unrealistic case, just skip
+            if value >= len(lines):  # Skip unrealistic line numbers
                 continue
         except:
+            # Skip entries with 'NA' or invalid values
             continue
 
         itemsegid.append([key, value])
     
     if len(itemsegid) == 0:
-        # No Item Found!!! Set all lines to 'O'
+        # No items found - mark all lines as outside any item
         predlabel = ['O'] * len(lines)
     else:
+        # Sort items by line number (ascending order)
         itemsegid2 = sorted(itemsegid, key=lambda x: x[1])
 
+        # Initialize all lines as 'O' (outside)
         predlabel = ['O'] * len(lines)
         lastline = len(lines)
+
+        # Process items in reverse order (from end to beginning)
+        # This ensures each item extends until the next item starts
         for a_item in itemsegid2[::-1]:
+            # Mark the starting line with 'B' prefix (Beginning)
             predlabel[a_item[1]] = 'B' + a_item[0]
-            
+
+            # Mark all subsequent lines until next item with 'I' prefix (Inside)
             for tmpid in range(a_item[1]+1, lastline):
                 predlabel[tmpid] = 'I' + a_item[0]
             lastline = a_item[1]

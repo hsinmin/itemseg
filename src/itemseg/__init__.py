@@ -1,163 +1,203 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+10-K Item Segmentation Tool
 
+This module provides functionality to segment SEC 10-K filings into their constituent items
+using various machine learning approaches (CRF, LSTM, BERT, ChatGPT).
+"""
+
+# Standard library imports
 import platform
-import sys, re, os
+import sys
 import re
 import os
-import requests
-import pandas as pd
-from inscriptis import get_text
-import html
-import pycrfsuite
 import glob
 import json
-import gensim
-import torch
 import pickle
+import pathlib
+import urllib.parse
+import html
+
+# Third-party imports
+import requests
+import pandas as pd
+import numpy as np
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import numpy as np
+import pycrfsuite
+import gensim
+from inscriptis import get_text
+from argparse import ArgumentParser
+
+# Local imports
 from itemseg import lib_10kq_seg_v1 as lib10kq
 from itemseg import crf_feature_lib_v8 as crf_feature
 from itemseg import gpt4itemSeg
-from argparse import ArgumentParser
-import urllib.parse
-import pathlib
-# import unicodedata
-# import nltk
-# from torch.utils.data import Dataset, DataLoader
-# from nltk import tokenize
-# from sklearn.metrics import classification_report
-# import time, collections, random
 
-
+# Configuration: HTML to text conversion method
 html2txt_type = "inscriptis"
 
-# url0 = "http://www.im.ntu.edu.tw/~lu/data/itemseg/"
-def get_resource(dest="__home__", check_only=False, verbose=1, 
-                 url0 = "http://nebula.lu.im.ntu.edu.tw/itemseg/"):
-    files = ['crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite',
-             'word2vecmodel_10kq3a_epoch_5',
-             'word2vecmodel_10kq3a_epoch_5.syn1neg.npy',
-             'word2vecmodel_10kq3a_epoch_5.wv.vectors.npy',
-             'tag2023_v1_labelidmap.pkl',
-             'tag2021_v3_labelidmap.pkl',  # for bert
-             'bert_model/bert_model.pth',
-             'lstm_model/h256len100lay2lr3complete_args.json',
-             'lstm_model/h256len100lay2lr3complete_e020_vac97.31_vce0.08639.pth']
-    
+def get_resource(dest="__home__", check_only=False, verbose=1,
+                 url0="http://nebula.lu.im.ntu.edu.tw/itemseg/"):
+    """
+    Download required model resource files from remote server.
+
+    Args:
+        dest (str): Destination directory for downloaded files.
+                   "__home__" will resolve to ~/itemseg/resource/
+        check_only (bool): If True, only check for resources without downloading
+        verbose (int): Verbosity level (0=silent, 1=normal, 2=detailed)
+        url0 (str): Base URL for downloading resource files
+
+    Returns:
+        None. Downloads files to the specified destination directory.
+    """
+    # List of required model files to download
+    files = ['crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite',  # CRF model
+             'word2vecmodel_10kq3a_epoch_5',  # Word2Vec model base
+             'word2vecmodel_10kq3a_epoch_5.syn1neg.npy',  # Word2Vec negative sampling weights
+             'word2vecmodel_10kq3a_epoch_5.wv.vectors.npy',  # Word2Vec word vectors
+             'tag2023_v1_labelidmap.pkl',  # Label mapping for LSTM
+             'tag2021_v3_labelidmap.pkl',  # Label mapping for BERT/CRF
+             'bert_model/bert_model.pth',  # BERT model weights
+             'lstm_model/h256len100lay2lr3complete_args.json',  # LSTM model config
+             'lstm_model/h256len100lay2lr3complete_e020_vac97.31_vce0.08639.pth']  # LSTM weights
+
+    # Resolve destination path
     if dest == "__home__":
-        # replace with real home path
-        # dest = str(pathlib.Path.home()) + "/itemseg/resource/"
+        # Use user's home directory
         dest = os.path.join(str(pathlib.Path.home()), "itemseg", "resource")
 
     if check_only == False:
-        # todo: implement check resource... (if this necessary?)
+        # Download mode: fetch all resource files
         print(f"Download resource to {dest}")
+
+        # Create directory structure if it doesn't exist
         if not os.path.exists(dest):
             os.makedirs(dest)
             os.makedirs(os.path.join(dest, "lstm_model"))
             os.makedirs(os.path.join(dest, "bert_model"))
-        # start download files
+
+        # Download each resource file
         err_count = 0
         for atarget in files:
             url = url0 + "resource/" + atarget
             outfn = os.path.join(dest, atarget)
+
             if verbose >= 1:
                 print(f"Getting {url}")
 
+            # Fetch file from remote server
             r = requests.get(url, allow_redirects=True)
-            if r.status_code == 200:            
+            if r.status_code == 200:
+                print(f"   write to {outfn}")
                 open(outfn, 'wb').write(r.content)
             else:
+                print(f"   Error {r.status_code}: Cannot access {url}")
                 err_count += 1
-            
-        if err_count == 0: print("Resource download completed")
+
+        if err_count == 0:
+            print("Resource download completed")
         
 
 def main():
+    """
+    Main entry point for the 10-K item segmentation tool.
+
+    This function:
+    1. Parses command-line arguments
+    2. Downloads or verifies resource files
+    3. Loads input 10-K filing (from URL or local file)
+    4. Preprocesses the document (HTML/text conversion, cleaning)
+    5. Loads the specified ML model (CRF/LSTM/BERT/ChatGPT)
+    6. Performs item segmentation
+    7. Outputs results to CSV and individual item files
+
+    Returns:
+        int: Exit code (0 for success, non-zero for errors)
+    """
     parser = ArgumentParser()
-    
-    parser.add_argument("--get_resource", dest="get_resource", 
+
+    # Resource management arguments
+    parser.add_argument("--get_resource", dest="get_resource",
                         action="store_true",
-                        help="Download resource files")
-    # default_resource_url = "http://www.im.ntu.edu.tw/~lu/data/itemseg/"
+                        help="Download resource files (models, embeddings, etc.)")
     default_resource_url = "http://nebula.lu.im.ntu.edu.tw/itemseg/"
     parser.add_argument("--resource_url", dest="resource_url", type=str,
                         default=default_resource_url,
                         help=f"Set URL to download resource files. Default: {default_resource_url}")
-    # input options
-    # currently does not support local file yet
+    # Input source arguments
     parser.add_argument("--input", dest="input", type=str,
-                        # default='',
-                        # required=True,
-                        help="path to local input file or EDGAR filing URL; e.g. https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt")
+                        help="Path to local input file or EDGAR filing URL; "
+                             "e.g. https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt")
     parser.add_argument("--input_type", dest="input_type", type=str,
-                         # default='auto',
-                         help="[raw|html|native_text|cleaned_text] \n" 
-                              "    raw: Complete submission text file. See example at https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt\n"
-                              "    html: HTML report. See example file at https://www.sec.gov/ix?doc=/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm\n"
-                              "native_text: text report. See example at https://www.sec.gov/Archives/edgar/data/789019/000103221001501099/d10k.txt\n"
-                               "cleaned_text: 10-K report converted to the pure text formated with tables removed.")
+                         help="Input file format type:\n"
+                              "  raw: Complete submission text file with SEC headers\n"
+                              "  html: HTML report from EDGAR\n"
+                              "  native_text: Native text format 10-K\n"
+                              "  cleaned_text: Pre-processed text with tables removed")
     parser.add_argument("--user_agent_str", dest="user_agent_str", type=str,
                          default='N/A',
-                         help="User Agent String per SEC's request. E.g. 'Sample Company Name AdminContact@<sample company domain>.com'")
+                         help="User Agent string required by SEC for automated requests. "
+                              "Format: 'Company Name Contact@domain.com'")
 
-    # output options
+    # Output configuration arguments
     parser.add_argument("--outputdir", dest="outputdir", type=str,
                         default="./segout01/",
-                        help="model output dir")
+                        help="Directory where output files will be saved")
     parser.add_argument("--outfn_prefix", dest="outfn_prefix", type=str,
                         default="AUTO",
-                        help="output filename prefix (AUTO=let the script decide)")
+                        help="Prefix for output filenames (AUTO=derive from input filename)")
     parser.add_argument("--outfn_type", dest="outfn_type", type=str,
                         default="csv,item1,item1a,item3,item7",
-                        help="output file type; csv=line-by-line prediction and text; itemx=per item text in a single file")
+                        help="Output file types (comma-separated): "
+                             "csv=line-by-line predictions; itemX=extract specific items to separate files")
 
-    # model options
+    # Model selection and configuration arguments
     parser.add_argument("--method", dest="method", type=str,
                         default='crf',
-                        help="[crf|lstm|bert|chatgpt] Item segmentation method;"
-                             " crf: conditional random field, recommended for machine without a GPU; "
-                             " lstm: Bi-directional long short-term memory; "
-                             " bert: bert encoder coupled with bi-lstm; "
-                             " chatgpt: use openai api and line-id-based prompting.")
+                        help="Item segmentation method:\n"
+                             "  crf: Conditional Random Field (CPU-friendly, no GPU required)\n"
+                             "  lstm: Bidirectional LSTM (requires GPU for best performance)\n"
+                             "  bert: BERT encoder + BiLSTM (requires GPU)\n"
+                             "  chatgpt: OpenAI API with prompt-based segmentation")
     parser.add_argument("--word2vec", dest="word2vec", type=str,
                         default='./resource/word2vecmodel_10kq3a_epoch_5',
-                        help="File name of the word2vec model (gensim trained)")
+                        help="Path to Word2Vec model file (gensim format, used by LSTM)")
     parser.add_argument("--lstmpath", dest="lstmpath", type=str,
                         default="./resource/lstm_model",
-                        help="lstm model (path) for inference")
+                        help="Path to LSTM model directory containing weights and config")
     parser.add_argument("--crfpath", dest="crfpath", type=str,
                         default="./resource/crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite",
-                        help="CRF model (path) for inference")
+                        help="Path to trained CRF model file")
     parser.add_argument("--labelid_map", dest="labelid_map", type=str,
                         default='AUTO',
-                        help="labelid mapping file;")
-    parser.add_argument("--verbose", dest="verbose", default = 1, type = int,
-                        help="verbose level=0, 1, or 2; 0=silent, 2=many messages")
-    parser.add_argument("--debug", dest="debug", 
+                        help="Path to label-to-ID mapping pickle file (AUTO=auto-select based on method)")
+    parser.add_argument("--verbose", dest="verbose", default=1, type=int,
+                        help="Verbosity level: 0=silent, 1=normal, 2=detailed debug info")
+    parser.add_argument("--debug", dest="debug",
                         action="store_true",
-                        help="save in-progress files for debugging")
+                        help="Save intermediate processing files for debugging")
     parser.add_argument('--bertpath', dest='bertpath', type=str,
                         default='./resource/bert_model/bert_model.pth',
-                        help="BERT model (path) for inference")
-    # For chatgpt model start
+                        help="Path to BERT model weights file")
     parser.add_argument('--apikey', dest='apikey', type=str,
                         default=None,
-                        help='Your own openai api key for using chatgpt model.')
+                        help='OpenAI API key (required for chatgpt method)')
     
+    # Parse command-line arguments
     args = parser.parse_args()
     args.hostname = platform.node()
 
-    # set  user-invisiable parameters
-    # (mostly not used; should do a deeper cleanup)
+    # Set internal parameters (used by some models)
+    # Note: These are mostly legacy parameters, not exposed to CLI
     args.optimizer = "Adam"
-    args.lr = 0.0001
+    args.lr = 0.0001  # Learning rate (not used in inference)
     args.weight_decay = 0.0
-    args.num_layers = 2
-    args.hidden_dim = 256
+    args.num_layers = 2  # LSTM/BERT layers
+    args.hidden_dim = 256  # Hidden dimension for LSTM/BERT
 
     # test dynamic html page
     # args = parser.parse_args(args=['--input', 
@@ -187,49 +227,46 @@ def main():
     #                                "--method", "lstm"])
     
     
-    if args.verbose >=1:
+    # Display banner and version info
+    if args.verbose >= 1:
         print("itemseg: A tool for 10-K Item Segmentation")
         print("    Free to use for non-commercial purpose.")
-        # print("    Maintained by: Hsin-Min Lu (luim@ntu.edu.tw)")
-        # todo: add project URL
-        # print("    Please cite our work (https://arxiv.org/abs/2502.08875) "
-        #       "if you use this tool in your research.")
 
-    if args.verbose >=2:
+    if args.verbose >= 2:
         print("Arguments:", args)
-        
+
+    # Validate command-line arguments
     if (args.input is None) and (args.get_resource == False):
         parser.error("Need either --input or --get_resource")
-    
+
+    # Handle resource download mode
     if args.get_resource:
         get_resource()
         sys.exit(0)
-    
-    # now let's check input_type
+
+    # Validate input_type parameter
     if args.input_type is None:
         parser.error("Need to specify input_type")
 
     legal_input_type = ['raw', 'html', 'native_text', 'cleaned_text']
     if args.input_type not in legal_input_type:
-        parser.error(f"Illegal input type. Need to be one of these {legal_input_type}")
+        parser.error(f"Illegal input type. Must be one of: {legal_input_type}")
 
+    # Configure method and paths
     method = args.method
-    rdnseed = 52345
+    rdnseed = 52345  # Random seed for reproducibility
     resource_prefix = str(pathlib.Path.home()) + "/itemseg/"
 
-    # crf_model_fn = "resource/crf8f6_m5000c2_1f_200f06c1_0.00c2_1.00_m5000.crfsuite"
+    # Construct full paths to model resource files
     crf_model_fn = os.path.join(resource_prefix, args.crfpath)
-    # lstm_model_fn = "resource/lstm_model"
     lstm_model_fn = os.path.join(resource_prefix, args.lstmpath)
-    # word2vec_fn = "resource/word2vecmodel_10kq3a_epoch_5"
     word2vec_fn = os.path.join(resource_prefix, args.word2vec)
 
-    # label2id_fn = "resource/tag2023_v1_labelidmap.pkl"
-    # ./resource/tag2023_v1_labelidmap.pkl
+    # Auto-select appropriate label mapping based on method
     if args.labelid_map == "AUTO":
         if args.method in ["lstm"]:
             label2id_fn = os.path.join(resource_prefix, "resource/tag2023_v1_labelidmap.pkl")
-        elif args.method in ['crf', 'bert']:
+        elif args.method in ['crf', 'bert', 'chatgpt']:    # need to verify the chatgpt case
             label2id_fn = os.path.join(resource_prefix, "resource/tag2021_v3_labelidmap.pkl")
         else:
             print(f"Unknown method {args.method} for automatic labelid_map assignment")
@@ -237,47 +274,56 @@ def main():
     else:
         label2id_fn = os.path.join(resource_prefix, args.labelid_map)
 
-    bert_model_fn = os.path.join(resource_prefix, args.bertpath)        
-    
-    # check whether the resource files are readily available
-    res_files = [crf_model_fn, 
+    bert_model_fn = os.path.join(resource_prefix, args.bertpath)
+
+    # Verify that all required resource files exist
+    res_files = [crf_model_fn,
                  lstm_model_fn,
                  word2vec_fn,
-                 label2id_fn, 
+                 label2id_fn,
                  bert_model_fn]
     for ares in res_files:
         if os.path.exists(ares) == False:
-            print(f"Cannot find resource file {crf_model_fn}.\n" 
-                   "Did you foreget to download resource files with '--get_resource'?")
+            print(f"Cannot find resource file {ares}.\n"
+                   "Did you forget to download resource files with '--get_resource'?")
             sys.exit(300)
 
-    # create output dir if not exists
+    # Create output directory if it doesn't exist
     if not os.path.exists(args.outputdir):
         os.makedirs(args.outputdir)
 
+    # Determine compute device (GPU if available, otherwise CPU)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
     # ================================
-    # prepare the 10-k report
-    
-    if args.input.find("http") >=0:
+    # STEP 1: Load the 10-K filing
+    # ================================
+
+    # Determine if input is a URL or local file
+    if args.input.find("http") >= 0:
         src_type = "url"
     else:
-        src_type = "fn"    
+        src_type = "fn"  # filename
 
     if args.verbose >= 2:
         print("Source type is", src_type)
 
+    # Load input from local file
     if src_type == "fn":
-        # srcfn = args.input
         with open(args.input, "r") as fh:
             rawtext = fh.read()
-    elif src_type == "url":        
+
+    # Load input from URL
+    elif src_type == "url":
         srcurl = args.input
-        # do sec url translate
+
+        # Validate SEC.gov URL
         if srcurl.find("sec.gov/") < 0:
             if args.verbose >= 1:
                 print("Warning: this is not a sec.gov URL.")
-        if srcurl.find("sec.gov/ix?doc=/") >= 0:        
+
+        # Handle EDGAR interactive viewer URLs (convert to direct file URLs)
+        if srcurl.find("sec.gov/ix?doc=/") >= 0:
             srcurl = srcurl.replace("ix?doc=/", "")
             if args.verbose >= 1:
                 print("EDGAR dynamic URL detected. Apply URL translation.")
@@ -285,54 +331,63 @@ def main():
 
         print(f"Getting input file from {srcurl}")
 
+        # SEC requires User-Agent header for automated access
         if args.user_agent_str == "N/A":
             print("You need to specify user_agent_str per SEC's rule.")
             print("cf. https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data")
             sys.exit(200)
 
-        headers = {        
+        # Prepare HTTP headers for SEC compliance
+        headers = {
             "User-Agent": args.user_agent_str,
             "Accept-Encoding": "gzip, deflate",
             "host": "www.sec.gov"
             }
 
+        # Fetch the filing from SEC
         r = requests.get(srcurl, headers=headers)
         if args.verbose >= 2:
             print(f"URL respond code = {r.status_code}")
 
+        # Save raw response for debugging if requested
         if args.debug:
-            with open(os.path.join(args.outputdir, "rawfile.txt"), 
+            with open(os.path.join(args.outputdir, "rawfile.txt"),
                       "w", encoding="utf-8") as my_file:
                 my_file.write(r.text)
 
-        if(r.text == None):            
-            print(f"No response from target URL. Stop (response code = {r.status_code})")            
+        # Validate response
+        if(r.text == None):
+            print(f"No response from target URL. Stop (response code = {r.status_code})")
             sys.exit(100)
-        elif len(r.text)< 50:            
-            print(f"The length of filed text is too small (len(r.text)). Stop.") 
-            urltype = "HTML"
+        elif len(r.text) < 50:
+            print(f"The length of filed text is too small ({len(r.text)} chars). Stop.")
             sys.exit(101)
         elif r.text.find("Your Request Originates from an Undeclared Automated Tool") >= 0:
             print(f"Error: SEC denied undeclared automated tool!")
-            print(f"Header: {headers}")       
+            print(f"Header: {headers}")
             sys.exit(102)
         else:
             rawtext = r.text
-    # ---- Now we get rawtext; either from local file or url
-    # The next step is to verify and preprocess based on rawtext    #         
 
+    # ================================
+    # STEP 2: Detect and validate input type
+    # ================================         
+
+    # Try to detect SEC submission header (present in "raw" type files)
     par1 = re.compile('(<SEC-DOCUMENT>.*?</SEC-HEADER>)(.*)', re.M | re.S)
-    par1m1=par1.findall(rawtext)
+    par1m1 = par1.findall(rawtext)
+
     if len(par1m1) == 0:
+        # No SEC header found - must be HTML, native_text, or cleaned_text
         print("Cannot find header tags (SEC-DOCUMENT to SEC-HEADER). Assume to be user specified type.")
         if args.input_type == "raw":
             print(f"User specified input_type={args.input_type} but the header does not exist. Stop")
             sys.exit(191)
-        # urltype = "HTML"         
         urltype = args.input_type
     else:
-        sec_header = par1m1[0][0]
-        html1 = par1m1[0][1]
+        # SEC header found - this is a "raw" submission file
+        sec_header = par1m1[0][0]  # Header portion
+        html1 = par1m1[0][1]  # Document portion
         urltype = "raw"
         if args.input_type != "raw":
             print(f"User specified input_type={args.input_type} but header exists. Stop")
@@ -416,12 +471,24 @@ def main():
                         raise(Exception("unsupported method: lynx"))
                     elif html2txt_type == "inscriptis":
                         clean_text = get_text(adoc)
+                        if args.debug:                            
+                            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean00.htm.txt" )
+                            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                                fh1.write(clean_text)
                         clean_text = html.unescape(clean_text)
+                        if args.debug:
+                            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean01.htm.txt" )
+                            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                                fh1.write(clean_text)
                         clean_text = lib10kq.translate2ascii(clean_text.encode('utf-8'))
+                        if args.debug:                            
+                            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean02.htm.txt" )
+                            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                                fh1.write(clean_text)
 
                         if args.debug:
                             # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
-                            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean.htm.txt" )
+                            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean03.htm.txt" )
                             with open(fn1, 'w', encoding = 'utf-8') as fh1:
                                 fh1.write(clean_text)
                     else:
@@ -449,12 +516,32 @@ def main():
             fh1.close()
 
         clean_text = get_text(adoc)
+        if args.debug:
+            # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
+            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean00.htm.txt")
+            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                fh1.write(clean_text)
         clean_text = html.unescape(clean_text)
+        if args.debug:
+            # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
+            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean01.htm.txt")
+            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                fh1.write(clean_text)
         clean_text = lib10kq.translate2ascii(clean_text.encode('utf-8'))
+        if args.debug:
+            # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
+            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean02.htm.txt")
+            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                fh1.write(clean_text)
         pure_text2 = lib10kq.pretty_text(clean_text)
         if args.debug:
             # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
-            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean2.htm.txt")
+            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean03.htm.txt")
+            with open(fn1, 'w', encoding = 'utf-8') as fh1:
+                fh1.write(pure_text2)
+        if args.debug:
+            # fn1 = outprefix + "urlfile" + "_clean.htm.txt"                
+            fn1 = os.path.join(args.outputdir, "urlfile" + "_clean04.htm.txt")
             with open(fn1, 'w', encoding = 'utf-8') as fh1:
                 fh1.write(pure_text2)
     elif urltype == "native_text":  
@@ -572,8 +659,7 @@ def main():
         if args.verbose >= 2:
             print("Using device", device)
         
-        # current_dir = os.path.dirname(__file__)
-        # 現有路徑
+        # current_dir = os.path.dirname(__file__)        
         # label2id_bert = os.path.join(current_dir, 'tag2021_v3_labelidmap.pkl') 
         with open(label2id_fn, 'rb') as f:
             labelid_map = pickle.load(f)
@@ -669,11 +755,11 @@ def main():
 
         apikey = args.apikey
 
-        # 處理要喂進 chatgpt model 的輸入
+        # chatgpt model input
         text_final = gpt4itemSeg.preprocess_doc(args, lines)
-        # 喂進 chatgpt model
+        # submit to chatgpt model
         response = gpt4itemSeg.openai(text_final, apikey)
-        # 取得與每行句子對應的預測tag
+        # get predicted tag
         pred_ext = gpt4itemSeg.map_lines_to_tags(response, lines)
 
         outdf = pd.DataFrame({'pred': pred_ext, 'sentence': lines})
@@ -685,7 +771,7 @@ def main():
     # BERT
     if method == 'bert':        
         # load model
-        # 組合路徑到 `bert_model.pth`
+        # `bert_model.pth`
         # model_path = os.path.join(current_dir, args.bertpath)
         # bert_model_fn        
         print(f"Loading BERT model from {bert_model_fn}")
@@ -702,7 +788,6 @@ def main():
                 seqmap[seqkeep] = i
                 seqkeep += 1
 
-        # Block start - 這個 block 是替換 line number 745, 757, 772 的部分
         total_features_df = lib10kq.createFeatures(linekeep)
         # print(f"total_features_df = {total_features_df}")        
         # raise(Exception("here"))
