@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/hsinmin/itemseg/main/ITEMSEG%20LOGO1%20SMALL.jpg)
 
-Itemseg is a 10-K item segmentation tool for processing 10-K reports and extracting item-specific text.
+Itemseg is a 10-K item segmentation tool for processing 10-K filings and extracting item-specific text.
 
 Itemseg supports the following input formats (--input_type):
 * **raw**: Complete submission text file. See example at [SEC Website](https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/0001564590-20-034944.txt)
@@ -14,11 +14,10 @@ The input (`--input`) can be either a local file or a URL pointing to the SEC we
 
 Itemseg supports the following item segmentation approaches (--method):
 * **crf**: Conditional Random Field (default method). Recommended for machines without a GPU.
-* **lstm**: Bi-directional Long Short-Term Memory.
 * **bert**: BERT4ItemSeg; BERT encoder coupled with Bi-LSTM.
 * **chatgpt**: GPT4ItemSeg; Uses OpenAI API and line-id-based prompting.
 
-Both **lstm** and **bert** require a GPU to work at a reasonable speed. You will need to setup the GPU hardware and driver before using these approaches. You can still use itemseg to process 10-K reports without GPUs by selecting the **crf** approach. 
+**bert** require a GPU to work at a reasonable speed. You will need to setup the GPU hardware and driver before using these approaches. You can still use itemseg to process 10-K reports without GPUs by selecting the **crf** approach. 
 
 [![PyPI - Version](https://img.shields.io/pypi/v/itemseg.svg)](https://pypi.org/project/itemseg)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/itemseg.svg)](https://pypi.org/project/itemseg)
@@ -34,24 +33,18 @@ Both **lstm** and **bert** require a GPU to work at a reasonable speed. You will
 
 ## Installation
 
-We recommend installing itemseg in a separate environment created by `virtualenv` to prevent library version conflicts. The instructions below have been tested with Ubuntu 22 LTS and macOS 15.5.
+We recommend installing itemseg in a separate environment created by `virtualenv` to prevent library version conflicts. The instructions below have been tested with Ubuntu 24 LTS.
 
 ### Setup virtualenv
 Install `virtualenv` first if it is not already installed. 
 
-For Ubuntu 22 LTS:
 ```console
 sudo apt install python3-venv
 ```
 
-For macOS:
-```console
-pip3 install virtualenv
-```
 
 The next step is to setup the virtualenv.
 
-Ubuntu 22 LTS and macOS:
 ```console
 python3 -m venv env_itemseg
 ```
@@ -85,9 +78,23 @@ Using Apple 10-K (2023) as an example (adjust --user_agent according to your aff
 python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt --user_agent "Some University johndow@someuniversity.edu"
 ```
 
+The default method is CRF. 
 See the results in `./segout01/`.
 
 The `*.csv` file contains line-by-line predictions for items in Begin-Inside-Outside (BIO) style tags. Other files contain item-specific text.
+
+
+### Other sample command
+
+To use BERT4ItemSeg
+```console
+python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt --user_agent "Some University johndow@someuniversity.edu" --method bert
+```
+
+To use GPT4ItemSeg
+```console
+python3 -m itemseg --input_type raw --input https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106.txt --user_agent "Some University johndow@someuniversity.edu" --method chatgpt --apikey zzzzxxxxzzzz
+```
 
 ### About 10-K reports
 A 10-K report is an annual report filed by publicly traded companies with the U.S. Securities and Exchange Commission (SEC). It provides a comprehensive overview of the company's financial performance and is more detailed than an annual report. Key items of a 10-K report include:
@@ -116,10 +123,11 @@ If you are trying to process large amounts of 10-K files, a good starting point 
 
 `itemseg` is distributed under the terms of the [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/) license.
 
-## Citation
+<!-- ## Citation
 
 Please cite our work if you use **itemseg** in your research. 
 
 Lu, H.-M., Chien, Y.-T., Yen, H.-H., and Chen, Y.-H. (2025). Utilizing Pre-trained and Large Language Models for 10-K Items Segmentation. arXiv preprint arxiv:2502.08875 (https://arxiv.org/abs/2502.08875).
+-->
 
 We extend our special thanks to Chia-Tai Li and I-Chen Tsai for their valuable support in managing the dataset, as well as merging and refactoring the project.
