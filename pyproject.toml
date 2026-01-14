@@ -26,19 +26,19 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
   "License :: Free for non-commercial use",
 ]
-dependencies = ['requests <= 2.32.4', 
-                'pandas <= 2.3.0',
-                'inscriptis <= 2.6.0',
-                'python-crfsuite >= 0.9.11',
-                'nltk <= 3.9.1',
-                'gensim <= 4.3.3',
-                'torch <= 2.7.1',
-                'scikit-learn <= 1.7.0',
-                'scipy <= 1.13.1',
-                'numpy <= 1.26.4',
-                'urllib3 <= 2.5.0',
-                'openai <= 1.91.0',
-                'sentence_transformers <= 4.1.0'
+dependencies = ['requests <= 2.32.5', 
+                'pandas <= 2.3.3',
+                'inscriptis <= 2.7.0',
+                'python-crfsuite >= 0.9.12',
+                'nltk <= 3.9.2',
+                'gensim <= 4.4.0',
+                'torch <= 2.9.1',
+                'scikit-learn <= 1.8.0',
+                'scipy <= 1.17.0',
+                'numpy <= 2.4.1',
+                'urllib3 <= 2.6.3',
+                'openai <= 2.15.0',
+                'sentence_transformers <= 5.2.0'
 ]
 
 [project.scripts]
