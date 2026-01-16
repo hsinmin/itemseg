@@ -124,7 +124,8 @@ def main():
     parser.add_argument("--get_resource", dest="get_resource",
                         action="store_true",
                         help="Download resource files (models, embeddings, etc.)")
-    default_resource_url = "http://nebula.lu.im.ntu.edu.tw/itemseg/"
+    # default_resource_url = "http://nebula.lu.im.ntu.edu.tw/itemseg/"
+    default_resource_url = "https://www.im.ntu.edu.tw/~lu/data/itemseg/"
     parser.add_argument("--resource_url", dest="resource_url", type=str,
                         default=default_resource_url,
                         help=f"Set URL to download resource files. Default: {default_resource_url}")
@@ -241,7 +242,7 @@ def main():
 
     # Handle resource download mode
     if args.get_resource:
-        get_resource()
+        get_resource(url0=args.resource_url)
         sys.exit(0)
 
     # Validate input_type parameter
@@ -374,7 +375,7 @@ def main():
     # ================================         
 
     # Try to detect SEC submission header (present in "raw" type files)
-    par1 = re.compile('(<SEC-DOCUMENT>.*?</SEC-HEADER>)(.*)', re.M | re.S)
+    par1 = re.compile(r'(<SEC-DOCUMENT>.*?</SEC-HEADER>)(.*)', re.M | re.S)
     par1m1 = par1.findall(rawtext)
 
     if len(par1m1) == 0:
@@ -418,7 +419,7 @@ def main():
 
     if urltype == "raw":
         #now, split by document
-        par2 = re.compile('(<DOCUMENT>.*?</DOCUMENT>)', re.M | re.S)
+        par2 = re.compile(r'(<DOCUMENT>.*?</DOCUMENT>)', re.M | re.S)
         par2m1= par2.findall(html1)
         get_target = 0
 
@@ -426,12 +427,12 @@ def main():
             print("# of document component:", len(par2m1))
 
         for adoc in par2m1:
-            par3=re.compile('<TYPE>(\S+)')
+            par3=re.compile(r'<TYPE>(\S+)')
             par3m1 = par3.findall(adoc)
             doc_type = par3m1[0]
 
             #<FILENAME>body10k.htm
-            par3a=re.compile('<FILENAME>(.*)')
+            par3a=re.compile(r'<FILENAME>(.*)')
             par3am1 = par3a.findall(adoc)
             if len(par3am1) > 0:
                 doc_fn = par3am1[0].strip()
@@ -457,7 +458,7 @@ def main():
                     clean_text = lib10kq.strip_tags(adoc)
                     clean_text = html.unescape(clean_text)
                     # remove html comment
-                    html_com1 = re.compile('(<!--.*?-->)', re.M | re.S)
+                    html_com1 = re.compile(r'(<!--.*?-->)', re.M | re.S)
                     htmp1 = html_com1.subn('', clean_text)
                     clean_text = htmp1[0]
                     clean_text = lib10kq.translate2ascii(clean_text.encode('utf-8'))                    

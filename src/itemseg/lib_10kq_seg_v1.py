@@ -38,7 +38,7 @@ word_tokenizer = nltk.tokenize.wordpunct_tokenize  # Standard word tokenizer
 eng_punc = ['~', '\\', '>', '<', '@', '|', '+', '.', '?', '!', ':','=', '*', '-', ',', '(', ')', '[', ']', '{', '}', '/', '$', '%', '&', ';', '"', "'"]
 
 # Regex patterns for text cleaning
-re_float = re.compile('([+-]?\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?')  # Matches floating point numbers
+re_float = re.compile(r'([+-]?\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?')  # Matches floating point numbers
 punc_splus = re.compile(r'[=_\s.-]{2,}')  # Matches 2+ repeated punctuation/whitespace
 
 class MLStripper(HTMLParser):
@@ -222,12 +222,12 @@ def parse_edgar_header(sec_header):
             - sic_code: SIC code (integer, -1 if not found)
     """
     # Regular expressions for extracting header fields
-    re0 = re.compile('CONFORMED SUBMISSION TYPE:\s+(\S+)')
-    re1 = re.compile('CONFORMED PERIOD OF REPORT:\s+(\d+)')
-    re2 = re.compile('FILED AS OF DATE:\s+(\d+)')
-    re3 = re.compile('DATE AS OF CHANGE:\s+(\d+)')
-    re4 = re.compile('STANDARD INDUSTRIAL CLASSIFICATION:\s*(.*?)\s+\\[(\d+)\\]')
-    re5 = re.compile('COMPANY CONFORMED NAME:(.*)')
+    re0 = re.compile(r'CONFORMED SUBMISSION TYPE:\s+(\S+)')
+    re1 = re.compile(r'CONFORMED PERIOD OF REPORT:\s+(\d+)')
+    re2 = re.compile(r'FILED AS OF DATE:\s+(\d+)')
+    re3 = re.compile(r'DATE AS OF CHANGE:\s+(\d+)')
+    re4 = re.compile(r'STANDARD INDUSTRIAL CLASSIFICATION:\s*(.*?)\s+\[(\d+)\]')
+    re5 = re.compile(r'COMPANY CONFORMED NAME:(.*)')
     m0 = re0.findall(sec_header)
     m1 = re1.findall(sec_header)
     m2 = re2.findall(sec_header)
@@ -306,7 +306,7 @@ def word_len(text):
     Returns:
         Integer count of words containing at least one letter or digit
     """
-    nonPunct = re.compile('.*[A-Za-z0-9].*')  # must contain a letter or digit
+    nonPunct = re.compile(r'.*[A-Za-z0-9].*')  # must contain a letter or digit
     filtered = [w for w in tokenize.word_tokenize(text) if nonPunct.match(w)]
     wlen = len(filtered)
     return wlen
@@ -1523,7 +1523,7 @@ def f1_perf(fold_perf):
     core_f1 = []
     all_f1 = []
     # coreitem = ['Item1', 'Item1A', 'Item3', 'Item5', 'Item7', 'Item7A', 'Item8', 'Item10', 'Item11']
-    rep1 = re.compile('^Item1_|Item1A_|Item3_|Item5_|Item7_|Item7A_|Item8_|Item10_|Item11_')
+    rep1 = re.compile(r'^Item1_|Item1A_|Item3_|Item5_|Item7_|Item7A_|Item8_|Item10_|Item11_')
     for key, value in fold_perf.to_dict().items():
         tstr = "_f1"        
         if key[-len(tstr):] == tstr:
